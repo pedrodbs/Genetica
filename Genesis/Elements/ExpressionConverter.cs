@@ -9,7 +9,7 @@ namespace Genesis.Elements
 {
 	public class ExpressionConverter : IDisposable
 	{
-	    private const string SUB_ELEM_PATTERN = "(.+)";
+	    private const string SUB_ELEM_PATTERN = @"((?>[^\(\)]+|(?<l>\()|(?<-l>\)))+(?(l)(?!))|[^\(\)]+)";
         private readonly string[] _parentheses = { "(", ")" };
         private readonly Dictionary<string, IElement> _primitiveLabels = new Dictionary<string, IElement>();
         private readonly Dictionary<string, IElement> _functionPatterns = new Dictionary<string, IElement>();
@@ -64,7 +64,7 @@ namespace Genesis.Elements
 
             // cleans expression
             expression = expression.Replace(" ", string.Empty);
-
+            
             // tests for terminals
             if (this._primitiveLabels.ContainsKey(expression))
                 return this._primitiveLabels[expression].Clone();

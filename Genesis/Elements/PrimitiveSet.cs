@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Genesis.Elements.Functions;
 using Genesis.Elements.Terminals;
+using Genesis.Util;
 
 namespace Genesis.Elements
 {
@@ -28,24 +29,31 @@ namespace Genesis.Elements
             });
 
 	    private bool _disposed;
+	    private readonly HashSet<Terminal> _terminals;
+        private readonly HashSet<IFunction> _functions;
 
-	    public IReadOnlyCollection<Terminal> Terminals { get; }
-
-		public IReadOnlyCollection<IFunction> Functions { get; }
+	    public IReadOnlyCollection<Terminal> Terminals => this._terminals.ToList();
+        public IReadOnlyCollection<IFunction> Functions => this._functions.ToList();
 
 		public PrimitiveSet(IEnumerable<Terminal> terminals, IEnumerable<IFunction> operators)
 		{
-			this.Terminals = terminals.ToList();
-			this.Functions = operators.ToList();
+			this._terminals = new HashSet<Terminal>(terminals);
+			this._functions = new HashSet<IFunction>(operators);
 		}
+
+	    public void Add(PrimitiveSet primitiveSet)
+	    {
+	        this._terminals.AddRange(primitiveSet.Terminals);
+	        this._functions.AddRange(primitiveSet.Functions);
+	    }
 
 	    protected virtual void Dispose(bool disposing)
 	    {
             if(this._disposed) return;
 	        if (disposing)
 	        {
-                ((List<IFunction>)this.Functions).Clear();
-                ((List<Terminal>)this.Terminals).Clear();
+                this._functions.Clear();
+                this._terminals.Clear();
             }
 	        this._disposed = true;
 	    }

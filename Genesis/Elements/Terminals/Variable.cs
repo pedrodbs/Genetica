@@ -31,26 +31,22 @@ namespace Genesis.Elements.Terminals
         public bool Equals(Variable other)
         {
             return !ReferenceEquals(null, other) &&
-                   (ReferenceEquals(this, other) ||
-                    (string.Equals(this.Label, other.Label) && this._valuedObject.Equals(other._valuedObject)));
+                   (ReferenceEquals(this, other) || (string.Equals(this.Label, other.Label)));
         }
 
 	    public override int GetHashCode() => this._hashCode;
 
-        private int ProduceHashCode()
-        {
-            unchecked
-            {
-                const int hashingBase = (int)2166136261;
-                const int hashingMultiplier = 16777619;
+	    private int ProduceHashCode()
+	    {
+	        unchecked
+	        {
+	            const int hashingBase = (int) 2166136261;
+	            const int hashingMultiplier = 16777619;
+	            return (hashingBase * hashingMultiplier) ^ this.Label?.GetHashCode() ?? 0;
+	        }
+	    }
 
-                var hashCode = hashingBase;
-                hashCode = (hashCode * hashingMultiplier) ^ this._valuedObject.GetHashCode();
-                return (hashCode * hashingMultiplier) ^ this.Label.GetHashCode();
-            }
-        }
-
-        public static bool operator ==(Variable left, Variable right)
+	    public static bool operator ==(Variable left, Variable right)
         {
             return ReferenceEquals(left, right) || (!ReferenceEquals(null, left) && left.Equals(right));
         }
@@ -60,6 +56,6 @@ namespace Genesis.Elements.Terminals
             return !(left == right);
         }
 
-	    public override double GetValue() => this._valuedObject.Value;
-    }
+	    public override double GetValue() => this._valuedObject?.Value ?? 0d;
+	}
 }
