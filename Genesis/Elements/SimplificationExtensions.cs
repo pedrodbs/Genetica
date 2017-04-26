@@ -4,7 +4,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 2017/03/03
+//    Last updated: 2017/03/16
 // 
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
@@ -17,6 +17,7 @@ using System.Linq;
 using Genesis.Elements.Functions;
 using Genesis.Elements.Terminals;
 using Genesis.Evaluation;
+using Genesis.Util;
 
 namespace Genesis.Elements
 {
@@ -25,7 +26,7 @@ namespace Genesis.Elements
         #region Static Fields & Constants
 
         private const string VAR_NAME_STR = "VAR";
-        private const double MIN_VAL = -10000;
+        private const double MIN_VAL = -1000;
         private const double RANGE = -2 * MIN_VAL;
         private const double DEFAULT_MARGIN = 1e-6d;
         private const uint DEFAULT_NUM_TRIALS = 1000;
@@ -69,6 +70,56 @@ namespace Genesis.Elements
         }
 
         /// <summary>
+        ///     Gets the root-mean-square deviation (RMSD) between the values computed for the given elements. The method works by
+        ///     substituting the variables in both elements' expressions by random values for a certain number of trials. In each
+        ///     trial, the square of the difference between the values computed by both elements is calculated.
+        /// </summary>
+        /// <param name="element">The first element that we want to test.</param>
+        /// <param name="other">The second element that we want to test.</param>
+        /// <param name="numTrials">The number of trials used to compute the squared difference.</param>
+        /// <returns>The RMSD between the several values computed for the given elements.</returns>
+        public static double GetValueRmsd(
+            this IElement element, IElement other, uint numTrials = DEFAULT_NUM_TRIALS)
+        {
+            // checks null
+            if (element == null || other == null) return double.MaxValue;
+
+            // checks expression or constant equivalence after simplification
+            element = element.Simplify();
+            other = other.Simplify();
+            if (element.Equals(other) || element.IsConstant() && other.IsConstant())
+                return Math.Abs(element.GetValue() - other.GetValue());
+
+            // replaces variables of each expression by custom variables
+            var customVariables = new Dictionary<IElement, CustomVariable>();
+            element = ReplaceVariables(element, customVariables);
+            other = ReplaceVariables(other, customVariables);
+            if (customVariables.Count == 0) return double.MaxValue;
+
+            // gets random values for each variable
+            var customVariablesValues = customVariables.Values.ToDictionary(
+                variable => variable, variable => GetTrialRandomNumbers(numTrials));
+
+            // runs a batch of trials
+            var squareDiffSum = 0d;
+            for (var i = 0; i < numTrials; i++)
+            {
+                // replaces the value of each variable by a random number
+                foreach (var customVariablesValue in customVariablesValues)
+                    customVariablesValue.Key.Value = customVariablesValue.Value[i];
+
+                // computes difference of the resulting values of the expressions
+                var elem1Value = element.GetValue();
+                var elem2Value = other.GetValue();
+                var diff = elem1Value.Equals(elem2Value) ? 0 : elem1Value - elem2Value;
+                squareDiffSum += diff * diff;
+            }
+
+            // returns rmsd
+            return Math.Sqrt(squareDiffSum);
+        }
+
+        /// <summary>
         ///     Verifies whether the <see cref="IElement" /> has a constant value, i.e., whether all its descendant leaf
         ///     elements are instances of <see cref="Constant" />.
         /// </summary>
@@ -95,10 +146,10 @@ namespace Genesis.Elements
         ///     The margin used to compare against the difference of values computed by both expressions in each
         ///     trial.
         /// </param>
-        /// <param name="trials">The number of trials used to discern whether the given elements are equivalent.</param>
+        /// <param name="numTrials">The number of trials used to discern whether the given elements are equivalent.</param>
         /// <returns><c>True</c> if the given elements are considered to be value-equivalent, <c>False</c> otherwise.</returns>
         public static bool IsValueEquivalent(
-            this IElement element, IElement other, double margin = DEFAULT_MARGIN, uint trials = DEFAULT_NUM_TRIALS)
+            this IElement element, IElement other, double margin = DEFAULT_MARGIN, uint numTrials = DEFAULT_NUM_TRIALS)
         {
             // checks null
             if (element == null || other == null) return false;
@@ -116,13 +167,16 @@ namespace Genesis.Elements
             other = ReplaceVariables(other, customVariables);
             if (customVariables.Count == 0) return false;
 
+            // gets random values for each variable
+            var customVariablesValues = customVariables.Values.ToDictionary(
+                variable => variable, variable => GetTrialRandomNumbers(numTrials));
+
             // runs a batch of trials
-            var rnd = new Random();
-            for (var i = 0; i < trials; i++)
+            for (var i = 0; i < numTrials; i++)
             {
-                //  replaces the values of each variable by random numbers
-                foreach (var customVariable in customVariables.Values)
-                    customVariable.Value = MIN_VAL + RANGE * rnd.NextDouble();
+                // replaces the value of each variable by a random number
+                foreach (var customVariablesValue in customVariablesValues)
+                    customVariablesValue.Key.Value = customVariablesValue.Value[i];
 
                 // compares the resulting values of the expressions
                 if (Math.Abs(element.GetValue() - other.GetValue()) >= margin)
@@ -262,6 +316,24 @@ namespace Genesis.Elements
 
         #endregion
 
+        #region Private & Protected Methods
+
+        private static IList<double> GetTrialRandomNumbers(uint numTrials)
+        {
+            var rnd = new Random();
+
+            // adds fixed numbers
+            var trialNumbers = new List<double>((int) numTrials) {0, -1, 1, 0.1, -0.1};
+
+            // adds rest with random numbers
+            for (var i = trialNumbers.Count; i < numTrials; i++)
+                trialNumbers.Add(MIN_VAL + RANGE * rnd.NextDouble());
+
+            // shuffles and returns
+            trialNumbers.Shuffle();
+            return trialNumbers;
+        }
+
         #region Private Methods
 
         private static IElement ReplaceVariables(this IElement element, IDictionary<IElement, CustomVariable> customVars)
@@ -280,21 +352,23 @@ namespace Genesis.Elements
 
         #endregion
 
+        #endregion
+
         #region Nested type: CustomVariable
 
         private class CustomVariable : Variable
         {
+            #region Properties & Indexers
+
+            public double Value { private get; set; }
+
+            #endregion
+
             #region Constructors
 
             public CustomVariable(string name) : base(name, null)
             {
             }
-
-            #endregion
-
-            #region Properties & Indexers
-
-            public double Value { private get; set; }
 
             #endregion
 

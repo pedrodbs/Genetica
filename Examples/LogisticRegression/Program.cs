@@ -9,7 +9,7 @@ using Genesis.Elements.Terminals;
 using Genesis.Evaluation;
 using Genesis.Generation;
 using Genesis.Mutation;
-using Genesis.QuickGraph;
+using Genesis.Graphviz;
 using Genesis.Selection;
 using QuickGraph.Graphviz.Dot;
 
@@ -50,14 +50,14 @@ namespace LogisticRegression
 			var solutionExp = "(+ (+ x x) (+ (* 3 (* x x)) 1))";
 			var solution = new ExpressionConverter(primitives).FromPrefixNotation(solutionExp);
 			Console.WriteLine("Fitness: {0} | {1}", fitnessFunction.Evaluate(solution), solution);
-			solution.ToGraphvizFile(GraphvizImageType.Png, Path.GetFullPath("."), "solution");
+			solution.ToGraphvizFile(Path.GetFullPath("."), "solution", GraphvizImageType.Png);
 
 			var seed = new AdditionFunction(const1, variable);
 
 			var elementGenerator =
 				new StochasticElementGenerator(new List<IElementGenerator>
 				{
-					new GrowElemenetGenerator(),
+					new GrowElementGenerator(),
 					new FullElementGenerator()
 				});
 			var selection = new TournamentSelection(fitnessFunction, (uint)(popSize * 0.03));
@@ -77,8 +77,8 @@ namespace LogisticRegression
 				});
 
 			var pop = new Population(
-				popSize, primitives, elementGenerator, maxDepth,
-				fitnessFunction, selection, crossover, mutation);
+				popSize, primitives, elementGenerator,
+				fitnessFunction, selection, crossover, mutation, maxDepth);
 			pop.Init(new HashSet<IElement> { seed });
 
 			IElement best = null;
@@ -96,7 +96,7 @@ namespace LogisticRegression
 				Print(pop, i, fitnessFunction, diff);
 			}
 
-			pop.BestElement.ToGraphvizFile(GraphvizImageType.Png, Path.GetFullPath("."), "best");
+			best.ToGraphvizFile(Path.GetFullPath("."), "best", GraphvizImageType.Png);
 			Console.ReadKey();
 		}
 

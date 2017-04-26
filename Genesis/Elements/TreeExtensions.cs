@@ -4,7 +4,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 2017/03/02
+//    Last updated: 2017/04/06
 // 
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
@@ -160,18 +160,31 @@ namespace Genesis.Elements
         }
 
         /// <summary>
-        ///     Gets a <see cref="ISet{T}" /> containing all the descendant <see cref="IElement" />
-        ///     of the given element.
+        ///     Gets a <see cref="ISet{T}" /> containing all the descendant <see cref="IElement" /> of the given element.
         /// </summary>
         /// <returns>A set containing all the sub elements of the given element.</returns>
         /// <param name="element">The element we want to get the sub-elements.</param>
-        public static ISet<IElement> GetSubElements(this IElement element)
+        public static IElement[] GetSubElements(this IElement element)
         {
             if (element == null) return null;
-            var subElements = new HashSet<IElement>();
-            for (var i = 1u; i < element.Count; i++)
-                subElements.Add(element.ElementAt(i));
+            var subElements = new IElement[element.Count-1];
+            var index = 0;
+            GetSubElements(element, ref index, element.Count-1, subElements);
             return subElements;
+        }
+
+        /// <summary>
+        ///     Gets a set constaining all the <see cref="Terminal" /> sub-elements of the given element. This corresponds to the
+        ///     leaf nodes of the expression tree of the given element.
+        /// </summary>
+        /// <param name="element">The element whose terminal sub-elements we want to retrieve.</param>
+        /// <returns>A set constaining all the <see cref="Terminal" /> sub-elements of the given element.</returns>
+        public static ISet<Terminal> GetTerminals(this IElement element)
+        {
+            if (element == null) return null;
+            var terminals = new HashSet<Terminal>();
+            GetTerminals(element, terminals);
+            return terminals;
         }
 
         /// <summary>
@@ -194,15 +207,61 @@ namespace Genesis.Elements
 
         /// <summary>
         ///     Gets a new copy of <paramref name="element" /> where the descendant element at the given index is replaced by
-        ///     <paramref name="newElement" />. Elements are indexed in a zero-based, depth first search manner.
+        ///     <paramref name="newSubElement" />. Elements are indexed in a zero-based, depth first search manner.
         /// </summary>
         /// <returns>A copy of the element with the descendant at the given index replaced by the new element.</returns>
-        /// <param name="element">The root element to copy and search for the child element at the given index.</param>
-        /// <param name="index">The index of the element we want to replace.</param>
-        /// <param name="newElement">The new element to replace the one at the given index.</param>
-        public static IElement Replace(this IElement element, uint index, IElement newElement)
+        /// <param name="element">The root element to copy and search for the sub-element at the given index.</param>
+        /// <param name="index">The index of the sub-element we want to replace.</param>
+        /// <param name="newSubElement">The new element to replace the one at the given index.</param>
+        public static IElement Replace(this IElement element, uint index, IElement newSubElement)
         {
-            return Replace(element, ref index, newElement);
+            return Replace(element, ref index, newSubElement);
+        }
+
+        /// <summary>
+        ///     Gets a new copy of <paramref name="element" /> where all sub-elements that are equal to
+        ///     <paramref name="oldSubElement" /> are replaced by <paramref name="newSubElement" />.
+        /// </summary>
+        /// <returns>
+        ///     A copy of the element with the given descendant replaced by the new element. If the given element is equal to the
+        ///     sub-element we want to replace, then the replacement is returned. If the given sub-element is not found, a copy of
+        ///     the original element is returned, or <c>null</c> if the element is <c>null</c>.
+        /// </returns>
+        /// <param name="element">The root element to copy and search for the given sub-element .</param>
+        /// <param name="oldSubElement">The sub-element we want to replace.</param>
+        /// <param name="newSubElement">The new sub-element to replace the given one.</param>
+        public static IElement Replace(this IElement element, IElement oldSubElement, IElement newSubElement)
+        {
+            if (element == null || oldSubElement == null || newSubElement == null)
+                return element?.Clone();
+
+            // checks if element is equal, return replacement
+            if (element.Equals(oldSubElement)) return newSubElement;
+
+            // replaces children recursively and creates a new element
+            if (element.Children == null || element.Children.Count == 0) return element;
+            var children = new IElement[element.Children.Count];
+            for (var i = 0; i < element.Children.Count; i++)
+                children[i] = element.Children[i].Replace(oldSubElement, newSubElement);
+            return element.CreateNew(children);
+        }
+
+        #endregion
+
+        #region Private & Protected Methods
+
+        private static void GetSubElements(IElement element, ref int index, int maxIdx, IList<IElement> subElements)
+        {
+            if (index > maxIdx )
+                return;
+
+            if (index > 0) subElements[index - 1] = element;
+            if (element.Children == null) return;
+            foreach (var child in element.Children)
+            {
+                index++;
+                GetSubElements(child, ref index, maxIdx, subElements);
+            }
         }
 
         #endregion
@@ -211,9 +270,13 @@ namespace Genesis.Elements
 
         private static IElement ElementAt(this IElement element, ref uint index)
         {
-            if (element == null) return null;
             if (index == 0) return element;
-            if (element.Children == null) return null;
+            if (element?.Children == null) return null;
+            if (index >= element.Count)
+            {
+                index -= (uint) element.Count - 1;
+                return null;
+            }
 
             foreach (var child in element.Children)
             {
@@ -241,7 +304,7 @@ namespace Genesis.Elements
                 return;
             }
 
-            // elements have same number of sub-children, iterate recursively
+            // elements have same number of children, iterate recursively
             for (var i = 0; i < element.Children.Count; i++)
             {
                 idx1++;
@@ -250,17 +313,33 @@ namespace Genesis.Elements
             }
         }
 
-        private static IElement Replace(this IElement element, ref uint index, IElement newElement)
+        private static void GetTerminals(this IElement element, ISet<Terminal> terminals)
+        {
+            // checks element is terminal, add to set
+            var terminal = element as Terminal;
+            if (terminal != null)
+            {
+                terminals.Add(terminal);
+                return;
+            }
+
+            // searches children 
+            if (element.Children != null)
+                foreach (var child in element.Children)
+                    GetTerminals(child, terminals);
+        }
+
+        private static IElement Replace(this IElement element, ref uint index, IElement newSubElement)
         {
             if (element == null) return null;
-            if (index == 0) return newElement;
+            if (index == 0) return newSubElement;
             if (element.Children == null) return element;
 
             var newChildren = element.Children.ToArray();
             for (var i = 0; i < element.Children.Count; i++)
             {
                 index--;
-                newChildren[i] = element.Children[i].Replace(ref index, newElement);
+                newChildren[i] = element.Children[i].Replace(ref index, newSubElement);
                 if (index == 0)
                     break;
             }

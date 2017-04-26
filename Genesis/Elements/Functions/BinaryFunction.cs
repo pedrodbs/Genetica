@@ -15,7 +15,9 @@ namespace Genesis.Elements.Functions
 
 		public IReadOnlyList<IElement> Children => this._children;
 
-		public uint NumChildren => 2;
+        IReadOnlyList<ITreeNode> ITreeNode.Children => this.Children;
+
+        public uint NumChildren => 2;
 
 	    private readonly int _hashCode;
 
@@ -47,7 +49,8 @@ namespace Genesis.Elements.Functions
 		{
 			return !ReferenceEquals(null, other) &&
 				   (ReferenceEquals(this, other) ||
-					(string.Equals(this.Label, other.Label) &&
+                   (this._hashCode == other._hashCode &&
+					string.Equals(this.Label, other.Label) &&
 					 this.FirstElement.Equals(other.FirstElement) &&
 					 this.SecondElement.Equals(other.SecondElement)));
 		}

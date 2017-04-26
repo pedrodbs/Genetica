@@ -20,8 +20,9 @@ namespace Genesis
 		private readonly uint _maxSize;
 		private readonly IElementGenerator _elementGenerator;
 		private readonly PrimitiveSet _primitives;
-		private readonly uint _maxDepth;
-		private readonly IComparer<IElement> _elementComparer;
+		private readonly uint _maxGenerationDepth;
+	    private readonly uint _maxElementCount;
+	    private readonly IComparer<IElement> _elementComparer;
 
 		public double CrossoverPercent { get; set; }
 		public double MutationPercent { get; set; }
@@ -30,23 +31,25 @@ namespace Genesis
 		public IElement BestElement { get; private set; }
 
 		public Population(
-			uint maxSize,
-			PrimitiveSet primitives,
-			IElementGenerator elementGenerator,
-			uint maxDepth,
-			IComparer<IElement> elementComparer,
-			ISelectionOperator selectionOperator,
-			ICrossoverOperator crossoverOperator,
-			IMutationOperator mutationOperator,
-			double crossoverPercent = 0.65d,
-			double mutationPercent = 0.2d,
-			double elitismPercent = 0.1d)
+            uint maxSize,
+            PrimitiveSet primitives,
+            IElementGenerator elementGenerator, 
+            IComparer<IElement> elementComparer,
+            ISelectionOperator selectionOperator,
+            ICrossoverOperator crossoverOperator,
+            IMutationOperator mutationOperator,
+            uint maxGenerationDepth = 4,
+            uint maxElementCount = 6,
+            double crossoverPercent = 0.65d, 
+            double mutationPercent = 0.2d, 
+            double elitismPercent = 0.1d)
 		{
 			this._maxSize = maxSize;
 			this._primitives = primitives;
 			this._elementGenerator = elementGenerator;
-			this._maxDepth = maxDepth;
-			this._elementComparer = elementComparer;
+			this._maxGenerationDepth = maxGenerationDepth;
+		    this._maxElementCount = maxElementCount;
+		    this._elementComparer = elementComparer;
 			this._selectionOperator = selectionOperator;
 			this._mutationOperator = mutationOperator;
 			this._crossoverOperator = crossoverOperator;
@@ -74,7 +77,7 @@ namespace Genesis
 				IElement element;
 				do
 				{
-					element = this._elementGenerator.Generate(this._primitives, this._maxDepth);
+					element = this._elementGenerator.Generate(this._primitives, this._maxGenerationDepth);
 				} while (this.Contains(element));
 				this.Add(element);
 			}
@@ -97,7 +100,9 @@ namespace Genesis
 				//randomly selects 2 parents (may be equal)
 				var parent1 = selection[this._random.Next(selection.Count)];
 				var parent2 = selection[this._random.Next(selection.Count)];
-				newGeneration.Add(this._crossoverOperator.Crossover(parent1, parent2));
+			    var descendant = this._crossoverOperator.Crossover(parent1, parent2);
+			    if (descendant.Count <= this._maxElementCount)
+			        newGeneration.Add(descendant);
 			}
 
 			// 3 - performs mutation from selection
@@ -120,7 +125,7 @@ namespace Genesis
 
 			// 5 - creates random elements
 			for (var i = newGeneration.Count; i < this._maxSize; i++)
-				newGeneration.Add(this._elementGenerator.Generate(this._primitives, this._maxDepth));
+				newGeneration.Add(this._elementGenerator.Generate(this._primitives, this._maxGenerationDepth));
 
 			// 6 - replace population with new generation
 			this.Clear();

@@ -16,11 +16,11 @@ using System.Collections.Generic;
 
 namespace Genesis.Elements
 {
-    public interface IElement : IComparable<IElement>
+    public interface IElement : IComparable<IElement>, ITreeNode
     {
         #region Properties & Indexers
 
-        IReadOnlyList<IElement> Children { get; }
+        new IReadOnlyList<IElement> Children { get; }
 
         /// <summary>
         ///     Gets the element count, i.e., the total number of <see cref="IElement" /> descendant elements encountered

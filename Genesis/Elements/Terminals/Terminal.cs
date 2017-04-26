@@ -8,7 +8,9 @@ namespace Genesis.Elements.Terminals
 
 		public IReadOnlyList<IElement> Children => this._children;
 
-		public abstract string Label { get; }
+        IReadOnlyList<ITreeNode> ITreeNode.Children => this.Children;
+
+        public abstract string Label { get; }
 
 		public string Expression => this.Label;
 

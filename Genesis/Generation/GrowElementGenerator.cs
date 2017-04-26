@@ -6,7 +6,7 @@ using MathNet.Numerics.Random;
 
 namespace Genesis.Generation
 {
-	public class GrowElemenetGenerator : IElementGenerator
+	public class GrowElementGenerator : IElementGenerator
 	{
 		private readonly Random _random = new WH2006(RandomSeed.Robust());
 

@@ -37,7 +37,7 @@ namespace Genesis.Selection
 			var best = popList[0];
 			for (var i = 0; i < tourSize; i++)
 			{
-				//selects individual at random from pop (no repetition)
+				// selects individual at random from pop (no repetition)
 				int index;
 				do
 				{
@@ -45,7 +45,7 @@ namespace Genesis.Selection
 				} while (indexes.Contains(index));
 				indexes.Add(index);
 
-				// checks max fitenss
+				// checks max fitness
 				var individual = popList[index];
 				if (this._elementComparer.Compare(individual, best) > 0)
 					best = individual;

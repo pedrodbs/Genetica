@@ -63,9 +63,9 @@
     <Compile Include="ValuedObject.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Genesis.QuickGraph\Genesis.QuickGraph.csproj">
-      <Project>{9B7BA1F3-C589-44EC-9FBF-6883AFD13DAE}</Project>
-      <Name>Genesis.QuickGraph</Name>
+    <ProjectReference Include="..\..\Genesis.Graphviz\Genesis.Graphviz.csproj">
+      <Project>{9b7ba1f3-c589-44ec-9fbf-6883afd13dae}</Project>
+      <Name>Genesis.Graphviz</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Genesis\Genesis.csproj">
       <Project>{FA82CFDC-8CD4-419F-A5B1-43D32AC358D1}</Project>
