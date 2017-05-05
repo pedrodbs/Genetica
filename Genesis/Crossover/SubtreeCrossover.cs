@@ -49,8 +49,8 @@ namespace Genesis.Crossover
             do
             {
                 crossPoint1 = (uint) this._random.Next(parent1.Count);
-                if (crossPoint1 > 0) elem = subElems1[crossPoint1 - 1];
-            } while (elem == null || parent1.Children.Count > 0 && !(elem is IFunction));
+                elem = crossPoint1 == 0 ? parent1 : subElems1[crossPoint1 - 1];
+            } while (parent1.Children.Count > 0  && !(elem is IFunction));
 
             // define the second crossover point as a random element of parent 2
             elem = parent2.ElementAt((uint) this._random.Next(parent2.Count));
