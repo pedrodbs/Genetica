@@ -4,7 +4,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 2017/04/07
+//    Last updated: 2017/05/16
 // 
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
@@ -16,14 +16,14 @@ using System.Collections.Generic;
 using System.Linq;
 using Genesis.Elements;
 
-namespace Genesis
+namespace Genesis.Trees
 {
     /// <summary>
     ///     Implementation of the symbol-tree data structure in [1].
     /// </summary>
     /// <remarks>
-    ///     [1] Foster, M. A. (2005). The program structure of genetic programming trees (Doctoral dissertation, Master’s
-    ///     thesis, School of Computer Science and Information Technology, RMIT University Melbourne Australia).
+    ///     [1] Foster, M. A. (2005). The program structure of genetic programming trees (Master’s thesis, School of Computer
+    ///     Science and Information Technology, RMIT University Melbourne Australia).
     /// </remarks>
     public class SymbolTree
     {
@@ -108,8 +108,7 @@ namespace Genesis
 
         public void Prune(double frequencyThreshold)
         {
-            var rootNode = this._rootNode;
-            Prune(rootNode, (uint) (frequencyThreshold * rootNode.Value));
+            Prune(this._rootNode, (uint) (frequencyThreshold * this._rootNode.Value));
         }
 
         #endregion

@@ -31,6 +31,7 @@
     <OutputPath>bin\x64\Debug\</OutputPath>
     <DefineConstants>DEBUG;</DefineConstants>
     <Optimize>false</Optimize>
+    <DebugType>full</DebugType>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
     <PlatformTarget>x64</PlatformTarget>
@@ -101,13 +102,14 @@
     <Compile Include="Similarity\ISimilarityMeasure.cs" />
     <Compile Include="Similarity\CommonRegionSimilarity.cs" />
     <Compile Include="Similarity\TerminalSimilarity.cs" />
+    <Compile Include="Trees\OrderedSymbolTree.cs" />
     <Compile Include="Util\CollectionUtil.cs" />
     <Compile Include="Elements\SimplificationExtensions.cs" />
     <Compile Include="Mutation\SimplifyMutation.cs" />
     <Compile Include="Mutation\FitnessSimplifyMutation.cs" />
     <Compile Include="Util\StringUtil.cs" />
-    <Compile Include="SymbolTree.cs" />
-    <Compile Include="InformationTree.cs" />
+    <Compile Include="Trees\SymbolTree.cs" />
+    <Compile Include="Trees\InformationTree.cs" />
     <Compile Include="Similarity\SymbolTreeSimilarity.cs" />
     <Compile Include="Generation\GrowElementGenerator.cs" />
   </ItemGroup>

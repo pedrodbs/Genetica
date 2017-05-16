@@ -16,7 +16,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Genesis.Elements;
 
-namespace Genesis
+namespace Genesis.Trees
 {
     /// <summary>
     ///     Implementation of the information tree (iTree) data structure in [1].

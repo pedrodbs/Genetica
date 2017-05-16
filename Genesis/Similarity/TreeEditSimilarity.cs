@@ -210,7 +210,7 @@ namespace Genesis.Similarity
 
             #region Constructors
 
-            public WeightedVariable(string name, uint weight) : base(name, null)
+            public WeightedVariable(string label, uint weight) : base(label, null)
             {
                 this.Weight = weight;
             }

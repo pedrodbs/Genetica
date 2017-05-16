@@ -12,6 +12,7 @@
 // ------------------------------------------
 
 using Genesis.Elements;
+using Genesis.Trees;
 
 namespace Genesis.Similarity
 {

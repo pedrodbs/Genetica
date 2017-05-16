@@ -24,7 +24,7 @@ namespace Genesis.Elements.Terminals
 	    public override bool Equals(object obj)
 	    {
 	        return !ReferenceEquals(null, obj) && 
-                (ReferenceEquals(this, obj) || (obj.GetType() == this.GetType() && Equals((Constant) obj)));
+                (ReferenceEquals(this, obj) || (obj is Constant && Equals((Constant) obj)));
 	    }
 
 	    public bool Equals(Constant other)

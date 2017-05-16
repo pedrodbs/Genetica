@@ -366,7 +366,7 @@ namespace Genesis.Elements
 
             #region Constructors
 
-            public CustomVariable(string name) : base(name, null)
+            public CustomVariable(string label) : base(label, null)
             {
             }
 
