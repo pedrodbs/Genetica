@@ -4,7 +4,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 2017/05/12
+//    Last updated: 2017/05/18
 // 
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
@@ -13,6 +13,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -189,7 +190,9 @@ namespace Genesis.Elements
             double constValue;
             if (this._primitiveLabels.ContainsKey(expression[index]))
                 elem = this._primitiveLabels[expression[index]];
-            else if (double.TryParse(expression[index], out constValue))
+            else if (
+                double.TryParse(expression[index], NumberStyles.Any, CultureInfo.InvariantCulture, out constValue) ||
+                double.TryParse(expression[index], out constValue))
                 elem = new Constant(constValue);
             else
                 return null;

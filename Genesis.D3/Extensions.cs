@@ -4,7 +4,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis.D3
-//    Last updated: 2017/05/15
+//    Last updated: 2017/05/18
 // 
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
@@ -23,7 +23,6 @@ namespace Genesis.D3
     {
         #region Static Fields & Constants
 
-        private const string ROOT_NODE_NAME = "Root";
         private const string NODE_NAME_PROP_NAME = "n";
         private const string NODE_VALUE_PROP_NAME = "v";
         private const string NODE_CHILDREN_PROP_NAME = "c";
@@ -62,7 +61,7 @@ namespace Genesis.D3
             using (var sw = new StreamWriter(filePath))
             {
                 var writer = new JsonTextWriter(sw) {Formatting = formatting};
-                WriteJson(rootNode, writer, true);
+                WriteJson(rootNode, writer);
             }
         }
 
@@ -70,18 +69,9 @@ namespace Genesis.D3
 
         #region Private & Protected Methods
 
-        private static string GetLabel(ITreeNode node, bool isRoot)
+        private static string GetLabel(ITreeNode node)
         {
-            if (node is SymbolTree.TreeNode || node is InformationTree.TreeNode)
-            {
-                return isRoot ? ROOT_NODE_NAME : node.ToString();
-            }
-            if (node is IElement)
-            {
-                return ((IElement) node).Label;
-            }
-
-            return node.ToString();
+            return node is IElement ? ((IElement) node).Label : node.ToString();
         }
 
         private static double GetValue(ITreeNode node)
@@ -96,18 +86,28 @@ namespace Genesis.D3
                 var treeNode = (InformationTree.TreeNode) node;
                 return (double) treeNode.Value / treeNode.RootNode?.Value ?? 1d;
             }
+            if (node is OrderedSymbolTree.SymbolNode)
+            {
+                var treeNode = (OrderedSymbolTree.SymbolNode) node;
+                return (double) treeNode.Value / treeNode.RootNode?.Value ?? 1d;
+            }
+            if (node is OrderedSymbolTree.ArgumentNode)
+            {
+                var treeNode = (OrderedSymbolTree.ArgumentNode) node;
+                return (double) treeNode.Parent.Value / treeNode.Parent.RootNode?.Value ?? 1d;
+            }
 
             return 1;
         }
 
-        private static void WriteJson(ITreeNode node, JsonTextWriter writer, bool isRoot = false)
+        private static void WriteJson(ITreeNode node, JsonTextWriter writer)
 
         {
             writer.WriteStartObject();
 
             // writes name or node id
             writer.WritePropertyName(NODE_NAME_PROP_NAME);
-            writer.WriteValue(GetLabel(node, isRoot));
+            writer.WriteValue(GetLabel(node));
 
             // writes distance/dissimilarity
             writer.WritePropertyName(NODE_VALUE_PROP_NAME);

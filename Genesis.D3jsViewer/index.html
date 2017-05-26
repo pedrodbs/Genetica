@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<meta charset="utf-8">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Tree Visualizer</title>
+</head>
+
+<body>
+    <table id="ui-table" >
+        <tr>
+            <td id="options-column">
+                
+                <!-- **** File options **** -->
+                <p class="options-title">Tree file:</p>
+                <input id="input-file" type="file" accept=".json" onchange="loadFile(this.files)" style="display: none" >
+                <input class="options-box" id="load-file-btn" type="button" value="Load..." onclick="document.getElementById('input-file').click();" />
+                
+                <hr class="options-box"/>
+
+                <!-- **** Visual options **** -->
+                <p class="options-title">Visual options:</p>
+                <div class="chkbox-box">
+                    Vertical layout:
+                    <div style="float: right">
+                        <input id="vert-layout-chkbox" type="checkbox" checked onclick="update()">
+                        <label for="vert-layout-chkbox"></label>
+                    </div>
+                </div>
+                <div class="chkbox-box">
+                    Names inside:
+                    <div style="float: right">
+                        <input id="name-within-chkbox" type="checkbox" checked onclick="update()">
+                        <label for="name-within-chkbox"></label>
+                    </div>
+                </div>
+                <div class="chkbox-box">
+                    Straight links:
+                    <div style="float: right">
+                        <input id="straight-chkbox" type="checkbox" checked onclick="update()">
+                        <label for="straight-chkbox"></label>
+                    </div>
+                </div>
+                <div class="chkbox-box">
+                    Grayscale:
+                    <div style="float: right">
+                        <input id="grayscale-chkbox" type="checkbox" onclick="update()">
+                        <label for="grayscale-chkbox"></label>
+                    </div>
+                </div>
+
+                <div class="chkbox-box">
+                    Background color:
+                    <div style="float: right">
+                        <input id="color-picker" type="hidden" onchange="update()" value="none">
+                        <input id="pick-color-btn" type="button" class="jscolor {valueElement: 'color-picker'}">
+                        <label for="pick-color-btn"></label>
+                    </div>
+                </div>
+                <div class="options-box">
+                    Color scheme:
+                    <select id="color-scheme-select" class="options-select" onchange="update();"></select>
+                </div>
+
+                <hr class="options-box"/>
+
+                <!-- **** Interaction options **** -->
+                <p class="options-title">Interaction options:</p>
+                <div class="chkbox-box">
+                    Zoom & drag:
+                    <div style="float: right">
+                        <input id="zoom-chkbox" type="checkbox" onclick="update()">
+                        <label for="zoom-chkbox"></label>
+                    </div>
+                </div>
+                <input class="options-box" id="center-button" type="button" value="Reset view" onclick="resetDragZoom()"/>
+                <hr class="options-box"/>
+
+                <!-- **** Node options **** -->
+                <p class="options-title">Node options:</p>
+
+                <div class="options-box">
+                    Value threshold:
+                    <div class="options-box-value" id="value-threshold-slider-value">0</div>
+                </div>
+                <input class="options-box" id="value-threshold-slider" type="range" min="0" max="1" step="0.005" value="0.5"
+                       oninput="onValueThresholdChanged(this.value)" onchange="onValueThresholdChanged(this.value)"/>
+
+                <input class="options-box" id="expand-button" type="button" value="Expand all" onclick="expandAll()"/>
+                <input class="options-box" id="collapse-button" type="button" value="Collapse all" onclick="collapseAll()"/>
+
+                <hr class="options-box"/>
+
+                <input class="options-box" id="save-button" type="button" value="Download SVG" onclick="saveImage()"/>
+            </td>
+            <td id="container-column">
+                <div id="container"></div>
+            </td>
+        </tr>
+    </table>
+
+    <script src="scripts/d3.v3.min.js"></script>
+    <script src="scripts/utilFunctions.js"></script>
+    <script src="scripts/jscolor.min.js"></script>
+    <script src="scripts/palette.js"></script>
+    <script src="scripts/chroma.js"></script>
+    <script src="scripts/variables.js"></script>
+    <script src="scripts/drag-zoom.js"></script>
+    <script src="scripts/treeFunctions.js"></script>
+    <script src="scripts/svg-crowbar-2.js"></script>
+    <script src="scripts/uiFunctions.js"></script>
+    <script>
+        //initializes all the D3 elements
+        window.initUI();
+    </script>
+</body>

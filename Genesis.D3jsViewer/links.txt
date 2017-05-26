@@ -1,0 +1,14 @@
+Base, collapsible tree:
+http://bl.ocks.org/mbostock/4339083
+
+Vertical tree layout:
+https://gist.github.com/d3noob/8326869
+
+Drag & drop:
+http://bl.ocks.org/robschmuecker/7926762
+
+Color picker:
+http://jscolor.com/
+
+Numeric slider:
+http://refreshless.com/nouislider/
