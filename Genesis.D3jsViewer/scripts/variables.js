@@ -2,48 +2,57 @@
 // File input
 // ======================
 var fileNameParam = getParameterByName("file");
-var fileName = !isNullOrEmptyOrWhiteSpaces(fileNameParam) ? fileNameParam : "data/flare.json";
+var fileName = !isNullOrEmptyOrWhiteSpaces(fileNameParam) ? fileNameParam : "data/sub-elem-tree.json";
 
 // ======================
-// D3 cluster algorithm objects and svg elements
+// Control / update variables
 // ======================
-var root, // tree root node
-    tree, // the D3 tree algorithm
-    diagonal, // the links drawing function
-    lineData;
+var sizeChanged = true,        // whether the window size has changed
+    nodeChanged = true,        // whether some node was expanded / collapsed
+    colorsChanged = true;      // whether the colors have changed
+
+// ======================
+// D3 graph algorithm objects and svg elements
+// ======================
+var links, // the graph links
+    nodes, // the graph nodes
+    force, // d3 force
+    link, // the d3 svg graph lines
+    node; // the d3 svg graph circles
 
 var topSvg, // d3 main svg
     svg, // d3 svg to contain all elements, including cluster tree
     backgRect; // d3 background rectangle
 
-var nodes, links; // the tree structure itself (nodes and links)
 
 // ======================
 // Layout variables
 // ======================
-var width = 800, //720, //1280, //960,
-    height = 800; //576, //720, //500,
+var width = 800, height = 800; 
 
-var vertLayout = true, //true, //false,
-    nodeNameWithin = true, //false,             // whether to place node name inside circle
+var linkDistance = 30, // the force link distance
+      forceCharge = -120;   // the force charge
+
+var showLabels = true, //false,             // whether to place node name inside circle
     straightLinks = false, // whether to draw straight links in tree
     nodeStrokeColor = "#000", // node stroke color from color picker
     nodeValueThreshold = 0.5, // the threshold for node expansion (updated by slider)
-    nodeRadius = 0, // radius of node (auto updated)
+    nodeRadius = 15, // radius of node
     argNodeRadius = 7, // radius of ragument node of ordered symbol trees
     maxDepthDistance = 100, // the max distance between the several depths/levels of the tree
     treeMargin = 20, // the margin between the tree nodes and the border
     argNodeDistFactor = 10, //the distance factor between arg nodes and their parent symbol node in ordered symbol trees
-    textDistance = 0; // distance of node text from center (auto updated)
+    textDistance = 0; // distance of node text from center
 
 var numNodes = 0, // number of expanded nodes (auto updated)
     maxDepth = 1, // current max depth of tree (auto updated)
     maxValue = 1; // current max node value in the tree (auto updated)
 
+
 // ======================
 // Style variables
 // ======================
-var expNodeColor = "white", // expanded node color (updated from base color)
+var expNodeColor = "white", // expanded node color (updated from back color)
     colNodeColor = "#eee", // collapsed node color (fixed)
     labelColor = "black", // color of labels (auto-updated)
     grayscale = false, // whether nodes colors appear in grayscale

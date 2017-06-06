@@ -4,7 +4,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 2017/04/06
+//    Last updated: 2017/06/06
 // 
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
@@ -34,11 +34,30 @@ namespace Genesis.Elements
         {
             // checks trivials
             if (element == null || other == null ||
-                element.Count <= other.Count || element.Children?.Count == 0) return false;
+                element.Length <= other.Length || element.Children?.Count == 0) return false;
 
             // search the descendants for the given element
             return element.Children != null &&
                    element.Children.Any(child => other.Equals(child) || child.ContainsSubElement(other));
+        }
+
+        /// <summary>
+        ///     Creates a new <see cref="IFunction" /> element of the same type as the given element whose children are a
+        ///     <see cref="Constant" /> of value 0
+        /// </summary>
+        /// <param name="function">The base function for the new element to be created.</param>
+        /// <returns>
+        ///     A new <see cref="IFunction" /> element of the same type as the given element whose children are a
+        ///     <see cref="Constant" /> of value 0
+        /// </returns>
+        public static IElement CreateNewZero(this IFunction function)
+        {
+            var numChildren = function.Children.Count;
+            var constant = new Constant(0);
+            var children = new IElement[numChildren];
+            for (var i = 0; i < numChildren; i++)
+                children[i] = constant;
+            return function.CreateNew(children);
         }
 
         /// <summary>
@@ -64,7 +83,7 @@ namespace Genesis.Elements
         /// </summary>
         /// <returns>
         ///     The <see cref="IElement" /> at the given index, or <see langword="null" /> if the given index is greater
-        ///     than or equal to the <see cref="IElement.Count" />.
+        ///     than or equal to the <see cref="IElement.Length" />.
         /// </returns>
         /// <param name="element">The root element to search for the child element at the given index.</param>
         /// <param name="index">The index of the element we want to search for.</param>
@@ -119,6 +138,20 @@ namespace Genesis.Elements
         }
 
         /// <summary>
+        ///     Gets a set constaining all the <see cref="Terminal" /> sub-elements of the given element and their count. This
+        ///     corresponds to the leaf nodes of the expression tree of the given element.
+        /// </summary>
+        /// <param name="element">The element whose terminal sub-elements we want to retrieve.</param>
+        /// <returns>A set constaining all the <see cref="Terminal" /> sub-elements of the given element.</returns>
+        public static IDictionary<IElement, uint> GetPrimitives(this IElement element)
+        {
+            if (element == null) return null;
+            var primitives = new Dictionary<IElement, uint>();
+            GetPrimitives(element, primitives);
+            return primitives;
+        }
+
+        /// <summary>
         ///     Gets all the <see cref="IElement" /> sub-combinations of the given element. If the element is a
         ///     <see cref="Terminal" />, return a clone of itself, if it is a <see cref="IFunction" />,
         ///     then returns all the possible combinations between the sub-elements of the children and also the
@@ -167,22 +200,22 @@ namespace Genesis.Elements
         public static IElement[] GetSubElements(this IElement element)
         {
             if (element == null) return null;
-            var subElements = new IElement[element.Count-1];
+            var subElements = new IElement[element.Length - 1];
             var index = 0;
-            GetSubElements(element, ref index, element.Count-1, subElements);
+            GetSubElements(element, ref index, element.Length - 1, subElements);
             return subElements;
         }
 
         /// <summary>
-        ///     Gets a set constaining all the <see cref="Terminal" /> sub-elements of the given element. This corresponds to the
-        ///     leaf nodes of the expression tree of the given element.
+        ///     Gets a set constaining all the <see cref="Terminal" /> sub-elements of the given element and their count. This
+        ///     corresponds to the leaf nodes of the expression tree of the given element.
         /// </summary>
         /// <param name="element">The element whose terminal sub-elements we want to retrieve.</param>
         /// <returns>A set constaining all the <see cref="Terminal" /> sub-elements of the given element.</returns>
-        public static ISet<Terminal> GetTerminals(this IElement element)
+        public static IDictionary<Terminal, uint> GetTerminals(this IElement element)
         {
             if (element == null) return null;
-            var terminals = new HashSet<Terminal>();
+            var terminals = new Dictionary<Terminal, uint>();
             GetTerminals(element, terminals);
             return terminals;
         }
@@ -198,7 +231,7 @@ namespace Genesis.Elements
         {
             // checks trivials
             if (element == null || other == null ||
-                element.Count >= other.Count || other.Children?.Count == 0) return false;
+                element.Length >= other.Length || other.Children?.Count == 0) return false;
 
             // search the descendants for the given element
             return other.Children != null &&
@@ -250,31 +283,13 @@ namespace Genesis.Elements
 
         #region Private & Protected Methods
 
-        private static void GetSubElements(IElement element, ref int index, int maxIdx, IList<IElement> subElements)
-        {
-            if (index > maxIdx )
-                return;
-
-            if (index > 0) subElements[index - 1] = element;
-            if (element.Children == null) return;
-            foreach (var child in element.Children)
-            {
-                index++;
-                GetSubElements(child, ref index, maxIdx, subElements);
-            }
-        }
-
-        #endregion
-
-        #region Private Methods
-
         private static IElement ElementAt(this IElement element, ref uint index)
         {
             if (index == 0) return element;
             if (element?.Children == null) return null;
-            if (index >= element.Count)
+            if (index >= element.Length)
             {
-                index -= (uint) element.Count - 1;
+                index -= (uint) element.Length - 1;
                 return null;
             }
 
@@ -299,8 +314,8 @@ namespace Genesis.Elements
                 element.Children.Count != otherElement.Children.Count)
             {
                 // just advance the indexes of both sub-trees
-                if (element != null) idx1 += (uint) element.Count - 1;
-                if (otherElement != null) idx2 += (uint) otherElement.Count - 1;
+                if (element != null) idx1 += (uint) element.Length - 1;
+                if (otherElement != null) idx2 += (uint) otherElement.Length - 1;
                 return;
             }
 
@@ -313,13 +328,44 @@ namespace Genesis.Elements
             }
         }
 
-        private static void GetTerminals(this IElement element, ISet<Terminal> terminals)
+        private static void GetPrimitives(this IElement element, IDictionary<IElement, uint> primitives)
+        {
+            // checks element type
+            var function = element as IFunction;
+            var elem = function != null ? function.CreateNewZero() : element;
+
+            // checks count table
+            if (!primitives.ContainsKey(elem)) primitives.Add(elem, 0);
+            primitives[elem]++;
+
+            // searches children
+            if (element.Children != null)
+                foreach (var child in element.Children)
+                    GetPrimitives(child, primitives);
+        }
+
+        private static void GetSubElements(IElement element, ref int index, int maxIdx, IList<IElement> subElements)
+        {
+            if (index > maxIdx)
+                return;
+
+            if (index > 0) subElements[index - 1] = element;
+            if (element.Children == null) return;
+            foreach (var child in element.Children)
+            {
+                index++;
+                GetSubElements(child, ref index, maxIdx, subElements);
+            }
+        }
+
+        private static void GetTerminals(this IElement element, IDictionary<Terminal, uint> terminals)
         {
             // checks element is terminal, add to set
             var terminal = element as Terminal;
             if (terminal != null)
             {
-                terminals.Add(terminal);
+                if (!terminals.ContainsKey(terminal)) terminals.Add(terminal, 0);
+                terminals[terminal]++;
                 return;
             }
 

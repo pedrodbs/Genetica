@@ -4,7 +4,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 2017/03/16
+//    Last updated: 2017/06/06
 // 
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
@@ -18,6 +18,7 @@ using Genesis.Elements.Functions;
 using Genesis.Elements.Terminals;
 using Genesis.Evaluation;
 using Genesis.Util;
+using MathNet.Numerics.Random;
 
 namespace Genesis.Elements
 {
@@ -91,14 +92,15 @@ namespace Genesis.Elements
                 return Math.Abs(element.GetValue() - other.GetValue());
 
             // replaces variables of each expression by custom variables
-            var customVariables = new Dictionary<IElement, CustomVariable>();
+            var customVariables = new Dictionary<Variable, CustomVariable>();
             element = ReplaceVariables(element, customVariables);
             other = ReplaceVariables(other, customVariables);
             if (customVariables.Count == 0) return double.MaxValue;
 
             // gets random values for each variable
             var customVariablesValues = customVariables.Values.ToDictionary(
-                variable => variable, variable => GetTrialRandomNumbers(numTrials));
+                variable => variable,
+                variable => GetTrialRandomNumbers(numTrials, variable.Range));
 
             // runs a batch of trials
             var squareDiffSum = 0d;
@@ -116,7 +118,7 @@ namespace Genesis.Elements
             }
 
             // returns rmsd
-            return Math.Sqrt(squareDiffSum);
+            return Math.Sqrt(squareDiffSum/numTrials);
         }
 
         /// <summary>
@@ -154,6 +156,9 @@ namespace Genesis.Elements
             // checks null
             if (element == null || other == null) return false;
 
+            // checks equivalence
+            if (element.Equals(other)) return true;
+
             // checks expression or constant equivalence after simplification
             element = element.Simplify();
             other = other.Simplify();
@@ -161,35 +166,13 @@ namespace Genesis.Elements
                 element.IsConstant() && other.IsConstant() && Math.Abs(element.GetValue() - other.GetValue()) < margin)
                 return true;
 
-            // replaces variables of each expression by custom variables
-            var customVariables = new Dictionary<IElement, CustomVariable>();
-            element = ReplaceVariables(element, customVariables);
-            other = ReplaceVariables(other, customVariables);
-            if (customVariables.Count == 0) return false;
-
-            // gets random values for each variable
-            var customVariablesValues = customVariables.Values.ToDictionary(
-                variable => variable, variable => GetTrialRandomNumbers(numTrials));
-
-            // runs a batch of trials
-            for (var i = 0; i < numTrials; i++)
-            {
-                // replaces the value of each variable by a random number
-                foreach (var customVariablesValue in customVariablesValues)
-                    customVariablesValue.Key.Value = customVariablesValue.Value[i];
-
-                // compares the resulting values of the expressions
-                if (Math.Abs(element.GetValue() - other.GetValue()) >= margin)
-                    return false;
-            }
-
-            // all trials are over, elements are value equivalent
-            return true;
+            // gets rmse by replacing the values of the variables in some number of trials
+            return element.GetValueRmsd(other, numTrials) <= margin;
         }
 
         /// <summary>
         ///     Simplifies the expression of the given element by returning a new <see cref="IElement" /> which value will
-        ///     always be equal to the original element, i.e. it removes reduntant operations, e.g. subtrees with functions
+        ///     always be equal to the original element, i.e. it removes redundant operations, e.g. subtrees with functions
         ///     that will always result in the value of one of its operands.
         /// </summary>
         /// <returns>An element corresponding to a simplification of the given element.</returns>
@@ -290,27 +273,58 @@ namespace Genesis.Elements
         public static IElement Simplify(
             this IElement element, IFitnessFunction fitnessFunction, double margin = DEFAULT_MARGIN)
         {
-            // gets original element fitness and count
-            var fitness = fitnessFunction.Evaluate(element);
-
-            // gets all subcombinations of the element
+            // gets original element's fitness and count
             var simplified = element;
-            var count = element.Count;
-            var subCombs = element.GetSubCombinations();
-            foreach (var subComb in subCombs)
+            var fitness = fitnessFunction.Evaluate(element);
+            var length = element.Length;
+
+            // first replaces all sub-elements by infinity and nan recursively
+            var consts = new HashSet<Constant>
+                         {
+                             new Constant(double.NegativeInfinity),
+                             new Constant(double.NaN),
+                             new Constant(double.PositiveInfinity)
+                         };
+            bool simplificationFound;
+            do
+            {
+                simplificationFound = false;
+                var simpLength = simplified.Length;
+                for (var i = 0u; i < simpLength && !simplificationFound; i++)
+                {
+                    if (consts.Contains(simplified.ElementAt(i)))
+                        continue;
+                    foreach (var constant in consts)
+                    {
+                        var elem = simplified.Replace(i, constant);
+                        var elemFit = fitnessFunction.Evaluate(elem);
+                        var elemLength = elem.Length;
+                        if (Math.Abs(elemFit - fitness) < margin && elemLength <= length)
+                        {
+                            simplified = elem;
+                            length = elemLength;
+                            simplificationFound = true;
+                            break;
+                        }
+                    }
+                }
+            } while (simplificationFound);
+
+            // then gets all subcombinations of the simplified element
+            var alternatives = simplified.GetSubCombinations();
+            foreach (var subComb in alternatives)
             {
                 var subFit = fitnessFunction.Evaluate(subComb);
-                var subCount = subComb.Count;
+                var subCombLength = subComb.Length;
 
                 //checks their fitness and count
-                if (Math.Abs(subFit - fitness) < margin && subCount < count)
+                if (Math.Abs(subFit - fitness) < margin && subCombLength < length)
                 {
                     simplified = subComb;
-                    count = subCount;
+                    length = subCombLength;
                 }
             }
 
-            subCombs.Clear();
             return simplified;
         }
 
@@ -318,9 +332,22 @@ namespace Genesis.Elements
 
         #region Private & Protected Methods
 
+        private static IList<double> GetTrialRandomNumbers(uint numTrials, Range range)
+        {
+            var rnd = new WH2006(RandomSeed.Robust());
+
+            // adds equally-separated values
+            var trialNumbers = new List<double>();
+            var interval = range.Interval / numTrials;
+            for (var i = 0; i < numTrials; i++)
+                trialNumbers.Add(range.Min + i * interval);
+            trialNumbers.Shuffle(rnd);
+            return trialNumbers;
+        }
+
         private static IList<double> GetTrialRandomNumbers(uint numTrials)
         {
-            var rnd = new Random();
+            var rnd = new WH2006(RandomSeed.Robust());
 
             // adds fixed numbers
             var trialNumbers = new List<double>((int) numTrials) {0, -1, 1, 0.1, -0.1};
@@ -330,24 +357,26 @@ namespace Genesis.Elements
                 trialNumbers.Add(MIN_VAL + RANGE * rnd.NextDouble());
 
             // shuffles and returns
-            trialNumbers.Shuffle();
+            trialNumbers.Shuffle(rnd);
             return trialNumbers;
         }
 
         #region Private Methods
 
-        private static IElement ReplaceVariables(this IElement element, IDictionary<IElement, CustomVariable> customVars)
+        private static IElement ReplaceVariables(
+            this IElement element, IDictionary<Variable, CustomVariable> customVars)
         {
             // if element is not a variable, tries to replace all children recursively
-            if (!(element is Variable))
+            var variable = element as Variable;
+            if (variable == null)
                 return element.CreateNew(element.Children?.Select(child => child.ReplaceVariables(customVars)).ToList());
 
-            // checks if a corresponding variable was already created
-            if (!customVars.ContainsKey(element))
-                customVars.Add(element, new CustomVariable($"{VAR_NAME_STR}{customVars.Count}"));
+            // checks if a corresponding variable has not yet been created
+            if (!customVars.ContainsKey(variable))
+                customVars.Add(variable, new CustomVariable($"{VAR_NAME_STR}{customVars.Count}"));
 
             // replaces it by the custom variable
-            return customVars[element];
+            return customVars[variable];
         }
 
         #endregion

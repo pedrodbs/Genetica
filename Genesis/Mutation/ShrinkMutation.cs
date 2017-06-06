@@ -54,7 +54,7 @@ namespace Genesis.Mutation
             if (element == null) return mutations;
 
             // replaces each sub-element by a terminal element
-            for (var i = 0u; i < element.Count; i++)
+            for (var i = 0u; i < element.Length; i++)
                 foreach (var terminal in this._terminals)
                     mutations.Add(element.Replace(i, terminal));
 
@@ -70,7 +70,7 @@ namespace Genesis.Mutation
         public IElement Mutate(IElement element)
         {
             // define the mutation point randomly
-            var mutatePoint = (uint) this._random.Next(element.Count);
+            var mutatePoint = (uint) this._random.Next(element.Length);
 
             // replaces with a new random terminal element
             return element.Replace(mutatePoint, this._terminals.GetRandomItem(this._random));

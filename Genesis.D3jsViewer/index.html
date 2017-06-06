@@ -21,16 +21,9 @@
                 <!-- **** Visual options **** -->
                 <p class="options-title">Visual options:</p>
                 <div class="chkbox-box">
-                    Vertical layout:
+                    Show labels:
                     <div style="float: right">
-                        <input id="vert-layout-chkbox" type="checkbox" checked onclick="update()">
-                        <label for="vert-layout-chkbox"></label>
-                    </div>
-                </div>
-                <div class="chkbox-box">
-                    Names inside:
-                    <div style="float: right">
-                        <input id="name-within-chkbox" type="checkbox" checked onclick="update()">
+                        <input id="name-within-chkbox" type="checkbox" checked onclick="onShowLabelsChanged()">
                         <label for="name-within-chkbox"></label>
                     </div>
                 </div>
@@ -44,7 +37,7 @@
                 <div class="chkbox-box">
                     Grayscale:
                     <div style="float: right">
-                        <input id="grayscale-chkbox" type="checkbox" onclick="update()">
+                        <input id="grayscale-chkbox" type="checkbox" onclick="onColorsChanged()">
                         <label for="grayscale-chkbox"></label>
                     </div>
                 </div>
@@ -52,14 +45,14 @@
                 <div class="chkbox-box">
                     Background color:
                     <div style="float: right">
-                        <input id="color-picker" type="hidden" onchange="update()" value="none">
+                        <input id="color-picker" type="hidden" onchange="onColorsChanged()" value="none">
                         <input id="pick-color-btn" type="button" class="jscolor {valueElement: 'color-picker'}">
                         <label for="pick-color-btn"></label>
                     </div>
                 </div>
                 <div class="options-box">
                     Color scheme:
-                    <select id="color-scheme-select" class="options-select" onchange="update();"></select>
+                    <select id="color-scheme-select" class="options-select" onchange="onColorsChanged();"></select>
                 </div>
 
                 <hr class="options-box"/>
@@ -106,7 +99,7 @@
     <script src="scripts/chroma.js"></script>
     <script src="scripts/variables.js"></script>
     <script src="scripts/drag-zoom.js"></script>
-    <script src="scripts/treeFunctions.js"></script>
+    <script src="scripts/graphFunctions.js"></script>
     <script src="scripts/svg-crowbar-2.js"></script>
     <script src="scripts/uiFunctions.js"></script>
     <script>

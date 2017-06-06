@@ -101,7 +101,7 @@ namespace Genesis
 				var parent1 = selection[this._random.Next(selection.Count)];
 				var parent2 = selection[this._random.Next(selection.Count)];
 			    var descendant = this._crossoverOperator.Crossover(parent1, parent2);
-			    if (descendant.Count <= this._maxElementCount)
+			    if (descendant.Length <= this._maxElementCount)
 			        newGeneration.Add(descendant);
 			}
 

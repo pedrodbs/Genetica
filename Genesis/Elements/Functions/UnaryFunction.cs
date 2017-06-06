@@ -20,7 +20,7 @@ namespace Genesis.Elements.Functions
 
 		public virtual string Expression => $"f({this.Operand.Expression})";
 
-        public ushort Count { get; }
+        public ushort Length { get; }
 
         public abstract double GetValue();
 
@@ -28,7 +28,7 @@ namespace Genesis.Elements.Functions
 		{
 			this._children = new[] { operand };
 		    this._hashCode = this.ProduceHashCode();
-		    this.Count = (ushort) (1 + operand.Count);
+		    this.Length = (ushort) (1 + operand.Length);
 		}
 
         public override bool Equals(object obj)

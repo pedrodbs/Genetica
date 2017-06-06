@@ -38,12 +38,12 @@ namespace Genesis.Similarity
 
             // replace all common sub-elements by weighted variables
             var ignoreElements = new HashSet<IElement>();
-            var minCount = Math.Min(elem1.Count, elem2.Count);
+            var minCount = Math.Min(elem1.Length, elem2.Length);
             for (var i = 0; i < minCount; i++)
             {
                 var largestCommon = GetLargestCommon(ref elem1, ref elem2, ignoreElements);
-                if (largestCommon == null || largestCommon.Count < 2) break;
-                var newSubElement = new WeightedVariable(((char) ('a' + i)).ToString(), largestCommon.Count);
+                if (largestCommon == null || largestCommon.Length < 2) break;
+                var newSubElement = new WeightedVariable(((char) ('a' + i)).ToString(), largestCommon.Length);
                 elem1 = elem1.Replace(largestCommon, newSubElement);
                 elem2 = elem2.Replace(largestCommon, newSubElement);
                 ignoreElements.Add(newSubElement);
@@ -57,8 +57,8 @@ namespace Genesis.Similarity
 
             // tries to align both trees in all possible ways
             var minRelCost = double.MaxValue;
-            for (var i = 0u; i < elem1.Count; i++)
-            for (var j = 0u; j < elem2.Count; j++)
+            for (var i = 0u; i < elem1.Length; i++)
+            for (var j = 0u; j < elem2.Length; j++)
             {
                 // alignment is determined by the starting indexes of both trees
                 var idx1 = i;
@@ -72,7 +72,7 @@ namespace Genesis.Similarity
                 GetEditCost(subElems1, subElems2, ref idx1, ref idx2, ref cost, ref totalCost);
 
                 // checks cost of having to add remainding nodes
-                var remainder = elem1.Count - idx1 + elem2.Count - idx2 - 2;
+                var remainder = elem1.Length - idx1 + elem2.Length - idx2 - 2;
                 cost += remainder;
                 totalCost += remainder;
                 var relCost = (double) cost / totalCost;
@@ -100,10 +100,10 @@ namespace Genesis.Similarity
             if (subElem1 != null && subElem2 != null && subElem1.Equals(subElem2))
             {
                 // just advance both indexes and adds total cost (cur cost remains the same)
-                var remainder = subElem1.Count - 1u;
+                var remainder = subElem1.Length - 1u;
                 idx1 += remainder;
                 idx2 += remainder;
-                totalCost += (subElem1 is WeightedVariable ? ((WeightedVariable) subElem1).Weight : subElem1.Count) - 1;
+                totalCost += (subElem1 is WeightedVariable ? ((WeightedVariable) subElem1).Weight : subElem1.Length) - 1;
                 return;
             }
 
@@ -123,10 +123,10 @@ namespace Genesis.Similarity
                         // it was a swap: ignores cost of adding/removing nodes the original element's nodes
                         totalCost += ((WeightedVariable) subElem1).Weight - 1;
                     }
-                    else if (subElem1.Count > 1)
+                    else if (subElem1.Length > 1)
                     {
                         // normal, uncommon element, count cost of adding/removing its nodes
-                        var remainder1 = subElem1.Count - 1u;
+                        var remainder1 = subElem1.Length - 1u;
                         idx1 += remainder1;
                         curCost += remainder1;
                         totalCost += remainder1;
@@ -139,10 +139,10 @@ namespace Genesis.Similarity
                         // it was a swap: ignores cost of adding/removing nodes the original element's nodes
                         totalCost += ((WeightedVariable) subElem2).Weight - 1;
                     }
-                    else if (subElem2.Count > 1)
+                    else if (subElem2.Length > 1)
                     {
                         // normal, uncommon element, count cost of adding/removing its nodes
-                        var remainder2 = subElem2.Count - 1u;
+                        var remainder2 = subElem2.Length - 1u;
                         idx2 += remainder2;
                         curCost += remainder2;
                         totalCost += remainder2;
@@ -189,7 +189,7 @@ namespace Genesis.Similarity
         {
             // gets sub-elements and sort descendingly
             var subElems1 = new SortedSet<IElement>(elem1.GetSubElements(),
-                Comparer<IElement>.Create((a, b) => -(a.Count == b.Count ? a.CompareTo(b) : a.Count.CompareTo(b.Count))));
+                Comparer<IElement>.Create((a, b) => -(a.Length == b.Length ? a.CompareTo(b) : a.Length.CompareTo(b.Length))));
             var subElems2 = new HashSet<IElement>(elem2.GetSubElements());
             return subElems1.FirstOrDefault(
                 subElem1 =>

@@ -14,7 +14,7 @@ namespace Genesis.Elements.Terminals
 
 		public string Expression => this.Label;
 
-	    public ushort Count => 1;
+	    public ushort Length => 1;
 
         public IElement CreateNew(IList<IElement> children)
         {

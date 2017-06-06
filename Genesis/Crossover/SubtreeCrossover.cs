@@ -48,12 +48,12 @@ namespace Genesis.Crossover
             var subElems1 = parent1.GetSubElements();
             do
             {
-                crossPoint1 = (uint) this._random.Next(parent1.Count);
+                crossPoint1 = (uint) this._random.Next(parent1.Length);
                 elem = crossPoint1 == 0 ? parent1 : subElems1[crossPoint1 - 1];
             } while (parent1.Children.Count > 0  && !(elem is IFunction));
 
             // define the second crossover point as a random element of parent 2
-            elem = parent2.ElementAt((uint) this._random.Next(parent2.Count));
+            elem = parent2.ElementAt((uint) this._random.Next(parent2.Length));
             return parent1.Replace(crossPoint1, elem);
         }
 
@@ -65,7 +65,7 @@ namespace Genesis.Crossover
             // gets parent 1's cross-over points (the function sub-elements)
             var crossPoints1 = new List<uint>();
             var subElems1 = parent1.GetSubElements();
-            for (var i = 1u; i < parent1.Count; i++)
+            for (var i = 1u; i < parent1.Length; i++)
                 if (subElems1[i - 1] is IFunction)
                     crossPoints1.Add(i);
 
@@ -74,7 +74,7 @@ namespace Genesis.Crossover
             var subElems2 = new List<IElement> {parent2};
             subElems2.AddRange(parent2.GetSubElements());
             foreach (var crossPoint1 in crossPoints1)
-                for (var j = 0; j < parent2.Count; j++)
+                for (var j = 0; j < parent2.Length; j++)
                     offspring.Add(parent1.Replace(crossPoint1, subElems2[j]));
 
             return offspring;

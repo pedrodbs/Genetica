@@ -4,7 +4,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 2017/03/06
+//    Last updated: 2017/06/05
 // 
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
@@ -32,11 +32,18 @@ namespace Genesis.Similarity
 
             var elem1Terminals = elem1.GetTerminals();
             var elem2Terminals = elem2.GetTerminals();
-            var union = new HashSet<Terminal>(elem1Terminals);
-            union.UnionWith(elem2Terminals);
-            var intersection = elem1Terminals as HashSet<Terminal> ?? new HashSet<Terminal>(elem1Terminals);
-            intersection.IntersectWith(elem2Terminals);
-            return (double) intersection.Count / union.Count;
+            var union = new HashSet<Terminal>(elem1Terminals.Keys);
+            union.UnionWith(elem2Terminals.Keys);
+            var unionCount = 0u;
+            var intersectionCount = 0u;
+            foreach (var terminal in union)
+            {
+                if (elem1Terminals.ContainsKey(terminal)) unionCount += elem1Terminals[terminal];
+                if (elem2Terminals.ContainsKey(terminal)) unionCount += elem2Terminals[terminal];
+                if (elem1Terminals.ContainsKey(terminal) && elem2Terminals.ContainsKey(terminal))
+                    intersectionCount += elem1Terminals[terminal] + elem2Terminals[terminal];
+            }
+            return (double) intersectionCount / unionCount;
         }
 
         #endregion

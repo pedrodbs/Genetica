@@ -44,7 +44,7 @@ namespace Genesis.Mutation
             // replaces each sub-element by its simplification
             var subElems = new List<IElement> {element};
             subElems.AddRange(element.GetSubElements());
-            for (var i = 0; i < element.Count; i++)
+            for (var i = 0; i < element.Length; i++)
                 mutations.Add(element.Replace((uint) i, subElems[i].Simplify()));
 
             mutations.Remove(element);
@@ -59,7 +59,7 @@ namespace Genesis.Mutation
         public IElement Mutate(IElement element)
         {
             // define the mutation point randomly
-            var mutatePoint = (uint) this._random.Next(element.Count);
+            var mutatePoint = (uint) this._random.Next(element.Length);
 
             // replaces with a simplified version of the sub-element
             var simp = element.ElementAt(mutatePoint).Simplify();

@@ -53,7 +53,7 @@ namespace Genesis.Mutation
             if (element == null) return null;
 
             // define the mutation point randomly
-            var mutatePoint = (uint) this._random.Next(element.Count);
+            var mutatePoint = (uint) this._random.Next(element.Length);
 
             // return the sub-element
             return element.ElementAt(mutatePoint);

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Genesis.D3jsViewer", "..\", "{BE4B536B-33FA-4067-AE5B-B6E475B8D55E}"
 	ProjectSection(WebsiteProperties) = preProject

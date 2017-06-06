@@ -4,13 +4,14 @@
 // </copyright>
 // <summary>
 //    Project: Genesis.Graphviz
-//    Last updated: 2017/05/16
+//    Last updated: 2017/06/05
 // 
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
 // ------------------------------------------
 
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using Genesis.Elements;
@@ -26,11 +27,13 @@ namespace Genesis.Graphviz
     {
         #region Static Fields & Constants
 
+        private const GraphvizImageType GRAPHVIZ_IMAGE_TYPE = GraphvizImageType.Svgz;
         private const int FONT_SIZE = 18;
+        private const int ARG_FONT_SIZE = 7;
         private const string FONT_NAME = "Candara"; //"Tahoma";
         private const GraphvizVertexShape NODE_VERTEX_SHAPE = GraphvizVertexShape.Ellipse;
         private const GraphvizVertexStyle ROOT_VERTEX_STYLE = GraphvizVertexStyle.Diagonals;
-        private const GraphvizVertexShape ARG_VERTEX_SHAPE = GraphvizVertexShape.Point;
+        private const GraphvizVertexShape ARG_VERTEX_SHAPE = GraphvizVertexShape.Circle;
         private const int MAX_STROKE_COLOR = 180; //220;
         private const int MAX_FONT_COLOR = 140;
 
@@ -39,42 +42,27 @@ namespace Genesis.Graphviz
         #region Public Methods
 
         public static string ToGraphvizFile(
-            this InformationTree tree, string basePath, string fileName,
-            GraphvizImageType imageType = GraphvizImageType.Svg)
+            this IInformationTree tree, string basePath, string fileName,
+            GraphvizImageType imageType = GRAPHVIZ_IMAGE_TYPE)
         {
             return tree.RootNode.ToGraphvizFile(basePath, fileName, OnFormatInfoVertex, OnFormatInfoEdge, imageType);
         }
 
         public static string ToGraphvizFile(
             this IElement element, string basePath, string fileName,
-            GraphvizImageType imageType = GraphvizImageType.Svg)
+            GraphvizImageType imageType = GRAPHVIZ_IMAGE_TYPE)
         {
             return element.ToGraphvizFile(basePath, fileName, OnFormatElementVertex, OnFormatElementEdge, imageType);
-        }
-
-        public static string ToGraphvizFile(
-            this SymbolTree tree, string basePath, string fileName,
-            GraphvizImageType imageType = GraphvizImageType.Svg)
-        {
-            return tree.RootNode.ToGraphvizFile(basePath, fileName, OnFormatSymbolVertex, OnFormatSymbolEdge, imageType);
-        }
-
-        public static string ToGraphvizFile(
-            this OrderedSymbolTree tree, string basePath, string fileName,
-            GraphvizImageType imageType = GraphvizImageType.Svg)
-        {
-            return tree.RootNode.ToGraphvizFile(
-                basePath, fileName, OnFormatOrdSymbolVertex, OnFormatOrdSymbolEdge, imageType);
         }
 
         public static string ToGraphvizFile(
             this ITreeNode rootNode, string basePath, string fileName,
             MyGraphvizAlgorithm<Vertex, Edge>.MyFormatVertexEventHandler formatVertex,
             MyGraphvizAlgorithm<Vertex, Edge>.MyFormatEdgeAction formatEdge,
-            GraphvizImageType imageType = GraphvizImageType.Svg)
+            GraphvizImageType imageType = GRAPHVIZ_IMAGE_TYPE)
         {
             var graph = new AdjacencyGraph<Vertex, Edge>();
-            GraphAdd(rootNode, graph);
+            GraphAdd(rootNode, graph, new Dictionary<ITreeNode, Vertex>());
 
             var filePath = Path.Combine(basePath, $"{fileName}.dot");
             if (File.Exists(filePath))
@@ -103,22 +91,32 @@ namespace Genesis.Graphviz
             var fontColor = (byte) ((1d - relCount) * MAX_FONT_COLOR);
             vertexFormatter.Shape = isArgument ? ARG_VERTEX_SHAPE : NODE_VERTEX_SHAPE;
             if (isRoot) vertexFormatter.Style = ROOT_VERTEX_STYLE;
-            vertexFormatter.Font = new GraphvizFont(FONT_NAME, FONT_SIZE);
+            vertexFormatter.Size = new GraphvizSizeF(0.15f, 0.15f);
+            vertexFormatter.FixedSize = isArgument;
+            vertexFormatter.Font = new GraphvizFont(FONT_NAME, isArgument ? ARG_FONT_SIZE : FONT_SIZE);
             vertexFormatter.FontColor = new MyGraphvizColor(255, fontColor, fontColor, fontColor);
             vertexFormatter.Label = label;
             vertexFormatter.StrokeColor = new MyGraphvizColor(255, strokeColor, strokeColor, strokeColor);
         }
 
-        private static Vertex GraphAdd(ITreeNode node, AdjacencyGraph<Vertex, Edge> graph)
+        private static Vertex GraphAdd(
+            ITreeNode node, AdjacencyGraph<Vertex, Edge> graph, IDictionary<ITreeNode, Vertex> vertices)
         {
             if (node == null) return null;
+
+            // checks if vertex already exists for this node
+            if (vertices.ContainsKey(node)) return vertices[node];
+
+            // creates new vertex
             var vertex = new Vertex(node);
+            vertices.Add(node, vertex);
             graph.AddVertex(vertex);
 
+            // iterates through children, creating edges between parent and child nodes
             if (node.Children == null) return vertex;
             foreach (var child in node.Children)
             {
-                var childVertex = GraphAdd(child, graph);
+                var childVertex = GraphAdd(child, graph, vertices);
                 if (childVertex != null)
                     graph.AddEdge(new Edge(vertex, childVertex));
             }
@@ -139,7 +137,7 @@ namespace Genesis.Graphviz
 
         private static void OnFormatInfoEdge(object sender, MyGraphvizAlgorithm<Vertex, Edge>.MyFormatEdgeEventArgs e)
         {
-            var treeNode = e.Edge.Target.Node as InformationTree.TreeNode;
+            var treeNode = e.Edge.Target.Node as IInformationTreeNode;
             var relCount = (treeNode?.Value ?? 1d) / treeNode?.RootNode?.Value ?? 1d;
             FormatEdge(relCount, e.EdgeFormatter);
         }
@@ -147,62 +145,15 @@ namespace Genesis.Graphviz
         private static void OnFormatInfoVertex(
             object sender, MyGraphvizAlgorithm<Vertex, Edge>.MyFormatVertexEventArgs e)
         {
-            var treeNode = e.Vertex.Node as InformationTree.TreeNode;
-            var relCount = (treeNode?.Value ?? 1d) / treeNode?.RootNode?.Value ?? 1d;
-            FormatVertex(e.VertexFormatter, relCount, e.Vertex.Node.ToString(), treeNode?.RootNode == null);
-        }
-
-        private static void OnFormatOrdSymbolEdge(object sender,
-            MyGraphvizAlgorithm<Vertex, Edge>.MyFormatEdgeEventArgs e)
-        {
-            double relCount;
-            if (e.Edge.Target.Node is OrderedSymbolTree.SymbolNode)
-            {
-                var treeNode = (OrderedSymbolTree.SymbolNode) e.Edge.Target.Node;
-                relCount = (double) treeNode.Value / treeNode.RootNode?.Value ?? 1d;
-            }
-            else
-            {
-                var treeNode = (OrderedSymbolTree.ArgumentNode) e.Edge.Target.Node;
-                relCount = (double) treeNode.Parent.Value / treeNode.Parent.RootNode?.Value ?? 1d;
-            }
-            FormatEdge(relCount, e.EdgeFormatter);
-        }
-
-        private static void OnFormatOrdSymbolVertex(
-            object sender, MyGraphvizAlgorithm<Vertex, Edge>.MyFormatVertexEventArgs e)
-        {
-            double relCount;
-            var isArg = false;
-            var isRoot = false;
-            if (e.Vertex.Node is OrderedSymbolTree.SymbolNode)
-            {
-                var treeNode = (OrderedSymbolTree.SymbolNode) e.Vertex.Node;
-                relCount = (double) treeNode.Value / treeNode.RootNode?.Value ?? 1d;
-                isRoot = treeNode.RootNode == null;
-            }
-            else
-            {
-                var treeNode = (OrderedSymbolTree.ArgumentNode) e.Vertex.Node;
-                isArg = true;
-                relCount = (double) treeNode.Parent.Value / treeNode.Parent.RootNode?.Value ?? 1d;
-            }
-            FormatVertex(e.VertexFormatter, relCount, e.Vertex.Node.ToString(), isRoot, isArg);
-        }
-
-        private static void OnFormatSymbolEdge(object sender, MyGraphvizAlgorithm<Vertex, Edge>.MyFormatEdgeEventArgs e)
-        {
-            var treeNode = e.Edge.Target.Node as SymbolTree.TreeNode;
-            var relCount = (treeNode?.Value ?? 1d) / treeNode?.RootNode?.Value ?? 1d;
-            FormatEdge(relCount, e.EdgeFormatter);
-        }
-
-        private static void OnFormatSymbolVertex(
-            object sender, MyGraphvizAlgorithm<Vertex, Edge>.MyFormatVertexEventArgs e)
-        {
-            var treeNode = e.Vertex.Node as SymbolTree.TreeNode;
-            var relCount = (treeNode?.Value ?? 1d) / treeNode?.RootNode?.Value ?? 1d;
-            FormatVertex(e.VertexFormatter, relCount, e.Vertex.Node.ToString(), treeNode?.RootNode == null);
+            if (!(e.Vertex.Node is IInformationTreeNode)) return;
+            var treeNode = (IInformationTreeNode) e.Vertex.Node;
+            var relCount = (double) treeNode.Value / treeNode.RootNode?.Value ?? 1d;
+            var isArgument = treeNode is OrderedSymbolTree.ArgumentNode;
+            FormatVertex(e.VertexFormatter, relCount,
+                isArgument || treeNode is InformationTree.TreeNode
+                    ? treeNode.ToString()
+                    : $"{treeNode}:{treeNode.Value}",
+                treeNode.RootNode == null, isArgument);
         }
 
         #endregion

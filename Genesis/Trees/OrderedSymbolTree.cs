@@ -4,7 +4,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 2017/05/16
+//    Last updated: 2017/06/05
 // 
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
@@ -13,6 +13,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using Genesis.Elements;
 
@@ -27,7 +28,7 @@ namespace Genesis.Trees
     ///     [1] Foster, M. A. (2005). The program structure of genetic programming trees (Master’s thesis, School of Computer
     ///     Science and Information Technology, RMIT University Melbourne Australia).
     /// </remarks>
-    public class OrderedSymbolTree
+    public class OrderedSymbolTree : IInformationTree
     {
         #region Static Fields & Constants
 
@@ -37,53 +38,17 @@ namespace Genesis.Trees
 
         #region Fields
 
-        private SymbolNode _rootNode = new SymbolNode(ROOT_NODE_LABEL, 1, null);
+        protected SymbolNode rootNode = new SymbolNode(ROOT_NODE_LABEL, 1, null);
 
         #endregion
 
         #region Properties & Indexers
 
-        public ITreeNode RootNode => this._rootNode;
+        public IInformationTreeNode RootNode => this.rootNode;
 
         #endregion
 
         #region Public Methods
-
-        public void AddElement(IElement element)
-        {
-            this._rootNode.Value++;
-            AddElement(element, this._rootNode.Children[0], this._rootNode);
-        }
-
-        public void AddElements(IEnumerable<IElement> elements)
-        {
-            foreach (var element in elements)
-                this.AddElement(element);
-        }
-
-        public void Clear()
-        {
-            this._rootNode = new SymbolNode(ROOT_NODE_LABEL, 1, null);
-        }
-
-        /// <summary>
-        ///     Gets the number of nodes in the symbol-tree.
-        /// </summary>
-        /// <returns>The tree node count.</returns>
-        public uint GetCount()
-        {
-            return (uint) (this._rootNode.GetCount() - 1);
-        }
-
-        /// <summary>
-        ///     Gets the total number of program nodes (genetic nodes) used to build the tree [1].
-        /// </summary>
-        /// <returns>The total node count.</returns>
-        public uint GetNodeCount()
-        {
-            // discounts the (artificial) root node count
-            return GetNodeCount(this._rootNode) - this._rootNode.Value;
-        }
 
         /// <summary>
         ///     Gets the ratio between the number of tree nodes and the total number of nodes inserted into the tree.
@@ -92,7 +57,7 @@ namespace Genesis.Trees
         /// <returns>The node ratio.</returns>
         public double GetNodeRatio()
         {
-            return (double) (this.GetCount() * this._rootNode.Value) / this.GetNodeCount();
+            return (double) (this.GetCount() * this.rootNode.Value) / this.GetNodeCount();
         }
 
         /// <summary>
@@ -103,21 +68,58 @@ namespace Genesis.Trees
         /// <param name="other">The other tree we want to calculate the similarity with.</param>
         public double GetSimilarity(OrderedSymbolTree other)
         {
-            var commonCount = GetCommonCount(this._rootNode, other._rootNode) -
-                              Math.Min(this._rootNode.Value, other._rootNode.Value);
+            var commonCount = GetCommonCount(this.rootNode, other.rootNode) -
+                              Math.Min(this.rootNode.Value, other.rootNode.Value);
             return (double) commonCount / Math.Max(this.GetNodeCount(), other.GetNodeCount());
+        }
+
+        public virtual void AddElement(IElement element)
+        {
+            this.rootNode.Value++;
+            AddElement(element, this.rootNode.Children[0], this.rootNode, new HashSet<SymbolNode>());
+        }
+
+        public void AddElements(IEnumerable<IElement> elements)
+        {
+            foreach (var element in elements)
+                this.AddElement(element);
+        }
+
+        public void Clear()
+        {
+            this.rootNode = new SymbolNode(ROOT_NODE_LABEL, 1, null);
+        }
+
+        /// <summary>
+        ///     Gets the number of nodes in the symbol-tree.
+        /// </summary>
+        /// <returns>The tree node count.</returns>
+        public uint GetCount()
+        {
+            return (uint) (this.rootNode.GetCount() - 1);
+        }
+
+        /// <summary>
+        ///     Gets the total number of program nodes (genetic nodes) used to build the tree [1].
+        /// </summary>
+        /// <returns>The total node count.</returns>
+        public uint GetNodeCount()
+        {
+            // discounts the (artificial) root node count
+            return GetNodeCount(this.rootNode) - this.rootNode.Value;
         }
 
         public void Prune(double frequencyThreshold)
         {
-            Prune(this._rootNode, (uint) (frequencyThreshold * this._rootNode.Value));
+            Prune(this.rootNode, (uint) (frequencyThreshold * this.rootNode.Value));
         }
 
         #endregion
 
         #region Private & Protected Methods
 
-        private static void AddElement(IElement element, ArgumentNode node, SymbolNode rootNode)
+        protected static void AddElement(
+            IElement element, ArgumentNode node, SymbolNode rootNode, HashSet<SymbolNode> visited)
         {
             if (element == null) return;
 
@@ -126,12 +128,16 @@ namespace Genesis.Trees
             if (!node.Children.ContainsKey(element.Label))
                 node.Children.Add(element.Label, new SymbolNode(element.Label, numChildren, rootNode));
             var symbolNode = node.Children[element.Label];
-            symbolNode.Value++;
+            if (!visited.Contains(symbolNode))
+            {
+                symbolNode.Value++;
+                visited.Add(symbolNode);
+            }
 
             // recurses through children
             if (element.Children == null || element.Children.Count == 0) return;
             for (var i = 0; i < element.Children.Count; i++)
-                AddElement(element.Children[i], symbolNode.Children[i], rootNode);
+                AddElement(element.Children[i], symbolNode.Children[i], rootNode, visited);
         }
 
         private static uint GetCommonCount(SymbolNode node1, SymbolNode node2)
@@ -176,7 +182,7 @@ namespace Genesis.Trees
 
         #region Nested type: ArgumentNode
 
-        public class ArgumentNode : ITreeNode
+        public class ArgumentNode : IInformationTreeNode
         {
             #region Fields
 
@@ -189,6 +195,10 @@ namespace Genesis.Trees
             public IDictionary<string, SymbolNode> Children { get; }
 
             public SymbolNode Parent { get; }
+
+            public IInformationTreeNode RootNode => this.Parent.RootNode;
+
+            public uint Value { get { return this.Parent.Value; } set { } }
 
             IReadOnlyList<ITreeNode> ITreeNode.Children => this.Children.Values.ToList();
 
@@ -209,7 +219,7 @@ namespace Genesis.Trees
 
             public override string ToString()
             {
-                return $"{this._index}";
+                return this._index.ToString(CultureInfo.InvariantCulture);
             }
 
             #endregion
@@ -225,7 +235,7 @@ namespace Genesis.Trees
 
         #region Nested type: SymbolNode
 
-        public class SymbolNode : ITreeNode
+        public class SymbolNode : IInformationTreeNode
         {
             #region Fields
 
@@ -237,7 +247,7 @@ namespace Genesis.Trees
 
             public ArgumentNode[] Children { get; }
 
-            public SymbolNode RootNode { get; }
+            public IInformationTreeNode RootNode { get; }
 
             public uint Value { get; set; }
 
@@ -262,7 +272,7 @@ namespace Genesis.Trees
 
             public override string ToString()
             {
-                return $"{this._symbol}:{this.Value}";
+                return this._symbol;
             }
 
             #endregion

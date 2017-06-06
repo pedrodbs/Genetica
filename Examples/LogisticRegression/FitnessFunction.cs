@@ -41,7 +41,7 @@ namespace LogisticRegression
 		{
 			// x is best (higher) than y if its fitness is higher and the expression is shorter (in case of tie)
 			var fitnessDiff = this.Evaluate(x).CompareTo(this.Evaluate(y));
-			return fitnessDiff.Equals(0) ? -x.Count.CompareTo(y.Count) : fitnessDiff;
+			return fitnessDiff.Equals(0) ? -x.Length.CompareTo(y.Length) : fitnessDiff;
 		}
 	}
 }

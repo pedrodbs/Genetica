@@ -40,6 +40,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Elements\Functions\CommutativeBinaryFunction.cs" />
+    <Compile Include="Elements\Terminals\Range.cs" />
     <Compile Include="IPopulation.cs" />
     <Compile Include="Elements\IElement.cs" />
     <Compile Include="Elements\Terminals\Terminal.cs" />
@@ -93,6 +94,7 @@
     <Compile Include="Crossover\ContextPreservingCrossover.cs" />
     <Compile Include="Elements\ExpressionConverter.cs" />
     <Compile Include="Similarity\AverageSimilarity.cs" />
+    <Compile Include="Similarity\PrimitiveSimilarity.cs" />
     <Compile Include="Similarity\ValueSimilarity.cs" />
     <Compile Include="Similarity\NormalNotationEditSimilarity.cs" />
     <Compile Include="Similarity\PrefixNotationEditSimilarity.cs" />
@@ -102,6 +104,9 @@
     <Compile Include="Similarity\ISimilarityMeasure.cs" />
     <Compile Include="Similarity\CommonRegionSimilarity.cs" />
     <Compile Include="Similarity\TerminalSimilarity.cs" />
+    <Compile Include="Trees\IInformationTree.cs" />
+    <Compile Include="Trees\IInformationTreeNode.cs" />
+    <Compile Include="Trees\InfoTreeExtensions.cs" />
     <Compile Include="Trees\OrderedSymbolTree.cs" />
     <Compile Include="Util\CollectionUtil.cs" />
     <Compile Include="Elements\SimplificationExtensions.cs" />
@@ -112,6 +117,7 @@
     <Compile Include="Trees\InformationTree.cs" />
     <Compile Include="Similarity\SymbolTreeSimilarity.cs" />
     <Compile Include="Generation\GrowElementGenerator.cs" />
+    <Compile Include="Trees\SubElementTree.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MathNet.Numerics, Version=3.19.0.0, Culture=neutral, processorArchitecture=MSIL">

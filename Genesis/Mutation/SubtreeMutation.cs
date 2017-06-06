@@ -77,7 +77,7 @@ namespace Genesis.Mutation
             allPrimitives.AddRange(this._primitives.Terminals);
 
             // replaces each sub-element by a primitive element
-            for (var i = 0u; i < element.Count; i++)
+            for (var i = 0u; i < element.Length; i++)
                 foreach (var primitive in allPrimitives)
                     mutations.Add(element.Replace(i, primitive));
 
@@ -98,7 +98,7 @@ namespace Genesis.Mutation
             if (element == null) return null;
 
             // define the mutation point randomly
-            var mutatePoint = (uint) this._random.Next(element.Count);
+            var mutatePoint = (uint) this._random.Next(element.Length);
 
             // define the new random element and creates replacement
             var newElem = this._elementGenerator.Generate(this._primitives, this.MaxDepth);

@@ -45,7 +45,7 @@ namespace Genesis.Crossover
             if (parent1.Equals(parent2)) return parent1;
 
             // checks shorter tree
-            var maxIndex = (int) Math.Min(parent1.Count, parent2.Count);
+            var maxIndex = (int) Math.Min(parent1.Length, parent2.Length);
 
             // gets random crossover point
             var crossoverPoint = (uint) this._random.Next(maxIndex);
@@ -63,7 +63,7 @@ namespace Genesis.Crossover
             if (parent1.Equals(parent2)) return new HashSet<IElement>();
 
             // checks shorter tree
-            var maxIndex = (int) Math.Min(parent1.Count, parent2.Count);
+            var maxIndex = (int) Math.Min(parent1.Length, parent2.Length);
 
             // replaces each sub-element of parent 1 by the index-corresponding one of parent 2
             var offspring = new HashSet<IElement>();

@@ -394,12 +394,12 @@ input[type=button]:disabled {
 
 .node, .node.arg { cursor: pointer; }
 
-.node.collapsed ellipse, .node.arg.collapsed ellipse {
+.node.collapsed circle, .node.arg.collapsed circle {
     stroke-width: 2px;
     stroke-dasharray: 2.5;
 }
 
-.node.expanded ellipse, .node.arg.expanded ellipse { stroke-width: 1px; }
+.node.expanded circle, .node.arg.expanded circle { stroke-width: 1px; }
 
 .link {
     fill: none;
@@ -407,13 +407,13 @@ input[type=button]:disabled {
 }
 
 .node text {
-    font-size: 14px;
+    font-size: 12px;
     font-family: Candara;
     font-weight: normal;
 }
 
 .node.arg text {
-    font-size: 9px;
+    font-size: 8px;
     font-family: Candara;
     font-weight: normal;
 }

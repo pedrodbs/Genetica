@@ -28,7 +28,7 @@ namespace Genesis.Elements.Functions
 	        $"({this.ConditionElement.Expression}?{this.ZeroElement.Expression}:" +
 	        $"{this.PositiveElement.Expression}:{this.NegativeElement.Expression})";
 
-        public ushort Count { get; }
+        public ushort Length { get; }
 
         public double GetValue()
 		{
@@ -45,8 +45,8 @@ namespace Genesis.Elements.Functions
 		{
 		    this._children = new[] {conditionElement, zeroElement, positiveElement, negativeElement};
 		    this._hashCode = this.ProduceHashCode();
-            this.Count = 
-                (ushort)(1 + conditionElement.Count + zeroElement.Count + positiveElement.Count + negativeElement.Count);
+            this.Length = 
+                (ushort)(1 + conditionElement.Length + zeroElement.Length + positiveElement.Length + negativeElement.Length);
         }
 
         public override bool Equals(object obj)

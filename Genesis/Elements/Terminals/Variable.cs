@@ -4,7 +4,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 2017/05/12
+//    Last updated: 2017/06/06
 // 
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
@@ -19,8 +19,6 @@ namespace Genesis.Elements.Terminals
     {
         #region Fields
 
-        private readonly int _hashCode;
-
         private readonly IValued _valuedObject;
 
         #endregion
@@ -29,14 +27,24 @@ namespace Genesis.Elements.Terminals
 
         public override string Label { get; }
 
+        /// <summary>
+        ///     The minimum and maximum value allowed for this variable.
+        /// </summary>
+        public Range Range { get; }
+
         #endregion
 
         #region Constructors
 
-        public Variable(string label, IValued valuedObject)
+        public Variable(string label, IValued valuedObject) : this(label, valuedObject, Range.Default)
+        {
+        }
+
+        public Variable(string label, IValued valuedObject, Range range)
         {
             this.Label = label;
             this._valuedObject = valuedObject;
+            this.Range = range;
         }
 
         #endregion
@@ -74,6 +82,7 @@ namespace Genesis.Elements.Terminals
 
         public bool Equals(Variable other)
         {
+            //todo check add equals range
             return !ReferenceEquals(null, other) &&
                    (ReferenceEquals(this, other) || string.Equals(this.Label, other.Label));
         }

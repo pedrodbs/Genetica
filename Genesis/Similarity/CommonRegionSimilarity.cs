@@ -31,7 +31,7 @@ namespace Genesis.Similarity
             if (elem1.Equals(elem2)) return 1;
 
             var commonRegionIdxs = elem1.GetCommonRegionIndexes(elem2);
-            return (double) commonRegionIdxs.Count / Math.Max(elem1.Count, elem2.Count);
+            return (double) commonRegionIdxs.Count / Math.Max(elem1.Length, elem2.Length);
         }
 
         #endregion

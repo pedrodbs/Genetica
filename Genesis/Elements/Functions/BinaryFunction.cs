@@ -23,7 +23,7 @@ namespace Genesis.Elements.Functions
 
 		public virtual string Expression => $"f({this.FirstElement.Expression},{this.SecondElement.Expression})";
 
-	    public ushort Count { get; }
+	    public ushort Length { get; }
 
 	    public abstract string Label { get; }
 
@@ -31,7 +31,7 @@ namespace Genesis.Elements.Functions
 		{
 			this._children = new[] { firstElement, secondElement };
 			this._hashCode = this.ProduceHashCode();
-		    this.Count = (ushort) (1 + firstElement.Count + this.SecondElement.Count);
+		    this.Length = (ushort) (1 + firstElement.Length + this.SecondElement.Length);
 		}
 
 		public override string ToString()

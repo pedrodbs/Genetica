@@ -46,7 +46,7 @@ namespace Genesis.Mutation
             // reverses the order of all function sub-elements
             var subElems = new List<IElement> {element};
             subElems.AddRange(element.GetSubElements());
-            for (var i = 0; i < element.Count; i++)
+            for (var i = 0; i < element.Length; i++)
             {
                 var subElem = subElems[i];
                 if (!(subElem is IFunction)) continue;
@@ -71,7 +71,7 @@ namespace Genesis.Mutation
             if (element == null) return null;
 
             // define the mutation point randomly
-            var mutatePoint = (uint) this._random.Next(element.Count);
+            var mutatePoint = (uint) this._random.Next(element.Length);
 
             // get sub-element and swap children (inverse order)
             var elem = element.ElementAt(mutatePoint);

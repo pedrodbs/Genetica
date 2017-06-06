@@ -4,14 +4,13 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 2017/04/07
+//    Last updated: 2017/06/01
 // 
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
 // ------------------------------------------
 
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using Genesis.Elements;
@@ -26,7 +25,7 @@ namespace Genesis.Trees
     ///     and visualization of population measures. In European Conference on Genetic Programming (pp. 35-46). Springer
     ///     Berlin Heidelberg.
     /// </remarks>
-    public class InformationTree
+    public class InformationTree : IInformationTree
     {
         #region Fields
 
@@ -36,7 +35,7 @@ namespace Genesis.Trees
 
         #region Properties & Indexers
 
-        public ITreeNode RootNode => this._rootNode;
+        public IInformationTreeNode RootNode => this._rootNode;
 
         #endregion
 
@@ -58,38 +57,20 @@ namespace Genesis.Trees
             this._rootNode = new TreeNode(null);
         }
 
-        /// <summary>
-        ///     Gets the number of node positions sampled in the tree search space [1], i.e., the structure-unique node count.
-        /// </summary>
-        /// <returns>The structure-unique node count.</returns>
         public uint GetCount()
         {
             return this._rootNode.GetCount();
         }
 
-        /// <summary>
-        ///     Gets the degree of fullness of the tree [1].
-        /// </summary>
-        /// <returns>The degree of fullness of the tree.</returns>
-        public double GetFullness()
-        {
-            return 1d / this._rootNode.Value *
-                   this._rootNode.Children.Sum(child => GetFullness(child, 0));
-        }
-
-        /// <summary>
-        ///     Gets the total number of program nodes (genetic nodes) of the programs inserted into the tree [1].
-        /// </summary>
-        /// <returns>The node count.</returns>
         public uint GetNodeCount()
         {
             return GetNodeCount(this._rootNode);
         }
 
-        public void Prune(double frequencyThreshold)
+        public void Prune(double valueThreshold)
         {
             var rootNode = this._rootNode;
-            Prune(rootNode, (uint) (frequencyThreshold * rootNode.Value));
+            Prune(rootNode, (uint) (valueThreshold * rootNode.Value));
         }
 
         #endregion
@@ -110,16 +91,10 @@ namespace Genesis.Trees
             }
         }
 
-        private static double GetFullness(TreeNode node, uint depth)
-        {
-            var sum = node.Children?.Sum(child => GetFullness(child, depth + 1));
-            return sum != null ? node.Value / Math.Pow(2, depth) + (double) sum : -1;
-        }
-
         private static uint GetNodeCount(TreeNode node)
         {
             var sum = node.Value + node.Children?.Sum(child => GetNodeCount(child));
-            return sum != null ? (uint) sum : 0;
+            return (uint) (sum ?? 0);
         }
 
         private static void Prune(TreeNode node, uint frequencyThreshold)
@@ -139,13 +114,13 @@ namespace Genesis.Trees
 
         #region Nested type: TreeNode
 
-        public class TreeNode : ITreeNode
+        public class TreeNode : IInformationTreeNode
         {
             #region Properties & Indexers
 
             public List<TreeNode> Children { get; }
 
-            public TreeNode RootNode { get; }
+            public IInformationTreeNode RootNode { get; }
 
             public uint Value { get; set; }
 
