@@ -52,6 +52,10 @@ namespace Genesis.Elements.Terminals
 
         #region Constructors
 
+        public Range(double constValue) : this(constValue, constValue)
+        {
+        }
+
         public Range(double min, double max)
         {
             this.Min = min;

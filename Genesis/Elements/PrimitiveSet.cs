@@ -4,7 +4,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 2017/03/08
+//    Last updated: 2017/06/08
 // 
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
@@ -14,6 +14,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using Genesis.Elements.Functions;
 using Genesis.Elements.Terminals;
 using Genesis.Util;
@@ -50,7 +51,14 @@ namespace Genesis.Elements
 
         private readonly HashSet<IFunction> _functions;
         private readonly HashSet<Terminal> _terminals;
-        private bool _disposed;
+
+        #endregion
+
+        #region Properties & Indexers
+
+        public IReadOnlyCollection<IFunction> Functions => this._functions.ToList();
+
+        public IReadOnlyCollection<Terminal> Terminals => this._terminals.ToList();
 
         #endregion
 
@@ -64,11 +72,20 @@ namespace Genesis.Elements
 
         #endregion
 
-        #region Properties & Indexers
+        #region Public Methods
 
-        public IReadOnlyCollection<IFunction> Functions => this._functions.ToList();
-
-        public IReadOnlyCollection<Terminal> Terminals => this._terminals.ToList();
+        public override string ToString()
+        {
+            var sb = new StringBuilder("Functions: ");
+            foreach (var function in this._functions)
+                sb.Append($"{function.Label},");
+            if (this._functions.Count > 0) sb.Remove(sb.Length - 1, 1);
+            sb.Append("\nTerminals: ");
+            foreach (var terminal in this._terminals)
+                sb.Append($"{terminal.Label},");
+            if (this._terminals.Count > 0) sb.Remove(sb.Length - 1, 1);
+            return sb.ToString();
+        }
 
         #endregion
 
@@ -82,23 +99,8 @@ namespace Genesis.Elements
 
         public void Dispose()
         {
-            this.Dispose(true);
-            GC.SuppressFinalize(this);
-        }
-
-        #endregion
-
-        #region Private & Protected Methods
-
-        protected virtual void Dispose(bool disposing)
-        {
-            if (this._disposed) return;
-            if (disposing)
-            {
-                this._functions.Clear();
-                this._terminals.Clear();
-            }
-            this._disposed = true;
+            this._functions.Clear();
+            this._terminals.Clear();
         }
 
         #endregion

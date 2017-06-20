@@ -104,12 +104,12 @@ namespace Genesis.Graphviz
         {
             if (node == null) return null;
 
-            // checks if vertex already exists for this node
-            if (vertices.ContainsKey(node)) return vertices[node];
+            //// checks if vertex already exists for this node
+            //if (vertices.ContainsKey(node)) return vertices[node];
 
             // creates new vertex
             var vertex = new Vertex(node);
-            vertices.Add(node, vertex);
+            //vertices.Add(node, vertex);
             graph.AddVertex(vertex);
 
             // iterates through children, creating edges between parent and child nodes

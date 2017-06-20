@@ -4,7 +4,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 2017/05/18
+//    Last updated: 2017/06/07
 // 
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
@@ -61,6 +61,23 @@ namespace Genesis.Elements
         #endregion
 
         #region Public Methods
+
+        public static string ToPrefixNotation(IElement element, bool includeParentheses = true)
+        {
+            if (element == null) return null;
+
+            // if is a terminal just return the label
+            if (element.Children == null || element.Children.Count == 0) return GetName(element);
+
+            // if a function, create an expression in prefix notation
+            var strBuilder = new StringBuilder(includeParentheses ? "(" : string.Empty);
+            strBuilder.AppendFormat("{0} ", GetName(element));
+            foreach (var child in element.Children)
+                strBuilder.AppendFormat("{0} ", ToPrefixNotation(child, includeParentheses));
+            strBuilder.Remove(strBuilder.Length - 1, 1);
+            strBuilder.Append(includeParentheses ? ")" : string.Empty);
+            return strBuilder.ToString();
+        }
 
         public IElement FromNormalNotation(string expression)
         {
@@ -120,23 +137,6 @@ namespace Genesis.Elements
             var expression = prefixNotationExpression.Split(new[] {' '}, StringSplitOptions.RemoveEmptyEntries);
             var elem = this.FromPrefixNotation(expression, ref index);
             return index != expression.Length - 1 ? null : elem;
-        }
-
-        public string ToPrefixNotation(IElement element, bool includeParentheses = true)
-        {
-            if (element == null) return null;
-
-            // if is a terminal just return the label
-            if (element.Children == null || element.Children.Count == 0) return GetName(element);
-
-            // if a function, create an expression in prefix notation
-            var strBuilder = new StringBuilder(includeParentheses ? "(" : string.Empty);
-            strBuilder.AppendFormat("{0} ", GetName(element));
-            foreach (var child in element.Children)
-                strBuilder.AppendFormat("{0} ", ToPrefixNotation(child, includeParentheses));
-            strBuilder.Remove(strBuilder.Length - 1, 1);
-            strBuilder.Append(includeParentheses ? ")" : string.Empty);
-            return strBuilder.ToString();
         }
 
         #endregion
