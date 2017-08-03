@@ -4,7 +4,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 2017/06/06
+//    Last updated: 2017/07/12
 // 
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
@@ -82,7 +82,6 @@ namespace Genesis.Elements.Terminals
 
         public bool Equals(Variable other)
         {
-            //todo check add equals range
             return !ReferenceEquals(null, other) &&
                    (ReferenceEquals(this, other) || string.Equals(this.Label, other.Label));
         }

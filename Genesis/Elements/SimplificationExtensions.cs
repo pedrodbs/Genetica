@@ -117,7 +117,7 @@ namespace Genesis.Elements
                 squareDiffSum += diff * diff;
             }
 
-            // returns rmsd
+            // returns RMSD
             return Math.Sqrt(squareDiffSum/numTrials);
         }
 
@@ -166,7 +166,7 @@ namespace Genesis.Elements
                 element.IsConstant() && other.IsConstant() && Math.Abs(element.GetValue() - other.GetValue()) < margin)
                 return true;
 
-            // gets rmse by replacing the values of the variables in some number of trials
+            // gets RMSE by replacing the values of the variables in some number of trials
             return element.GetValueRmsd(other, numTrials) <= margin;
         }
 
@@ -278,7 +278,7 @@ namespace Genesis.Elements
             var fitness = fitnessFunction.Evaluate(element);
             var length = element.Length;
 
-            // first replaces all sub-elements by infinity and nan recursively
+            // first replaces all sub-elements by infinity and NaN recursively
             var consts = new HashSet<Constant>
                          {
                              new Constant(double.NegativeInfinity),
@@ -310,7 +310,7 @@ namespace Genesis.Elements
                 }
             } while (simplificationFound);
 
-            // then gets all subcombinations of the simplified element
+            // then gets all sub-combinations of the simplified element
             var alternatives = simplified.GetSubCombinations();
             foreach (var subComb in alternatives)
             {
