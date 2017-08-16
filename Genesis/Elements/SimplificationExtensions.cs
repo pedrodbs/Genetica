@@ -201,7 +201,7 @@ namespace Genesis.Elements
                 else if (children[1].EqualsConstant(0))
                     return children[0];
 
-            // if its an subtraction
+            // if its a subtraction
             if (element is SubtractionFunction)
 
                 // if the operands are equal, return 0
@@ -243,17 +243,28 @@ namespace Genesis.Elements
             if ((element is MaxFunction || element is MinFunction) && children[0].Equals(children[1]))
                 return children[0];
 
-            // if its an if clause, check whether the first child is a constant and returns one of the other children
-            // accordingly
-            if (element is IfFunction && children[0].IsConstant())
+            // if its an if clause
+            if (element is IfFunction)
             {
-                var val = children[0].GetValue();
-                return val.Equals(0) ? children[1] : (val > 0 ? children[2] : children[3]);
+                //  check whether the first child is a constant and returns one of the other children accordingly
+                var child1 = children[0];
+                if (child1.IsConstant())
+                {
+                    var val = child1.GetValue();
+                    return val.Equals(0) ? children[1] : (val > 0 ? children[2] : children[3]);
+                }
+                // check whether first child is a variable, check its range
+                if (child1 is Variable)
+                {
+                    var range = ((Variable) child1).Range;
+                    if (range.Min.Equals(0) && range.Max.Equals(0)) return children[1];
+                    if (range.Min > 0) return children[2];
+                    if (range.Max < 0) return children[3];
+                }
+                // check whether result children are equal, in which case replace by one of them
+                if (children[1].Equals(children[2]) && children[1].Equals(children[3]))
+                    return children[1];
             }
-
-            // if its an if clause, check whether result children are equal, in which case replace by one of them
-            if (element is IfFunction && children[1].Equals(children[2]) && children[1].Equals(children[3]))
-                return children[1];
 
             return element.CreateNew(children);
         }

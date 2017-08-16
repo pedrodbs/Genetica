@@ -4,7 +4,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis.Examples.LogisticRegression
-//    Last updated: 2017/07/27
+//    Last updated: 2017/08/13
 // 
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
@@ -35,7 +35,8 @@ namespace Genesis.Examples.LogisticRegression
         {
             const uint popSize = 200;
             const uint maxDepth = 4;
-            const uint maxGenerations = 1000;
+            const uint maxGenerations = 2000;
+            const uint maxElementLength = 20;
             const uint maxNoImproveGen = (uint) (maxGenerations * 0.5);
 
             var const0 = new Constant(0);
@@ -63,8 +64,10 @@ namespace Genesis.Examples.LogisticRegression
 
             var solutionExp = "(+ (+ x x) (+ (* 3 (* x x)) 1))";
             var solution = new ExpressionConverter(primitives).FromPrefixNotation(solutionExp);
+            Console.WriteLine("===================================");
             Console.WriteLine("Fitness: {0} | {1}", fitnessFunction.Evaluate(solution), solution);
             solution.ToGraphvizFile(Path.GetFullPath("."), "solution", GraphvizImageType.Png);
+            Console.WriteLine("===================================");
 
             var seed = new AdditionFunction(const1, variable);
 
@@ -74,27 +77,27 @@ namespace Genesis.Examples.LogisticRegression
                                                    new GrowElementGenerator(),
                                                    new FullElementGenerator()
                                                });
-            var selection = new TournamentSelection(fitnessFunction, (uint) (popSize * 0.03));
+            var selection = new TournamentSelection(fitnessFunction, (uint) (popSize * 0.05));
             var crossover = new StochasticCrossover(new List<ICrossoverOperator>
                                                     {
                                                         new SubtreeCrossover(),
-
-                                                        //new OnePointCrossover(),
-                                                        //new ContextPreservingCrossover(),
+                                                        new OnePointCrossover(),
+                                                        new ContextPreservingCrossover(),
                                                         new UniformCrossover()
                                                     });
             var mutation = new StochasticMutation(new List<IMutationOperator>
                                                   {
-                                                      //new SubtreeMutation(elementGenerator, primitives, 1),
+                                                      new SubtreeMutation(elementGenerator, primitives, 1),
                                                       new PointMutation(primitives),
-                                                      new ShrinkMutation(primitives)
 
-                                                      //new HoistMutation(),
+                                                      //new ShrinkMutation(primitives),
+                                                      new SimplifyMutation(),
+                                                      new HoistMutation()
                                                   });
 
             var pop = new Population(
                 popSize, primitives, elementGenerator,
-                fitnessFunction, selection, crossover, mutation, maxDepth);
+                fitnessFunction, selection, crossover, mutation, maxDepth, maxElementLength);
             pop.Init(new HashSet<IElement> {seed});
 
             IElement best = null;
@@ -113,6 +116,8 @@ namespace Genesis.Examples.LogisticRegression
             }
 
             best.ToGraphvizFile(Path.GetFullPath("."), "best", GraphvizImageType.Png);
+            Console.WriteLine("===================================");
+            Console.WriteLine($"Best: {pop.BestElement}, fitness: {fitnessFunction.Evaluate(pop.BestElement):0.000}");
             Console.ReadKey();
         }
 
@@ -124,8 +129,8 @@ namespace Genesis.Examples.LogisticRegression
         {
             var elem = pop.BestElement;
             Console.WriteLine(
-                "Gen {0:000}, pop: {1:000}, diff: {2:0.00}, fitness: {3:0.00} | {4}",
-                generation, pop.Count, diff, fitnessFunction.Evaluate(elem), elem);
+                $"Gen {generation:000}, pop: {pop.Count:000}, diff: {diff:0.00}, " +
+                $"fitness: {fitnessFunction.Evaluate(elem):0.00} | {elem}");
         }
 
         #endregion

@@ -1,163 +1,195 @@
-using System.Collections.Generic;
-using Genesis.Elements;
-using Genesis.Crossover;
-using Genesis.Generation;
+// ------------------------------------------
+// <copyright file="Population.cs" company="Pedro Sequeira">
+//     Some copyright
+// </copyright>
+// <summary>
+//    Project: Genesis
+//    Last updated: 2017/08/13
+// 
+//    Author: Pedro Sequeira
+//    E-mail: pedrodbs@gmail.com
+// </summary>
+// ------------------------------------------
+
 using System;
-using Genesis.Selection;
+using System.Collections.Generic;
 using System.Linq;
+using Genesis.Crossover;
+using Genesis.Elements;
+using Genesis.Generation;
 using Genesis.Mutation;
+using Genesis.Selection;
 using MathNet.Numerics.Random;
 
 namespace Genesis
 {
-	[Serializable]
-	public class Population : HashSet<IElement>, IPopulation
-	{
-		private readonly Random _random = new WH2006(RandomSeed.Robust());
-		private readonly ICrossoverOperator _crossoverOperator;
-		private readonly IMutationOperator _mutationOperator;
-		private readonly ISelectionOperator _selectionOperator;
-		private readonly uint _maxSize;
-		private readonly IElementGenerator _elementGenerator;
-		private readonly PrimitiveSet _primitives;
-		private readonly uint _maxGenerationDepth;
-	    private readonly uint _maxElementCount;
-	    private readonly IComparer<IElement> _elementComparer;
+    [Serializable]
+    public class Population : HashSet<IElement>, IPopulation
+    {
+        #region Fields
 
-		public double CrossoverPercent { get; set; }
-		public double MutationPercent { get; set; }
-		public double ElitismPercent { get; set; }
+        private readonly ICrossoverOperator _crossoverOperator;
+        private readonly IComparer<IElement> _elementComparer;
+        private readonly IElementGenerator _elementGenerator;
+        private readonly uint _maxElementLength;
+        private readonly uint _maxGenerationDepth;
+        private readonly uint _maxSize;
+        private readonly IMutationOperator _mutationOperator;
+        private readonly PrimitiveSet _primitives;
+        private readonly Random _random = new WH2006(RandomSeed.Robust());
+        private readonly ISelectionOperator _selectionOperator;
 
-		public IElement BestElement { get; private set; }
+        #endregion
 
-		public Population(
+        #region Constructors
+
+        public Population(
             uint maxSize,
             PrimitiveSet primitives,
-            IElementGenerator elementGenerator, 
+            IElementGenerator elementGenerator,
             IComparer<IElement> elementComparer,
             ISelectionOperator selectionOperator,
             ICrossoverOperator crossoverOperator,
             IMutationOperator mutationOperator,
             uint maxGenerationDepth = 4,
-            uint maxElementCount = 6,
-            double crossoverPercent = 0.65d, 
-            double mutationPercent = 0.2d, 
+            uint maxElementLength = 20,
+            double crossoverPercent = 0.65d,
+            double mutationPercent = 0.2d,
             double elitismPercent = 0.1d)
-		{
-			this._maxSize = maxSize;
-			this._primitives = primitives;
-			this._elementGenerator = elementGenerator;
-			this._maxGenerationDepth = maxGenerationDepth;
-		    this._maxElementCount = maxElementCount;
-		    this._elementComparer = elementComparer;
-			this._selectionOperator = selectionOperator;
-			this._mutationOperator = mutationOperator;
-			this._crossoverOperator = crossoverOperator;
-			this.ElitismPercent = elitismPercent;
-			this.MutationPercent = mutationPercent;
-			this.CrossoverPercent = crossoverPercent;
-		}
+        {
+            this._maxSize = maxSize;
+            this._primitives = primitives;
+            this._elementGenerator = elementGenerator;
+            this._maxGenerationDepth = maxGenerationDepth;
+            this._maxElementLength = maxElementLength;
+            this._elementComparer = elementComparer;
+            this._selectionOperator = selectionOperator;
+            this._mutationOperator = mutationOperator;
+            this._crossoverOperator = crossoverOperator;
+            this.ElitismPercent = elitismPercent;
+            this.MutationPercent = mutationPercent;
+            this.CrossoverPercent = crossoverPercent;
+        }
 
-		public void Init(ISet<IElement> seeds)
-		{
-			// clear pop
-			this.Clear();
+        #endregion
 
-			// add seeds directly to the initial pop
-			if (seeds != null)
-			{
-				var i = 0;
-				foreach (var elem in seeds)
-					if (i++ < this._maxSize) this.Add(elem);
-			}
+        #region Properties & Indexers
 
-			// creates new elements
-			for (var i = this.Count; i < this._maxSize; i++)
-			{
-				IElement element;
-				do
-				{
-					element = this._elementGenerator.Generate(this._primitives, this._maxGenerationDepth);
-				} while (this.Contains(element));
-				this.Add(element);
-			}
-		}
+        public IElement BestElement { get; private set; }
 
-		public virtual void Step()
-		{
-			// checks initialization
-			if (this.Count == 0) this.Init(null);
+        public double CrossoverPercent { get; set; }
 
-			var newGeneration = new List<IElement>((int)this._maxSize);
+        public double ElitismPercent { get; set; }
 
-			// 1 - performs selection to get pool of parents for crossover
-			var selection = new List<IElement>(this._selectionOperator.Select(this));
+        public double MutationPercent { get; set; }
 
-			// 2 - performs crossover to get some offspring
-			var numOffspring = (int)(this.CrossoverPercent * this._maxSize);
-			for (var i = 0; i < numOffspring; i++)
-			{
-				//randomly selects 2 parents (may be equal)
-				var parent1 = selection[this._random.Next(selection.Count)];
-				var parent2 = selection[this._random.Next(selection.Count)];
-			    var descendant = this._crossoverOperator.Crossover(parent1, parent2);
-			    if (descendant.Length <= this._maxElementCount)
-			        newGeneration.Add(descendant);
-			}
+        #endregion
 
-			// 3 - performs mutation from selection
-			var numMutations = (int)(this.MutationPercent * this._maxSize);
-			for (var i = 0; i < numMutations; i++)
-			{
-				//randomly selects element
-				var element = selection[this._random.Next(selection.Count)];
-				newGeneration.Add(this._mutationOperator.Mutate(element));
-			}
+        #region Public Methods
 
-			// 4 - performs elite selection (keeps some best elements)
-			var numElite = (int)(this.ElitismPercent * this._maxSize);
-			var j = 0;
-			foreach (var element in this.Reverse())
-			{
-				if (j++ >= numElite) break;
-				newGeneration.Add(element);
-			}
+        public virtual void Step()
+        {
+            // checks initialization
+            if (this.Count == 0) this.Init(null);
 
-			// 5 - creates random elements
-			for (var i = newGeneration.Count; i < this._maxSize; i++)
-				newGeneration.Add(this._elementGenerator.Generate(this._primitives, this._maxGenerationDepth));
+            var newGeneration = new List<IElement>((int) this._maxSize);
 
-			// 6 - replace population with new generation
-			this.Clear();
-			foreach (var element in newGeneration)
-				this.Add(element);
+            // 1 - performs selection to get pool of parents for crossover
+            var selection = new List<IElement>(this._selectionOperator.Select(this));
 
-			newGeneration.Clear();
-			selection.Clear();
+            // 2 - performs crossover to get some offspring
+            var numOffspring = (int) (this.CrossoverPercent * this._maxSize);
+            for (var i = 0; i < numOffspring; i++)
+            {
+                //randomly selects 2 parents (may be equal)
+                var parent1 = selection[this._random.Next(selection.Count)];
+                var parent2 = selection[this._random.Next(selection.Count)];
+                var descendant = this._crossoverOperator.Crossover(parent1, parent2);
+                if (descendant.Length <= this._maxElementLength)
+                    newGeneration.Add(descendant);
+            }
 
-			// gets best element
-			foreach (var element in this)
-				if ((this.BestElement == null) || this._elementComparer.Compare(element, this.BestElement) > 0)
-					this.BestElement = element;
-		}
+            // 3 - performs mutation from selection
+            var numMutations = (int) (this.MutationPercent * this._maxSize);
+            for (var i = 0; i < numMutations; i++)
+            {
+                //randomly selects element
+                var element = selection[this._random.Next(selection.Count)];
+                newGeneration.Add(this._mutationOperator.Mutate(element));
+            }
 
-		#region IDisposable Support
+            // 4 - performs elite selection (keeps some best elements)
+            var numElite = (int) (this.ElitismPercent * this._maxSize);
+            var j = 0;
+            foreach (var element in this.Reverse())
+            {
+                if (j++ >= numElite) break;
+                newGeneration.Add(element);
+            }
 
-		private bool _disposed;
+            // 5 - creates random elements
+            for (var i = newGeneration.Count; i < this._maxSize; i++)
+                newGeneration.Add(this._elementGenerator.Generate(this._primitives, this._maxGenerationDepth));
 
-		protected virtual void Dispose(bool disposing)
-		{
-			if (this._disposed) return;
-			if (disposing) this.Clear();
+            // 6 - replace population with new generation
+            this.Clear();
+            foreach (var element in newGeneration)
+                this.Add(element);
 
-			this._disposed = true;
-		}
+            newGeneration.Clear();
+            selection.Clear();
 
-		public void Dispose()
-		{
-			this.Dispose(true);
-			GC.SuppressFinalize(this);
-		}
-		#endregion
-	}
+            // gets best element
+            foreach (var element in this)
+                if (this.BestElement == null || this._elementComparer.Compare(element, this.BestElement) > 0)
+                    this.BestElement = element;
+        }
+
+        public void Init(ISet<IElement> seeds)
+        {
+            // clear pop
+            this.Clear();
+
+            // add seeds directly to the initial pop
+            if (seeds != null)
+            {
+                var i = 0;
+                foreach (var elem in seeds)
+                    if (i++ < this._maxSize) this.Add(elem);
+            }
+
+            // creates new elements
+            for (var i = this.Count; i < this._maxSize; i++)
+            {
+                IElement element;
+                do
+                {
+                    element = this._elementGenerator.Generate(this._primitives, this._maxGenerationDepth);
+                } while (this.Contains(element));
+                this.Add(element);
+            }
+        }
+
+        #endregion
+
+        #region IDisposable Support
+
+        private bool _disposed;
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (this._disposed) return;
+            if (disposing) this.Clear();
+
+            this._disposed = true;
+        }
+
+        public void Dispose()
+        {
+            this.Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        #endregion
+    }
 }
