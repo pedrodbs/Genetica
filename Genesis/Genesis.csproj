@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="Elements\Functions\CommutativeBinaryFunction.cs" />
     <Compile Include="Elements\Terminals\Range.cs" />
+    <Compile Include="Elements\UtilExtensions.cs" />
     <Compile Include="IPopulation.cs" />
     <Compile Include="Elements\IElement.cs" />
     <Compile Include="Elements\Terminals\Terminal.cs" />
