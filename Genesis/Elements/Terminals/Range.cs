@@ -4,7 +4,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 2017/06/06
+//    Last updated: 2017/09/06
 // 
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
@@ -31,6 +31,20 @@ namespace Genesis.Elements.Terminals
 
         #endregion
 
+        #region Constructors
+
+        public Range(double constValue) : this(constValue, constValue)
+        {
+        }
+
+        public Range(double min, double max)
+        {
+            this.Min = min;
+            this.Max = max;
+        }
+
+        #endregion
+
         #region Properties & Indexers
 
         /// <summary>
@@ -50,20 +64,6 @@ namespace Genesis.Elements.Terminals
 
         #endregion
 
-        #region Constructors
-
-        public Range(double constValue) : this(constValue, constValue)
-        {
-        }
-
-        public Range(double min, double max)
-        {
-            this.Min = min;
-            this.Max = max;
-        }
-
-        #endregion
-
         #region Public Methods
 
         public override bool Equals(object obj)
@@ -80,10 +80,7 @@ namespace Genesis.Elements.Terminals
             }
         }
 
-        public override string ToString()
-        {
-            return $"[{this.Min},{this.Max}]";
-        }
+        public override string ToString() => $"[{this.Min:0.###},{this.Max:0.###}]";
 
         #endregion
 
@@ -99,10 +96,7 @@ namespace Genesis.Elements.Terminals
             return !left.Equals(right);
         }
 
-        public bool Equals(Range other)
-        {
-            return this.Max.Equals(other.Max) && this.Min.Equals(other.Min);
-        }
+        public bool Equals(Range other) => this.Max.Equals(other.Max) && this.Min.Equals(other.Min);
 
         #endregion
     }

@@ -4,15 +4,17 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 2017/08/28
+//    Last updated: 2017/09/06
 // 
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
 // ------------------------------------------
 
+using System;
 using System.Collections.Generic;
 using Genesis.Elements.Terminals;
+using Genesis.Util;
 
 namespace Genesis.Elements
 {
@@ -30,6 +32,47 @@ namespace Genesis.Elements
             var primitivesCounts = new Dictionary<IElement, uint>();
             CountPrimitives(element, primitivesCounts);
             return primitivesCounts;
+        }
+
+        public static Range GetRange(this IElement element)
+        {
+            // checks for constant value
+            if (element.IsConstant())
+            {
+                var value = element.GetValue();
+                return new Range(value, value);
+            }
+
+            // checks for variable
+            if (element is Variable) return ((Variable) element).Range;
+
+            // collects info on ranges of all children 
+            var childrenRanges = new List<IEnumerable<double>>();
+            foreach (var child in element.Children)
+            {
+                var childRange = GetRange(child);
+                childrenRanges.Add(new[] {childRange.Min, childRange.Max});
+            }
+
+            // gets all combinations between children ranges
+            var min = double.MaxValue;
+            var max = double.MinValue;
+            var allRangeCombinations = childrenRanges.GetAllCombinations();
+            foreach (var rangeCombination in allRangeCombinations)
+            {
+                // builds new element by replacing children with constant values (range min or max)
+                var children = new IElement[rangeCombination.Count];
+                for (var i = 0; i < rangeCombination.Count; i++)
+                    children[i] = new Constant(rangeCombination[i]);
+                var newElem = element.CreateNew(children);
+
+                // checks min and max values from new elem value
+                var val = newElem.GetValue();
+                min = Math.Min(min, val);
+                max = Math.Max(max, val);
+            }
+
+            return new Range(min, max);
         }
 
         #endregion

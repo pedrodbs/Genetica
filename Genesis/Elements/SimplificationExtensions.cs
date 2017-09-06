@@ -396,7 +396,7 @@ namespace Genesis.Elements
 
         #region Nested type: CustomVariable
 
-        private class CustomVariable : Variable
+        internal class CustomVariable : Variable
         {
             #region Properties & Indexers
 

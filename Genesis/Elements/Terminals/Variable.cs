@@ -4,7 +4,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 2017/07/12
+//    Last updated: 2017/09/06
 // 
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
@@ -23,17 +23,6 @@ namespace Genesis.Elements.Terminals
 
         #endregion
 
-        #region Properties & Indexers
-
-        public override string Label { get; }
-
-        /// <summary>
-        ///     The minimum and maximum value allowed for this variable.
-        /// </summary>
-        public Range Range { get; }
-
-        #endregion
-
         #region Constructors
 
         public Variable(string label, IValued valuedObject) : this(label, valuedObject, Range.Default)
@@ -49,12 +38,20 @@ namespace Genesis.Elements.Terminals
 
         #endregion
 
+        #region Properties & Indexers
+
+        public override string Label { get; }
+
+        /// <summary>
+        ///     The minimum and maximum value allowed for this variable.
+        /// </summary>
+        public Range Range { get; }
+
+        #endregion
+
         #region Public Methods
 
-        public override IElement Clone()
-        {
-            return new Variable(this.Label, this._valuedObject);
-        }
+        public override IElement Clone() => new Variable(this.Label, this._valuedObject, this.Range);
 
         public override bool Equals(object obj)
         {
