@@ -65,9 +65,12 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Patch\Extensions.cs" />
+    <Compile Include="Patch\IMyDotEngine.cs" />
     <Compile Include="Patch\MyGraphvizAlgorithm.cs" />
     <Compile Include="Patch\MyGraphvizColor.cs" />
     <Compile Include="Patch\MyGraphvizEdge.cs" />
+    <Compile Include="Patch\MyGraphvizImageType.cs" />
     <Compile Include="Patch\MyGraphvizVertex.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Edge.cs" />

@@ -4,7 +4,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis.Graphviz
-//    Last updated: 2017/06/05
+//    Last updated: 2017/09/07
 // 
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
@@ -18,7 +18,6 @@ using Genesis.Elements;
 using Genesis.Graphviz.Patch;
 using Genesis.Trees;
 using QuickGraph;
-using QuickGraph.Graphviz;
 using QuickGraph.Graphviz.Dot;
 
 namespace Genesis.Graphviz
@@ -27,7 +26,7 @@ namespace Genesis.Graphviz
     {
         #region Static Fields & Constants
 
-        private const GraphvizImageType GRAPHVIZ_IMAGE_TYPE = GraphvizImageType.Svgz;
+        private const MyGraphvizImageType GRAPHVIZ_IMAGE_TYPE = MyGraphvizImageType.Pdf;
         private const int FONT_SIZE = 18;
         private const int ARG_FONT_SIZE = 7;
         private const string FONT_NAME = "Candara"; //"Tahoma";
@@ -43,14 +42,14 @@ namespace Genesis.Graphviz
 
         public static string ToGraphvizFile(
             this IInformationTree tree, string basePath, string fileName,
-            GraphvizImageType imageType = GRAPHVIZ_IMAGE_TYPE)
+            MyGraphvizImageType imageType = GRAPHVIZ_IMAGE_TYPE)
         {
             return tree.RootNode.ToGraphvizFile(basePath, fileName, OnFormatInfoVertex, OnFormatInfoEdge, imageType);
         }
 
         public static string ToGraphvizFile(
             this IElement element, string basePath, string fileName,
-            GraphvizImageType imageType = GRAPHVIZ_IMAGE_TYPE)
+            MyGraphvizImageType imageType = GRAPHVIZ_IMAGE_TYPE)
         {
             return element.ToGraphvizFile(basePath, fileName, OnFormatElementVertex, OnFormatElementEdge, imageType);
         }
@@ -59,7 +58,7 @@ namespace Genesis.Graphviz
             this ITreeNode rootNode, string basePath, string fileName,
             MyGraphvizAlgorithm<Vertex, Edge>.MyFormatVertexEventHandler formatVertex,
             MyGraphvizAlgorithm<Vertex, Edge>.MyFormatEdgeAction formatEdge,
-            GraphvizImageType imageType = GRAPHVIZ_IMAGE_TYPE)
+            MyGraphvizImageType imageType = GRAPHVIZ_IMAGE_TYPE)
         {
             var graph = new AdjacencyGraph<Vertex, Edge>();
             GraphAdd(rootNode, graph, new Dictionary<ITreeNode, Vertex>());
@@ -109,6 +108,7 @@ namespace Genesis.Graphviz
 
             // creates new vertex
             var vertex = new Vertex(node);
+
             //vertices.Add(node, vertex);
             graph.AddVertex(vertex);
 
@@ -123,7 +123,8 @@ namespace Genesis.Graphviz
             return vertex;
         }
 
-        private static void OnFormatElementEdge(object sender, MyGraphvizAlgorithm<Vertex, Edge>.MyFormatEdgeEventArgs e)
+        private static void OnFormatElementEdge(object sender,
+            MyGraphvizAlgorithm<Vertex, Edge>.MyFormatEdgeEventArgs e)
         {
             FormatEdge(1, e.EdgeFormatter);
         }
@@ -160,15 +161,15 @@ namespace Genesis.Graphviz
 
         #region Nested type: FileDotEngine
 
-        internal sealed class FileDotEngine : IDotEngine
+        internal sealed class FileDotEngine : IMyDotEngine
         {
             #region Public Methods
 
-            public string Run(GraphvizImageType imageType, string dot, string outputFileName)
+            public string Run(MyGraphvizImageType imageType, string dot, string outputFileName)
             {
                 // writes .dot file with the tree and converts it to an image
                 File.WriteAllText(outputFileName, dot);
-                var args = $"\"{outputFileName}\" -T{imageType.ToString().ToLower()} -O";
+                var args = $"\"{outputFileName}\" -T{imageType.GetOutputFormatStr()} -O";
                 var processInfo = new ProcessStartInfo("dot", args)
                                   {
                                       UseShellExecute = false,

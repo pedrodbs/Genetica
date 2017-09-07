@@ -4,7 +4,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis.Examples.LogisticRegression
-//    Last updated: 2017/08/13
+//    Last updated: 2017/09/07
 // 
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
@@ -21,9 +21,9 @@ using Genesis.Elements.Terminals;
 using Genesis.Evaluation;
 using Genesis.Generation;
 using Genesis.Graphviz;
+using Genesis.Graphviz.Patch;
 using Genesis.Mutation;
 using Genesis.Selection;
-using QuickGraph.Graphviz.Dot;
 
 namespace Genesis.Examples.LogisticRegression
 {
@@ -38,38 +38,26 @@ namespace Genesis.Examples.LogisticRegression
             const uint maxGenerations = 2000;
             const uint maxElementLength = 20;
             const uint maxNoImproveGen = (uint) (maxGenerations * 0.5);
+            const string solutionExp = "(+ (+ x x) (+ (* 3 (* x x)) 1))";
 
-            var const0 = new Constant(0);
-            var const1 = new Constant(1);
-            var const3 = new Constant(3);
             var valued = new ValuedObject();
             var variable = new Variable("x", valued);
-            var addition = new AdditionFunction(const0, const0);
-            var subtr = new SubtractionFunction(const0, const0);
-            var div = new DivisionFunction(const0, const0);
-            var mult = new MultiplicationFunction(const0, const0);
-            var max = new MaxFunction(const0, const0);
-            var min = new MinFunction(const0, const0);
-            var log = new LogarithmFunction(const0, const0);
-            var pow = new PowerFunction(const0, const0);
-            var ifop = new IfFunction(const0, const0, const0, const0);
-            var cos = new CosineFunction(const0);
-            var sin = new SineFunction(const0);
 
             var primitives = new PrimitiveSet(
-                new HashSet<Terminal> {variable, const0, const1, const3},
-                new HashSet<IFunction> {addition, subtr, div, mult, max, min, log, pow, ifop, cos, sin});
+                new HashSet<Terminal> {variable, new Constant(0), new Constant(1), new Constant(3) },
+                new HashSet<IFunction>());
+            primitives.Add(PrimitiveSet.Default);
 
             var fitnessFunction = new FitnessFunction(x => 2 * x + 3 * x * x + 1, valued, 100, -50, 50);
 
-            var solutionExp = "(+ (+ x x) (+ (* 3 (* x x)) 1))";
+            
             var solution = new ExpressionConverter(primitives).FromPrefixNotation(solutionExp);
             Console.WriteLine("===================================");
             Console.WriteLine("Fitness: {0} | {1}", fitnessFunction.Evaluate(solution), solution);
-            solution.ToGraphvizFile(Path.GetFullPath("."), "solution", GraphvizImageType.Png);
+            solution.ToGraphvizFile(Path.GetFullPath("."), "solution", MyGraphvizImageType.Png);
             Console.WriteLine("===================================");
 
-            var seed = new AdditionFunction(const1, variable);
+            var seed = new AdditionFunction(new Constant(1), variable);
 
             var elementGenerator =
                 new StochasticElementGenerator(new List<IElementGenerator>
@@ -115,7 +103,7 @@ namespace Genesis.Examples.LogisticRegression
                 Print(pop, i, fitnessFunction, diff);
             }
 
-            best.ToGraphvizFile(Path.GetFullPath("."), "best", GraphvizImageType.Png);
+            best.ToGraphvizFile(Path.GetFullPath("."), "best", MyGraphvizImageType.Png);
             Console.WriteLine("===================================");
             Console.WriteLine($"Best: {pop.BestElement}, fitness: {fitnessFunction.Evaluate(pop.BestElement):0.000}");
             Console.ReadKey();

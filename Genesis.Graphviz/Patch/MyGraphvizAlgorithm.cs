@@ -3,8 +3,8 @@
 //     Some copyright
 // </copyright>
 // <summary>
-//    Project: Genesis.QuickGraph
-//    Last updated: 2017/03/29
+//    Project: Genesis.Graphviz
+//    Last updated: 2017/09/07
 // 
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
@@ -15,13 +15,12 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text.RegularExpressions;
 using QuickGraph;
-using QuickGraph.Graphviz;
 using QuickGraph.Graphviz.Dot;
 
 namespace Genesis.Graphviz.Patch
 {
     /// <summary>
-    ///     An algorithm that renders a graph to the Graphviz DOT format.
+    ///     An algorithm that renders a graph to the GraphViz DOT format.
     ///     Override of the original QuickGraph code in <see href="https://quickgraph.codeplex.com/" /> in order to have
     ///     colored vertexes and edges.
     /// </summary>
@@ -50,6 +49,27 @@ namespace Genesis.Graphviz.Patch
 
         #endregion
 
+        #region Constructors
+
+        public MyGraphvizAlgorithm(IEdgeListGraph<TVertex, TEdge> g)
+            : this(g, MyGraphvizImageType.Svg)
+        {
+        }
+
+        public MyGraphvizAlgorithm(
+            IEdgeListGraph<TVertex, TEdge> g,
+            MyGraphvizImageType imageType
+        )
+        {
+            this.VisitedGraph = g;
+            this.ImageType = imageType;
+            this.GraphFormat = new GraphvizGraph();
+            this.CommonVertexFormat = new MyGraphvizVertex();
+            this.CommonEdgeFormat = new MyGraphvizEdge();
+        }
+
+        #endregion
+
         #region Properties & Indexers
 
         public MyGraphvizEdge CommonEdgeFormat { get; }
@@ -61,7 +81,7 @@ namespace Genesis.Graphviz.Patch
         /// <summary>
         ///     Current image output type
         /// </summary>
-        public GraphvizImageType ImageType { get; set; }
+        public MyGraphvizImageType ImageType { get; set; }
 
         /// <summary>
         ///     Dot output stream.
@@ -69,27 +89,6 @@ namespace Genesis.Graphviz.Patch
         public StringWriter Output { get; private set; }
 
         public IEdgeListGraph<TVertex, TEdge> VisitedGraph { get; set; }
-
-        #endregion
-
-        #region Constructors
-
-        public MyGraphvizAlgorithm(IEdgeListGraph<TVertex, TEdge> g)
-            : this(g, GraphvizImageType.Png)
-        {
-        }
-
-        public MyGraphvizAlgorithm(
-            IEdgeListGraph<TVertex, TEdge> g,
-            GraphvizImageType imageType
-        )
-        {
-            this.VisitedGraph = g;
-            this.ImageType = imageType;
-            this.GraphFormat = new GraphvizGraph();
-            this.CommonVertexFormat = new MyGraphvizVertex();
-            this.CommonEdgeFormat = new MyGraphvizEdge();
-        }
 
         #endregion
 
@@ -139,7 +138,7 @@ namespace Genesis.Graphviz.Patch
             return this.Output.ToString();
         }
 
-        public string Generate(IDotEngine dot, string outputFileName)
+        public string Generate(IMyDotEngine dot, string outputFileName)
         {
             this.Generate();
             return dot.Run(this.ImageType, this.Output.ToString(), outputFileName);
@@ -211,15 +210,6 @@ namespace Genesis.Graphviz.Patch
 
         public sealed class MyFormatEdgeEventArgs : EdgeEventArgs<TVertex, TEdge>
         {
-            #region Properties & Indexers
-
-            /// <summary>
-            ///     Edge formatter
-            /// </summary>
-            public MyGraphvizEdge EdgeFormatter { get; }
-
-            #endregion
-
             #region Constructors
 
             internal MyFormatEdgeEventArgs(TEdge e, MyGraphvizEdge edgeFormatter)
@@ -227,6 +217,15 @@ namespace Genesis.Graphviz.Patch
             {
                 this.EdgeFormatter = edgeFormatter;
             }
+
+            #endregion
+
+            #region Properties & Indexers
+
+            /// <summary>
+            ///     Edge formatter
+            /// </summary>
+            public MyGraphvizEdge EdgeFormatter { get; }
 
             #endregion
         }
@@ -237,18 +236,18 @@ namespace Genesis.Graphviz.Patch
 
         public sealed class MyFormatVertexEventArgs : VertexEventArgs<TVertex>
         {
-            #region Properties & Indexers
-
-            public MyGraphvizVertex VertexFormatter { get; }
-
-            #endregion
-
             #region Constructors
 
             internal MyFormatVertexEventArgs(TVertex v, MyGraphvizVertex vertexFormatter) : base(v)
             {
                 this.VertexFormatter = vertexFormatter;
             }
+
+            #endregion
+
+            #region Properties & Indexers
+
+            public MyGraphvizVertex VertexFormatter { get; }
 
             #endregion
         }
