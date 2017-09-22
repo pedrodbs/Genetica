@@ -4,7 +4,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 2017/06/05
+//    Last updated: 2017/09/11
 // 
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
@@ -50,12 +50,6 @@ namespace Genesis.Elements
         #endregion
 
         #region Public methods
-
-        /// <summary>
-        ///     Creates a new <see cref="IElement" /> that is an exact copy of this element.
-        /// </summary>
-        /// <returns>A new <see cref="IElement" /> that is an exact copy of this element.</returns>
-        IElement Clone();
 
         /// <summary>
         ///     Creates a new <see cref="IElement" /> of the same kind of this element with the given child elements.

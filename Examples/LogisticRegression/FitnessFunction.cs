@@ -4,7 +4,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis.Examples.LogisticRegression
-//    Last updated: 2017/07/27
+//    Last updated: 2017/09/08
 // 
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
@@ -13,6 +13,7 @@
 
 using System;
 using Genesis.Elements;
+using Genesis.Elements.Terminals;
 using Genesis.Evaluation;
 
 namespace Genesis.Examples.LogisticRegression
@@ -21,24 +22,24 @@ namespace Genesis.Examples.LogisticRegression
     {
         #region Fields
 
-        readonly Func<double, double> function;
-        readonly double max;
-        readonly double min;
-        readonly uint numSamples;
-        readonly ValuedObject x;
+        private readonly Func<double, double> _function;
+        private readonly double _max;
+        private readonly double _min;
+        private readonly uint _numSamples;
+        private readonly Variable _x;
 
         #endregion
 
         #region Constructors
 
         public FitnessFunction(
-            Func<double, double> function, ValuedObject valued, uint numSamples, double min, double max)
+            Func<double, double> function, Variable variable, uint numSamples, double min, double max)
         {
-            this.x = valued;
-            this.function = function;
-            this.max = max;
-            this.min = min;
-            this.numSamples = numSamples;
+            this._x = variable;
+            this._function = function;
+            this._max = max;
+            this._min = min;
+            this._numSamples = numSamples;
         }
 
         #endregion
@@ -54,12 +55,12 @@ namespace Genesis.Examples.LogisticRegression
 
         public double Evaluate(IElement element)
         {
-            var delta = (this.max - this.min) / this.numSamples;
+            var delta = (this._max - this._min) / this._numSamples;
             var error = 0d;
-            for (var i = 0; i < numSamples; i++)
+            for (var i = 0; i < this._numSamples; i++)
             {
-                this.x.Value = this.min + delta * i;
-                var y = this.function(this.x.Value);
+                this._x.Value = this._min + delta * i;
+                var y = this._function(this._x.Value);
                 var estimate = element.GetValue();
                 var diff = y - estimate;
                 error += diff * diff;

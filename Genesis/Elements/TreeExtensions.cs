@@ -4,7 +4,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 2017/06/06
+//    Last updated: 2017/09/11
 // 
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
@@ -58,23 +58,6 @@ namespace Genesis.Elements
             for (var i = 0; i < numChildren; i++)
                 children[i] = constant;
             return function.CreateNew(children);
-        }
-
-        /// <summary>
-        ///     Deep clones the given element by creating an <see cref="IElement" /> that is an exact copy of the given
-        ///     element's structure.
-        /// </summary>
-        /// <returns>The cloned element.</returns>
-        /// <param name="element">The element to be cloned.</param>
-        public static IElement DeepClone(this IElement element)
-        {
-            if (element == null) return null;
-            if (element.Children == null) return element.Clone();
-
-            var newChildren = new IElement[element.Children.Count];
-            for (var i = 0; i < element.Children.Count; i++)
-                newChildren[i] = element.Children[i].DeepClone();
-            return element.CreateNew(newChildren);
         }
 
         /// <summary>
@@ -266,7 +249,7 @@ namespace Genesis.Elements
         public static IElement Replace(this IElement element, IElement oldSubElement, IElement newSubElement)
         {
             if (element == null || oldSubElement == null || newSubElement == null)
-                return element?.Clone();
+                return element;
 
             // checks if element is equal, return replacement
             if (element.Equals(oldSubElement)) return newSubElement;

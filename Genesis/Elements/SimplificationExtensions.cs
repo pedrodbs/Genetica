@@ -4,7 +4,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 2017/06/06
+//    Last updated: 2017/09/11
 // 
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
@@ -27,8 +27,6 @@ namespace Genesis.Elements
         #region Static Fields & Constants
 
         private const string VAR_NAME_STR = "VAR";
-        private const double MIN_VAL = -1000;
-        private const double RANGE = -2 * MIN_VAL;
         private const double DEFAULT_MARGIN = 1e-6d;
         private const uint DEFAULT_NUM_TRIALS = 1000;
 
@@ -92,7 +90,7 @@ namespace Genesis.Elements
                 return Math.Abs(element.GetValue() - other.GetValue());
 
             // replaces variables of each expression by custom variables
-            var customVariables = new Dictionary<Variable, CustomVariable>();
+            var customVariables = new Dictionary<Variable, Variable>();
             element = ReplaceVariables(element, customVariables);
             other = ReplaceVariables(other, customVariables);
             if (customVariables.Count == 0) return double.MaxValue;
@@ -118,7 +116,7 @@ namespace Genesis.Elements
             }
 
             // returns RMSD
-            return Math.Sqrt(squareDiffSum/numTrials);
+            return Math.Sqrt(squareDiffSum / numTrials);
         }
 
         /// <summary>
@@ -253,6 +251,7 @@ namespace Genesis.Elements
                     var val = child1.GetValue();
                     return val.Equals(0) ? children[1] : (val > 0 ? children[2] : children[3]);
                 }
+
                 // check whether first child is a variable, check its range
                 if (child1 is Variable)
                 {
@@ -261,6 +260,7 @@ namespace Genesis.Elements
                     if (range.Min > 0) return children[2];
                     if (range.Max < 0) return children[3];
                 }
+
                 // check whether result children are equal, in which case replace by one of them
                 if (children[1].Equals(children[2]) && children[1].Equals(children[3]))
                     return children[1];
@@ -356,74 +356,26 @@ namespace Genesis.Elements
             return trialNumbers;
         }
 
-        private static IList<double> GetTrialRandomNumbers(uint numTrials)
-        {
-            var rnd = new WH2006(RandomSeed.Robust());
-
-            // adds fixed numbers
-            var trialNumbers = new List<double>((int) numTrials) {0, -1, 1, 0.1, -0.1};
-
-            // adds rest with random numbers
-            for (var i = trialNumbers.Count; i < numTrials; i++)
-                trialNumbers.Add(MIN_VAL + RANGE * rnd.NextDouble());
-
-            // shuffles and returns
-            trialNumbers.Shuffle(rnd);
-            return trialNumbers;
-        }
-
         #region Private Methods
 
         private static IElement ReplaceVariables(
-            this IElement element, IDictionary<Variable, CustomVariable> customVars)
+            this IElement element, IDictionary<Variable, Variable> customVars)
         {
             // if element is not a variable, tries to replace all children recursively
             var variable = element as Variable;
             if (variable == null)
-                return element.CreateNew(element.Children?.Select(child => child.ReplaceVariables(customVars)).ToList());
+                return element.CreateNew(element.Children?.Select(child => child.ReplaceVariables(customVars))
+                    .ToList());
 
             // checks if a corresponding variable has not yet been created
             if (!customVars.ContainsKey(variable))
-                customVars.Add(variable, new CustomVariable($"{VAR_NAME_STR}{customVars.Count}"));
+                customVars.Add(variable, new Variable($"{VAR_NAME_STR}{customVars.Count}"));
 
             // replaces it by the custom variable
             return customVars[variable];
         }
 
         #endregion
-
-        #endregion
-
-        #region Nested type: CustomVariable
-
-        internal class CustomVariable : Variable
-        {
-            #region Properties & Indexers
-
-            public double Value { private get; set; }
-
-            #endregion
-
-            #region Constructors
-
-            public CustomVariable(string label) : base(label, null)
-            {
-            }
-
-            #endregion
-
-            #region Public Methods
-
-            public override IElement Clone()
-            {
-                // in this case we want the same variable reference when cloned
-                return this;
-            }
-
-            public override double GetValue() => Value;
-
-            #endregion
-        }
 
         #endregion
     }

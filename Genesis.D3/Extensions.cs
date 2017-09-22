@@ -4,7 +4,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis.D3
-//    Last updated: 2017/06/05
+//    Last updated: 2017/09/11
 // 
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
@@ -54,8 +54,7 @@ namespace Genesis.D3
         public static void ToD3JsonFile(
             this ITreeNode rootNode, string filePath, Formatting formatting = Formatting.None)
         {
-            using (var fs = File.OpenWrite(filePath))
-            using (var sw = new StreamWriter(fs, Encoding.UTF8))
+            using (var sw = new StreamWriter(filePath, false, Encoding.UTF8))
             {
                 var writer = new JsonTextWriter(sw) {Formatting = formatting};
                 WriteGraphJson(rootNode, writer);
@@ -65,8 +64,7 @@ namespace Genesis.D3
         public static void ToD3TreeJsonFile(
             this ITreeNode rootNode, string filePath, Formatting formatting = Formatting.None)
         {
-            using (var fs = File.OpenWrite(filePath))
-            using (var sw = new StreamWriter(fs, Encoding.UTF8))
+            using (var sw = new StreamWriter(filePath, false, Encoding.UTF8))
             {
                 var writer = new JsonTextWriter(sw) {Formatting = formatting};
                 WriteTreeJson(rootNode, writer);

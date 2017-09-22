@@ -4,7 +4,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 2017/04/06
+//    Last updated: 2017/09/11
 // 
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
@@ -103,7 +103,8 @@ namespace Genesis.Similarity
                 var remainder = subElem1.Length - 1u;
                 idx1 += remainder;
                 idx2 += remainder;
-                totalCost += (subElem1 is WeightedVariable ? ((WeightedVariable) subElem1).Weight : subElem1.Length) - 1;
+                totalCost += (subElem1 is WeightedVariable ? ((WeightedVariable) subElem1).Weight : subElem1.Length) -
+                             1;
                 return;
             }
 
@@ -189,7 +190,9 @@ namespace Genesis.Similarity
         {
             // gets sub-elements and sort descendingly
             var subElems1 = new SortedSet<IElement>(elem1.GetSubElements(),
-                Comparer<IElement>.Create((a, b) => -(a.Length == b.Length ? a.CompareTo(b) : a.Length.CompareTo(b.Length))));
+                Comparer<IElement>.Create((a, b) => -(a.Length == b.Length
+                                              ? a.CompareTo(b)
+                                              : a.Length.CompareTo(b.Length))));
             var subElems2 = new HashSet<IElement>(elem2.GetSubElements());
             return subElems1.FirstOrDefault(
                 subElem1 =>
@@ -202,18 +205,18 @@ namespace Genesis.Similarity
 
         private class WeightedVariable : Variable
         {
-            #region Properties & Indexers
-
-            public uint Weight { get; }
-
-            #endregion
-
             #region Constructors
 
-            public WeightedVariable(string label, uint weight) : base(label, null)
+            public WeightedVariable(string label, uint weight) : base(label)
             {
                 this.Weight = weight;
             }
+
+            #endregion
+
+            #region Properties & Indexers
+
+            public uint Weight { get; }
 
             #endregion
         }

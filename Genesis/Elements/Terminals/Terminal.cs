@@ -4,7 +4,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 2017/08/12
+//    Last updated: 2017/09/11
 // 
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
@@ -71,9 +71,12 @@ namespace Genesis.Elements.Terminals
 
         public int CompareTo(IElement other) => string.CompareOrdinal(this.Expression, other.Expression);
 
-        public abstract IElement Clone();
-
-        public IElement CreateNew(IList<IElement> children) => this.Clone();
+        /// <summary>
+        ///     Because terminals have no children, this returns the object itself.
+        /// </summary>
+        /// <param name="children">This parameter will not be used, so it can be null.</param>
+        /// <returns>The same <see cref="Terminal" /> object.</returns>
+        public IElement CreateNew(IList<IElement> children = null) => this;
 
         public abstract double GetValue();
 

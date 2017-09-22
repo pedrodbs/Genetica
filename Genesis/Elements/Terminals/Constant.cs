@@ -4,7 +4,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 2017/05/19
+//    Last updated: 2017/09/11
 // 
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
@@ -25,12 +25,6 @@ namespace Genesis.Elements.Terminals
 
         #endregion
 
-        #region Properties & Indexers
-
-        public override string Label => this._value.ToString("0.##", CultureInfo.InvariantCulture);
-
-        #endregion
-
         #region Constructors
 
         public Constant(double val)
@@ -41,12 +35,13 @@ namespace Genesis.Elements.Terminals
 
         #endregion
 
-        #region Public Methods
+        #region Properties & Indexers
 
-        public override IElement Clone()
-        {
-            return new Constant(this._value);
-        }
+        public override string Label => this._value.ToString("0.##", CultureInfo.InvariantCulture);
+
+        #endregion
+
+        #region Public Methods
 
         public override bool Equals(object obj)
         {

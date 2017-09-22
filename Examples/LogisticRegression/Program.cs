@@ -4,7 +4,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis.Examples.LogisticRegression
-//    Last updated: 2017/09/07
+//    Last updated: 2017/09/08
 // 
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
@@ -40,17 +40,15 @@ namespace Genesis.Examples.LogisticRegression
             const uint maxNoImproveGen = (uint) (maxGenerations * 0.5);
             const string solutionExp = "(+ (+ x x) (+ (* 3 (* x x)) 1))";
 
-            var valued = new ValuedObject();
-            var variable = new Variable("x", valued);
+            var variable = new Variable("x");
 
             var primitives = new PrimitiveSet(
-                new HashSet<Terminal> {variable, new Constant(0), new Constant(1), new Constant(3) },
+                new HashSet<Terminal> {variable, new Constant(0), new Constant(1), new Constant(3)},
                 new HashSet<IFunction>());
             primitives.Add(PrimitiveSet.Default);
 
-            var fitnessFunction = new FitnessFunction(x => 2 * x + 3 * x * x + 1, valued, 100, -50, 50);
+            var fitnessFunction = new FitnessFunction(x => 2 * x + 3 * x * x + 1, variable, 100, -50, 50);
 
-            
             var solution = new ExpressionConverter(primitives).FromPrefixNotation(solutionExp);
             Console.WriteLine("===================================");
             Console.WriteLine("Fitness: {0} | {1}", fitnessFunction.Evaluate(solution), solution);

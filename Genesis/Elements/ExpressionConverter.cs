@@ -4,7 +4,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 2017/06/07
+//    Last updated: 2017/09/11
 // 
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
@@ -88,7 +88,7 @@ namespace Genesis.Elements
 
             // tests for terminals
             if (this._primitiveLabels.ContainsKey(expression))
-                return this._primitiveLabels[expression].Clone();
+                return this._primitiveLabels[expression];
             double constValue;
             if (double.TryParse(expression, out constValue))
                 return new Constant(constValue);
@@ -216,12 +216,6 @@ namespace Genesis.Elements
 
         private class DummyTerminal : Terminal
         {
-            #region Properties & Indexers
-
-            public override string Label { get; }
-
-            #endregion
-
             #region Constructors
 
             public DummyTerminal(string label)
@@ -231,12 +225,13 @@ namespace Genesis.Elements
 
             #endregion
 
-            #region Public Methods
+            #region Properties & Indexers
 
-            public override IElement Clone()
-            {
-                return new DummyTerminal(this.Label);
-            }
+            public override string Label { get; }
+
+            #endregion
+
+            #region Public Methods
 
             public override double GetValue() => 0;
 

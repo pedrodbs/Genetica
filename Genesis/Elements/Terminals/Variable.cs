@@ -4,7 +4,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 2017/09/06
+//    Last updated: 2017/09/11
 // 
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
@@ -17,22 +17,22 @@ namespace Genesis.Elements.Terminals
 {
     public class Variable : Terminal, IEquatable<Variable>
     {
-        #region Fields
-
-        private readonly IValued _valuedObject;
-
-        #endregion
-
         #region Constructors
 
-        public Variable(string label, IValued valuedObject) : this(label, valuedObject, Range.Default)
+        public Variable(string label) : this(label, Range.Default)
         {
         }
 
-        public Variable(string label, IValued valuedObject, Range range)
+        public Variable(string label, double value, Range range)
+        {
+            this.Value = value;
+            this.Label = label;
+            this.Range = range;
+        }
+
+        public Variable(string label, Range range)
         {
             this.Label = label;
-            this._valuedObject = valuedObject;
             this.Range = range;
         }
 
@@ -43,15 +43,18 @@ namespace Genesis.Elements.Terminals
         public override string Label { get; }
 
         /// <summary>
-        ///     The minimum and maximum value allowed for this variable.
+        ///     Gets the minimum and maximum value expected for this variable.
         /// </summary>
         public Range Range { get; }
+
+        /// <summary>
+        ///     Gets or sets the value associated with this variable.
+        /// </summary>
+        public double Value { get; set; }
 
         #endregion
 
         #region Public Methods
-
-        public override IElement Clone() => new Variable(this.Label, this._valuedObject, this.Range);
 
         public override bool Equals(object obj)
         {
@@ -61,7 +64,7 @@ namespace Genesis.Elements.Terminals
 
         public override int GetHashCode() => this.Label.GetHashCode();
 
-        public override double GetValue() => this._valuedObject?.Value ?? 0d;
+        public override double GetValue() => this.Value; // this._valuedObject?.Value ?? 0d;
 
         #endregion
 
