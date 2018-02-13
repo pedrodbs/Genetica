@@ -21,7 +21,7 @@ using MathNet.Numerics.Random;
 namespace Genesis.Crossover
 {
     /// <summary>
-    ///     Creates offspring by selecting a random crossover point in the common region betwen the two
+    ///     Creates offspring by selecting a random crossover point in the common region between the two
     ///     <seealso cref="IElement" /> parents and then replacing a subtree of the first parent by the corresponding subtree
     ///     of the second parent.
     /// </summary>

@@ -77,7 +77,6 @@
     <Compile Include="Evaluation\NonLinearRankFitnessFunction.cs" />
     <Compile Include="Population.cs" />
     <Compile Include="Elements\Terminals\Variable.cs" />
-    <Compile Include="Elements\Terminals\IValued.cs" />
     <Compile Include="Generation\StochasticElementGenerator.cs" />
     <Compile Include="Selection\StochasticSelection.cs" />
     <Compile Include="Mutation\HoistMutation.cs" />

@@ -3,8 +3,8 @@
 //     Some copyright
 // </copyright>
 // <summary>
-//    Project: PS.Utilities
-//    Last updated: 2017/04/04
+//    Project: Genesis
+//    Last updated: 2018/01/18
 // 
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
@@ -29,6 +29,31 @@ namespace Genesis.Util
         #region Public Methods
 
         /// <summary>
+        ///     Adds the given values to the dictionary.
+        /// </summary>
+        /// <typeparam name="TKey">The type of key stored in the dictionary.</typeparam>
+        /// <typeparam name="TValue">The type of value stored in the dictionary.</typeparam>
+        /// <param name="set">The dictionary we want to add the values to.</param>
+        /// <param name="values">The values to be added to the dictionary.</param>
+        public static void AddRange<TKey, TValue>(this IDictionary<TKey, TValue> set, IDictionary<TKey, TValue> values)
+        {
+            foreach (var val in values) set.Add(val);
+        }
+
+        /// <summary>
+        ///     Adds the given values to the dictionary.
+        /// </summary>
+        /// <typeparam name="TKey">The type of key stored in the dictionary.</typeparam>
+        /// <typeparam name="TValue">The type of value stored in the dictionary.</typeparam>
+        /// <param name="set">The dictionary we want to add the values to.</param>
+        /// <param name="values">The values to be added to the dictionary.</param>
+        public static void AddRange<TKey, TValue>(this IDictionary<TKey, TValue> set,
+            IEnumerable<KeyValuePair<TKey, TValue>> values)
+        {
+            foreach (var val in values) set.Add(val);
+        }
+
+        /// <summary>
         ///     Adds the given values to the given set.
         /// </summary>
         /// <typeparam name="T">The type of elements in the collections.</typeparam>
@@ -40,6 +65,40 @@ namespace Genesis.Util
         }
 
         /// <summary>
+        ///     Adds the given element to the sorted list at the correct index.
+        /// </summary>
+        /// <remarks>
+        ///     This method assumes the given list is already sorted.
+        ///     <see href="https://stackoverflow.com/a/22801345" />
+        /// </remarks>
+        /// <param name="list">The sorted list onto which we want to add the given element.</param>
+        /// <param name="elem">The element to add to list.</param>
+        /// <returns>The index where the given element was added.</returns>
+        /// <typeparam name="T">The type of elements in the list</typeparam>
+        public static int AddSorted<T>(this List<T> list, T elem) where T : IComparable<T>
+        {
+            if (list.Count == 0)
+            {
+                list.Add(elem);
+                return 0;
+            }
+            if (list[list.Count - 1].CompareTo(elem) <= 0)
+            {
+                list.Add(elem);
+                return list.Count - 1;
+            }
+            if (list[0].CompareTo(elem) >= 0)
+            {
+                list.Insert(0, elem);
+                return 0;
+            }
+            var index = list.BinarySearch(elem);
+            if (index < 0) index = ~index;
+            list.Insert(index, elem);
+            return index;
+        }
+
+        /// <summary>
         ///     Modifies the given lists by aligning their elements so that equal elements have the same index.
         /// </summary>
         /// <typeparam name="T">The type of items stored in the given lists.</typeparam>
@@ -47,7 +106,7 @@ namespace Genesis.Util
         /// <param name="list2">The second list.</param>
         public static void Align<T>(IList<T> list1, IList<T> list2)
         {
-            var minCount = System.Math.Min(list1.Count, list2.Count);
+            var minCount = Math.Min(list1.Count, list2.Count);
             for (var i = 0; i < minCount; i++)
             {
                 // for each element in 1, see if equal element exists in 2
@@ -82,17 +141,17 @@ namespace Genesis.Util
         /// <typeparam name="T">The type of elements in the lists.</typeparam>
         public static IEnumerable<IList<T>> GetAllCombinations<T>(this IList<IEnumerable<T>> list)
         {
-            var combinations = new List<IList<T>> { new T[list.Count] };
+            var combinations = new List<IList<T>> {new T[list.Count]};
             for (var i = 0; i < list.Count; i++)
             {
                 var newCombs = new List<IList<T>>();
                 foreach (var item in list[i])
-                    foreach (var combination in combinations)
-                    {
-                        var newComb = combination.ToArray();
-                        newComb[i] = item;
-                        newCombs.Add(newComb);
-                    }
+                foreach (var combination in combinations)
+                {
+                    var newComb = combination.ToArray();
+                    newComb[i] = item;
+                    newCombs.Add(newComb);
+                }
                 combinations = newCombs;
             }
             return combinations;
@@ -171,7 +230,7 @@ namespace Genesis.Util
             this IList<T> collection, uint startIdex = 0, uint finalIndex = uint.MaxValue)
         {
             if (collection == null) return null;
-            var length = System.Math.Max(finalIndex, collection.Count) - startIdex;
+            var length = Math.Max(finalIndex, collection.Count) - startIdex;
             if (length <= 0) return null;
 
             var subSet = new T[length];

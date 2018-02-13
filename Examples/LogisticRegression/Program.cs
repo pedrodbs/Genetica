@@ -3,8 +3,8 @@
 //     Some copyright
 // </copyright>
 // <summary>
-//    Project: Genesis.Examples.LogisticRegression
-//    Last updated: 2017/09/08
+//    Project: LogisticRegression
+//    Last updated: 2018/01/18
 // 
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
@@ -14,6 +14,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using Genesis;
 using Genesis.Crossover;
 using Genesis.Elements;
 using Genesis.Elements.Functions;
@@ -25,7 +26,7 @@ using Genesis.Graphviz.Patch;
 using Genesis.Mutation;
 using Genesis.Selection;
 
-namespace Genesis.Examples.LogisticRegression
+namespace LogisticRegression
 {
     internal class MainClass
     {

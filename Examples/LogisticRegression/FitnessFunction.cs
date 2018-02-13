@@ -3,8 +3,8 @@
 //     Some copyright
 // </copyright>
 // <summary>
-//    Project: Genesis.Examples.LogisticRegression
-//    Last updated: 2017/09/08
+//    Project: LogisticRegression
+//    Last updated: 2018/01/18
 // 
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
@@ -16,7 +16,7 @@ using Genesis.Elements;
 using Genesis.Elements.Terminals;
 using Genesis.Evaluation;
 
-namespace Genesis.Examples.LogisticRegression
+namespace LogisticRegression
 {
     public class FitnessFunction : IFitnessFunction
     {
