@@ -19,7 +19,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 03/28/2018
+//    Last updated: 03/31/2018
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
@@ -87,11 +87,13 @@ namespace Genesis.Operators.Mutation
 
         #region Public Methods
 
+        /// <inheritdoc />
         public void Dispose()
         {
             this._primitives.Clear();
         }
 
+        /// <inheritdoc />
         public IEnumerable<TProgram> GetAllMutations(TProgram program)
         {
             // if terminal, just return list of terminals plus the program itself
@@ -122,13 +124,13 @@ namespace Genesis.Operators.Mutation
         }
 
         /// <summary>
-        ///     Mutates the given <see cref="TProgram" /> by randomly replacing each sub-program by one program with the same
-        ///     arity taken from the defined <see cref="PrimitiveSet{TProgram}" />.
+        ///     Mutates the given <typeparamref name="TProgram" /> by randomly replacing each sub-program by one program with the
+        ///     same arity taken from the defined <see cref="PrimitiveSet{TProgram}" />.
         /// </summary>
         /// <param name="program">The program we want to mutate.</param>
         /// <returns>
-        ///     A new <see cref="TProgram" /> created by randomly replacing each sub-program by one program with the same arity
-        ///     taken from the defined <see cref="PrimitiveSet{TProgram}" />.
+        ///     A new <typeparamref name="TProgram" /> created by randomly replacing each sub-program by one program with the same
+        ///     arity taken from the defined <see cref="PrimitiveSet{TProgram}" />.
         /// </returns>
         public TProgram Mutate(TProgram program)
         {

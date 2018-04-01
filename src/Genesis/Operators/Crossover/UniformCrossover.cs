@@ -19,7 +19,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 03/28/2018
+//    Last updated: 03/31/2018
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
@@ -71,6 +71,7 @@ namespace Genesis.Operators.Crossover
             return parent1.Equals(parent2) ? parent1 : (TProgram) this.GetCrossover(parent1, parent2);
         }
 
+        /// <inheritdoc />
         public IEnumerable<TProgram> GetAllOffspring(TProgram parent1, TProgram parent2)
         {
             if (parent1 == null || parent2 == null) return new List<TProgram>();
@@ -81,6 +82,7 @@ namespace Genesis.Operators.Crossover
                 : GetSubOffspring(parent1, parent2).Cast<TProgram>();
         }
 
+        /// <inheritdoc />
         public void Dispose()
         {
         }

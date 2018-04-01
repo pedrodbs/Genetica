@@ -19,7 +19,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 03/23/2018
+//    Last updated: 03/31/2018
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
@@ -82,8 +82,10 @@ namespace Genesis.Evaluation
 
         #region Public Methods
 
+        /// <inheritdoc />
         public int Compare(TProgram x, TProgram y) => this.individualRankings[x].CompareTo(this.individualRankings[y]);
 
+        /// <inheritdoc />
         public abstract double Evaluate(TProgram program);
 
         #endregion

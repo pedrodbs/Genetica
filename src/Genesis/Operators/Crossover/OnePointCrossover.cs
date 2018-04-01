@@ -19,7 +19,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 03/28/2018
+//    Last updated: 03/31/2018
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
@@ -56,6 +56,7 @@ namespace Genesis.Operators.Crossover
 
         #region Public Methods
 
+        /// <inheritdoc />
         public TProgram Crossover(TProgram parent1, TProgram parent2)
         {
             if (parent1 == null || parent2 == null) return default(TProgram);
@@ -76,6 +77,7 @@ namespace Genesis.Operators.Crossover
             return (TProgram) parent1.Replace(crossoverPoint, program);
         }
 
+        /// <inheritdoc />
         public IEnumerable<TProgram> GetAllOffspring(TProgram parent1, TProgram parent2)
         {
             if (parent1 == null || parent2 == null) return new List<TProgram>();
@@ -96,6 +98,7 @@ namespace Genesis.Operators.Crossover
             return offspring;
         }
 
+        /// <inheritdoc />
         public void Dispose()
         {
         }

@@ -19,7 +19,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 03/22/2018
+//    Last updated: 03/31/2018
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
@@ -49,10 +49,12 @@ namespace Genesis.Operators.Mutation
 
         #region Public Methods
 
+        /// <inheritdoc />
         public void Dispose()
         {
         }
 
+        /// <inheritdoc />
         public IEnumerable<TProgram> GetAllMutations(TProgram program)
         {
             if (program == null) return new List<TProgram>();
@@ -64,10 +66,10 @@ namespace Genesis.Operators.Mutation
         }
 
         /// <summary>
-        ///     Mutates the given <see cref="TProgram" /> by selecting one of its sub-programs.
+        ///     Mutates the given <typeparamref name="TProgram" /> by selecting one of its sub-programs.
         /// </summary>
         /// <param name="program">The program we want to mutate.</param>
-        /// <returns>A sub-program of the given <see cref="TProgram" />.</returns>
+        /// <returns>A sub-program of the given <typeparamref name="TProgram" />.</returns>
         public TProgram Mutate(TProgram program)
         {
             if (program == null) return default(TProgram);

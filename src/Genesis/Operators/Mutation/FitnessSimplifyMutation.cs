@@ -19,7 +19,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 03/26/2018
+//    Last updated: 03/31/2018
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
@@ -65,13 +65,16 @@ namespace Genesis.Operators.Mutation
 
         #region Public Methods
 
+        /// <inheritdoc />
         public void Dispose()
         {
         }
 
+        /// <inheritdoc />
         public IEnumerable<MathProgram> GetAllMutations(MathProgram program) =>
             new HashSet<MathProgram> {this.Mutate(program)};
 
+        /// <inheritdoc />
         public MathProgram Mutate(MathProgram program) =>
             (MathProgram) program.Simplify(this._fitnessFunction, this._epsilon);
 

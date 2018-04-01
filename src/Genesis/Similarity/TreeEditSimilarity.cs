@@ -19,7 +19,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 03/23/2018
+//    Last updated: 03/31/2018
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
@@ -45,6 +45,7 @@ namespace Genesis.Similarity
     {
         #region Public Methods
 
+        /// <inheritdoc />
         public double Calculate(TProgram prog1, TProgram prog2)
         {
             return Calculate(prog1, (ITreeProgram<TOutput>) prog2);
@@ -152,6 +153,7 @@ namespace Genesis.Similarity
                         totalCost += remainder1;
                     }
                 }
+
                 if (subProg2 != null)
                 {
                     if (subProg2 is WeightedVariable variable)
@@ -168,6 +170,7 @@ namespace Genesis.Similarity
                         totalCost += remainder2;
                     }
                 }
+
                 return;
             }
 
@@ -260,6 +263,8 @@ namespace Genesis.Similarity
             public ITreeProgram<TOutput> CreateNew(IList<ITreeProgram<TOutput>> children) => this;
 
             public ITreeProgram<TOutput> GetPrimitive() => this;
+
+            public ITreeProgram<TOutput> Simplify() => this;
 
             #endregion
         }

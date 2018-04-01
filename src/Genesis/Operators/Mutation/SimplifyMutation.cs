@@ -19,7 +19,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 03/28/2018
+//    Last updated: 03/31/2018
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
@@ -48,10 +48,12 @@ namespace Genesis.Operators.Mutation
 
         #region Public Methods
 
+        /// <inheritdoc />
         public void Dispose()
         {
         }
 
+        /// <inheritdoc />
         public IEnumerable<MathProgram> GetAllMutations(MathProgram program)
         {
             var mutations = new HashSet<MathProgram>();

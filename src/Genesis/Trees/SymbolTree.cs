@@ -19,7 +19,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 03/23/2018
+//    Last updated: 03/31/2018
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
@@ -56,6 +56,7 @@ namespace Genesis.Trees
 
         #region Properties & Indexers
 
+        /// <inheritdoc />
         public IInformationTreeNode RootNode => this._rootNode;
 
         #endregion
@@ -82,31 +83,37 @@ namespace Genesis.Trees
             return (double) commonCount / Math.Max(this.GetNodeCount(), other.GetNodeCount());
         }
 
+        /// <inheritdoc />
         public void AddProgram(TProgram program)
         {
             this._rootNode.Value++;
             AddElement(program, this._rootNode, this._rootNode, new HashSet<SymbolTreeNode>());
         }
 
+        /// <inheritdoc />
         public void AddPrograms(IEnumerable<TProgram> programs)
         {
             foreach (var program in programs)
                 this.AddProgram(program);
         }
 
+        /// <inheritdoc />
         public void Clear()
         {
             this._rootNode.Children.Clear();
         }
 
+        /// <inheritdoc />
         public uint GetCount() => (uint) (this._rootNode.GetCount() - 1);
 
+        /// <inheritdoc />
         public uint GetNodeCount()
         {
             // discounts the (artificial) root node count
             return GetNodeCount(this._rootNode) - this._rootNode.Value;
         }
 
+        /// <inheritdoc />
         public void Prune(double frequencyThreshold)
         {
             Prune(this._rootNode, (uint) (frequencyThreshold * this._rootNode.Value));

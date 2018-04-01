@@ -42,6 +42,7 @@ namespace Genesis.Similarity
     {
         #region Public Methods
 
+        /// <inheritdoc />
         public double Calculate(TProgram prog1, TProgram prog2)
         {
             if (prog1 == null || prog2 == null) return 0;

@@ -19,7 +19,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 03/23/2018
+//    Last updated: 03/31/2018
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
@@ -34,7 +34,9 @@ namespace Genesis.Evaluation
     ///     Represents a <see cref="RankFitnessFunction{TProgram}" /> that computes the fitness of a program directly according
     ///     to its rank.
     /// </summary>
-    /// <remarks><see cref="http://www.pohlheim.com/Papers/mpga_gal95/gal2_3.html"/></remarks>
+    /// <remarks>
+    ///     <see href="http://www.pohlheim.com/Papers/mpga_gal95/gal2_3.html" />
+    /// </remarks>
     /// <typeparam name="TProgram">The type of program.</typeparam>
     public class LinearRankFitnessFunction<TProgram> : RankFitnessFunction<TProgram> where TProgram : IProgram
     {
@@ -54,6 +56,7 @@ namespace Genesis.Evaluation
 
         #region Public Methods
 
+        /// <inheritdoc />
         public override double Evaluate(TProgram program)
         {
             if (!this.individualRankings.ContainsKey(program)) return -1d;

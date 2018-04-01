@@ -19,7 +19,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 03/22/2018
+//    Last updated: 03/31/2018
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
@@ -45,7 +45,7 @@ namespace Genesis.Operators.Selection
         ///     Performs the selection operation over the given <see cref="IPopulation{TProgram}" />.
         /// </summary>
         /// <param name="population">The population over which to perform selection.</param>
-        /// <returns>A list of <see cref="TProgram" /> resulting from the selection operation.</returns>
+        /// <returns>A list of <typeparamref name="TProgram" /> resulting from the selection operation.</returns>
         IEnumerable<TProgram> Select(IPopulation<TProgram> population);
 
         #endregion

@@ -19,7 +19,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 03/23/2018
+//    Last updated: 03/31/2018
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
@@ -40,6 +40,7 @@ namespace Genesis.Similarity
     {
         #region Public Methods
 
+        /// <inheritdoc />
         public double Calculate(MathProgram prog1, MathProgram prog2)
         {
             if (prog1 == null || prog2 == null) return 0;

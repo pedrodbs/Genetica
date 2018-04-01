@@ -19,7 +19,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 03/26/2018
+//    Last updated: 03/31/2018
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
@@ -112,6 +112,7 @@ namespace Genesis.Elements
             return strBuilder.ToString();
         }
 
+        /// <inheritdoc />
         public void Dispose()
         {
             this._primitiveLabels.Clear();
@@ -165,13 +166,16 @@ namespace Genesis.Elements
                         invalid = true;
                         break;
                     }
+
                     children[i] = child;
                 }
+
                 if (invalid) continue;
 
                 // creates a new program
                 return (MathProgram) functionPattern.Value.CreateNew(children);
             }
+
             return null;
         }
 
@@ -196,6 +200,7 @@ namespace Genesis.Elements
             return index != expr.Length - 1 ? default(MathProgram) : prog;
         }
 
+        /// <inheritdoc />
         public string ToNormalNotation(MathProgram program, bool includeParentheses = true) => program.ToString();
 
         #endregion
@@ -222,6 +227,7 @@ namespace Genesis.Elements
                 var subPattern = (correctedParenthesis.Length == 1 ? @"\" : string.Empty) + correctedParenthesis;
                 pattern.Append($"{subPattern}{SUB_ELEM_PATTERN}");
             }
+
             if (exprElements.Length > 0)
                 pattern.Remove(pattern.Length - SUB_ELEM_PATTERN.Length, SUB_ELEM_PATTERN.Length);
             return pattern.ToString();
@@ -263,6 +269,7 @@ namespace Genesis.Elements
                 if (child == null) return null;
                 children[i] = child;
             }
+
             return (MathProgram) prog.CreateNew(children);
         }
 

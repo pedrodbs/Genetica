@@ -19,7 +19,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 03/23/2018
+//    Last updated: 03/31/2018
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
@@ -71,6 +71,14 @@ namespace Genesis.Elements
         ///     derived type.
         /// </returns>
         ITreeProgram<TOutput> GetPrimitive();
+
+        /// <summary>
+        ///     Simplifies the expression of the given program by returning a new program which value will always be equal to the
+        ///     original program, i.e. it removes redundant operations. Implementations can e.g. remove subtrees that will always
+        ///     result in the value of one of its operands.
+        /// </summary>
+        /// <returns>A program corresponding to a simplification of the given program.</returns>
+        ITreeProgram<TOutput> Simplify();
 
         #endregion
     }

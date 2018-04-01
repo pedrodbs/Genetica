@@ -19,7 +19,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 03/21/2018
+//    Last updated: 03/31/2018
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
@@ -89,12 +89,14 @@ namespace Genesis.Elements.Terminals
 
         #region Public Methods
 
+        /// <inheritdoc />
         public override bool Equals(object obj)
         {
             if (obj is null) return false;
             return obj is Range range && Equals(range);
         }
 
+        /// <inheritdoc />
         public override int GetHashCode()
         {
             unchecked
@@ -103,22 +105,32 @@ namespace Genesis.Elements.Terminals
             }
         }
 
+        /// <inheritdoc />
         public override string ToString() => $"[{this.Min:0.###},{this.Max:0.###}]";
 
         #endregion
 
         #region Public Methods
 
-        public static bool operator ==(Range left, Range right)
-        {
-            return left.Equals(right);
-        }
+        /// <summary>
+        ///     Checks whether two <see cref="Range" /> objects are equal, i.e., whether their <see cref="Max" /> and
+        ///     <see cref="Min" /> properties are equal.
+        /// </summary>
+        /// <param name="left">The first range.</param>
+        /// <param name="right">The second range.</param>
+        /// <returns><c>true</c> if the ranges are equal, <c>false</c> otherwise.</returns>
+        public static bool operator ==(Range left, Range right) => left.Equals(right);
 
-        public static bool operator !=(Range left, Range right)
-        {
-            return !left.Equals(right);
-        }
+        /// <summary>
+        ///     Checks whether two <see cref="Range" /> objects are not equal, i.e., whether their <see cref="Max" /> or
+        ///     <see cref="Min" /> properties are not equal.
+        /// </summary>
+        /// <param name="left">The first range.</param>
+        /// <param name="right">The second range.</param>
+        /// <returns><c>true</c> if the ranges are not equal, <c>false</c> otherwise.</returns>
+        public static bool operator !=(Range left, Range right) => !left.Equals(right);
 
+        /// <inheritdoc />
         public bool Equals(Range other) => this.Max.Equals(other.Max) && this.Min.Equals(other.Min);
 
         #endregion

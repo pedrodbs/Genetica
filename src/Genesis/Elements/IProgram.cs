@@ -19,7 +19,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 03/26/2018
+//    Last updated: 03/31/2018
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
@@ -48,8 +48,8 @@ namespace Genesis.Elements
     }
 
     /// <summary>
-    ///     Represents an interface for a genetic program that has some input of type <see cref="TInput" /> and output of type
-    ///     <see cref="TOutput" />.
+    ///     Represents an interface for a genetic program that has some input of type <typeparamref name="TInput" /> and output
+    ///     of type <typeparamref name="TOutput" />.
     /// </summary>
     /// <typeparam name="TInput">The type of program input.</typeparam>
     /// <typeparam name="TOutput">The type of program output.</typeparam>
@@ -69,7 +69,7 @@ namespace Genesis.Elements
         /// <summary>
         ///     Computes the output of the program based on it's <see cref="Input" />.
         /// </summary>
-        /// <returns>A <see cref="TOutput" /> value corresponding to this program's computed output.</returns>
+        /// <returns>A <typeparamref name="TOutput" /> value corresponding to this program's computed output.</returns>
         TOutput Compute();
 
         #endregion

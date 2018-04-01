@@ -19,7 +19,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 03/26/2018
+//    Last updated: 03/31/2018
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
@@ -41,23 +41,23 @@ namespace Genesis.Elements
 
         /// <summary>
         ///     Converts the given <see cref="string" /> expression written in normal notation, i.e., where functions are written
-        ///     in the form func(arg1 arg2 ...) or (arg1 func arg2) to a <see cref="TProgram" />.
+        ///     in the form func(arg1 arg2 ...) or (arg1 func arg2) to a <typeparamref name="TProgram" />.
         /// </summary>
         /// <param name="expression">The expression we want to convert to an program.</param>
-        /// <returns>A <see cref="TProgram" /> converted from the given expression.</returns>
+        /// <returns>A <typeparamref name="TProgram" /> converted from the given expression.</returns>
         TProgram FromNormalNotation(string expression);
 
         /// <summary>
         ///     Converts the given <see cref="string" /> expression written in prefix notation, i.e., where functions are written
-        ///     in the form (func arg1 arg2 ...) to a <see cref="TProgram" />.
+        ///     in the form (func arg1 arg2 ...) to a <typeparamref name="TProgram" />.
         /// </summary>
         /// <param name="expression">The expression we want to convert to an program.</param>
-        /// <returns>A <see cref="TProgram" /> converted from the given expression.</returns>
+        /// <returns>A <typeparamref name="TProgram" /> converted from the given expression.</returns>
         TProgram FromPrefixNotation(string expression);
 
         /// <summary>
-        ///     Converts the given <see cref="TProgram" /> to a <see cref="string" /> expression in prefix notation, i.e., where
-        ///     functions are written in the form (func arg1 arg2 ...).
+        ///     Converts the given <typeparamref name="TProgram" /> to a <see cref="string" /> expression in prefix notation, i.e.,
+        ///     where functions are written in the form (func arg1 arg2 ...).
         /// </summary>
         /// <param name="program">The program we want to convert to an expression.</param>
         /// <param name="includeParentheses">
@@ -67,8 +67,8 @@ namespace Genesis.Elements
         string ToNormalNotation(TProgram program, bool includeParentheses = true);
 
         /// <summary>
-        ///     Converts the given <see cref="TProgram" /> to a <see cref="string" /> expression in prefix notation, i.e., where
-        ///     functions are written in the form (func arg1 arg2 ...).
+        ///     Converts the given <typeparamref name="TProgram" /> to a <see cref="string" /> expression in prefix notation, i.e.,
+        ///     where functions are written in the form (func arg1 arg2 ...).
         /// </summary>
         /// <param name="program">The program we want to convert to an expression.</param>
         /// <param name="includeParentheses">

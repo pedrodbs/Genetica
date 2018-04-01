@@ -19,7 +19,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 03/22/2018
+//    Last updated: 03/31/2018
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
@@ -76,9 +76,11 @@ namespace Genesis.Operators.Crossover
 
         #region Public Methods
 
+        /// <inheritdoc />
         public TProgram Crossover(TProgram parent1, TProgram parent2) =>
             this._possibleCrossovers.GetRandomItem(this._random).Crossover(parent1, parent2);
 
+        /// <inheritdoc />
         public IEnumerable<TProgram> GetAllOffspring(TProgram parent1, TProgram parent2)
         {
             var offspring = new HashSet<TProgram>();
@@ -87,6 +89,7 @@ namespace Genesis.Operators.Crossover
             return offspring;
         }
 
+        /// <inheritdoc />
         public void Dispose()
         {
             this._possibleCrossovers.Clear();

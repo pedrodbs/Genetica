@@ -19,7 +19,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 03/28/2018
+//    Last updated: 03/31/2018
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
@@ -81,6 +81,7 @@ namespace Genesis.Operators.Mutation
 
         #region Public Methods
 
+        /// <inheritdoc />
         public void Dispose()
         {
         }
@@ -114,12 +115,13 @@ namespace Genesis.Operators.Mutation
         }
 
         /// <summary>
-        ///     Mutates the given <see cref="TProgram" /> by replacing one of its sub-programs by a new random program generated
-        ///     using the defined <see cref="IProgramGenerator{TProgram,TOutput}" />.
+        ///     Mutates the given <typeparamref name="TProgram" /> by replacing one of its sub-programs by a new random program
+        ///     generated using the defined <see cref="IProgramGenerator{TProgram,TOutput}" />.
         /// </summary>
         /// <param name="program">The program we want to mutate.</param>
         /// <returns>
-        ///     A new <see cref="TProgram" /> by replacing one of its sub-programs by a new random program generated using the
+        ///     A new <typeparamref name="TProgram" /> by replacing one of its sub-programs by a new random program generated using
+        ///     the
         ///     defined <see cref="IProgramGenerator{TProgram,TOutput}" />.
         /// </returns>
         public TProgram Mutate(TProgram program)

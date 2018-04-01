@@ -19,7 +19,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 03/26/2018
+//    Last updated: 03/31/2018
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
@@ -48,8 +48,10 @@ namespace Genesis.Elements.Functions
 
         #region Properties & Indexers
 
+        /// <inheritdoc />
         public override string Expression { get; }
 
+        /// <inheritdoc />
         public override string Label { get; } = "f";
 
         /// <summary>

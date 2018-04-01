@@ -19,7 +19,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 03/23/2018
+//    Last updated: 03/31/2018
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
@@ -34,7 +34,7 @@ using Genesis.Util;
 namespace Genesis.Elements
 {
     /// <summary>
-    ///     Represents a collection of <see cref="TProgram" /> primitives including a set of functions and terminals.
+    ///     Represents a collection of <typeparamref name="TProgram" /> primitives including a set of functions and terminals.
     /// </summary>
     /// <typeparam name="TProgram">The type of program.</typeparam>
     public class PrimitiveSet<TProgram> : IDisposable where TProgram : ITreeProgram
@@ -49,7 +49,7 @@ namespace Genesis.Elements
         #region Constructors
 
         /// <summary>
-        ///     Creates a new <see cref="PrimitiveSet{TProgram" /> with the give terminals and functions.
+        ///     Creates a new <see cref="PrimitiveSet{TProgram}" /> with the give terminals and functions.
         /// </summary>
         /// <param name="terminals">The programs representing the terminal primitives.</param>
         /// <param name="functions">The programs representing the function primitives.</param>
@@ -77,6 +77,7 @@ namespace Genesis.Elements
 
         #region Public Methods
 
+        /// <inheritdoc />
         public override string ToString()
         {
             var sb = new StringBuilder("Functions: ");
@@ -104,6 +105,7 @@ namespace Genesis.Elements
             this._functions.AddRange(primitiveSet.Functions);
         }
 
+        /// <inheritdoc />
         public void Dispose()
         {
             this._functions.Clear();

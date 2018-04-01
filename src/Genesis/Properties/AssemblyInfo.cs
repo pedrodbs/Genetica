@@ -5,8 +5,8 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Genetica.Graphviz")]
-[assembly: AssemblyDescription("Graphviz extensions for the Genetica.Net library")]
+[assembly: AssemblyTitle("Genetica")]
+[assembly: AssemblyDescription("A genetic programming library written in C#")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Pedro Sequeira")]
 [assembly: AssemblyProduct("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("9B7BA1F3-C589-44EC-9FBF-6883AFD13DAE")]
+[assembly: Guid("FA82CFDC-8CD4-419F-A5B1-43D32AC358D1")]
 
 // Version information for an assembly consists of the following four values:
 //

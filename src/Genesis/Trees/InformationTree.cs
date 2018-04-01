@@ -19,7 +19,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 03/23/2018
+//    Last updated: 03/31/2018
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
@@ -50,38 +50,45 @@ namespace Genesis.Trees
 
         #region Properties & Indexers
 
+        /// <inheritdoc />
         public IInformationTreeNode RootNode => this._rootNode;
 
         #endregion
 
         #region Public Methods
 
+        /// <inheritdoc />
         public void AddProgram(TProgram program)
         {
             AddProgram(program, this._rootNode, this._rootNode);
         }
 
+        /// <inheritdoc />
         public void AddPrograms(IEnumerable<TProgram> programs)
         {
             foreach (var program in programs)
                 this.AddProgram(program);
         }
 
+        /// <inheritdoc />
         public void Clear()
         {
             this._rootNode.Children.Clear();
         }
 
+        /// <inheritdoc />
         public uint GetCount()
         {
             return this._rootNode.GetCount();
         }
 
+        /// <inheritdoc />
         public uint GetNodeCount()
         {
             return GetNodeCount(this._rootNode);
         }
 
+        /// <inheritdoc />
         public void Prune(double valueThreshold)
         {
             var rootNode = this._rootNode;

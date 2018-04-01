@@ -19,13 +19,14 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 03/26/2018
+//    Last updated: 03/31/2018
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
 // ------------------------------------------
 
 using System.Collections.Generic;
+using Genesis.Elements.Terminals;
 
 namespace Genesis.Elements.Functions
 {
@@ -51,20 +52,61 @@ namespace Genesis.Elements.Functions
 
         #region Properties & Indexers
 
+        /// <inheritdoc />
         public override string Expression { get; }
 
+        /// <inheritdoc />
         public override string Label => "*";
 
         #endregion
 
         #region Public Methods
 
+        /// <inheritdoc />
         public override double Compute() => this.FirstParameter.Compute() * this.SecondParameter.Compute();
 
+        /// <inheritdoc />
         public override ITreeProgram<double> CreateNew(IList<ITreeProgram<double>> children) =>
             children == null || children.Count != 2
                 ? null
                 : new MultiplicationFunction(children[0], children[1]);
+
+        /// <inheritdoc />
+        public override ITreeProgram<double> Simplify()
+        {
+            // if its a constant value, just return a constant with that value
+            if (this.IsConstant())
+                return new Constant(this.Compute());
+
+            // otherwise first tries to simplify children
+            var input = new ITreeProgram<double>[this.Input.Count];
+            for (var i = 0; i < this.Input.Count; i++)
+                input[i] = this.Input[i].Simplify();
+
+            //check whether one operand is 1 and return the other
+            if (input[0].EqualsConstant(1))
+                return input[1];
+            if (input[1].EqualsConstant(1))
+                return input[0];
+
+            //check whether one of operands is 0 and return 0
+            if (input[0].EqualsConstant(0) || input[1].EqualsConstant(0))
+                return Constant.Zero;
+
+            //check whether operands are the same and return square
+            if (input[0].Equals(input[1]))
+                return new PowerFunction(input[0], new Constant(2));
+
+            // check whether there's a ((x^a)*x) situation, returns (x^(a+1))
+            if (input[0] is PowerFunction && input[0].Input[1] is Constant &&
+                input[0].Input[0].Equals(input[1]))
+                return new PowerFunction(input[1], new Constant(input[0].Input[1].Compute() + 1));
+            if (input[1] is PowerFunction && input[1].Input[1] is Constant &&
+                input[1].Input[0].Equals(input[0]))
+                return new PowerFunction(input[0], new Constant(input[1].Input[1].Compute() + 1));
+
+            return this.CreateNew(input);
+        }
 
         #endregion
     }

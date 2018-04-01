@@ -19,7 +19,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 03/22/2018
+//    Last updated: 03/31/2018
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
@@ -48,6 +48,7 @@ namespace Genesis.Elements.Terminals
 
         #region Properties & Indexers
 
+        /// <inheritdoc />
         public override string Expression => this.Label;
 
         #endregion
@@ -57,11 +58,18 @@ namespace Genesis.Elements.Terminals
         /// <summary>
         ///     Because terminals have no children, this returns the object itself.
         /// </summary>
-        /// <param name="children">This parameter will not be used, so it can be null.</param>
+        /// <param name="children">This parameter will not be used, so it may be null.</param>
         /// <returns>The same <see cref="Terminal" /> object.</returns>
         public override ITreeProgram<double> CreateNew(IList<ITreeProgram<double>> children) => this;
 
+        /// <inheritdoc />
         public override int GetHashCode() => this.Expression.GetHashCode();
+
+        /// <summary>
+        ///     Because terminals have no children, the program cannot be simplified so this method returns the object itself.
+        /// </summary>
+        /// <returns>The same <see cref="Terminal" /> object.</returns>
+        public override ITreeProgram<double> Simplify() => this;
 
         #endregion
     }

@@ -19,7 +19,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 03/23/2018
+//    Last updated: 03/31/2018
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
@@ -88,18 +88,21 @@ namespace Genesis.Trees
             return (double) commonCount / Math.Max(this.GetNodeCount(), other.GetNodeCount());
         }
 
+        /// <inheritdoc />
         public virtual void AddProgram(TProgram program)
         {
             this.rootNode.Value++;
             AddElement(program, this.rootNode.Children[0], this.rootNode, new HashSet<SymbolNode>());
         }
 
+        /// <inheritdoc />
         public void AddPrograms(IEnumerable<TProgram> programs)
         {
             foreach (var program in programs)
                 this.AddProgram(program);
         }
 
+        /// <inheritdoc />
         public void Clear()
         {
             this.rootNode = null;
@@ -124,6 +127,7 @@ namespace Genesis.Trees
             return GetNodeCount(this.rootNode) - this.rootNode.Value;
         }
 
+        /// <inheritdoc />
         public void Prune(double frequencyThreshold)
         {
             Prune(this.rootNode, (uint) (frequencyThreshold * this.rootNode.Value));
@@ -166,6 +170,7 @@ namespace Genesis.Trees
                     if (child2.Children.ContainsKey(symbChild1.Key))
                         commonCount += GetCommonCount(symbChild1.Value, child2.Children[symbChild1.Key]);
             }
+
             return commonCount;
         }
 
@@ -222,9 +227,11 @@ namespace Genesis.Trees
 
             public SymbolNode Parent { get; }
 
+            /// <inheritdoc />
             public IInformationTreeNode RootNode => this.Parent.RootNode;
 
-            public uint Value { get { return this.Parent.Value; } set { } }
+            /// <inheritdoc />
+            public uint Value { get => this.Parent.Value; set { } }
 
             IReadOnlyList<ITreeNode> ITreeNode.Children => this.Children.Values.ToList();
 
@@ -232,6 +239,7 @@ namespace Genesis.Trees
 
             #region Public Methods
 
+            /// <inheritdoc />
             public override string ToString()
             {
                 return this._index.ToString(CultureInfo.InvariantCulture);
@@ -275,8 +283,10 @@ namespace Genesis.Trees
 
             public ArgumentNode[] Children { get; }
 
+            /// <inheritdoc />
             public IInformationTreeNode RootNode { get; }
 
+            /// <inheritdoc />
             public uint Value { get; set; }
 
             IReadOnlyList<ITreeNode> ITreeNode.Children => this.Children;
@@ -285,6 +295,7 @@ namespace Genesis.Trees
 
             #region Public Methods
 
+            /// <inheritdoc />
             public override string ToString()
             {
                 return this._symbol;

@@ -19,7 +19,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 03/26/2018
+//    Last updated: 03/31/2018
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
@@ -37,14 +37,14 @@ namespace Genesis.Elements
         #region Public Methods
 
         /// <summary>
-        ///     Converts the given <see cref="string" /> to a program of type <see cref="TProgram" />.
+        ///     Converts the given <see cref="string" /> to a program of type <typeparamref name="TProgram" />.
         /// </summary>
         /// <param name="programStr">The string representing some program. </param>
         /// <returns>The program corresponding to the given string representation.</returns>
         TProgram FromString(string programStr);
 
         /// <summary>
-        ///     Converts the given <see cref="TProgram" /> to a string.
+        ///     Converts the given <typeparamref name="TProgram" /> to a string.
         /// </summary>
         /// <param name="program">The program we want to convert.</param>
         /// <returns>The string representing the given program.</returns>

@@ -19,7 +19,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 03/23/2018
+//    Last updated: 03/31/2018
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
@@ -38,7 +38,7 @@ namespace Genesis.Similarity
         #region Public Methods
 
         /// <summary>
-        ///     Calculates the similarity (or inverse distance) between two <see cref="TProgram" />.
+        ///     Calculates the similarity (or inverse distance) between two <typeparamref name="TProgram" />.
         /// </summary>
         /// <param name="prog1">The first program of the comparison.</param>
         /// <param name="prog2">The second program of the comparison.</param>

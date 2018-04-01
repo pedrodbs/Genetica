@@ -19,7 +19,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 03/22/2018
+//    Last updated: 03/31/2018
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
@@ -36,7 +36,14 @@ namespace Genesis.Elements.Terminals
     {
         #region Static Fields & Constants
 
+        /// <summary>
+        ///     Returns a <see cref="Constant" /> with a value of <c>0</c>.
+        /// </summary>
         public static readonly Constant Zero = new Constant(0);
+
+        /// <summary>
+        ///     Returns a <see cref="Constant" /> with a value of <c>1</c>.
+        /// </summary>
         public static readonly Constant One = new Constant(1);
 
         #endregion
@@ -62,18 +69,21 @@ namespace Genesis.Elements.Terminals
 
         #region Properties & Indexers
 
+        /// <inheritdoc />
         public override string Label => this._value.ToString("0.##", CultureInfo.InvariantCulture);
 
         #endregion
 
         #region Public Methods
 
+        /// <inheritdoc />
         public override double Compute() => this._value;
 
         #endregion
 
         #region Public Methods
 
+        /// <inheritdoc />
         public override int GetHashCode() => this._value.GetHashCode();
 
         #endregion

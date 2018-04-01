@@ -20,6 +20,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Genesis.Graphviz.Tests", "G
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunctionRegression", "Examples\FunctionRegression\FunctionRegression.csproj", "{9EC944ED-8FAC-401E-A65D-EF8BE5633F84}"
 EndProject
+Project("{7CF6DF6D-3B04-46F8-A40B-537D21BCA0B4}") = "Genesis.Sandcastle", "Genesis.Sandcastle\Genesis.Sandcastle.shfbproj", "{67FA2482-B6A7-43DE-A082-A7E540D87CB1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -114,6 +116,17 @@ Global
 		{9EC944ED-8FAC-401E-A65D-EF8BE5633F84}.Release|x64.Build.0 = Release|x64
 		{9EC944ED-8FAC-401E-A65D-EF8BE5633F84}.Release|x86.ActiveCfg = Release|x86
 		{9EC944ED-8FAC-401E-A65D-EF8BE5633F84}.Release|x86.Build.0 = Release|x86
+		{67FA2482-B6A7-43DE-A082-A7E540D87CB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67FA2482-B6A7-43DE-A082-A7E540D87CB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67FA2482-B6A7-43DE-A082-A7E540D87CB1}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{67FA2482-B6A7-43DE-A082-A7E540D87CB1}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{67FA2482-B6A7-43DE-A082-A7E540D87CB1}.Debug|x86.Build.0 = Debug|Any CPU
+		{67FA2482-B6A7-43DE-A082-A7E540D87CB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67FA2482-B6A7-43DE-A082-A7E540D87CB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67FA2482-B6A7-43DE-A082-A7E540D87CB1}.Release|x64.ActiveCfg = Release|Any CPU
+		{67FA2482-B6A7-43DE-A082-A7E540D87CB1}.Release|x64.Build.0 = Release|Any CPU
+		{67FA2482-B6A7-43DE-A082-A7E540D87CB1}.Release|x86.ActiveCfg = Release|Any CPU
+		{67FA2482-B6A7-43DE-A082-A7E540D87CB1}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

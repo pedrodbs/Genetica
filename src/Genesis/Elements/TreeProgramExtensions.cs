@@ -19,7 +19,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 03/28/2018
+//    Last updated: 03/31/2018
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
@@ -205,7 +205,7 @@ namespace Genesis.Elements
         /// </summary>
         /// <returns>
         ///     The <see cref="ITreeProgram{TOutput}" /> at the given index, or <see langword="null" /> if the given index
-        ///     is greater than or equal to the <see cref="ITreeProgram{TOutput}.Length" />.
+        ///     is greater than or equal to the program's length.
         /// </returns>
         /// <param name="program">The root program to search for the child program at the given index.</param>
         /// <param name="index">The index of the program we want to search for.</param>

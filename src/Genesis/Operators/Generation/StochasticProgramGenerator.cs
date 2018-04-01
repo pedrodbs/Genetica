@@ -19,7 +19,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 03/23/2018
+//    Last updated: 03/31/2018
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
@@ -78,11 +78,13 @@ namespace Genesis.Operators.Generation
 
         #region Public Methods
 
+        /// <inheritdoc />
         public void Dispose()
         {
             this._possibleGenerators.Clear();
         }
 
+        /// <inheritdoc />
         public TProgram Generate(PrimitiveSet<TProgram> primitives, uint maxDepth) =>
             this._possibleGenerators.GetRandomItem(this._random).Generate(primitives, maxDepth);
 

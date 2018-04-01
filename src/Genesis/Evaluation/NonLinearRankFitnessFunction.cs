@@ -19,7 +19,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 03/28/2018
+//    Last updated: 03/31/2018
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
@@ -96,6 +96,7 @@ namespace Genesis.Evaluation
 
         #region Public Methods
 
+        /// <inheritdoc />
         public override double Evaluate(TProgram program)
         {
             return !this._rootFound || !this.individualRankings.ContainsKey(program)

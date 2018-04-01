@@ -33,11 +33,13 @@
     <DefineConstants>DEBUG;</DefineConstants>
     <Optimize>false</Optimize>
     <DebugType>full</DebugType>
+    <DocumentationFile>bin\x64\Debug\Genesis.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
     <PlatformTarget>x64</PlatformTarget>
     <OutputPath>bin\x64\Release\</OutputPath>
     <Optimize>true</Optimize>
+    <DocumentationFile>bin\x64\Release\Genesis.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -106,6 +108,7 @@
     <Compile Include="Operators\Crossover\UniformCrossover.cs" />
     <Compile Include="Operators\Crossover\ContextPreservingCrossover.cs" />
     <Compile Include="Elements\MathExpressionConverter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Similarity\AverageSimilarity.cs" />
     <Compile Include="Similarity\PrimitiveSimilarity.cs" />
     <Compile Include="Similarity\ValueSimilarity.cs" />
@@ -122,7 +125,6 @@
     <Compile Include="Trees\InfoTreeExtensions.cs" />
     <Compile Include="Trees\OrderedSymbolTree.cs" />
     <Compile Include="Util\CollectionUtil.cs" />
-    <Compile Include="Elements\SimplificationExtensions.cs" />
     <Compile Include="Operators\Mutation\SimplifyMutation.cs" />
     <Compile Include="Operators\Mutation\FitnessSimplifyMutation.cs" />
     <Compile Include="Util\StringUtil.cs" />

@@ -1,5 +1,5 @@
 ﻿// ------------------------------------------
-// <copyright file="SubElementTree.cs" company="Pedro Sequeira">
+// <copyright file="SubProgramTree.cs" company="Pedro Sequeira">
 // 
 //     Copyright (c) 2018 Pedro Sequeira
 // 
@@ -19,7 +19,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 03/23/2018
+//    Last updated: 03/31/2018
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
@@ -40,6 +40,7 @@ namespace Genesis.Trees
     {
         #region Public Methods
 
+        /// <inheritdoc />
         public override void AddProgram(TProgram program)
         {
             this.rootNode.Value++;

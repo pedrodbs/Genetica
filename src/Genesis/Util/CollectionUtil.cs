@@ -19,7 +19,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 03/23/2018
+//    Last updated: 03/31/2018
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
@@ -32,6 +32,9 @@ using MathNet.Numerics.Random;
 
 namespace Genesis.Util
 {
+    /// <summary>
+    ///     Provides several utility methods to create and update collection objects.
+    /// </summary>
     public static class CollectionUtil
     {
         #region Static Fields & Constants
@@ -96,16 +99,19 @@ namespace Genesis.Util
                 list.Add(item);
                 return 0;
             }
+
             if (list[list.Count - 1].CompareTo(item) <= 0)
             {
                 list.Add(item);
                 return list.Count - 1;
             }
+
             if (list[0].CompareTo(item) >= 0)
             {
                 list.Insert(0, item);
                 return 0;
             }
+
             var index = list.BinarySearch(item);
             if (index < 0) index = ~index;
             list.Insert(index, item);
@@ -166,8 +172,10 @@ namespace Genesis.Util
                     newComb[i] = item;
                     newCombs.Add(newComb);
                 }
+
                 combinations = newCombs;
             }
+
             return combinations;
         }
 
@@ -214,6 +222,7 @@ namespace Genesis.Util
                 sum += dict[item];
                 if (sum > rnd) return item;
             }
+
             return dict.Count > 0 ? dict.Keys.First() : default(T);
         }
 
@@ -280,6 +289,7 @@ namespace Genesis.Util
                     items[i] = item;
                 }
             }
+
             return items;
         }
 

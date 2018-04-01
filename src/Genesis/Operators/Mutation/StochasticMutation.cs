@@ -19,7 +19,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 03/22/2018
+//    Last updated: 03/31/2018
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
@@ -76,11 +76,13 @@ namespace Genesis.Operators.Mutation
 
         #region Public Methods
 
+        /// <inheritdoc />
         public void Dispose()
         {
             this._possibleMutations.Clear();
         }
 
+        /// <inheritdoc />
         public IEnumerable<TProgram> GetAllMutations(TProgram program)
         {
             var mutations = new HashSet<TProgram>();

@@ -19,7 +19,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 03/28/2018
+//    Last updated: 03/31/2018
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
@@ -117,23 +117,29 @@ namespace Genesis
 
         #region Properties & Indexers
 
+        /// <inheritdoc />
         public TProgram BestProgram { get; private set; }
 
+        /// <inheritdoc />
         public double CrossoverPercent { get; set; }
 
+        /// <inheritdoc />
         public double ElitismPercent { get; set; }
 
+        /// <inheritdoc />
         public double MutationPercent { get; set; }
 
         #endregion
 
         #region Public Methods
 
+        /// <inheritdoc />
         public void Dispose()
         {
             this.Clear();
         }
 
+        /// <inheritdoc />
         public virtual void Step()
         {
             // checks initialization
@@ -192,6 +198,7 @@ namespace Genesis
                     this.BestProgram = program;
         }
 
+        /// <inheritdoc />
         public void Init(ISet<TProgram> seeds)
         {
             // clear pop

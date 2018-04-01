@@ -19,7 +19,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 03/26/2018
+//    Last updated: 03/31/2018
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
@@ -82,31 +82,47 @@ namespace Genesis.Elements
 
         IReadOnlyList<ITreeNode> ITreeNode.Children => this.Input;
 
+        /// <inheritdoc />
         public abstract string Label { get; }
 
         #endregion
 
         #region Public Methods
 
+        /// <inheritdoc />
         public override bool Equals(object obj)
         {
             return !(obj is null) && (ReferenceEquals(this, obj) ||
                                       obj.GetType() == this.GetType() && this.Equals((MathProgram) obj));
         }
 
+        /// <inheritdoc />
         public override int GetHashCode() => this._hashCode;
 
+        /// <inheritdoc />
         public override string ToString() => this.Expression;
 
         #endregion
 
         #region Public Methods
 
+        /// <summary>
+        ///     Checks if two <see cref="MathProgram" /> are equal.
+        /// </summary>
+        /// <param name="left">The first program.</param>
+        /// <param name="right">The second program.</param>
+        /// <returns><c>true</c> if the programs are equal <c>false</c> otherwise.</returns>
         public static bool operator ==(MathProgram left, MathProgram right)
         {
             return ReferenceEquals(left, right) || !(left is null) && left.Equals(right);
         }
 
+        /// <summary>
+        ///     Checks if two <see cref="MathProgram" /> are not equal.
+        /// </summary>
+        /// <param name="left">The first program.</param>
+        /// <param name="right">The second program.</param>
+        /// <returns><c>true</c> if the programs are not equal <c>false</c> otherwise.</returns>
         public static bool operator !=(MathProgram left, MathProgram right)
         {
             return !(left == right);
@@ -147,6 +163,22 @@ namespace Genesis.Elements
         /// <returns>A value corresponding to the execution of this program's mathematical expression and its <see cref="Input" />.</returns>
         public abstract double Compute();
 
+        /// <inheritdoc />
+        public virtual ITreeProgram<double> Simplify()
+        {
+            // if this is a constant value, just return a constant with that value
+            if (this.IsConstant())
+                return new Constant(this.Compute());
+
+            // otherwise tries to simplify children
+            var input = new ITreeProgram<double>[this.Input.Count];
+            for (var i = 0; i < this.Input.Count; i++)
+                input[i] = this.Input[i].Simplify();
+
+            // creates new program with possibly simplified input
+            return this.CreateNew(input);
+        }
+
         /// <summary>
         ///     Creates a new <see cref="MathProgram" /> which is a copy of this program.
         /// </summary>
@@ -173,7 +205,7 @@ namespace Genesis.Elements
 
         #region Private & Protected Methods
 
-        protected int ProduceHashCode()
+        private int ProduceHashCode()
         {
             unchecked
             {

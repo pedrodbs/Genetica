@@ -19,7 +19,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 03/22/2018
+//    Last updated: 03/31/2018
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
@@ -68,10 +68,12 @@ namespace Genesis.Operators.Selection
 
         #region Public Methods
 
+        /// <inheritdoc />
         public void Dispose()
         {
         }
 
+        /// <inheritdoc />
         public IEnumerable<TProgram> Select(IPopulation<TProgram> population)
         {
             // stores programs in a list, gets fitness sum
@@ -106,6 +108,7 @@ namespace Genesis.Operators.Selection
                     curFitSum += this._fitnessFunction.Evaluate(popList[indivIndex++]);
                 }
             }
+
             return selection;
         }
 

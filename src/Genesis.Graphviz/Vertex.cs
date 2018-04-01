@@ -19,7 +19,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis.Graphviz
-//    Last updated: 03/23/2018
+//    Last updated: 03/31/2018
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
@@ -69,11 +69,13 @@ namespace Genesis.Graphviz
 
         #region Public Methods
 
+        /// <inheritdoc />
         public override int GetHashCode()
         {
             return this._hashCode;
         }
 
+        /// <inheritdoc />
         public override string ToString()
         {
             return this.Node.ToString();

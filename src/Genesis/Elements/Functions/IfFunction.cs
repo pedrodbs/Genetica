@@ -19,13 +19,14 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 03/26/2018
+//    Last updated: 03/31/2018
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
 // ------------------------------------------
 
 using System.Collections.Generic;
+using Genesis.Elements.Terminals;
 
 namespace Genesis.Elements.Functions
 {
@@ -57,8 +58,10 @@ namespace Genesis.Elements.Functions
 
         #region Properties & Indexers
 
+        /// <inheritdoc />
         public override string Expression { get; }
 
+        /// <inheritdoc />
         public override string Label => "if";
 
         /// <summary>
@@ -85,6 +88,7 @@ namespace Genesis.Elements.Functions
 
         #region Public Methods
 
+        /// <inheritdoc />
         public override double Compute()
         {
             var val = this.ConditionProgram.Compute();
@@ -95,10 +99,47 @@ namespace Genesis.Elements.Functions
                     : this.NegativeProgram.Compute());
         }
 
+        /// <inheritdoc />
         public override ITreeProgram<double> CreateNew(IList<ITreeProgram<double>> children) =>
             children == null || children.Count != 4
                 ? null
                 : new IfFunction(children[0], children[1], children[2], children[3]);
+
+        /// <inheritdoc />
+        public override ITreeProgram<double> Simplify()
+        {
+            // if its a constant value, just return a constant with that value
+            if (this.IsConstant())
+                return new Constant(this.Compute());
+
+            // otherwise first tries to simplify children
+            var input = new ITreeProgram<double>[this.Input.Count];
+            for (var i = 0; i < this.Input.Count; i++)
+                input[i] = this.Input[i].Simplify();
+
+            //  check whether the first child is a constant and returns one of the other children accordingly
+            var child1 = input[0];
+            if (child1.IsConstant())
+            {
+                var val = child1.Compute();
+                return val.Equals(0) ? input[1] : (val > 0 ? input[2] : input[3]);
+            }
+
+            // check whether first child is a variable, check its range
+            if (child1 is Variable)
+            {
+                var range = ((Variable) child1).Range;
+                if (range.Min.Equals(0) && range.Max.Equals(0)) return input[1];
+                if (range.Min > 0) return input[2];
+                if (range.Max < 0) return input[3];
+            }
+
+            // check whether result children are equal, in which case replace by one of them
+            if (input[1].Equals(input[2]) && input[1].Equals(input[3]))
+                return input[1];
+
+            return this.CreateNew(input);
+        }
 
         #endregion
     }

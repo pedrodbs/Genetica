@@ -19,7 +19,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 03/22/2018
+//    Last updated: 03/31/2018
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
@@ -39,6 +39,9 @@ namespace Genesis.Operators.Selection
     /// <returns>The array of selection pointers</returns>
     public delegate double[] PopulationSelector(uint numPointers);
 
+    /// <summary>
+    ///     Provides methods that can be used as <see cref="PopulationSelector" /> delegates.
+    /// </summary>
     public static class PopulationSelectors
     {
         #region Static Fields & Constants

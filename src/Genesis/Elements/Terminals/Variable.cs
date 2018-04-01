@@ -19,7 +19,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 03/21/2018
+//    Last updated: 03/31/2018
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
@@ -70,6 +70,7 @@ namespace Genesis.Elements.Terminals
 
         #region Properties & Indexers
 
+        /// <inheritdoc />
         public override string Label { get; }
 
         /// <summary>
@@ -86,6 +87,7 @@ namespace Genesis.Elements.Terminals
 
         #region Public Methods
 
+        /// <inheritdoc />
         public override double Compute() => this.Value;
 
         #endregion
