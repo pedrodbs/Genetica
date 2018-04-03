@@ -19,7 +19,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis.Tests
-//    Last updated: 03/27/2018
+//    Last updated: 04/02/2018
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
@@ -57,7 +57,7 @@ namespace Genesis.Tests
         [TestMethod]
         public void AdditionByZeroTest()
         {
-            var converter = GetConverter(out var varX, out _);
+            GetConverter(out var varX, out _);
             var prog1 = new AdditionFunction(varX, Constant.Zero);
             var prog2 = varX;
             var simp = prog1.Simplify();
@@ -110,7 +110,7 @@ namespace Genesis.Tests
         [TestMethod]
         public void DivisionByOneTest()
         {
-            var converter = GetConverter(out var varX, out _);
+            GetConverter(out var varX, out _);
             var prog1 = new DivisionFunction(varX, Constant.One);
             var prog2 = varX;
             var simp = prog1.Simplify();
@@ -121,7 +121,7 @@ namespace Genesis.Tests
         [TestMethod]
         public void DivisionBySelfTest()
         {
-            var converter = GetConverter(out var varX, out _);
+            GetConverter(out var varX, out _);
             var prog1 = new DivisionFunction(varX, varX);
             var prog2 = Constant.One;
             var simp = prog1.Simplify();
@@ -153,7 +153,7 @@ namespace Genesis.Tests
         [TestMethod]
         public void IfEqualChildrenTest()
         {
-            var converter = GetConverter(out var varX, out var varY);
+            GetConverter(out var varX, out var varY);
             var prog1 = new IfFunction(varY, varX, varX, varX);
             var prog2 = varX;
             var simp = prog1.Simplify();
@@ -189,7 +189,7 @@ namespace Genesis.Tests
         [TestMethod]
         public void MaxTest()
         {
-            var converter = GetConverter(out var varX, out _);
+            GetConverter(out var varX, out _);
             MathProgram prog1 = new MaxFunction(varX, new Constant(double.MinValue));
             var prog2 = varX;
             var simp = prog1.Simplify();
@@ -205,7 +205,7 @@ namespace Genesis.Tests
         [TestMethod]
         public void MinMaxWithSelfTest()
         {
-            var converter = GetConverter(out var varX, out _);
+            GetConverter(out var varX, out _);
             MathProgram prog1 = new MaxFunction(varX, varX);
             var prog2 = varX;
             var simp = prog1.Simplify();
@@ -221,7 +221,7 @@ namespace Genesis.Tests
         [TestMethod]
         public void MinTest()
         {
-            var converter = GetConverter(out var varX, out _);
+            GetConverter(out var varX, out _);
             MathProgram prog1 = new MinFunction(varX, new Constant(double.MaxValue));
             var prog2 = varX;
             var simp = prog1.Simplify();
@@ -237,7 +237,7 @@ namespace Genesis.Tests
         [TestMethod]
         public void MultiplicationByOneTest()
         {
-            var converter = GetConverter(out var varX, out _);
+            GetConverter(out var varX, out _);
             var prog1 = new MultiplicationFunction(Constant.One, varX);
             var prog2 = varX;
             var simp = prog1.Simplify();
@@ -248,7 +248,7 @@ namespace Genesis.Tests
         [TestMethod]
         public void MultiplicationByZeroTest()
         {
-            var converter = GetConverter(out var varX, out _);
+            GetConverter(out var varX, out _);
             var prog1 = new MultiplicationFunction(varX, Constant.Zero);
             var prog2 = Constant.Zero;
             var simp = prog1.Simplify();
@@ -259,7 +259,7 @@ namespace Genesis.Tests
         [TestMethod]
         public void PowerByOneTest()
         {
-            var converter = GetConverter(out var varX, out _);
+            GetConverter(out var varX, out _);
             var prog1 = new PowerFunction(varX, Constant.One);
             var prog2 = varX;
             var simp = prog1.Simplify();
@@ -270,7 +270,7 @@ namespace Genesis.Tests
         [TestMethod]
         public void SelfSubtractionTest()
         {
-            var converter = GetConverter(out var varX, out _);
+            GetConverter(out var varX, out _);
             var prog1 = new SubtractionFunction(varX, varX);
             var prog2 = Constant.Zero;
             var simp = prog1.Simplify();
@@ -310,7 +310,7 @@ namespace Genesis.Tests
         [TestMethod]
         public void SubtractionByZeroTest()
         {
-            var converter = GetConverter(out var varX, out _);
+            GetConverter(out var varX, out _);
             var prog1 = new SubtractionFunction(varX, Constant.Zero);
             var prog2 = varX;
             var simp = prog1.Simplify();
@@ -321,7 +321,7 @@ namespace Genesis.Tests
         [TestMethod]
         public void ZeroDivisionTest()
         {
-            var converter = GetConverter(out var varX, out _);
+            GetConverter(out var varX, out _);
             var prog1 = new DivisionFunction(Constant.Zero, varX);
             var prog2 = Constant.Zero;
             var simp = prog1.Simplify();

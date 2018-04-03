@@ -19,7 +19,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis.Tests
-//    Last updated: 03/27/2018
+//    Last updated: 04/02/2018
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
@@ -117,7 +117,7 @@ namespace Genesis.Tests
             foreach (var expression in NormalExpressions)
             {
                 var prog1 = Converter.FromNormalNotation(expression);
-                var prefixExpr = MathExpressionConverter.ToPrefixNotation(prog1);
+                var prefixExpr = Converter.ToPrefixNotation(prog1);
                 var prog2 = Converter.FromPrefixNotation(prefixExpr);
                 Console.WriteLine($"{expression} -> {prog1} -> {prefixExpr} -> {prog2}");
                 Assert.AreEqual(prog1, prog2,
@@ -174,7 +174,7 @@ namespace Genesis.Tests
             foreach (var expression in PrefixExpressions)
             {
                 var prog = Converter.FromPrefixNotation(expression);
-                var prefixExpr = MathExpressionConverter.ToPrefixNotation(prog);
+                var prefixExpr = Converter.ToPrefixNotation(prog);
                 Console.WriteLine($"{expression} -> {prog} -> {prefixExpr}");
                 Assert.AreEqual(prefixExpr, expression,
                     $"Prefix notation expression {expression} should result in equal expression: {prefixExpr}.");

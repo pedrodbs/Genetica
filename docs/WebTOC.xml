@@ -1,0 +1,921 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpTOC>
+
+  <HelpTOCNode Title="Genetica.NET" Url="html/838abd4d-77a4-4079-8c9b-e18feef6b481.htm" />
+  <HelpTOCNode Id="9df74447-7ff1-450b-bb4b-936a9b0bd8a6" Title="Genesis" Url="html/N_Genesis.htm">
+    <HelpTOCNode Id="a69037f7-f445-4eed-bdd5-1811f99fd050" Title="IPopulation(TProgram) Interface" Url="html/T_Genesis_IPopulation_1.htm">
+      <HelpTOCNode Id="3e81dc45-cf2b-45b5-be9a-ffffcded2d96" Title="IPopulation(TProgram) Properties" Url="html/Properties_T_Genesis_IPopulation_1.htm">
+        <HelpTOCNode Title="BestProgram Property " Url="html/P_Genesis_IPopulation_1_BestProgram.htm" />
+        <HelpTOCNode Title="CrossoverPercent Property " Url="html/P_Genesis_IPopulation_1_CrossoverPercent.htm" />
+        <HelpTOCNode Title="ElitismPercent Property " Url="html/P_Genesis_IPopulation_1_ElitismPercent.htm" />
+        <HelpTOCNode Title="MutationPercent Property " Url="html/P_Genesis_IPopulation_1_MutationPercent.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="3058efa6-859c-461c-8d52-dd4a4e8a0e5c" Title="IPopulation(TProgram) Methods" Url="html/Methods_T_Genesis_IPopulation_1.htm">
+        <HelpTOCNode Title="Init Method " Url="html/M_Genesis_IPopulation_1_Init.htm" />
+        <HelpTOCNode Title="Step Method " Url="html/M_Genesis_IPopulation_1_Step.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="f3971365-e442-442c-8202-3f8bdf8f62c9" Title="ITreeNode Interface" Url="html/T_Genesis_ITreeNode.htm">
+      <HelpTOCNode Id="01b989d1-800e-485c-95b1-93f0bdeb6e9e" Title="ITreeNode Properties" Url="html/Properties_T_Genesis_ITreeNode.htm">
+        <HelpTOCNode Title="Children Property " Url="html/P_Genesis_ITreeNode_Children.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="ITreeNode Methods" Url="html/Methods_T_Genesis_ITreeNode.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="c8aaa232-704e-4151-aecb-ffb51cfbfdb6" Title="Population(TProgram, TOutput) Class" Url="html/T_Genesis_Population_2.htm">
+      <HelpTOCNode Title="Population(TProgram, TOutput) Constructor " Url="html/M_Genesis_Population_2__ctor.htm" />
+      <HelpTOCNode Id="883e59c5-94f8-44b4-a6fd-f57971076751" Title="Population(TProgram, TOutput) Properties" Url="html/Properties_T_Genesis_Population_2.htm">
+        <HelpTOCNode Title="BestProgram Property " Url="html/P_Genesis_Population_2_BestProgram.htm" />
+        <HelpTOCNode Title="CrossoverPercent Property " Url="html/P_Genesis_Population_2_CrossoverPercent.htm" />
+        <HelpTOCNode Title="ElitismPercent Property " Url="html/P_Genesis_Population_2_ElitismPercent.htm" />
+        <HelpTOCNode Title="MutationPercent Property " Url="html/P_Genesis_Population_2_MutationPercent.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="5838d8be-8f73-4895-a54c-fb39d619798a" Title="Population(TProgram, TOutput) Methods" Url="html/Methods_T_Genesis_Population_2.htm">
+        <HelpTOCNode Title="Dispose Method " Url="html/M_Genesis_Population_2_Dispose.htm" />
+        <HelpTOCNode Title="Init Method " Url="html/M_Genesis_Population_2_Init.htm" />
+        <HelpTOCNode Title="Step Method " Url="html/M_Genesis_Population_2_Step.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="607a8bb3-55e5-479a-ac34-5f4cd86305ce" Title="Genesis.D3" Url="html/N_Genesis_D3.htm">
+    <HelpTOCNode Id="0c615139-2487-4a87-ac61-01ec4abce33b" Title="Extensions Class" Url="html/T_Genesis_D3_Extensions.htm">
+      <HelpTOCNode Id="761cc743-8d2c-4c20-86a4-1fc38e56e061" Title="Extensions Methods" Url="html/Methods_T_Genesis_D3_Extensions.htm">
+        <HelpTOCNode Id="653384b8-a0ba-4039-8003-eaabd3beeae8" Title="ToD3JsonFile Method " Url="html/Overload_Genesis_D3_Extensions_ToD3JsonFile.htm">
+          <HelpTOCNode Title="ToD3JsonFile(TProgram) Method (IInformationTree(TProgram), String, Formatting)" Url="html/M_Genesis_D3_Extensions_ToD3JsonFile__1.htm" />
+          <HelpTOCNode Title="ToD3JsonFile Method (ITreeNode, String, Formatting)" Url="html/M_Genesis_D3_Extensions_ToD3JsonFile.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="ToD3TreeJsonFile Method " Url="html/M_Genesis_D3_Extensions_ToD3TreeJsonFile.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="1f21dd49-ddd4-4053-b43d-b08daf85a99c" Title="UniqueItemsList(T) Class" Url="html/T_Genesis_D3_UniqueItemsList_1.htm">
+      <HelpTOCNode Title="UniqueItemsList(T) Constructor " Url="html/M_Genesis_D3_UniqueItemsList_1__ctor.htm" />
+      <HelpTOCNode Id="4b5cc66d-6f8f-44ee-8fd2-47180355632d" Title="UniqueItemsList(T) Properties" Url="html/Properties_T_Genesis_D3_UniqueItemsList_1.htm">
+        <HelpTOCNode Title="Count Property " Url="html/P_Genesis_D3_UniqueItemsList_1_Count.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="07636241-d8dc-459c-b955-3bf17d24ceae" Title="UniqueItemsList(T) Methods" Url="html/Methods_T_Genesis_D3_UniqueItemsList_1.htm">
+        <HelpTOCNode Title="Clear Method " Url="html/M_Genesis_D3_UniqueItemsList_1_Clear.htm" />
+        <HelpTOCNode Title="Dispose Method " Url="html/M_Genesis_D3_UniqueItemsList_1_Dispose.htm" />
+        <HelpTOCNode Title="GetIndex Method " Url="html/M_Genesis_D3_UniqueItemsList_1_GetIndex.htm" />
+        <HelpTOCNode Title="GetItem Method " Url="html/M_Genesis_D3_UniqueItemsList_1_GetItem.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="7d554f19-6418-4715-98a9-49ac092373ee" Title="Genesis.Elements" Url="html/N_Genesis_Elements.htm">
+    <HelpTOCNode Id="c535b40c-0dde-4154-a391-56757ca5091a" Title="EvolutionaryDistanceCalculator(TProgram, TOutput) Class" Url="html/T_Genesis_Elements_EvolutionaryDistanceCalculator_2.htm">
+      <HelpTOCNode Title="EvolutionaryDistanceCalculator(TProgram, TOutput) Constructor " Url="html/M_Genesis_Elements_EvolutionaryDistanceCalculator_2__ctor.htm" />
+      <HelpTOCNode Id="d985dee6-fc2a-4e50-9d1b-57fcda8b49f1" Title="EvolutionaryDistanceCalculator(TProgram, TOutput) Methods" Url="html/Methods_T_Genesis_Elements_EvolutionaryDistanceCalculator_2.htm">
+        <HelpTOCNode Title="GetDistance Method " Url="html/M_Genesis_Elements_EvolutionaryDistanceCalculator_2_GetDistance.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="9f5beadc-931c-4b4c-ba80-a4601208ce6a" Title="ICommutativeTreeProgram(TOutput) Interface" Url="html/T_Genesis_Elements_ICommutativeTreeProgram_1.htm">
+      <HelpTOCNode Title="ICommutativeTreeProgram(TOutput) Properties" Url="html/Properties_T_Genesis_Elements_ICommutativeTreeProgram_1.htm" />
+      <HelpTOCNode Title="ICommutativeTreeProgram(TOutput) Methods" Url="html/Methods_T_Genesis_Elements_ICommutativeTreeProgram_1.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="52e40d11-f8c4-4cd6-8c5a-9e1d12999244" Title="IExpressionConverter(TProgram) Interface" Url="html/T_Genesis_Elements_IExpressionConverter_1.htm">
+      <HelpTOCNode Id="d3733c01-df18-43de-bdee-8f422c6ce656" Title="IExpressionConverter(TProgram) Methods" Url="html/Methods_T_Genesis_Elements_IExpressionConverter_1.htm">
+        <HelpTOCNode Title="FromString Method " Url="html/M_Genesis_Elements_IExpressionConverter_1_FromString.htm" />
+        <HelpTOCNode Title="ToString Method " Url="html/M_Genesis_Elements_IExpressionConverter_1_ToString.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="f5ff42f5-1411-4eae-b263-3d0f46b22228" Title="IProgram Interface" Url="html/T_Genesis_Elements_IProgram.htm">
+      <HelpTOCNode Id="0397ebf8-b463-4891-9f5d-3174bc54de7a" Title="IProgram Properties" Url="html/Properties_T_Genesis_Elements_IProgram.htm">
+        <HelpTOCNode Title="Expression Property " Url="html/P_Genesis_Elements_IProgram_Expression.htm" />
+        <HelpTOCNode Title="Length Property " Url="html/P_Genesis_Elements_IProgram_Length.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="8f42b841-d6b7-4858-bfe7-4d8f10c64121" Title="IProgram(TInput, TOutput) Interface" Url="html/T_Genesis_Elements_IProgram_2.htm">
+      <HelpTOCNode Id="e6789ca6-c446-4427-8d44-1e47f68b3745" Title="IProgram(TInput, TOutput) Properties" Url="html/Properties_T_Genesis_Elements_IProgram_2.htm">
+        <HelpTOCNode Title="Input Property " Url="html/P_Genesis_Elements_IProgram_2_Input.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="2825e9ca-a23c-480f-ad73-8a7b6b9ce446" Title="IProgram(TInput, TOutput) Methods" Url="html/Methods_T_Genesis_Elements_IProgram_2.htm">
+        <HelpTOCNode Title="Compute Method " Url="html/M_Genesis_Elements_IProgram_2_Compute.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="b6f542d1-8837-48a4-a56a-a0bf01a50f68" Title="ITreeExpressionConverter(TProgram) Interface" Url="html/T_Genesis_Elements_ITreeExpressionConverter_1.htm">
+      <HelpTOCNode Id="be548214-3c7b-425b-a493-25e8318d9b1f" Title="ITreeExpressionConverter(TProgram) Methods" Url="html/Methods_T_Genesis_Elements_ITreeExpressionConverter_1.htm">
+        <HelpTOCNode Title="FromNormalNotation Method " Url="html/M_Genesis_Elements_ITreeExpressionConverter_1_FromNormalNotation.htm" />
+        <HelpTOCNode Title="FromPrefixNotation Method " Url="html/M_Genesis_Elements_ITreeExpressionConverter_1_FromPrefixNotation.htm" />
+        <HelpTOCNode Title="ToNormalNotation Method " Url="html/M_Genesis_Elements_ITreeExpressionConverter_1_ToNormalNotation.htm" />
+        <HelpTOCNode Title="ToPrefixNotation Method " Url="html/M_Genesis_Elements_ITreeExpressionConverter_1_ToPrefixNotation.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="7c987bb9-1d31-4bb2-a118-31f1503e42a4" Title="ITreeProgram Interface" Url="html/T_Genesis_Elements_ITreeProgram.htm">
+      <HelpTOCNode Id="bd6f6f3f-e8c8-4541-b5a6-105639624759" Title="ITreeProgram Properties" Url="html/Properties_T_Genesis_Elements_ITreeProgram.htm">
+        <HelpTOCNode Title="Label Property " Url="html/P_Genesis_Elements_ITreeProgram_Label.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="ITreeProgram Methods" Url="html/Methods_T_Genesis_Elements_ITreeProgram.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="fe6f87d8-d37d-4a67-8447-95f7cfe0014c" Title="ITreeProgram(TOutput) Interface" Url="html/T_Genesis_Elements_ITreeProgram_1.htm">
+      <HelpTOCNode Title="ITreeProgram(TOutput) Properties" Url="html/Properties_T_Genesis_Elements_ITreeProgram_1.htm" />
+      <HelpTOCNode Id="e8325691-261a-485e-88e2-d83fb105c29e" Title="ITreeProgram(TOutput) Methods" Url="html/Methods_T_Genesis_Elements_ITreeProgram_1.htm">
+        <HelpTOCNode Title="CreateNew Method " Url="html/M_Genesis_Elements_ITreeProgram_1_CreateNew.htm" />
+        <HelpTOCNode Title="GetPrimitive Method " Url="html/M_Genesis_Elements_ITreeProgram_1_GetPrimitive.htm" />
+        <HelpTOCNode Title="Simplify Method " Url="html/M_Genesis_Elements_ITreeProgram_1_Simplify.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="41a97faa-67b6-472f-baeb-03081a0ff8e6" Title="MathExpressionConverter Class" Url="html/T_Genesis_Elements_MathExpressionConverter.htm">
+      <HelpTOCNode Title="MathExpressionConverter Constructor " Url="html/M_Genesis_Elements_MathExpressionConverter__ctor.htm" />
+      <HelpTOCNode Id="1cd3aa97-78d5-4a67-b7aa-fe81a2e66efa" Title="MathExpressionConverter Methods" Url="html/Methods_T_Genesis_Elements_MathExpressionConverter.htm">
+        <HelpTOCNode Title="Dispose Method " Url="html/M_Genesis_Elements_MathExpressionConverter_Dispose.htm" />
+        <HelpTOCNode Title="FromNormalNotation Method " Url="html/M_Genesis_Elements_MathExpressionConverter_FromNormalNotation.htm" />
+        <HelpTOCNode Title="FromPrefixNotation Method " Url="html/M_Genesis_Elements_MathExpressionConverter_FromPrefixNotation.htm" />
+        <HelpTOCNode Title="FromString Method " Url="html/M_Genesis_Elements_MathExpressionConverter_FromString.htm" />
+        <HelpTOCNode Title="ToNormalNotation Method " Url="html/M_Genesis_Elements_MathExpressionConverter_ToNormalNotation.htm" />
+        <HelpTOCNode Title="ToNormalNotationExpression Method " Url="html/M_Genesis_Elements_MathExpressionConverter_ToNormalNotationExpression.htm" />
+        <HelpTOCNode Title="ToPrefixNotation Method " Url="html/M_Genesis_Elements_MathExpressionConverter_ToPrefixNotation.htm" />
+        <HelpTOCNode Title="ToPrefixNotationExpression Method " Url="html/M_Genesis_Elements_MathExpressionConverter_ToPrefixNotationExpression.htm" />
+        <HelpTOCNode Id="b745d612-8772-4d74-8166-7661f881ca3b" Title="ToString Method " Url="html/Overload_Genesis_Elements_MathExpressionConverter_ToString.htm">
+          <HelpTOCNode Title="ToString Method (MathProgram)" Url="html/M_Genesis_Elements_MathExpressionConverter_ToString.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="081f1165-8c4b-43fc-8288-4a321ae9c8c7" Title="MathPrimitiveSets Class" Url="html/T_Genesis_Elements_MathPrimitiveSets.htm">
+      <HelpTOCNode Id="20345195-89ce-4b6e-9eb0-52b8694728b5" Title="MathPrimitiveSets Fields" Url="html/Fields_T_Genesis_Elements_MathPrimitiveSets.htm">
+        <HelpTOCNode Title="Default Field" Url="html/F_Genesis_Elements_MathPrimitiveSets_Default.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="d06ee6bc-2d2a-46dc-a8e5-d881090e6c1a" Title="MathProgram Class" Url="html/T_Genesis_Elements_MathProgram.htm">
+      <HelpTOCNode Title="MathProgram Constructor " Url="html/M_Genesis_Elements_MathProgram__ctor.htm" />
+      <HelpTOCNode Id="34a0ab6d-031d-4a94-93cb-55206e5ca099" Title="MathProgram Properties" Url="html/Properties_T_Genesis_Elements_MathProgram.htm">
+        <HelpTOCNode Title="Expression Property " Url="html/P_Genesis_Elements_MathProgram_Expression.htm" />
+        <HelpTOCNode Title="Input Property " Url="html/P_Genesis_Elements_MathProgram_Input.htm" />
+        <HelpTOCNode Title="Label Property " Url="html/P_Genesis_Elements_MathProgram_Label.htm" />
+        <HelpTOCNode Title="Length Property " Url="html/P_Genesis_Elements_MathProgram_Length.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="d2631edd-b708-4931-bc14-ed0bf95036af" Title="MathProgram Methods" Url="html/Methods_T_Genesis_Elements_MathProgram.htm">
+        <HelpTOCNode Title="CompareTo Method " Url="html/M_Genesis_Elements_MathProgram_CompareTo.htm" />
+        <HelpTOCNode Title="Compute Method " Url="html/M_Genesis_Elements_MathProgram_Compute.htm" />
+        <HelpTOCNode Title="CreateNew Method " Url="html/M_Genesis_Elements_MathProgram_CreateNew.htm" />
+        <HelpTOCNode Id="374907ed-f05f-4720-879a-63058b30c4f6" Title="Equals Method " Url="html/Overload_Genesis_Elements_MathProgram_Equals.htm">
+          <HelpTOCNode Title="Equals Method (Object)" Url="html/M_Genesis_Elements_MathProgram_Equals_1.htm" />
+          <HelpTOCNode Title="Equals Method (MathProgram)" Url="html/M_Genesis_Elements_MathProgram_Equals.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="GetHashCode Method " Url="html/M_Genesis_Elements_MathProgram_GetHashCode.htm" />
+        <HelpTOCNode Title="GetPrimitive Method " Url="html/M_Genesis_Elements_MathProgram_GetPrimitive.htm" />
+        <HelpTOCNode Title="Simplify Method " Url="html/M_Genesis_Elements_MathProgram_Simplify.htm" />
+        <HelpTOCNode Title="ToString Method " Url="html/M_Genesis_Elements_MathProgram_ToString.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="1d64eda4-c9fe-4504-b53b-620d735f8507" Title="MathProgram Operators" Url="html/Operators_T_Genesis_Elements_MathProgram.htm">
+        <HelpTOCNode Title="Equality Operator " Url="html/M_Genesis_Elements_MathProgram_op_Equality.htm" />
+        <HelpTOCNode Title="Inequality Operator " Url="html/M_Genesis_Elements_MathProgram_op_Inequality.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="21147068-671f-45a9-ae32-b11a7ecbca39" Title="MathProgramExtensions Class" Url="html/T_Genesis_Elements_MathProgramExtensions.htm">
+      <HelpTOCNode Id="15515544-deef-4065-ab7f-86d13d87426b" Title="MathProgramExtensions Methods" Url="html/Methods_T_Genesis_Elements_MathProgramExtensions.htm">
+        <HelpTOCNode Title="ContainsConstant Method " Url="html/M_Genesis_Elements_MathProgramExtensions_ContainsConstant.htm" />
+        <HelpTOCNode Title="EqualsConstant Method " Url="html/M_Genesis_Elements_MathProgramExtensions_EqualsConstant.htm" />
+        <HelpTOCNode Title="GetRange Method " Url="html/M_Genesis_Elements_MathProgramExtensions_GetRange.htm" />
+        <HelpTOCNode Title="GetValueRmsd Method " Url="html/M_Genesis_Elements_MathProgramExtensions_GetValueRmsd.htm" />
+        <HelpTOCNode Title="IsConstant Method " Url="html/M_Genesis_Elements_MathProgramExtensions_IsConstant.htm" />
+        <HelpTOCNode Title="IsValueEquivalent Method " Url="html/M_Genesis_Elements_MathProgramExtensions_IsValueEquivalent.htm" />
+        <HelpTOCNode Title="Simplify Method " Url="html/M_Genesis_Elements_MathProgramExtensions_Simplify.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="c21c7009-7632-4ad5-b84f-39ca60945fb9" Title="PrimitiveSet(TProgram) Class" Url="html/T_Genesis_Elements_PrimitiveSet_1.htm">
+      <HelpTOCNode Title="PrimitiveSet(TProgram) Constructor " Url="html/M_Genesis_Elements_PrimitiveSet_1__ctor.htm" />
+      <HelpTOCNode Id="4b77925d-64e2-4b0e-8872-c00b0fd98433" Title="PrimitiveSet(TProgram) Properties" Url="html/Properties_T_Genesis_Elements_PrimitiveSet_1.htm">
+        <HelpTOCNode Title="Functions Property " Url="html/P_Genesis_Elements_PrimitiveSet_1_Functions.htm" />
+        <HelpTOCNode Title="Terminals Property " Url="html/P_Genesis_Elements_PrimitiveSet_1_Terminals.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="348483e2-9199-4075-9161-0fbc0222c6b3" Title="PrimitiveSet(TProgram) Methods" Url="html/Methods_T_Genesis_Elements_PrimitiveSet_1.htm">
+        <HelpTOCNode Title="Add Method " Url="html/M_Genesis_Elements_PrimitiveSet_1_Add.htm" />
+        <HelpTOCNode Title="Dispose Method " Url="html/M_Genesis_Elements_PrimitiveSet_1_Dispose.htm" />
+        <HelpTOCNode Title="ToString Method " Url="html/M_Genesis_Elements_PrimitiveSet_1_ToString.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="4c8b0ec2-a4ca-40f9-810d-d3329d5bf4a4" Title="TreeProgramExtensions Class" Url="html/T_Genesis_Elements_TreeProgramExtensions.htm">
+      <HelpTOCNode Id="5e6b9c53-5166-4b49-8a37-8f8609b7854d" Title="TreeProgramExtensions Methods" Url="html/Methods_T_Genesis_Elements_TreeProgramExtensions.htm">
+        <HelpTOCNode Title="ContainsSubElement(TOutput) Method " Url="html/M_Genesis_Elements_TreeProgramExtensions_ContainsSubElement__1.htm" />
+        <HelpTOCNode Title="GetCommonRegionIndexes(TOutput) Method " Url="html/M_Genesis_Elements_TreeProgramExtensions_GetCommonRegionIndexes__1.htm" />
+        <HelpTOCNode Title="GetLeaves(TOutput) Method " Url="html/M_Genesis_Elements_TreeProgramExtensions_GetLeaves__1.htm" />
+        <HelpTOCNode Title="GetMaxBreadth(TOutput) Method " Url="html/M_Genesis_Elements_TreeProgramExtensions_GetMaxBreadth__1.htm" />
+        <HelpTOCNode Title="GetMaxDepth(TOutput) Method " Url="html/M_Genesis_Elements_TreeProgramExtensions_GetMaxDepth__1.htm" />
+        <HelpTOCNode Title="GetPrimitives(TOutput) Method " Url="html/M_Genesis_Elements_TreeProgramExtensions_GetPrimitives__1.htm" />
+        <HelpTOCNode Title="GetSubCombinations(TOutput) Method " Url="html/M_Genesis_Elements_TreeProgramExtensions_GetSubCombinations__1.htm" />
+        <HelpTOCNode Title="GetSubPrograms(TOutput) Method " Url="html/M_Genesis_Elements_TreeProgramExtensions_GetSubPrograms__1.htm" />
+        <HelpTOCNode Title="IsLeaf(TOutput) Method " Url="html/M_Genesis_Elements_TreeProgramExtensions_IsLeaf__1.htm" />
+        <HelpTOCNode Title="IsSubProgramOf(TOutput) Method " Url="html/M_Genesis_Elements_TreeProgramExtensions_IsSubProgramOf__1.htm" />
+        <HelpTOCNode Title="ProgramAt(TOutput) Method " Url="html/M_Genesis_Elements_TreeProgramExtensions_ProgramAt__1.htm" />
+        <HelpTOCNode Id="19ce8782-bd2b-4705-b588-21518309b5c1" Title="Replace Method " Url="html/Overload_Genesis_Elements_TreeProgramExtensions_Replace.htm">
+          <HelpTOCNode Title="Replace(TOutput) Method (ITreeProgram(TOutput), ITreeProgram(TOutput), ITreeProgram(TOutput))" Url="html/M_Genesis_Elements_TreeProgramExtensions_Replace__1.htm" />
+          <HelpTOCNode Title="Replace(TOutput) Method (ITreeProgram(TOutput), UInt32, ITreeProgram(TOutput))" Url="html/M_Genesis_Elements_TreeProgramExtensions_Replace__1_1.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="814cf973-92e0-4b0b-a594-9526a6c82f36" Title="Genesis.Elements.Functions" Url="html/N_Genesis_Elements_Functions.htm">
+    <HelpTOCNode Id="c01a1a18-460e-4164-8cc8-4c93d0cb39d5" Title="AdditionFunction Class" Url="html/T_Genesis_Elements_Functions_AdditionFunction.htm">
+      <HelpTOCNode Title="AdditionFunction Constructor " Url="html/M_Genesis_Elements_Functions_AdditionFunction__ctor.htm" />
+      <HelpTOCNode Id="ac56a53f-0fb9-46f3-9866-5c2ca6782957" Title="AdditionFunction Properties" Url="html/Properties_T_Genesis_Elements_Functions_AdditionFunction.htm">
+        <HelpTOCNode Title="Expression Property " Url="html/P_Genesis_Elements_Functions_AdditionFunction_Expression.htm" />
+        <HelpTOCNode Title="Label Property " Url="html/P_Genesis_Elements_Functions_AdditionFunction_Label.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="e61167cd-ff30-414d-b58a-ba2af06f3cbb" Title="AdditionFunction Methods" Url="html/Methods_T_Genesis_Elements_Functions_AdditionFunction.htm">
+        <HelpTOCNode Title="Compute Method " Url="html/M_Genesis_Elements_Functions_AdditionFunction_Compute.htm" />
+        <HelpTOCNode Title="CreateNew Method " Url="html/M_Genesis_Elements_Functions_AdditionFunction_CreateNew.htm" />
+        <HelpTOCNode Title="Simplify Method " Url="html/M_Genesis_Elements_Functions_AdditionFunction_Simplify.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="35eec945-f25c-407f-b0f0-d9388a202c16" Title="BinaryFunction Class" Url="html/T_Genesis_Elements_Functions_BinaryFunction.htm">
+      <HelpTOCNode Title="BinaryFunction Constructor " Url="html/M_Genesis_Elements_Functions_BinaryFunction__ctor.htm" />
+      <HelpTOCNode Id="8ce0a22b-edc3-46c5-a321-29ff1c09978f" Title="BinaryFunction Properties" Url="html/Properties_T_Genesis_Elements_Functions_BinaryFunction.htm">
+        <HelpTOCNode Title="Expression Property " Url="html/P_Genesis_Elements_Functions_BinaryFunction_Expression.htm" />
+        <HelpTOCNode Title="FirstParameter Property " Url="html/P_Genesis_Elements_Functions_BinaryFunction_FirstParameter.htm" />
+        <HelpTOCNode Title="Label Property " Url="html/P_Genesis_Elements_Functions_BinaryFunction_Label.htm" />
+        <HelpTOCNode Title="SecondParameter Property " Url="html/P_Genesis_Elements_Functions_BinaryFunction_SecondParameter.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="BinaryFunction Methods" Url="html/Methods_T_Genesis_Elements_Functions_BinaryFunction.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="b7ecb59d-3f1e-4ad5-b9ed-e8977cfceda6" Title="CommutativeBinaryFunction Class" Url="html/T_Genesis_Elements_Functions_CommutativeBinaryFunction.htm">
+      <HelpTOCNode Title="CommutativeBinaryFunction Constructor " Url="html/M_Genesis_Elements_Functions_CommutativeBinaryFunction__ctor.htm" />
+      <HelpTOCNode Title="CommutativeBinaryFunction Properties" Url="html/Properties_T_Genesis_Elements_Functions_CommutativeBinaryFunction.htm" />
+      <HelpTOCNode Title="CommutativeBinaryFunction Methods" Url="html/Methods_T_Genesis_Elements_Functions_CommutativeBinaryFunction.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="391a05c9-f9a9-47c8-815d-df68b0fc676d" Title="CosineFunction Class" Url="html/T_Genesis_Elements_Functions_CosineFunction.htm">
+      <HelpTOCNode Title="CosineFunction Constructor " Url="html/M_Genesis_Elements_Functions_CosineFunction__ctor.htm" />
+      <HelpTOCNode Id="c96f7f19-f5b8-4cc0-9b0c-9b63307ea84d" Title="CosineFunction Properties" Url="html/Properties_T_Genesis_Elements_Functions_CosineFunction.htm">
+        <HelpTOCNode Title="Label Property " Url="html/P_Genesis_Elements_Functions_CosineFunction_Label.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="0f2eddf3-6042-4f2a-a88d-cc3b0f7a3450" Title="CosineFunction Methods" Url="html/Methods_T_Genesis_Elements_Functions_CosineFunction.htm">
+        <HelpTOCNode Title="Compute Method " Url="html/M_Genesis_Elements_Functions_CosineFunction_Compute.htm" />
+        <HelpTOCNode Title="CreateNew Method " Url="html/M_Genesis_Elements_Functions_CosineFunction_CreateNew.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="d192e5eb-8cd6-4fed-9a13-640bc822c775" Title="DivisionFunction Class" Url="html/T_Genesis_Elements_Functions_DivisionFunction.htm">
+      <HelpTOCNode Title="DivisionFunction Constructor " Url="html/M_Genesis_Elements_Functions_DivisionFunction__ctor.htm" />
+      <HelpTOCNode Id="699931f4-7548-4b7d-9ee8-7305a86dad52" Title="DivisionFunction Properties" Url="html/Properties_T_Genesis_Elements_Functions_DivisionFunction.htm">
+        <HelpTOCNode Title="Expression Property " Url="html/P_Genesis_Elements_Functions_DivisionFunction_Expression.htm" />
+        <HelpTOCNode Title="Label Property " Url="html/P_Genesis_Elements_Functions_DivisionFunction_Label.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="ea5d99c1-8e81-4ab0-8edc-d05846cad015" Title="DivisionFunction Methods" Url="html/Methods_T_Genesis_Elements_Functions_DivisionFunction.htm">
+        <HelpTOCNode Title="Compute Method " Url="html/M_Genesis_Elements_Functions_DivisionFunction_Compute.htm" />
+        <HelpTOCNode Title="CreateNew Method " Url="html/M_Genesis_Elements_Functions_DivisionFunction_CreateNew.htm" />
+        <HelpTOCNode Title="Simplify Method " Url="html/M_Genesis_Elements_Functions_DivisionFunction_Simplify.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="9347ca0a-bfbd-4809-aa84-a6f2751a7ddf" Title="IfFunction Class" Url="html/T_Genesis_Elements_Functions_IfFunction.htm">
+      <HelpTOCNode Title="IfFunction Constructor " Url="html/M_Genesis_Elements_Functions_IfFunction__ctor.htm" />
+      <HelpTOCNode Id="9e311e44-f94f-4c48-9962-3831cfe29bfd" Title="IfFunction Properties" Url="html/Properties_T_Genesis_Elements_Functions_IfFunction.htm">
+        <HelpTOCNode Title="ConditionProgram Property " Url="html/P_Genesis_Elements_Functions_IfFunction_ConditionProgram.htm" />
+        <HelpTOCNode Title="Expression Property " Url="html/P_Genesis_Elements_Functions_IfFunction_Expression.htm" />
+        <HelpTOCNode Title="Label Property " Url="html/P_Genesis_Elements_Functions_IfFunction_Label.htm" />
+        <HelpTOCNode Title="NegativeProgram Property " Url="html/P_Genesis_Elements_Functions_IfFunction_NegativeProgram.htm" />
+        <HelpTOCNode Title="PositiveProgram Property " Url="html/P_Genesis_Elements_Functions_IfFunction_PositiveProgram.htm" />
+        <HelpTOCNode Title="ZeroProgram Property " Url="html/P_Genesis_Elements_Functions_IfFunction_ZeroProgram.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="b172eb4e-0c5e-4d64-924e-9c03f31c02cd" Title="IfFunction Methods" Url="html/Methods_T_Genesis_Elements_Functions_IfFunction.htm">
+        <HelpTOCNode Title="Compute Method " Url="html/M_Genesis_Elements_Functions_IfFunction_Compute.htm" />
+        <HelpTOCNode Title="CreateNew Method " Url="html/M_Genesis_Elements_Functions_IfFunction_CreateNew.htm" />
+        <HelpTOCNode Title="Simplify Method " Url="html/M_Genesis_Elements_Functions_IfFunction_Simplify.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="618e1bb3-44d5-4858-b734-0bf1967d2cc3" Title="LogarithmFunction Class" Url="html/T_Genesis_Elements_Functions_LogarithmFunction.htm">
+      <HelpTOCNode Title="LogarithmFunction Constructor " Url="html/M_Genesis_Elements_Functions_LogarithmFunction__ctor.htm" />
+      <HelpTOCNode Id="f050172d-2c16-4e35-b9e7-6f2c78e9ef60" Title="LogarithmFunction Properties" Url="html/Properties_T_Genesis_Elements_Functions_LogarithmFunction.htm">
+        <HelpTOCNode Title="Label Property " Url="html/P_Genesis_Elements_Functions_LogarithmFunction_Label.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="e131acab-6c80-42f2-82aa-ecd456b618cf" Title="LogarithmFunction Methods" Url="html/Methods_T_Genesis_Elements_Functions_LogarithmFunction.htm">
+        <HelpTOCNode Title="Compute Method " Url="html/M_Genesis_Elements_Functions_LogarithmFunction_Compute.htm" />
+        <HelpTOCNode Title="CreateNew Method " Url="html/M_Genesis_Elements_Functions_LogarithmFunction_CreateNew.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="15150bd4-43a3-47ff-86cd-3b9d8d4e2968" Title="MaxFunction Class" Url="html/T_Genesis_Elements_Functions_MaxFunction.htm">
+      <HelpTOCNode Title="MaxFunction Constructor " Url="html/M_Genesis_Elements_Functions_MaxFunction__ctor.htm" />
+      <HelpTOCNode Id="5da30835-4eda-4d13-9752-5e49d209150c" Title="MaxFunction Properties" Url="html/Properties_T_Genesis_Elements_Functions_MaxFunction.htm">
+        <HelpTOCNode Title="Label Property " Url="html/P_Genesis_Elements_Functions_MaxFunction_Label.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="07eb3818-b942-42e1-9c6c-90fba3f6e84f" Title="MaxFunction Methods" Url="html/Methods_T_Genesis_Elements_Functions_MaxFunction.htm">
+        <HelpTOCNode Title="Compute Method " Url="html/M_Genesis_Elements_Functions_MaxFunction_Compute.htm" />
+        <HelpTOCNode Title="CreateNew Method " Url="html/M_Genesis_Elements_Functions_MaxFunction_CreateNew.htm" />
+        <HelpTOCNode Title="Simplify Method " Url="html/M_Genesis_Elements_Functions_MaxFunction_Simplify.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="814c0154-2f0d-460b-9d0a-c1b8db850418" Title="MinFunction Class" Url="html/T_Genesis_Elements_Functions_MinFunction.htm">
+      <HelpTOCNode Title="MinFunction Constructor " Url="html/M_Genesis_Elements_Functions_MinFunction__ctor.htm" />
+      <HelpTOCNode Id="8764ac1a-fdfb-45af-9939-64bf816cab80" Title="MinFunction Properties" Url="html/Properties_T_Genesis_Elements_Functions_MinFunction.htm">
+        <HelpTOCNode Title="Label Property " Url="html/P_Genesis_Elements_Functions_MinFunction_Label.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="59471b78-396b-40df-87f3-b6707e335d9f" Title="MinFunction Methods" Url="html/Methods_T_Genesis_Elements_Functions_MinFunction.htm">
+        <HelpTOCNode Title="Compute Method " Url="html/M_Genesis_Elements_Functions_MinFunction_Compute.htm" />
+        <HelpTOCNode Title="CreateNew Method " Url="html/M_Genesis_Elements_Functions_MinFunction_CreateNew.htm" />
+        <HelpTOCNode Title="Simplify Method " Url="html/M_Genesis_Elements_Functions_MinFunction_Simplify.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="a4ce04af-8869-4122-826f-87653c68fcf3" Title="MultiplicationFunction Class" Url="html/T_Genesis_Elements_Functions_MultiplicationFunction.htm">
+      <HelpTOCNode Title="MultiplicationFunction Constructor " Url="html/M_Genesis_Elements_Functions_MultiplicationFunction__ctor.htm" />
+      <HelpTOCNode Id="694da9e0-a772-46b2-989f-99ac9d3e8013" Title="MultiplicationFunction Properties" Url="html/Properties_T_Genesis_Elements_Functions_MultiplicationFunction.htm">
+        <HelpTOCNode Title="Expression Property " Url="html/P_Genesis_Elements_Functions_MultiplicationFunction_Expression.htm" />
+        <HelpTOCNode Title="Label Property " Url="html/P_Genesis_Elements_Functions_MultiplicationFunction_Label.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="48f352c5-1188-4da7-bcee-593b52739239" Title="MultiplicationFunction Methods" Url="html/Methods_T_Genesis_Elements_Functions_MultiplicationFunction.htm">
+        <HelpTOCNode Title="Compute Method " Url="html/M_Genesis_Elements_Functions_MultiplicationFunction_Compute.htm" />
+        <HelpTOCNode Title="CreateNew Method " Url="html/M_Genesis_Elements_Functions_MultiplicationFunction_CreateNew.htm" />
+        <HelpTOCNode Title="Simplify Method " Url="html/M_Genesis_Elements_Functions_MultiplicationFunction_Simplify.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="dc0ea8ea-0882-4065-a233-33762dfd97de" Title="PowerFunction Class" Url="html/T_Genesis_Elements_Functions_PowerFunction.htm">
+      <HelpTOCNode Title="PowerFunction Constructor " Url="html/M_Genesis_Elements_Functions_PowerFunction__ctor.htm" />
+      <HelpTOCNode Id="60c11341-1f91-406b-a900-d984663896c9" Title="PowerFunction Properties" Url="html/Properties_T_Genesis_Elements_Functions_PowerFunction.htm">
+        <HelpTOCNode Title="Expression Property " Url="html/P_Genesis_Elements_Functions_PowerFunction_Expression.htm" />
+        <HelpTOCNode Title="Label Property " Url="html/P_Genesis_Elements_Functions_PowerFunction_Label.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="5bbb8c67-ca52-472d-9adc-3657b12af668" Title="PowerFunction Methods" Url="html/Methods_T_Genesis_Elements_Functions_PowerFunction.htm">
+        <HelpTOCNode Title="Compute Method " Url="html/M_Genesis_Elements_Functions_PowerFunction_Compute.htm" />
+        <HelpTOCNode Title="CreateNew Method " Url="html/M_Genesis_Elements_Functions_PowerFunction_CreateNew.htm" />
+        <HelpTOCNode Title="Simplify Method " Url="html/M_Genesis_Elements_Functions_PowerFunction_Simplify.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="874642eb-c3a7-4dad-b2e8-7ff19b2c61ef" Title="SineFunction Class" Url="html/T_Genesis_Elements_Functions_SineFunction.htm">
+      <HelpTOCNode Title="SineFunction Constructor " Url="html/M_Genesis_Elements_Functions_SineFunction__ctor.htm" />
+      <HelpTOCNode Id="39205b1a-17f5-463d-bbb6-3c8946d09d02" Title="SineFunction Properties" Url="html/Properties_T_Genesis_Elements_Functions_SineFunction.htm">
+        <HelpTOCNode Title="Label Property " Url="html/P_Genesis_Elements_Functions_SineFunction_Label.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="9526ab51-27ce-404e-bcc3-3a6cc93fcf90" Title="SineFunction Methods" Url="html/Methods_T_Genesis_Elements_Functions_SineFunction.htm">
+        <HelpTOCNode Title="Compute Method " Url="html/M_Genesis_Elements_Functions_SineFunction_Compute.htm" />
+        <HelpTOCNode Title="CreateNew Method " Url="html/M_Genesis_Elements_Functions_SineFunction_CreateNew.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="31b974a1-734d-4a07-b5ac-9383d6e1ff1e" Title="SubtractionFunction Class" Url="html/T_Genesis_Elements_Functions_SubtractionFunction.htm">
+      <HelpTOCNode Title="SubtractionFunction Constructor " Url="html/M_Genesis_Elements_Functions_SubtractionFunction__ctor.htm" />
+      <HelpTOCNode Id="7a4efbef-073a-4dd6-a4c7-5054b022526a" Title="SubtractionFunction Properties" Url="html/Properties_T_Genesis_Elements_Functions_SubtractionFunction.htm">
+        <HelpTOCNode Title="Expression Property " Url="html/P_Genesis_Elements_Functions_SubtractionFunction_Expression.htm" />
+        <HelpTOCNode Title="Label Property " Url="html/P_Genesis_Elements_Functions_SubtractionFunction_Label.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="40922e76-4e22-441a-ae47-f909ee942821" Title="SubtractionFunction Methods" Url="html/Methods_T_Genesis_Elements_Functions_SubtractionFunction.htm">
+        <HelpTOCNode Title="Compute Method " Url="html/M_Genesis_Elements_Functions_SubtractionFunction_Compute.htm" />
+        <HelpTOCNode Title="CreateNew Method " Url="html/M_Genesis_Elements_Functions_SubtractionFunction_CreateNew.htm" />
+        <HelpTOCNode Title="Simplify Method " Url="html/M_Genesis_Elements_Functions_SubtractionFunction_Simplify.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="6f8c90b0-7d2c-472d-a623-64076576269b" Title="UnaryFunction Class" Url="html/T_Genesis_Elements_Functions_UnaryFunction.htm">
+      <HelpTOCNode Title="UnaryFunction Constructor " Url="html/M_Genesis_Elements_Functions_UnaryFunction__ctor.htm" />
+      <HelpTOCNode Id="cc36fcfb-cc34-48a7-90bd-9134e399ca9c" Title="UnaryFunction Properties" Url="html/Properties_T_Genesis_Elements_Functions_UnaryFunction.htm">
+        <HelpTOCNode Title="Expression Property " Url="html/P_Genesis_Elements_Functions_UnaryFunction_Expression.htm" />
+        <HelpTOCNode Title="Label Property " Url="html/P_Genesis_Elements_Functions_UnaryFunction_Label.htm" />
+        <HelpTOCNode Title="Operand Property " Url="html/P_Genesis_Elements_Functions_UnaryFunction_Operand.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="UnaryFunction Methods" Url="html/Methods_T_Genesis_Elements_Functions_UnaryFunction.htm" />
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="48cc912d-8cc8-4793-a857-ef214cc53af9" Title="Genesis.Elements.Terminals" Url="html/N_Genesis_Elements_Terminals.htm">
+    <HelpTOCNode Id="903f0296-fb28-464e-8c86-1a5b2248bee9" Title="Constant Class" Url="html/T_Genesis_Elements_Terminals_Constant.htm">
+      <HelpTOCNode Title="Constant Constructor " Url="html/M_Genesis_Elements_Terminals_Constant__ctor.htm" />
+      <HelpTOCNode Id="7dd644c9-bd3c-4fcd-8f3e-076be7f7c6c9" Title="Constant Properties" Url="html/Properties_T_Genesis_Elements_Terminals_Constant.htm">
+        <HelpTOCNode Title="Label Property " Url="html/P_Genesis_Elements_Terminals_Constant_Label.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="782f0e65-bb16-4fb4-ab4b-63109687a74e" Title="Constant Methods" Url="html/Methods_T_Genesis_Elements_Terminals_Constant.htm">
+        <HelpTOCNode Title="Compute Method " Url="html/M_Genesis_Elements_Terminals_Constant_Compute.htm" />
+        <HelpTOCNode Title="GetHashCode Method " Url="html/M_Genesis_Elements_Terminals_Constant_GetHashCode.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="81a5f9f3-35de-4f91-9247-7de44a32d7d0" Title="Constant Fields" Url="html/Fields_T_Genesis_Elements_Terminals_Constant.htm">
+        <HelpTOCNode Title="One Field" Url="html/F_Genesis_Elements_Terminals_Constant_One.htm" />
+        <HelpTOCNode Title="Zero Field" Url="html/F_Genesis_Elements_Terminals_Constant_Zero.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="de780106-7869-4102-9e93-fcf733d6f2b7" Title="Range Structure" Url="html/T_Genesis_Elements_Terminals_Range.htm">
+      <HelpTOCNode Id="e6acf5e4-34bf-4d54-8ea1-09e43b9c3c92" Title="Range Constructor " Url="html/Overload_Genesis_Elements_Terminals_Range__ctor.htm">
+        <HelpTOCNode Title="Range Constructor (Double)" Url="html/M_Genesis_Elements_Terminals_Range__ctor.htm" />
+        <HelpTOCNode Title="Range Constructor (Double, Double)" Url="html/M_Genesis_Elements_Terminals_Range__ctor_1.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="0a38707a-dd3d-404c-a167-9acddc173b5c" Title="Range Properties" Url="html/Properties_T_Genesis_Elements_Terminals_Range.htm">
+        <HelpTOCNode Title="Interval Property " Url="html/P_Genesis_Elements_Terminals_Range_Interval.htm" />
+        <HelpTOCNode Title="Max Property " Url="html/P_Genesis_Elements_Terminals_Range_Max.htm" />
+        <HelpTOCNode Title="Min Property " Url="html/P_Genesis_Elements_Terminals_Range_Min.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="d93fa9e6-e790-498b-9cd7-f61679b3d00d" Title="Range Methods" Url="html/Methods_T_Genesis_Elements_Terminals_Range.htm">
+        <HelpTOCNode Id="59947aac-347a-4e12-9b9f-476245cf2937" Title="Equals Method " Url="html/Overload_Genesis_Elements_Terminals_Range_Equals.htm">
+          <HelpTOCNode Title="Equals Method (Object)" Url="html/M_Genesis_Elements_Terminals_Range_Equals_1.htm" />
+          <HelpTOCNode Title="Equals Method (Range)" Url="html/M_Genesis_Elements_Terminals_Range_Equals.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="GetHashCode Method " Url="html/M_Genesis_Elements_Terminals_Range_GetHashCode.htm" />
+        <HelpTOCNode Title="ToString Method " Url="html/M_Genesis_Elements_Terminals_Range_ToString.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="03c69886-60c1-40c9-9f17-20fc2fd307b6" Title="Range Operators" Url="html/Operators_T_Genesis_Elements_Terminals_Range.htm">
+        <HelpTOCNode Title="Equality Operator " Url="html/M_Genesis_Elements_Terminals_Range_op_Equality.htm" />
+        <HelpTOCNode Title="Inequality Operator " Url="html/M_Genesis_Elements_Terminals_Range_op_Inequality.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="76199476-424f-4fb1-92a2-718c51837080" Title="Range Fields" Url="html/Fields_T_Genesis_Elements_Terminals_Range.htm">
+        <HelpTOCNode Title="Default Field" Url="html/F_Genesis_Elements_Terminals_Range_Default.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="8189577c-2efa-47c5-928e-161208634bcc" Title="Terminal Class" Url="html/T_Genesis_Elements_Terminals_Terminal.htm">
+      <HelpTOCNode Title="Terminal Constructor " Url="html/M_Genesis_Elements_Terminals_Terminal__ctor.htm" />
+      <HelpTOCNode Id="cdd343b6-021b-4fa1-a60f-1123ff98e54a" Title="Terminal Properties" Url="html/Properties_T_Genesis_Elements_Terminals_Terminal.htm">
+        <HelpTOCNode Title="Expression Property " Url="html/P_Genesis_Elements_Terminals_Terminal_Expression.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="8f652a37-be87-4c4b-aad1-8c295362354a" Title="Terminal Methods" Url="html/Methods_T_Genesis_Elements_Terminals_Terminal.htm">
+        <HelpTOCNode Title="CreateNew Method " Url="html/M_Genesis_Elements_Terminals_Terminal_CreateNew.htm" />
+        <HelpTOCNode Title="GetHashCode Method " Url="html/M_Genesis_Elements_Terminals_Terminal_GetHashCode.htm" />
+        <HelpTOCNode Title="Simplify Method " Url="html/M_Genesis_Elements_Terminals_Terminal_Simplify.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="5d6f1fb9-8404-4c02-91bd-f63e2a6b5355" Title="Variable Class" Url="html/T_Genesis_Elements_Terminals_Variable.htm">
+      <HelpTOCNode Id="486b3bc7-a561-44b5-986e-b714c4125c06" Title="Variable Constructor " Url="html/Overload_Genesis_Elements_Terminals_Variable__ctor.htm">
+        <HelpTOCNode Title="Variable Constructor (String)" Url="html/M_Genesis_Elements_Terminals_Variable__ctor.htm" />
+        <HelpTOCNode Title="Variable Constructor (String, Range)" Url="html/M_Genesis_Elements_Terminals_Variable__ctor_1.htm" />
+        <HelpTOCNode Title="Variable Constructor (String, Double, Range)" Url="html/M_Genesis_Elements_Terminals_Variable__ctor_2.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="e3e3227a-e35a-4d86-b39c-21a2f88a0637" Title="Variable Properties" Url="html/Properties_T_Genesis_Elements_Terminals_Variable.htm">
+        <HelpTOCNode Title="Label Property " Url="html/P_Genesis_Elements_Terminals_Variable_Label.htm" />
+        <HelpTOCNode Title="Range Property " Url="html/P_Genesis_Elements_Terminals_Variable_Range.htm" />
+        <HelpTOCNode Title="Value Property " Url="html/P_Genesis_Elements_Terminals_Variable_Value.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="294dcb16-26bb-4595-9c84-8a2acf6907b3" Title="Variable Methods" Url="html/Methods_T_Genesis_Elements_Terminals_Variable.htm">
+        <HelpTOCNode Title="Compute Method " Url="html/M_Genesis_Elements_Terminals_Variable_Compute.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="73d8a6da-753f-4d77-b87a-cdcb3d5f631f" Title="Genesis.Evaluation" Url="html/N_Genesis_Evaluation.htm">
+    <HelpTOCNode Id="94707a10-b89e-48df-a09d-985f31fea09a" Title="IFitnessFunction(TProgram) Interface" Url="html/T_Genesis_Evaluation_IFitnessFunction_1.htm">
+      <HelpTOCNode Id="c3a74796-3866-4318-b941-b7a5efb8e56d" Title="IFitnessFunction(TProgram) Methods" Url="html/Methods_T_Genesis_Evaluation_IFitnessFunction_1.htm">
+        <HelpTOCNode Title="Evaluate Method " Url="html/M_Genesis_Evaluation_IFitnessFunction_1_Evaluate.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="980ddecd-1cbc-409f-8877-613f37237fc5" Title="LinearRankFitnessFunction(TProgram) Class" Url="html/T_Genesis_Evaluation_LinearRankFitnessFunction_1.htm">
+      <HelpTOCNode Title="LinearRankFitnessFunction(TProgram) Constructor " Url="html/M_Genesis_Evaluation_LinearRankFitnessFunction_1__ctor.htm" />
+      <HelpTOCNode Title="LinearRankFitnessFunction(TProgram) Properties" Url="html/Properties_T_Genesis_Evaluation_LinearRankFitnessFunction_1.htm" />
+      <HelpTOCNode Id="c5004885-3cf6-4ba8-ae4d-3cc908c114a9" Title="LinearRankFitnessFunction(TProgram) Methods" Url="html/Methods_T_Genesis_Evaluation_LinearRankFitnessFunction_1.htm">
+        <HelpTOCNode Title="Evaluate Method " Url="html/M_Genesis_Evaluation_LinearRankFitnessFunction_1_Evaluate.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="LinearRankFitnessFunction(TProgram) Fields" Url="html/Fields_T_Genesis_Evaluation_LinearRankFitnessFunction_1.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="ced5c3bc-33f7-4422-8224-0f54130083f6" Title="NonLinearRankFitnessFunction(TProgram) Class" Url="html/T_Genesis_Evaluation_NonLinearRankFitnessFunction_1.htm">
+      <HelpTOCNode Title="NonLinearRankFitnessFunction(TProgram) Constructor " Url="html/M_Genesis_Evaluation_NonLinearRankFitnessFunction_1__ctor.htm" />
+      <HelpTOCNode Title="NonLinearRankFitnessFunction(TProgram) Properties" Url="html/Properties_T_Genesis_Evaluation_NonLinearRankFitnessFunction_1.htm" />
+      <HelpTOCNode Id="e8da3085-3899-4a9c-8526-f553610b798b" Title="NonLinearRankFitnessFunction(TProgram) Methods" Url="html/Methods_T_Genesis_Evaluation_NonLinearRankFitnessFunction_1.htm">
+        <HelpTOCNode Title="Evaluate Method " Url="html/M_Genesis_Evaluation_NonLinearRankFitnessFunction_1_Evaluate.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="NonLinearRankFitnessFunction(TProgram) Fields" Url="html/Fields_T_Genesis_Evaluation_NonLinearRankFitnessFunction_1.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="4b275a5e-fa94-4980-a7a2-a2e2ac36f1a1" Title="RankFitnessFunction(TProgram) Class" Url="html/T_Genesis_Evaluation_RankFitnessFunction_1.htm">
+      <HelpTOCNode Title="RankFitnessFunction(TProgram) Constructor " Url="html/M_Genesis_Evaluation_RankFitnessFunction_1__ctor.htm" />
+      <HelpTOCNode Id="10405921-7b59-488d-88f1-1fb979fa9718" Title="RankFitnessFunction(TProgram) Properties" Url="html/Properties_T_Genesis_Evaluation_RankFitnessFunction_1.htm">
+        <HelpTOCNode Title="SelectivePressure Property " Url="html/P_Genesis_Evaluation_RankFitnessFunction_1_SelectivePressure.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="caa466ca-249c-4428-9925-28eb32cf16e5" Title="RankFitnessFunction(TProgram) Methods" Url="html/Methods_T_Genesis_Evaluation_RankFitnessFunction_1.htm">
+        <HelpTOCNode Title="Compare Method " Url="html/M_Genesis_Evaluation_RankFitnessFunction_1_Compare.htm" />
+        <HelpTOCNode Title="Evaluate Method " Url="html/M_Genesis_Evaluation_RankFitnessFunction_1_Evaluate.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="2722395c-32d6-431a-a68a-f9b696fb682c" Title="RankFitnessFunction(TProgram) Fields" Url="html/Fields_T_Genesis_Evaluation_RankFitnessFunction_1.htm">
+        <HelpTOCNode Title="individualRankings Field" Url="html/F_Genesis_Evaluation_RankFitnessFunction_1_individualRankings.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="4de2c5f8-ade6-49f2-bfcf-f00a44d9825c" Title="Genesis.Graphviz" Url="html/N_Genesis_Graphviz.htm">
+    <HelpTOCNode Id="d9a4e7c0-dbf8-4dab-906d-2f4682fcba10" Title="Edge Class" Url="html/T_Genesis_Graphviz_Edge.htm">
+      <HelpTOCNode Title="Edge Constructor " Url="html/M_Genesis_Graphviz_Edge__ctor.htm" />
+      <HelpTOCNode Id="9b81a040-72c1-4e97-955a-7dc1653abbd6" Title="Edge Properties" Url="html/Properties_T_Genesis_Graphviz_Edge.htm">
+        <HelpTOCNode Title="Source Property " Url="html/P_Genesis_Graphviz_Edge_Source.htm" />
+        <HelpTOCNode Title="Target Property " Url="html/P_Genesis_Graphviz_Edge_Target.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="Edge Methods" Url="html/Methods_T_Genesis_Graphviz_Edge.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="bc8428ab-0d8f-48a8-90fb-5ccb58e816fb" Title="Extensions Class" Url="html/T_Genesis_Graphviz_Extensions.htm">
+      <HelpTOCNode Id="977d5d96-d90d-4cf1-9d84-5a159b4d1d47" Title="Extensions Methods" Url="html/Methods_T_Genesis_Graphviz_Extensions.htm">
+        <HelpTOCNode Id="68e26342-aa58-4686-b592-49757d2cc6d2" Title="ToGraphvizFile Method " Url="html/Overload_Genesis_Graphviz_Extensions_ToGraphvizFile.htm">
+          <HelpTOCNode Title="ToGraphvizFile(TProgram) Method (IInformationTree(TProgram), String, String, GraphvizImageType, Int32)" Url="html/M_Genesis_Graphviz_Extensions_ToGraphvizFile__1.htm" />
+          <HelpTOCNode Title="ToGraphvizFile Method (ITreeNode, String, String, GraphvizImageType, Int32)" Url="html/M_Genesis_Graphviz_Extensions_ToGraphvizFile.htm" />
+          <HelpTOCNode Title="ToGraphvizFile Method (ITreeNode, String, String, FormatVertexEventHandler`1(Vertex), FormatEdgeAction`2(Vertex, Edge), GraphvizImageType, Int32)" Url="html/M_Genesis_Graphviz_Extensions_ToGraphvizFile_1.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="d1bfafb2-b980-49a6-9efa-77dcc34d627d" Title="Vertex Class" Url="html/T_Genesis_Graphviz_Vertex.htm">
+      <HelpTOCNode Title="Vertex Constructor " Url="html/M_Genesis_Graphviz_Vertex__ctor.htm" />
+      <HelpTOCNode Id="2a10733f-79b7-4454-b72f-0bb69ac8bf6e" Title="Vertex Properties" Url="html/Properties_T_Genesis_Graphviz_Vertex.htm">
+        <HelpTOCNode Title="Node Property " Url="html/P_Genesis_Graphviz_Vertex_Node.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="485ab5c2-7d86-4e67-a0aa-71715015a218" Title="Vertex Methods" Url="html/Methods_T_Genesis_Graphviz_Vertex.htm">
+        <HelpTOCNode Title="GetHashCode Method " Url="html/M_Genesis_Graphviz_Vertex_GetHashCode.htm" />
+        <HelpTOCNode Title="ToString Method " Url="html/M_Genesis_Graphviz_Vertex_ToString.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="a99f845e-e014-4e05-8566-b870c3f099c9" Title="Genesis.Operators.Crossover" Url="html/N_Genesis_Operators_Crossover.htm">
+    <HelpTOCNode Id="f9540e63-dd8a-4743-82c2-36fd8acea607" Title="ContextPreservingCrossover(TProgram, TOutput) Class" Url="html/T_Genesis_Operators_Crossover_ContextPreservingCrossover_2.htm">
+      <HelpTOCNode Title="ContextPreservingCrossover(TProgram, TOutput) Constructor " Url="html/M_Genesis_Operators_Crossover_ContextPreservingCrossover_2__ctor.htm" />
+      <HelpTOCNode Id="6c4941dc-a345-4d8d-98f2-6cfbf38a245d" Title="ContextPreservingCrossover(TProgram, TOutput) Methods" Url="html/Methods_T_Genesis_Operators_Crossover_ContextPreservingCrossover_2.htm">
+        <HelpTOCNode Title="Crossover Method " Url="html/M_Genesis_Operators_Crossover_ContextPreservingCrossover_2_Crossover.htm" />
+        <HelpTOCNode Title="Dispose Method " Url="html/M_Genesis_Operators_Crossover_ContextPreservingCrossover_2_Dispose.htm" />
+        <HelpTOCNode Title="GetAllOffspring Method " Url="html/M_Genesis_Operators_Crossover_ContextPreservingCrossover_2_GetAllOffspring.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="36fe15fe-fa7c-4041-bd8c-91fe37c8b544" Title="ICrossoverOperator(TProgram) Interface" Url="html/T_Genesis_Operators_Crossover_ICrossoverOperator_1.htm">
+      <HelpTOCNode Id="21f08616-e098-408c-aaac-ae287ffedfbb" Title="ICrossoverOperator(TProgram) Methods" Url="html/Methods_T_Genesis_Operators_Crossover_ICrossoverOperator_1.htm">
+        <HelpTOCNode Title="Crossover Method " Url="html/M_Genesis_Operators_Crossover_ICrossoverOperator_1_Crossover.htm" />
+        <HelpTOCNode Title="GetAllOffspring Method " Url="html/M_Genesis_Operators_Crossover_ICrossoverOperator_1_GetAllOffspring.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="fc5dfa0b-4ddd-4ba0-ad88-e1067427b325" Title="OnePointCrossover(TProgram, TOutput) Class" Url="html/T_Genesis_Operators_Crossover_OnePointCrossover_2.htm">
+      <HelpTOCNode Title="OnePointCrossover(TProgram, TOutput) Constructor " Url="html/M_Genesis_Operators_Crossover_OnePointCrossover_2__ctor.htm" />
+      <HelpTOCNode Id="ad50650d-7677-44ae-9795-f7013c4b7dd7" Title="OnePointCrossover(TProgram, TOutput) Methods" Url="html/Methods_T_Genesis_Operators_Crossover_OnePointCrossover_2.htm">
+        <HelpTOCNode Title="Crossover Method " Url="html/M_Genesis_Operators_Crossover_OnePointCrossover_2_Crossover.htm" />
+        <HelpTOCNode Title="Dispose Method " Url="html/M_Genesis_Operators_Crossover_OnePointCrossover_2_Dispose.htm" />
+        <HelpTOCNode Title="GetAllOffspring Method " Url="html/M_Genesis_Operators_Crossover_OnePointCrossover_2_GetAllOffspring.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="38bb9ef9-6617-4053-a583-9cc14bd5b676" Title="StochasticCrossover(TProgram) Class" Url="html/T_Genesis_Operators_Crossover_StochasticCrossover_1.htm">
+      <HelpTOCNode Id="b6cdd1e3-3523-4b6c-be90-763b653133a3" Title="StochasticCrossover(TProgram) Constructor " Url="html/Overload_Genesis_Operators_Crossover_StochasticCrossover_1__ctor.htm">
+        <HelpTOCNode Title="StochasticCrossover(TProgram) Constructor (IDictionary(ICrossoverOperator(TProgram), Double))" Url="html/M_Genesis_Operators_Crossover_StochasticCrossover_1__ctor.htm" />
+        <HelpTOCNode Title="StochasticCrossover(TProgram) Constructor (IList(ICrossoverOperator(TProgram)))" Url="html/M_Genesis_Operators_Crossover_StochasticCrossover_1__ctor_1.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="d252491c-6712-4c1f-a71a-d6f3e1602882" Title="StochasticCrossover(TProgram) Methods" Url="html/Methods_T_Genesis_Operators_Crossover_StochasticCrossover_1.htm">
+        <HelpTOCNode Title="Crossover Method " Url="html/M_Genesis_Operators_Crossover_StochasticCrossover_1_Crossover.htm" />
+        <HelpTOCNode Title="Dispose Method " Url="html/M_Genesis_Operators_Crossover_StochasticCrossover_1_Dispose.htm" />
+        <HelpTOCNode Title="GetAllOffspring Method " Url="html/M_Genesis_Operators_Crossover_StochasticCrossover_1_GetAllOffspring.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="771ac74b-8961-49f1-b736-3b5f6b144ce7" Title="SubtreeCrossover(TProgram, TOutput) Class" Url="html/T_Genesis_Operators_Crossover_SubtreeCrossover_2.htm">
+      <HelpTOCNode Title="SubtreeCrossover(TProgram, TOutput) Constructor " Url="html/M_Genesis_Operators_Crossover_SubtreeCrossover_2__ctor.htm" />
+      <HelpTOCNode Id="dfd0853c-4dbb-42b3-b5f4-c55e6f37324e" Title="SubtreeCrossover(TProgram, TOutput) Methods" Url="html/Methods_T_Genesis_Operators_Crossover_SubtreeCrossover_2.htm">
+        <HelpTOCNode Title="Crossover Method " Url="html/M_Genesis_Operators_Crossover_SubtreeCrossover_2_Crossover.htm" />
+        <HelpTOCNode Title="Dispose Method " Url="html/M_Genesis_Operators_Crossover_SubtreeCrossover_2_Dispose.htm" />
+        <HelpTOCNode Title="GetAllOffspring Method " Url="html/M_Genesis_Operators_Crossover_SubtreeCrossover_2_GetAllOffspring.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="8ce514ac-55cc-4469-9433-bf8015d196cf" Title="UniformCrossover(TProgram, TOutput) Class" Url="html/T_Genesis_Operators_Crossover_UniformCrossover_2.htm">
+      <HelpTOCNode Title="UniformCrossover(TProgram, TOutput) Constructor " Url="html/M_Genesis_Operators_Crossover_UniformCrossover_2__ctor.htm" />
+      <HelpTOCNode Id="c9c3f6c1-2e99-4568-bf69-fc2dc18dcd4f" Title="UniformCrossover(TProgram, TOutput) Methods" Url="html/Methods_T_Genesis_Operators_Crossover_UniformCrossover_2.htm">
+        <HelpTOCNode Title="Crossover Method " Url="html/M_Genesis_Operators_Crossover_UniformCrossover_2_Crossover.htm" />
+        <HelpTOCNode Title="Dispose Method " Url="html/M_Genesis_Operators_Crossover_UniformCrossover_2_Dispose.htm" />
+        <HelpTOCNode Title="GetAllOffspring Method " Url="html/M_Genesis_Operators_Crossover_UniformCrossover_2_GetAllOffspring.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="4e01d337-6504-4103-bd0d-20f5abb34f0f" Title="Genesis.Operators.Generation" Url="html/N_Genesis_Operators_Generation.htm">
+    <HelpTOCNode Id="dc09732e-4dc4-4dc5-80ac-124ec8db301d" Title="FullProgramGenerator(TProgram, TOutput) Class" Url="html/T_Genesis_Operators_Generation_FullProgramGenerator_2.htm">
+      <HelpTOCNode Title="FullProgramGenerator(TProgram, TOutput) Constructor " Url="html/M_Genesis_Operators_Generation_FullProgramGenerator_2__ctor.htm" />
+      <HelpTOCNode Id="01792c5b-f510-472e-acbf-f2711508ed17" Title="FullProgramGenerator(TProgram, TOutput) Methods" Url="html/Methods_T_Genesis_Operators_Generation_FullProgramGenerator_2.htm">
+        <HelpTOCNode Title="Dispose Method " Url="html/M_Genesis_Operators_Generation_FullProgramGenerator_2_Dispose.htm" />
+        <HelpTOCNode Title="Generate Method " Url="html/M_Genesis_Operators_Generation_FullProgramGenerator_2_Generate.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="4c7b35f1-dce8-404d-90d0-b4325b1d2bf2" Title="GrowProgramGenerator(TProgram, TOutput) Class" Url="html/T_Genesis_Operators_Generation_GrowProgramGenerator_2.htm">
+      <HelpTOCNode Title="GrowProgramGenerator(TProgram, TOutput) Constructor " Url="html/M_Genesis_Operators_Generation_GrowProgramGenerator_2__ctor.htm" />
+      <HelpTOCNode Id="1280e502-4a23-46da-9691-c84579ce6110" Title="GrowProgramGenerator(TProgram, TOutput) Methods" Url="html/Methods_T_Genesis_Operators_Generation_GrowProgramGenerator_2.htm">
+        <HelpTOCNode Title="Dispose Method " Url="html/M_Genesis_Operators_Generation_GrowProgramGenerator_2_Dispose.htm" />
+        <HelpTOCNode Title="Generate Method " Url="html/M_Genesis_Operators_Generation_GrowProgramGenerator_2_Generate.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="857d0b83-9ac7-4bf0-a9db-cc76c0a7aaec" Title="IProgramGenerator(TProgram, TOutput) Interface" Url="html/T_Genesis_Operators_Generation_IProgramGenerator_2.htm">
+      <HelpTOCNode Id="f83c7c12-6a5d-49d0-b136-c482cd6444f2" Title="IProgramGenerator(TProgram, TOutput) Methods" Url="html/Methods_T_Genesis_Operators_Generation_IProgramGenerator_2.htm">
+        <HelpTOCNode Title="Generate Method " Url="html/M_Genesis_Operators_Generation_IProgramGenerator_2_Generate.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="b4d041df-8220-490f-a668-28832bc1dd58" Title="StochasticProgramGenerator(TProgram, TOutput) Class" Url="html/T_Genesis_Operators_Generation_StochasticProgramGenerator_2.htm">
+      <HelpTOCNode Id="c8adfa87-0027-4b59-8761-01e6887594ee" Title="StochasticProgramGenerator(TProgram, TOutput) Constructor " Url="html/Overload_Genesis_Operators_Generation_StochasticProgramGenerator_2__ctor.htm">
+        <HelpTOCNode Title="StochasticProgramGenerator(TProgram, TOutput) Constructor (IDictionary(IProgramGenerator(TProgram, TOutput), Double))" Url="html/M_Genesis_Operators_Generation_StochasticProgramGenerator_2__ctor.htm" />
+        <HelpTOCNode Title="StochasticProgramGenerator(TProgram, TOutput) Constructor (IList(IProgramGenerator(TProgram, TOutput)))" Url="html/M_Genesis_Operators_Generation_StochasticProgramGenerator_2__ctor_1.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="9112255a-ec30-4158-b84c-19f3a286779b" Title="StochasticProgramGenerator(TProgram, TOutput) Methods" Url="html/Methods_T_Genesis_Operators_Generation_StochasticProgramGenerator_2.htm">
+        <HelpTOCNode Title="Dispose Method " Url="html/M_Genesis_Operators_Generation_StochasticProgramGenerator_2_Dispose.htm" />
+        <HelpTOCNode Title="Generate Method " Url="html/M_Genesis_Operators_Generation_StochasticProgramGenerator_2_Generate.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="15592c21-b32a-432a-b317-60bd628b18da" Title="Genesis.Operators.Mutation" Url="html/N_Genesis_Operators_Mutation.htm">
+    <HelpTOCNode Id="eaa39e7d-2779-4b9d-91a7-cfb7e0e1491e" Title="FitnessSimplifyMutation Class" Url="html/T_Genesis_Operators_Mutation_FitnessSimplifyMutation.htm">
+      <HelpTOCNode Title="FitnessSimplifyMutation Constructor " Url="html/M_Genesis_Operators_Mutation_FitnessSimplifyMutation__ctor.htm" />
+      <HelpTOCNode Id="0c5b318e-fdc3-44db-bd67-605d648987f6" Title="FitnessSimplifyMutation Methods" Url="html/Methods_T_Genesis_Operators_Mutation_FitnessSimplifyMutation.htm">
+        <HelpTOCNode Title="Dispose Method " Url="html/M_Genesis_Operators_Mutation_FitnessSimplifyMutation_Dispose.htm" />
+        <HelpTOCNode Title="GetAllMutations Method " Url="html/M_Genesis_Operators_Mutation_FitnessSimplifyMutation_GetAllMutations.htm" />
+        <HelpTOCNode Title="Mutate Method " Url="html/M_Genesis_Operators_Mutation_FitnessSimplifyMutation_Mutate.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="9157fb95-ed27-4ce5-98c2-b49f79025fa8" Title="HoistMutation(TProgram, TOutput) Class" Url="html/T_Genesis_Operators_Mutation_HoistMutation_2.htm">
+      <HelpTOCNode Title="HoistMutation(TProgram, TOutput) Constructor " Url="html/M_Genesis_Operators_Mutation_HoistMutation_2__ctor.htm" />
+      <HelpTOCNode Id="df9f90d6-018f-41a7-af32-893998d2907b" Title="HoistMutation(TProgram, TOutput) Methods" Url="html/Methods_T_Genesis_Operators_Mutation_HoistMutation_2.htm">
+        <HelpTOCNode Title="Dispose Method " Url="html/M_Genesis_Operators_Mutation_HoistMutation_2_Dispose.htm" />
+        <HelpTOCNode Title="GetAllMutations Method " Url="html/M_Genesis_Operators_Mutation_HoistMutation_2_GetAllMutations.htm" />
+        <HelpTOCNode Title="Mutate Method " Url="html/M_Genesis_Operators_Mutation_HoistMutation_2_Mutate.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="f857c35b-decf-411f-997d-47639c2a7a57" Title="IMutationOperator(TProgram) Interface" Url="html/T_Genesis_Operators_Mutation_IMutationOperator_1.htm">
+      <HelpTOCNode Id="0b92cc98-c331-4698-81ea-8ed64bed79ed" Title="IMutationOperator(TProgram) Methods" Url="html/Methods_T_Genesis_Operators_Mutation_IMutationOperator_1.htm">
+        <HelpTOCNode Title="GetAllMutations Method " Url="html/M_Genesis_Operators_Mutation_IMutationOperator_1_GetAllMutations.htm" />
+        <HelpTOCNode Title="Mutate Method " Url="html/M_Genesis_Operators_Mutation_IMutationOperator_1_Mutate.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="b1f23880-be14-4f3d-9a04-63558619c808" Title="PointMutation(TProgram, TOutput) Class" Url="html/T_Genesis_Operators_Mutation_PointMutation_2.htm">
+      <HelpTOCNode Title="PointMutation(TProgram, TOutput) Constructor " Url="html/M_Genesis_Operators_Mutation_PointMutation_2__ctor.htm" />
+      <HelpTOCNode Id="a36cf516-5460-4b2d-8f1a-75ba85465c61" Title="PointMutation(TProgram, TOutput) Properties" Url="html/Properties_T_Genesis_Operators_Mutation_PointMutation_2.htm">
+        <HelpTOCNode Title="MutationProbability Property " Url="html/P_Genesis_Operators_Mutation_PointMutation_2_MutationProbability.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="d1e7a81b-1c0f-4ac0-8eb6-2408946843c8" Title="PointMutation(TProgram, TOutput) Methods" Url="html/Methods_T_Genesis_Operators_Mutation_PointMutation_2.htm">
+        <HelpTOCNode Title="Dispose Method " Url="html/M_Genesis_Operators_Mutation_PointMutation_2_Dispose.htm" />
+        <HelpTOCNode Title="GetAllMutations Method " Url="html/M_Genesis_Operators_Mutation_PointMutation_2_GetAllMutations.htm" />
+        <HelpTOCNode Title="Mutate Method " Url="html/M_Genesis_Operators_Mutation_PointMutation_2_Mutate.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="aea18296-394b-43d5-901f-398c8420f762" Title="ShrinkMutation(TProgram, TOutput) Class" Url="html/T_Genesis_Operators_Mutation_ShrinkMutation_2.htm">
+      <HelpTOCNode Title="ShrinkMutation(TProgram, TOutput) Constructor " Url="html/M_Genesis_Operators_Mutation_ShrinkMutation_2__ctor.htm" />
+      <HelpTOCNode Id="492e4971-81a9-477e-b1a4-0143ac6738d6" Title="ShrinkMutation(TProgram, TOutput) Methods" Url="html/Methods_T_Genesis_Operators_Mutation_ShrinkMutation_2.htm">
+        <HelpTOCNode Title="Dispose Method " Url="html/M_Genesis_Operators_Mutation_ShrinkMutation_2_Dispose.htm" />
+        <HelpTOCNode Title="GetAllMutations Method " Url="html/M_Genesis_Operators_Mutation_ShrinkMutation_2_GetAllMutations.htm" />
+        <HelpTOCNode Title="Mutate Method " Url="html/M_Genesis_Operators_Mutation_ShrinkMutation_2_Mutate.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="fc092047-0162-49e4-85e8-eaaaefc8bf78" Title="SimplifyMutation Class" Url="html/T_Genesis_Operators_Mutation_SimplifyMutation.htm">
+      <HelpTOCNode Title="SimplifyMutation Constructor " Url="html/M_Genesis_Operators_Mutation_SimplifyMutation__ctor.htm" />
+      <HelpTOCNode Id="28152aa2-fc01-43df-828c-b5a4fa5ce1b3" Title="SimplifyMutation Methods" Url="html/Methods_T_Genesis_Operators_Mutation_SimplifyMutation.htm">
+        <HelpTOCNode Title="Dispose Method " Url="html/M_Genesis_Operators_Mutation_SimplifyMutation_Dispose.htm" />
+        <HelpTOCNode Title="GetAllMutations Method " Url="html/M_Genesis_Operators_Mutation_SimplifyMutation_GetAllMutations.htm" />
+        <HelpTOCNode Title="Mutate Method " Url="html/M_Genesis_Operators_Mutation_SimplifyMutation_Mutate.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="585785ba-a890-47e5-9d98-161c2d6bd32f" Title="StochasticMutation(TProgram) Class" Url="html/T_Genesis_Operators_Mutation_StochasticMutation_1.htm">
+      <HelpTOCNode Id="95badbac-4017-4b26-af54-d03228eb2361" Title="StochasticMutation(TProgram) Constructor " Url="html/Overload_Genesis_Operators_Mutation_StochasticMutation_1__ctor.htm">
+        <HelpTOCNode Title="StochasticMutation(TProgram) Constructor (ICollection(IMutationOperator(TProgram)))" Url="html/M_Genesis_Operators_Mutation_StochasticMutation_1__ctor.htm" />
+        <HelpTOCNode Title="StochasticMutation(TProgram) Constructor (IDictionary(IMutationOperator(TProgram), Double))" Url="html/M_Genesis_Operators_Mutation_StochasticMutation_1__ctor_1.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="68c8ae2b-e986-48a2-a29c-ff501a16a052" Title="StochasticMutation(TProgram) Methods" Url="html/Methods_T_Genesis_Operators_Mutation_StochasticMutation_1.htm">
+        <HelpTOCNode Title="Dispose Method " Url="html/M_Genesis_Operators_Mutation_StochasticMutation_1_Dispose.htm" />
+        <HelpTOCNode Title="GetAllMutations Method " Url="html/M_Genesis_Operators_Mutation_StochasticMutation_1_GetAllMutations.htm" />
+        <HelpTOCNode Title="Mutate Method " Url="html/M_Genesis_Operators_Mutation_StochasticMutation_1_Mutate.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="aa840949-f90d-425a-92d2-6007ad4d82f7" Title="SubtreeMutation(TProgram, TOutput) Class" Url="html/T_Genesis_Operators_Mutation_SubtreeMutation_2.htm">
+      <HelpTOCNode Title="SubtreeMutation(TProgram, TOutput) Constructor " Url="html/M_Genesis_Operators_Mutation_SubtreeMutation_2__ctor.htm" />
+      <HelpTOCNode Id="a8e562c4-59dc-448e-a9bd-d90d54af70c1" Title="SubtreeMutation(TProgram, TOutput) Properties" Url="html/Properties_T_Genesis_Operators_Mutation_SubtreeMutation_2.htm">
+        <HelpTOCNode Title="MaxDepth Property " Url="html/P_Genesis_Operators_Mutation_SubtreeMutation_2_MaxDepth.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="280de8e1-633e-43d2-a21b-bfa3fb1f6eb5" Title="SubtreeMutation(TProgram, TOutput) Methods" Url="html/Methods_T_Genesis_Operators_Mutation_SubtreeMutation_2.htm">
+        <HelpTOCNode Title="Dispose Method " Url="html/M_Genesis_Operators_Mutation_SubtreeMutation_2_Dispose.htm" />
+        <HelpTOCNode Title="GetAllMutations Method " Url="html/M_Genesis_Operators_Mutation_SubtreeMutation_2_GetAllMutations.htm" />
+        <HelpTOCNode Title="Mutate Method " Url="html/M_Genesis_Operators_Mutation_SubtreeMutation_2_Mutate.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="06fe2a0b-0071-45df-b2e6-f672f1c450bd" Title="SwapMutation(TProgram, TOutput) Class" Url="html/T_Genesis_Operators_Mutation_SwapMutation_2.htm">
+      <HelpTOCNode Title="SwapMutation(TProgram, TOutput) Constructor " Url="html/M_Genesis_Operators_Mutation_SwapMutation_2__ctor.htm" />
+      <HelpTOCNode Id="5a025efa-e9f4-4127-81f7-d20e03058e3c" Title="SwapMutation(TProgram, TOutput) Methods" Url="html/Methods_T_Genesis_Operators_Mutation_SwapMutation_2.htm">
+        <HelpTOCNode Title="Dispose Method " Url="html/M_Genesis_Operators_Mutation_SwapMutation_2_Dispose.htm" />
+        <HelpTOCNode Title="GetAllMutations Method " Url="html/M_Genesis_Operators_Mutation_SwapMutation_2_GetAllMutations.htm" />
+        <HelpTOCNode Title="Mutate Method " Url="html/M_Genesis_Operators_Mutation_SwapMutation_2_Mutate.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="039ab123-397f-476e-b9ea-a590c7ae881d" Title="Genesis.Operators.Selection" Url="html/N_Genesis_Operators_Selection.htm">
+    <HelpTOCNode Id="524926ec-500f-4f2e-ab46-f4b94d68f83c" Title="ISelectionOperator(TProgram) Interface" Url="html/T_Genesis_Operators_Selection_ISelectionOperator_1.htm">
+      <HelpTOCNode Id="426aa77a-20db-4d8b-8eb3-ba57822020b1" Title="ISelectionOperator(TProgram) Methods" Url="html/Methods_T_Genesis_Operators_Selection_ISelectionOperator_1.htm">
+        <HelpTOCNode Title="Select Method " Url="html/M_Genesis_Operators_Selection_ISelectionOperator_1_Select.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Title="PopulationSelector Delegate" Url="html/T_Genesis_Operators_Selection_PopulationSelector.htm" />
+    <HelpTOCNode Id="0799c75d-d3d4-4b6c-b7a7-abc325f358bf" Title="PopulationSelectors Class" Url="html/T_Genesis_Operators_Selection_PopulationSelectors.htm">
+      <HelpTOCNode Id="c2066085-900e-4a70-a676-7c9a5a577a8e" Title="PopulationSelectors Methods" Url="html/Methods_T_Genesis_Operators_Selection_PopulationSelectors.htm">
+        <HelpTOCNode Title="RandomSelector Method " Url="html/M_Genesis_Operators_Selection_PopulationSelectors_RandomSelector.htm" />
+        <HelpTOCNode Title="UniformSelector Method " Url="html/M_Genesis_Operators_Selection_PopulationSelectors_UniformSelector.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="84701759-4caa-4879-86c8-e45653033009" Title="RouletteWheelSelection(TProgram) Class" Url="html/T_Genesis_Operators_Selection_RouletteWheelSelection_1.htm">
+      <HelpTOCNode Title="RouletteWheelSelection(TProgram) Constructor " Url="html/M_Genesis_Operators_Selection_RouletteWheelSelection_1__ctor.htm" />
+      <HelpTOCNode Id="f3aef778-7a13-435d-abe9-7fa51916b876" Title="RouletteWheelSelection(TProgram) Methods" Url="html/Methods_T_Genesis_Operators_Selection_RouletteWheelSelection_1.htm">
+        <HelpTOCNode Title="Dispose Method " Url="html/M_Genesis_Operators_Selection_RouletteWheelSelection_1_Dispose.htm" />
+        <HelpTOCNode Title="Select Method " Url="html/M_Genesis_Operators_Selection_RouletteWheelSelection_1_Select.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="38f0b914-faa0-4908-8e37-214fec3e9d5e" Title="StochasticSelection(TProgram) Class" Url="html/T_Genesis_Operators_Selection_StochasticSelection_1.htm">
+      <HelpTOCNode Id="72713fbe-7c0f-4554-898e-919fd3132797" Title="StochasticSelection(TProgram) Constructor " Url="html/Overload_Genesis_Operators_Selection_StochasticSelection_1__ctor.htm">
+        <HelpTOCNode Title="StochasticSelection(TProgram) Constructor (ICollection(ISelectionOperator(TProgram)))" Url="html/M_Genesis_Operators_Selection_StochasticSelection_1__ctor.htm" />
+        <HelpTOCNode Title="StochasticSelection(TProgram) Constructor (IDictionary(ISelectionOperator(TProgram), Double))" Url="html/M_Genesis_Operators_Selection_StochasticSelection_1__ctor_1.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="fd70076d-695c-4a06-896d-77553c765fa9" Title="StochasticSelection(TProgram) Methods" Url="html/Methods_T_Genesis_Operators_Selection_StochasticSelection_1.htm">
+        <HelpTOCNode Title="Dispose Method " Url="html/M_Genesis_Operators_Selection_StochasticSelection_1_Dispose.htm" />
+        <HelpTOCNode Title="Select Method " Url="html/M_Genesis_Operators_Selection_StochasticSelection_1_Select.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="6ce18d7f-582d-4d4d-b009-d9b36bbae148" Title="TournamentSelection(TProgram) Class" Url="html/T_Genesis_Operators_Selection_TournamentSelection_1.htm">
+      <HelpTOCNode Title="TournamentSelection(TProgram) Constructor " Url="html/M_Genesis_Operators_Selection_TournamentSelection_1__ctor.htm" />
+      <HelpTOCNode Id="f4145488-d48f-49c5-ad58-487a6150a57e" Title="TournamentSelection(TProgram) Properties" Url="html/Properties_T_Genesis_Operators_Selection_TournamentSelection_1.htm">
+        <HelpTOCNode Title="TournamentSize Property " Url="html/P_Genesis_Operators_Selection_TournamentSelection_1_TournamentSize.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="369032ac-68f8-4e35-add6-12ab4f2737f5" Title="TournamentSelection(TProgram) Methods" Url="html/Methods_T_Genesis_Operators_Selection_TournamentSelection_1.htm">
+        <HelpTOCNode Title="Dispose Method " Url="html/M_Genesis_Operators_Selection_TournamentSelection_1_Dispose.htm" />
+        <HelpTOCNode Title="Select Method " Url="html/M_Genesis_Operators_Selection_TournamentSelection_1_Select.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="2143776b-772a-4cdb-a7cf-e05e57c8c592" Title="Genesis.Similarity" Url="html/N_Genesis_Similarity.htm">
+    <HelpTOCNode Id="961c1734-1b5a-44ff-ac7a-32eddaba4de1" Title="AverageSimilarity(TProgram) Class" Url="html/T_Genesis_Similarity_AverageSimilarity_1.htm">
+      <HelpTOCNode Title="AverageSimilarity(TProgram) Constructor " Url="html/M_Genesis_Similarity_AverageSimilarity_1__ctor.htm" />
+      <HelpTOCNode Id="e467303d-f558-4b74-b74e-758561dcc261" Title="AverageSimilarity(TProgram) Methods" Url="html/Methods_T_Genesis_Similarity_AverageSimilarity_1.htm">
+        <HelpTOCNode Title="Calculate Method " Url="html/M_Genesis_Similarity_AverageSimilarity_1_Calculate.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="0ee20135-0187-4681-a2f6-91f05a1b7d16" Title="CommonRegionSimilarity(TProgram, TOutput) Class" Url="html/T_Genesis_Similarity_CommonRegionSimilarity_2.htm">
+      <HelpTOCNode Title="CommonRegionSimilarity(TProgram, TOutput) Constructor " Url="html/M_Genesis_Similarity_CommonRegionSimilarity_2__ctor.htm" />
+      <HelpTOCNode Id="2b7aac14-b47f-41fa-8e48-5eb79c8590f7" Title="CommonRegionSimilarity(TProgram, TOutput) Methods" Url="html/Methods_T_Genesis_Similarity_CommonRegionSimilarity_2.htm">
+        <HelpTOCNode Title="Calculate Method " Url="html/M_Genesis_Similarity_CommonRegionSimilarity_2_Calculate.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="30202eee-1dd6-4c0b-9673-c446055773ab" Title="ISimilarityMeasure(TProgram) Interface" Url="html/T_Genesis_Similarity_ISimilarityMeasure_1.htm">
+      <HelpTOCNode Id="4a16f94b-5e4d-43d6-9933-1c620f60555b" Title="ISimilarityMeasure(TProgram) Methods" Url="html/Methods_T_Genesis_Similarity_ISimilarityMeasure_1.htm">
+        <HelpTOCNode Title="Calculate Method " Url="html/M_Genesis_Similarity_ISimilarityMeasure_1_Calculate.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="91a06751-e4c2-4fe3-9eb2-499e814e0a5c" Title="LeafSimilarity(TProgram, TOutput) Class" Url="html/T_Genesis_Similarity_LeafSimilarity_2.htm">
+      <HelpTOCNode Title="LeafSimilarity(TProgram, TOutput) Constructor " Url="html/M_Genesis_Similarity_LeafSimilarity_2__ctor.htm" />
+      <HelpTOCNode Id="86d0c4d7-5b2b-4ab6-8e1c-8ea53c3adb3f" Title="LeafSimilarity(TProgram, TOutput) Methods" Url="html/Methods_T_Genesis_Similarity_LeafSimilarity_2.htm">
+        <HelpTOCNode Title="Calculate Method " Url="html/M_Genesis_Similarity_LeafSimilarity_2_Calculate.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="3b8aca5b-1c4f-4891-b331-6125cff6062e" Title="NormalNotationEditSimilarity Class" Url="html/T_Genesis_Similarity_NormalNotationEditSimilarity.htm">
+      <HelpTOCNode Title="NormalNotationEditSimilarity Constructor " Url="html/M_Genesis_Similarity_NormalNotationEditSimilarity__ctor.htm" />
+      <HelpTOCNode Id="0835de5c-6122-4152-8952-4edaecabaa00" Title="NormalNotationEditSimilarity Methods" Url="html/Methods_T_Genesis_Similarity_NormalNotationEditSimilarity.htm">
+        <HelpTOCNode Title="Calculate Method " Url="html/M_Genesis_Similarity_NormalNotationEditSimilarity_Calculate.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="b3eda428-81da-4e2d-823c-08fd89dd01c5" Title="PrefixNotationEditSimilarity Class" Url="html/T_Genesis_Similarity_PrefixNotationEditSimilarity.htm">
+      <HelpTOCNode Title="PrefixNotationEditSimilarity Constructor " Url="html/M_Genesis_Similarity_PrefixNotationEditSimilarity__ctor.htm" />
+      <HelpTOCNode Id="1cca9ab6-7717-4225-abe1-b1a7e66b1ca7" Title="PrefixNotationEditSimilarity Methods" Url="html/Methods_T_Genesis_Similarity_PrefixNotationEditSimilarity.htm">
+        <HelpTOCNode Title="Calculate Method " Url="html/M_Genesis_Similarity_PrefixNotationEditSimilarity_Calculate.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="ead8a20f-55a1-44c7-8084-8f33c5034c13" Title="PrimitiveSimilarity(TProgram, TOutput) Class" Url="html/T_Genesis_Similarity_PrimitiveSimilarity_2.htm">
+      <HelpTOCNode Title="PrimitiveSimilarity(TProgram, TOutput) Constructor " Url="html/M_Genesis_Similarity_PrimitiveSimilarity_2__ctor.htm" />
+      <HelpTOCNode Id="8606fa20-9b83-4148-8758-a5cb524b18f7" Title="PrimitiveSimilarity(TProgram, TOutput) Methods" Url="html/Methods_T_Genesis_Similarity_PrimitiveSimilarity_2.htm">
+        <HelpTOCNode Title="Calculate Method " Url="html/M_Genesis_Similarity_PrimitiveSimilarity_2_Calculate.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="65daca53-795e-477b-bd75-f5ed5f15cd29" Title="SubCombinationSimilarity(TProgram, TOutput) Class" Url="html/T_Genesis_Similarity_SubCombinationSimilarity_2.htm">
+      <HelpTOCNode Title="SubCombinationSimilarity(TProgram, TOutput) Constructor " Url="html/M_Genesis_Similarity_SubCombinationSimilarity_2__ctor.htm" />
+      <HelpTOCNode Id="f3268085-1ce8-4cb9-bbb7-2f0f9a03a79d" Title="SubCombinationSimilarity(TProgram, TOutput) Methods" Url="html/Methods_T_Genesis_Similarity_SubCombinationSimilarity_2.htm">
+        <HelpTOCNode Title="Calculate Method " Url="html/M_Genesis_Similarity_SubCombinationSimilarity_2_Calculate.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="118cbbb7-00d8-4391-8dba-de79c22e3c53" Title="SubProgramSimilarity(TProgram, TOutput) Class" Url="html/T_Genesis_Similarity_SubProgramSimilarity_2.htm">
+      <HelpTOCNode Title="SubProgramSimilarity(TProgram, TOutput) Constructor " Url="html/M_Genesis_Similarity_SubProgramSimilarity_2__ctor.htm" />
+      <HelpTOCNode Id="c2851ce5-1504-48b5-98d7-c12889bcf6e3" Title="SubProgramSimilarity(TProgram, TOutput) Methods" Url="html/Methods_T_Genesis_Similarity_SubProgramSimilarity_2.htm">
+        <HelpTOCNode Title="Calculate Method " Url="html/M_Genesis_Similarity_SubProgramSimilarity_2_Calculate.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="28e99eab-a936-4cef-a44e-b9938575e599" Title="SymbolTreeSimilarity Class" Url="html/T_Genesis_Similarity_SymbolTreeSimilarity.htm">
+      <HelpTOCNode Title="SymbolTreeSimilarity Constructor " Url="html/M_Genesis_Similarity_SymbolTreeSimilarity__ctor.htm" />
+      <HelpTOCNode Id="5b0fe6ad-0359-4dce-8baa-a21fe3574198" Title="SymbolTreeSimilarity Methods" Url="html/Methods_T_Genesis_Similarity_SymbolTreeSimilarity.htm">
+        <HelpTOCNode Title="Calculate Method " Url="html/M_Genesis_Similarity_SymbolTreeSimilarity_Calculate.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="52bb5709-20c9-4cf3-b15f-8763e8a0fe03" Title="TreeEditSimilarity(TProgram, TOutput) Class" Url="html/T_Genesis_Similarity_TreeEditSimilarity_2.htm">
+      <HelpTOCNode Title="TreeEditSimilarity(TProgram, TOutput) Constructor " Url="html/M_Genesis_Similarity_TreeEditSimilarity_2__ctor.htm" />
+      <HelpTOCNode Id="f8adda9e-9b87-49b6-a3d0-193392eb1e8a" Title="TreeEditSimilarity(TProgram, TOutput) Methods" Url="html/Methods_T_Genesis_Similarity_TreeEditSimilarity_2.htm">
+        <HelpTOCNode Title="Calculate Method " Url="html/M_Genesis_Similarity_TreeEditSimilarity_2_Calculate.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="19f84cd3-8cae-45bd-a3ac-ca6ec1487200" Title="ValueSimilarity Class" Url="html/T_Genesis_Similarity_ValueSimilarity.htm">
+      <HelpTOCNode Title="ValueSimilarity Constructor " Url="html/M_Genesis_Similarity_ValueSimilarity__ctor.htm" />
+      <HelpTOCNode Id="1c78fc6d-e044-443c-ba41-f91e37763c0a" Title="ValueSimilarity Methods" Url="html/Methods_T_Genesis_Similarity_ValueSimilarity.htm">
+        <HelpTOCNode Title="Calculate Method " Url="html/M_Genesis_Similarity_ValueSimilarity_Calculate.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="889cb47a-d063-4695-ab48-118512abac3c" Title="Genesis.Trees" Url="html/N_Genesis_Trees.htm">
+    <HelpTOCNode Id="647ae08d-204f-4b39-83a7-71933eb9074e" Title="IArgInfoTreeNode Interface" Url="html/T_Genesis_Trees_IArgInfoTreeNode.htm">
+      <HelpTOCNode Title="IArgInfoTreeNode Properties" Url="html/Properties_T_Genesis_Trees_IArgInfoTreeNode.htm" />
+      <HelpTOCNode Title="IArgInfoTreeNode Methods" Url="html/Methods_T_Genesis_Trees_IArgInfoTreeNode.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="aa166b2c-554c-4549-b4ab-fdea0c26bc99" Title="IInformationTree(TProgram) Interface" Url="html/T_Genesis_Trees_IInformationTree_1.htm">
+      <HelpTOCNode Id="e0af612f-af3a-4d69-9cd4-5a5267d78063" Title="IInformationTree(TProgram) Properties" Url="html/Properties_T_Genesis_Trees_IInformationTree_1.htm">
+        <HelpTOCNode Title="RootNode Property " Url="html/P_Genesis_Trees_IInformationTree_1_RootNode.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="6d2a8a81-1090-41aa-8563-ea7cb02efbc4" Title="IInformationTree(TProgram) Methods" Url="html/Methods_T_Genesis_Trees_IInformationTree_1.htm">
+        <HelpTOCNode Title="AddProgram Method " Url="html/M_Genesis_Trees_IInformationTree_1_AddProgram.htm" />
+        <HelpTOCNode Title="AddPrograms Method " Url="html/M_Genesis_Trees_IInformationTree_1_AddPrograms.htm" />
+        <HelpTOCNode Title="Clear Method " Url="html/M_Genesis_Trees_IInformationTree_1_Clear.htm" />
+        <HelpTOCNode Title="GetCount Method " Url="html/M_Genesis_Trees_IInformationTree_1_GetCount.htm" />
+        <HelpTOCNode Title="GetNodeCount Method " Url="html/M_Genesis_Trees_IInformationTree_1_GetNodeCount.htm" />
+        <HelpTOCNode Title="Prune Method " Url="html/M_Genesis_Trees_IInformationTree_1_Prune.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="9870b3fe-cadc-49d8-a5d8-57ba225b0f25" Title="IInformationTreeNode Interface" Url="html/T_Genesis_Trees_IInformationTreeNode.htm">
+      <HelpTOCNode Id="e534535e-06f3-408c-b9cd-20ebbf35ee36" Title="IInformationTreeNode Properties" Url="html/Properties_T_Genesis_Trees_IInformationTreeNode.htm">
+        <HelpTOCNode Title="RootNode Property " Url="html/P_Genesis_Trees_IInformationTreeNode_RootNode.htm" />
+        <HelpTOCNode Title="Value Property " Url="html/P_Genesis_Trees_IInformationTreeNode_Value.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="IInformationTreeNode Methods" Url="html/Methods_T_Genesis_Trees_IInformationTreeNode.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="2adc8454-9216-4a84-ab39-3986cf6c620f" Title="InformationTree(TProgram) Class" Url="html/T_Genesis_Trees_InformationTree_1.htm">
+      <HelpTOCNode Title="InformationTree(TProgram) Constructor " Url="html/M_Genesis_Trees_InformationTree_1__ctor.htm" />
+      <HelpTOCNode Id="cc934866-bc06-4a79-b5bf-f6b82096529f" Title="InformationTree(TProgram) Properties" Url="html/Properties_T_Genesis_Trees_InformationTree_1.htm">
+        <HelpTOCNode Title="RootNode Property " Url="html/P_Genesis_Trees_InformationTree_1_RootNode.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="3d489498-aca0-4fe3-b5de-ea0a2e3ad439" Title="InformationTree(TProgram) Methods" Url="html/Methods_T_Genesis_Trees_InformationTree_1.htm">
+        <HelpTOCNode Title="AddProgram Method " Url="html/M_Genesis_Trees_InformationTree_1_AddProgram.htm" />
+        <HelpTOCNode Title="AddPrograms Method " Url="html/M_Genesis_Trees_InformationTree_1_AddPrograms.htm" />
+        <HelpTOCNode Title="Clear Method " Url="html/M_Genesis_Trees_InformationTree_1_Clear.htm" />
+        <HelpTOCNode Title="GetCount Method " Url="html/M_Genesis_Trees_InformationTree_1_GetCount.htm" />
+        <HelpTOCNode Title="GetNodeCount Method " Url="html/M_Genesis_Trees_InformationTree_1_GetNodeCount.htm" />
+        <HelpTOCNode Title="Prune Method " Url="html/M_Genesis_Trees_InformationTree_1_Prune.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="2df396fa-942f-4b3f-a418-60621b65bd05" Title="InfoTreeExtensions Class" Url="html/T_Genesis_Trees_InfoTreeExtensions.htm">
+      <HelpTOCNode Id="da6da558-5ab0-412c-8029-0d584c6027b6" Title="InfoTreeExtensions Methods" Url="html/Methods_T_Genesis_Trees_InfoTreeExtensions.htm">
+        <HelpTOCNode Title="GetFullness(TProgram) Method " Url="html/M_Genesis_Trees_InfoTreeExtensions_GetFullness__1.htm" />
+        <HelpTOCNode Title="GetRelativeValue Method " Url="html/M_Genesis_Trees_InfoTreeExtensions_GetRelativeValue.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="e09427fb-8e0b-4a37-9564-6b09f5f10b9a" Title="OrderedSymbolTree(TProgram) Class" Url="html/T_Genesis_Trees_OrderedSymbolTree_1.htm">
+      <HelpTOCNode Title="OrderedSymbolTree(TProgram) Constructor " Url="html/M_Genesis_Trees_OrderedSymbolTree_1__ctor.htm" />
+      <HelpTOCNode Id="4d9534e1-2179-4219-8aee-8fd8757796b5" Title="OrderedSymbolTree(TProgram) Properties" Url="html/Properties_T_Genesis_Trees_OrderedSymbolTree_1.htm">
+        <HelpTOCNode Title="RootNode Property " Url="html/P_Genesis_Trees_OrderedSymbolTree_1_RootNode.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="0892a2ab-7d7f-428b-bbac-21e762dd2020" Title="OrderedSymbolTree(TProgram) Methods" Url="html/Methods_T_Genesis_Trees_OrderedSymbolTree_1.htm">
+        <HelpTOCNode Title="AddElement Method " Url="html/M_Genesis_Trees_OrderedSymbolTree_1_AddElement.htm" />
+        <HelpTOCNode Title="AddProgram Method " Url="html/M_Genesis_Trees_OrderedSymbolTree_1_AddProgram.htm" />
+        <HelpTOCNode Title="AddPrograms Method " Url="html/M_Genesis_Trees_OrderedSymbolTree_1_AddPrograms.htm" />
+        <HelpTOCNode Title="Clear Method " Url="html/M_Genesis_Trees_OrderedSymbolTree_1_Clear.htm" />
+        <HelpTOCNode Title="GetCount Method " Url="html/M_Genesis_Trees_OrderedSymbolTree_1_GetCount.htm" />
+        <HelpTOCNode Title="GetNodeCount Method " Url="html/M_Genesis_Trees_OrderedSymbolTree_1_GetNodeCount.htm" />
+        <HelpTOCNode Title="GetNodeRatio Method " Url="html/M_Genesis_Trees_OrderedSymbolTree_1_GetNodeRatio.htm" />
+        <HelpTOCNode Title="GetSimilarity Method " Url="html/M_Genesis_Trees_OrderedSymbolTree_1_GetSimilarity.htm" />
+        <HelpTOCNode Title="Prune Method " Url="html/M_Genesis_Trees_OrderedSymbolTree_1_Prune.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="5e7d7d82-b9f9-40f8-8c7b-0719f8265c60" Title="OrderedSymbolTree(TProgram) Fields" Url="html/Fields_T_Genesis_Trees_OrderedSymbolTree_1.htm">
+        <HelpTOCNode Title="rootNode Field" Url="html/F_Genesis_Trees_OrderedSymbolTree_1_rootNode.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="e68cdd84-ac6c-4fe9-8c0c-bd983af9e57f" Title="OrderedSymbolTree(TProgram).ArgumentNode Class" Url="html/T_Genesis_Trees_OrderedSymbolTree_1_ArgumentNode.htm">
+      <HelpTOCNode Title="OrderedSymbolTree(TProgram).ArgumentNode Constructor " Url="html/M_Genesis_Trees_OrderedSymbolTree_1_ArgumentNode__ctor.htm" />
+      <HelpTOCNode Id="c8a1d0ef-3fe2-4e86-b53e-abb81a0c0568" Title="ArgumentNode Properties" Url="html/Properties_T_Genesis_Trees_OrderedSymbolTree_1_ArgumentNode.htm">
+        <HelpTOCNode Title="Children Property " Url="html/P_Genesis_Trees_OrderedSymbolTree_1_ArgumentNode_Children.htm" />
+        <HelpTOCNode Title="Parent Property " Url="html/P_Genesis_Trees_OrderedSymbolTree_1_ArgumentNode_Parent.htm" />
+        <HelpTOCNode Title="RootNode Property " Url="html/P_Genesis_Trees_OrderedSymbolTree_1_ArgumentNode_RootNode.htm" />
+        <HelpTOCNode Title="Value Property " Url="html/P_Genesis_Trees_OrderedSymbolTree_1_ArgumentNode_Value.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="50f11b17-9f20-401f-ac66-76410803233e" Title="ArgumentNode Methods" Url="html/Methods_T_Genesis_Trees_OrderedSymbolTree_1_ArgumentNode.htm">
+        <HelpTOCNode Title="GetCount Method " Url="html/M_Genesis_Trees_OrderedSymbolTree_1_ArgumentNode_GetCount.htm" />
+        <HelpTOCNode Title="ToString Method " Url="html/M_Genesis_Trees_OrderedSymbolTree_1_ArgumentNode_ToString.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="6285af01-8bfb-4f91-bf88-e5c7d1828dda" Title="OrderedSymbolTree(TProgram).SymbolNode Class" Url="html/T_Genesis_Trees_OrderedSymbolTree_1_SymbolNode.htm">
+      <HelpTOCNode Title="OrderedSymbolTree(TProgram).SymbolNode Constructor " Url="html/M_Genesis_Trees_OrderedSymbolTree_1_SymbolNode__ctor.htm" />
+      <HelpTOCNode Id="5cee2043-e375-48cc-b6b0-e0218afe7439" Title="SymbolNode Properties" Url="html/Properties_T_Genesis_Trees_OrderedSymbolTree_1_SymbolNode.htm">
+        <HelpTOCNode Title="Children Property " Url="html/P_Genesis_Trees_OrderedSymbolTree_1_SymbolNode_Children.htm" />
+        <HelpTOCNode Title="RootNode Property " Url="html/P_Genesis_Trees_OrderedSymbolTree_1_SymbolNode_RootNode.htm" />
+        <HelpTOCNode Title="Value Property " Url="html/P_Genesis_Trees_OrderedSymbolTree_1_SymbolNode_Value.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="bf9b744f-6652-4029-b9b9-0644be2844a8" Title="SymbolNode Methods" Url="html/Methods_T_Genesis_Trees_OrderedSymbolTree_1_SymbolNode.htm">
+        <HelpTOCNode Title="GetCount Method " Url="html/M_Genesis_Trees_OrderedSymbolTree_1_SymbolNode_GetCount.htm" />
+        <HelpTOCNode Title="ToString Method " Url="html/M_Genesis_Trees_OrderedSymbolTree_1_SymbolNode_ToString.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="647357a3-6a78-4326-a80c-a0ec5cce5682" Title="SubProgramTree(TProgram, TOutput) Class" Url="html/T_Genesis_Trees_SubProgramTree_2.htm">
+      <HelpTOCNode Title="SubProgramTree(TProgram, TOutput) Constructor " Url="html/M_Genesis_Trees_SubProgramTree_2__ctor.htm" />
+      <HelpTOCNode Title="SubProgramTree(TProgram, TOutput) Properties" Url="html/Properties_T_Genesis_Trees_SubProgramTree_2.htm" />
+      <HelpTOCNode Id="721f6dfa-4c34-4ff7-8eb5-0150648e161c" Title="SubProgramTree(TProgram, TOutput) Methods" Url="html/Methods_T_Genesis_Trees_SubProgramTree_2.htm">
+        <HelpTOCNode Title="AddProgram Method " Url="html/M_Genesis_Trees_SubProgramTree_2_AddProgram.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="SubProgramTree(TProgram, TOutput) Fields" Url="html/Fields_T_Genesis_Trees_SubProgramTree_2.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="8347c258-85f0-4a32-ad88-0582872f020a" Title="SymbolTree(TProgram) Class" Url="html/T_Genesis_Trees_SymbolTree_1.htm">
+      <HelpTOCNode Title="SymbolTree(TProgram) Constructor " Url="html/M_Genesis_Trees_SymbolTree_1__ctor.htm" />
+      <HelpTOCNode Id="8095328b-0c57-4541-93cc-bd87ada02181" Title="SymbolTree(TProgram) Properties" Url="html/Properties_T_Genesis_Trees_SymbolTree_1.htm">
+        <HelpTOCNode Title="RootNode Property " Url="html/P_Genesis_Trees_SymbolTree_1_RootNode.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="d2677bc0-8814-4cb7-9888-7c791dffba73" Title="SymbolTree(TProgram) Methods" Url="html/Methods_T_Genesis_Trees_SymbolTree_1.htm">
+        <HelpTOCNode Title="AddProgram Method " Url="html/M_Genesis_Trees_SymbolTree_1_AddProgram.htm" />
+        <HelpTOCNode Title="AddPrograms Method " Url="html/M_Genesis_Trees_SymbolTree_1_AddPrograms.htm" />
+        <HelpTOCNode Title="Clear Method " Url="html/M_Genesis_Trees_SymbolTree_1_Clear.htm" />
+        <HelpTOCNode Title="GetCount Method " Url="html/M_Genesis_Trees_SymbolTree_1_GetCount.htm" />
+        <HelpTOCNode Title="GetNodeCount Method " Url="html/M_Genesis_Trees_SymbolTree_1_GetNodeCount.htm" />
+        <HelpTOCNode Title="GetNodeRatio Method " Url="html/M_Genesis_Trees_SymbolTree_1_GetNodeRatio.htm" />
+        <HelpTOCNode Title="GetSimilarity Method " Url="html/M_Genesis_Trees_SymbolTree_1_GetSimilarity.htm" />
+        <HelpTOCNode Title="Prune Method " Url="html/M_Genesis_Trees_SymbolTree_1_Prune.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="c44c23f0-c157-4f81-a792-ba45cd5f008d" Title="Genesis.Util" Url="html/N_Genesis_Util.htm">
+    <HelpTOCNode Id="903283b6-1324-40b3-a03f-4087a8ab8e70" Title="CollectionUtil Class" Url="html/T_Genesis_Util_CollectionUtil.htm">
+      <HelpTOCNode Id="ce64595d-1c65-4379-bb47-9d49332327d3" Title="CollectionUtil Methods" Url="html/Methods_T_Genesis_Util_CollectionUtil.htm">
+        <HelpTOCNode Id="54e29f98-8127-4159-9244-f1dabaed5496" Title="AddRange Method " Url="html/Overload_Genesis_Util_CollectionUtil_AddRange.htm">
+          <HelpTOCNode Title="AddRange(TKey, TValue) Method (IDictionary(TKey, TValue), IDictionary(TKey, TValue))" Url="html/M_Genesis_Util_CollectionUtil_AddRange__2.htm" />
+          <HelpTOCNode Title="AddRange(TKey, TValue) Method (IDictionary(TKey, TValue), IEnumerable(KeyValuePair(TKey, TValue)))" Url="html/M_Genesis_Util_CollectionUtil_AddRange__2_1.htm" />
+          <HelpTOCNode Title="AddRange(T) Method (ISet(T), IEnumerable(T))" Url="html/M_Genesis_Util_CollectionUtil_AddRange__1.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="AddSorted(T) Method " Url="html/M_Genesis_Util_CollectionUtil_AddSorted__1.htm" />
+        <HelpTOCNode Title="Align(T) Method " Url="html/M_Genesis_Util_CollectionUtil_Align__1.htm" />
+        <HelpTOCNode Title="Dispose(T) Method " Url="html/M_Genesis_Util_CollectionUtil_Dispose__1.htm" />
+        <HelpTOCNode Title="GetAllCombinations(T) Method " Url="html/M_Genesis_Util_CollectionUtil_GetAllCombinations__1.htm" />
+        <HelpTOCNode Id="eb2f751f-0a98-4c59-bd6e-93d7b7bd5f61" Title="GetRandomItem Method " Url="html/Overload_Genesis_Util_CollectionUtil_GetRandomItem.htm">
+          <HelpTOCNode Title="GetRandomItem(T) Method (IDictionary(T, Double))" Url="html/M_Genesis_Util_CollectionUtil_GetRandomItem__1.htm" />
+          <HelpTOCNode Title="GetRandomItem(T) Method (IList(T))" Url="html/M_Genesis_Util_CollectionUtil_GetRandomItem__1_2.htm" />
+          <HelpTOCNode Title="GetRandomItem(T) Method (IDictionary(T, Double), Random)" Url="html/M_Genesis_Util_CollectionUtil_GetRandomItem__1_1.htm" />
+          <HelpTOCNode Title="GetRandomItem(T) Method (IList(T), Random)" Url="html/M_Genesis_Util_CollectionUtil_GetRandomItem__1_3.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="GetSubset(T) Method " Url="html/M_Genesis_Util_CollectionUtil_GetSubset__1.htm" />
+        <HelpTOCNode Title="GetUniqueItems(T) Method " Url="html/M_Genesis_Util_CollectionUtil_GetUniqueItems__1.htm" />
+        <HelpTOCNode Id="51eb740d-6a12-43fb-8f3f-023fc41c5a67" Title="Shuffle Method " Url="html/Overload_Genesis_Util_CollectionUtil_Shuffle.htm">
+          <HelpTOCNode Title="Shuffle(T) Method (IList(T))" Url="html/M_Genesis_Util_CollectionUtil_Shuffle__1.htm" />
+          <HelpTOCNode Title="Shuffle(T) Method (IList(T), Random)" Url="html/M_Genesis_Util_CollectionUtil_Shuffle__1_1.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="d375dd38-7bbd-4bd3-b857-b8f633f87f02" Title="StringUtil Class" Url="html/T_Genesis_Util_StringUtil.htm">
+      <HelpTOCNode Id="2d5c4a12-8b25-4288-bb23-bc02d5ea3197" Title="StringUtil Methods" Url="html/Methods_T_Genesis_Util_StringUtil.htm">
+        <HelpTOCNode Title="LevenshteinDistance Method " Url="html/M_Genesis_Util_StringUtil_LevenshteinDistance.htm" />
+        <HelpTOCNode Id="65db0477-fa1b-44d6-b7ee-c7a105c339fb" Title="Repeat Method " Url="html/Overload_Genesis_Util_StringUtil_Repeat.htm">
+          <HelpTOCNode Title="Repeat Method (Char, UInt32)" Url="html/M_Genesis_Util_StringUtil_Repeat.htm" />
+          <HelpTOCNode Title="Repeat Method (String, UInt32)" Url="html/M_Genesis_Util_StringUtil_Repeat_1.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="ToLiteral Method " Url="html/M_Genesis_Util_StringUtil_ToLiteral.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+</HelpTOC>

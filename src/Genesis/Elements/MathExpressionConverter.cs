@@ -19,7 +19,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 03/31/2018
+//    Last updated: 04/02/2018
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
@@ -87,6 +87,14 @@ namespace Genesis.Elements
         #region Public Methods
 
         /// <summary>
+        ///     Converts the given <see cref="MathProgram" /> to a <see cref="string" /> expression in prefix notation, i.e.,
+        ///     where functions are written in the form (func arg1 arg2 ...).
+        /// </summary>
+        /// <param name="program">The program we want to convert to an expression.</param>
+        /// <returns>A <see cref="string" /> representing the given program in prefix notation.</returns>
+        public static string ToNormalNotationExpression(MathProgram program) => program.ToString();
+
+        /// <summary>
         ///     Converts the given <see cref="MathProgram" /> to a <see cref="string" /> expression in prefix notation, i.e., where
         ///     functions are written in the form (func arg1 arg2 ...).
         /// </summary>
@@ -95,7 +103,7 @@ namespace Genesis.Elements
         ///     Whether to write opening '(' and closing ')' parentheses when writing the expression of functions.
         /// </param>
         /// <returns>A <see cref="string" /> representing the given program in prefix notation.</returns>
-        public static string ToPrefixNotation(MathProgram program, bool includeParentheses = true)
+        public static string ToPrefixNotationExpression(MathProgram program, bool includeParentheses = true)
         {
             if (program == null) return null;
 
@@ -106,7 +114,7 @@ namespace Genesis.Elements
             var strBuilder = new StringBuilder(includeParentheses ? "(" : string.Empty);
             strBuilder.AppendFormat("{0} ", GetName(program));
             foreach (var child in program.Input)
-                strBuilder.AppendFormat("{0} ", ToPrefixNotation((MathProgram) child, includeParentheses));
+                strBuilder.AppendFormat("{0} ", ToPrefixNotationExpression((MathProgram) child, includeParentheses));
             strBuilder.Remove(strBuilder.Length - 1, 1);
             strBuilder.Append(includeParentheses ? ")" : string.Empty);
             return strBuilder.ToString();
@@ -123,8 +131,8 @@ namespace Genesis.Elements
         public MathProgram FromString(string programStr) => this.FromPrefixNotation(programStr);
 
         /// <inheritdoc />
-        /// <remarks>Equivalent to <see cref="ToPrefixNotation" />.</remarks>
-        public string ToString(MathProgram program) => ToPrefixNotation(program, false);
+        /// <remarks>Equivalent to <see cref="ToPrefixNotationExpression" />.</remarks>
+        public string ToString(MathProgram program) => ToPrefixNotationExpression(program, false);
 
         /// <summary>
         ///     Converts the given <see cref="string" /> expression written in normal notation, i.e., where functions are written
@@ -201,7 +209,11 @@ namespace Genesis.Elements
         }
 
         /// <inheritdoc />
-        public string ToNormalNotation(MathProgram program, bool includeParentheses = true) => program.ToString();
+        public string ToNormalNotation(MathProgram program) => ToNormalNotationExpression(program);
+
+        /// <inheritdoc />
+        public string ToPrefixNotation(MathProgram program, bool includeParentheses = true) =>
+            ToPrefixNotationExpression(program, includeParentheses);
 
         #endregion
 
@@ -272,9 +284,6 @@ namespace Genesis.Elements
 
             return (MathProgram) prog.CreateNew(children);
         }
-
-        string ITreeExpressionConverter<MathProgram>.ToPrefixNotation(MathProgram program, bool includeParentheses) =>
-            ToPrefixNotation(program, includeParentheses);
 
         #endregion
     }

@@ -46,8 +46,8 @@ namespace Genesis.Similarity
             if (prog1 == null || prog2 == null) return 0;
             if (prog1.Equals(prog2)) return 1;
 
-            var expr1 = MathExpressionConverter.ToPrefixNotation(prog1);
-            var expr2 = MathExpressionConverter.ToPrefixNotation(prog2);
+            var expr1 = MathExpressionConverter.ToPrefixNotationExpression(prog1);
+            var expr2 = MathExpressionConverter.ToPrefixNotationExpression(prog2);
             return 1d - (double) expr1.LevenshteinDistance(expr2) / Math.Max(expr1.Length, expr2.Length);
         }
 

@@ -19,7 +19,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 03/31/2018
+//    Last updated: 04/02/2018
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
@@ -79,7 +79,7 @@ namespace Genesis.Elements
         }
 
         /// <summary>
-        ///     Gets a set containing all the <see cref="ITreeProgram{TOutput}" /> sub-programs of the given program and their
+        ///     Gets a dictionary containing all the <see cref="ITreeProgram{TOutput}" /> leaves of the given program and their
         ///     count. This corresponds to the leaf nodes of the expression tree of the given program.
         /// </summary>
         /// <param name="program">The program whose leaf sub-programs we want to retrieve.</param>
@@ -124,7 +124,8 @@ namespace Genesis.Elements
         }
 
         /// <summary>
-        ///     Gets a set containing all the <see cref="ITreeProgram{TOutput}" /> primitives in the given program and their count.
+        ///     Gets a dictionary containing all the <see cref="ITreeProgram{TOutput}" /> primitives in the given program and their
+        ///     count.
         /// </summary>
         /// <param name="program">The program whose terminal sub-programs we want to retrieve.</param>
         /// <returns>A set containing all the <see cref="ITreeProgram{TOutput}" /> primitives of the given program.</returns>

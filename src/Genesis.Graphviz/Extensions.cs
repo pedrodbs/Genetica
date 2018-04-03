@@ -19,7 +19,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis.Graphviz
-//    Last updated: 03/30/2018
+//    Last updated: 04/02/2018
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
@@ -36,6 +36,10 @@ using QuickGraph.Graphviz.Dot;
 
 namespace Genesis.Graphviz
 {
+    /// <summary>
+    ///     Provides extension methods to print <see cref="ITreeNode" /> elements such as <see cref="ITreeProgram" /> to image
+    ///     files using Graphviz.
+    /// </summary>
     public static class Extensions
     {
         #region Static Fields & Constants
