@@ -19,7 +19,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 03/26/2018
+//    Last updated: 04/04/2018
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
@@ -243,7 +243,7 @@ namespace Genesis.Elements
         ///     considered equivalent.
         /// </param>
         public static ITreeProgram<double> Simplify(
-            this MathProgram program, IFitnessFunction<MathProgram> fitnessFunction,double margin = DEFAULT_MARGIN)
+            this MathProgram program, IFitnessFunction<MathProgram> fitnessFunction, double margin = DEFAULT_MARGIN)
         {
             // gets original program's fitness and count
             var simplified = program;
@@ -251,7 +251,7 @@ namespace Genesis.Elements
             var length = program.Length;
 
             // first replaces all sub-programs by infinity and NaN recursively
-            var consts = new HashSet<MathProgram>
+            var consts = new HashSet<Constant>
                          {
                              new Constant(double.NegativeInfinity),
                              new Constant(double.NaN),
@@ -268,10 +268,10 @@ namespace Genesis.Elements
                         continue;
                     foreach (var constant in consts)
                     {
-                        var prog = (MathProgram)simplified.Replace(i, constant);
-                        var progFit = fitnessFunction.Evaluate(prog);
+                        var prog = (MathProgram) simplified.Replace(i, constant);
+                        var fit = fitnessFunction.Evaluate(prog);
                         var progLength = prog.Length;
-                        if (Math.Abs(progFit - fitness) < margin && progLength <= length)
+                        if (Math.Abs(fit - fitness) < margin && progLength <= length)
                         {
                             simplified = prog;
                             length = progLength;
@@ -284,9 +284,8 @@ namespace Genesis.Elements
 
             // then gets all sub-combinations of the simplified program
             var alternatives = simplified.GetSubCombinations();
-            foreach (var treeProgram in alternatives)
+            foreach (MathProgram subComb in alternatives)
             {
-                var subComb = (MathProgram) treeProgram;
                 var subFit = fitnessFunction.Evaluate(subComb);
                 var subCombLength = subComb.Length;
 

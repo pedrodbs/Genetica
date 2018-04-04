@@ -19,7 +19,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 03/31/2018
+//    Last updated: 04/03/2018
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
@@ -86,8 +86,6 @@ namespace Genesis.Elements.Functions
 
             // if second operand is 1 return the first
             if (input[1].EqualsConstant(1)) return input[0];
-
-           
 
             return this.CreateNew(input);
         }

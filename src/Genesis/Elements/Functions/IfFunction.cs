@@ -19,7 +19,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 03/31/2018
+//    Last updated: 04/04/2018
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
@@ -126,9 +126,9 @@ namespace Genesis.Elements.Functions
             }
 
             // check whether first child is a variable, check its range
-            if (child1 is Variable)
+            if (child1 is Variable variable)
             {
-                var range = ((Variable) child1).Range;
+                var range = variable.Range;
                 if (range.Min.Equals(0) && range.Max.Equals(0)) return input[1];
                 if (range.Min > 0) return input[2];
                 if (range.Max < 0) return input[3];

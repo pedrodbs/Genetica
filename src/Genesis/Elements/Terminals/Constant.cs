@@ -19,7 +19,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 03/31/2018
+//    Last updated: 04/04/2018
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
@@ -82,6 +82,10 @@ namespace Genesis.Elements.Terminals
         #endregion
 
         #region Public Methods
+
+        /// <inheritdoc />
+        public override bool Equals(object obj) =>
+            !(obj is null) && (ReferenceEquals(this, obj) || obj is Constant term && this._value.Equals(term._value));
 
         /// <inheritdoc />
         public override int GetHashCode() => this._value.GetHashCode();

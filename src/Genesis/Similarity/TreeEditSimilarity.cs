@@ -19,7 +19,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 03/31/2018
+//    Last updated: 04/04/2018
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
@@ -46,10 +46,7 @@ namespace Genesis.Similarity
         #region Public Methods
 
         /// <inheritdoc />
-        public double Calculate(TProgram prog1, TProgram prog2)
-        {
-            return Calculate(prog1, (ITreeProgram<TOutput>) prog2);
-        }
+        public double Calculate(TProgram prog1, TProgram prog2) => Calculate(prog1, prog2 as ITreeProgram<TOutput>);
 
         #endregion
 
@@ -62,16 +59,16 @@ namespace Genesis.Similarity
             if (prog1.Equals(prog2)) return 1;
 
             // replace all common sub-programs by weighted variables
-            var ignoreElements = new HashSet<ITreeProgram<TOutput>>();
+            var ignorePrograms = new HashSet<ITreeProgram<TOutput>>();
             var minCount = Math.Min(prog1.Length, prog2.Length);
             for (var i = 0; i < minCount; i++)
             {
-                var largestCommon = GetLargestCommon(ref prog1, ref prog2, ignoreElements);
+                var largestCommon = GetLargestCommon(ref prog1, ref prog2, ignorePrograms);
                 if (largestCommon == null || largestCommon.Length < 2) break;
-                var newSubElement = new WeightedVariable(((char) ('a' + i)).ToString(), largestCommon.Length);
-                prog1 = prog1.Replace(largestCommon, newSubElement);
-                prog2 = prog2.Replace(largestCommon, newSubElement);
-                ignoreElements.Add(newSubElement);
+                var newSubProgram = new WeightedVariable(largestCommon.Expression, largestCommon.Length);
+                prog1 = prog1.Replace(largestCommon, newSubProgram);
+                prog2 = prog2.Replace(largestCommon, newSubProgram);
+                ignorePrograms.Add(newSubProgram);
             }
 
             // gets sub-programs
@@ -130,8 +127,8 @@ namespace Genesis.Similarity
 
             // check if one of the sub-programs is null or has no children
             if (subProg1 == null || subProg2 == null ||
-                subProg1.Children == null || subProg1.Children.Count == 0 ||
-                subProg2.Children == null || subProg2.Children.Count == 0)
+                subProg1.Input == null || subProg1.Input.Count == 0 ||
+                subProg2.Input == null || subProg2.Input.Count == 0)
             {
                 // adds cost of adding / removing the null node
                 curCost++;
@@ -209,7 +206,7 @@ namespace Genesis.Similarity
 
         private static ITreeProgram<TOutput> GetLargestCommon(
             ref ITreeProgram<TOutput> prog1, ref ITreeProgram<TOutput> prog2,
-            ISet<ITreeProgram<TOutput>> ignoreElements = null)
+            ISet<ITreeProgram<TOutput>> ignorePrograms = null)
         {
             // gets sub-programs and sort descendingly
             var subProgs1 = new SortedSet<ITreeProgram<TOutput>>(prog1.GetSubPrograms(),
@@ -219,7 +216,7 @@ namespace Genesis.Similarity
             var subProgs2 = new HashSet<ITreeProgram<TOutput>>(prog2.GetSubPrograms());
             return subProgs1.FirstOrDefault(
                 subProg1 =>
-                    (ignoreElements == null || !ignoreElements.Contains(subProg1)) && subProgs2.Contains(subProg1));
+                    (ignorePrograms == null || !ignorePrograms.Contains(subProg1)) && subProgs2.Contains(subProg1));
         }
 
         #endregion
@@ -232,8 +229,8 @@ namespace Genesis.Similarity
 
             public WeightedVariable(string label, uint weight)
             {
-                this.Label = label;
                 this.Weight = weight;
+                this.Label = label;
             }
 
             #endregion
@@ -248,7 +245,7 @@ namespace Genesis.Similarity
 
             public IReadOnlyList<ITreeProgram<TOutput>> Input { get; } = new ITreeProgram<TOutput>[0];
 
-            public IReadOnlyList<ITreeNode> Children => this.Input;
+            IReadOnlyList<ITreeNode> ITreeNode.Children => this.Input;
 
             public string Label { get; }
 
@@ -256,7 +253,21 @@ namespace Genesis.Similarity
 
             #region Public Methods
 
-            public int CompareTo(ITreeProgram<TOutput> other) => string.CompareOrdinal(this.Label, other.Label);
+            public override bool Equals(object obj) =>
+                !(obj is null) && (ReferenceEquals(this, obj) ||
+                                   obj is ITreeProgram<TOutput> term && this.Label.Equals(term.Label));
+
+            /// <inheritdoc />
+            public override int GetHashCode() => this.Expression.GetHashCode();
+
+            public override string ToString() => this.Label;
+
+            #endregion
+
+            #region Public Methods
+
+            public int CompareTo(ITreeProgram<TOutput> other) =>
+                string.CompareOrdinal(this.Expression, other.Expression);
 
             public TOutput Compute() => default(TOutput);
 

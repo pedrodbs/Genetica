@@ -19,7 +19,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 03/31/2018
+//    Last updated: 04/04/2018
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
@@ -61,6 +61,10 @@ namespace Genesis.Elements.Terminals
         /// <param name="children">This parameter will not be used, so it may be null.</param>
         /// <returns>The same <see cref="Terminal" /> object.</returns>
         public override ITreeProgram<double> CreateNew(IList<ITreeProgram<double>> children) => this;
+
+        /// <inheritdoc />
+        public override bool Equals(object obj) =>
+            !(obj is null) && (ReferenceEquals(this, obj) || obj is Terminal term && this.Label.Equals(term.Label));
 
         /// <inheritdoc />
         public override int GetHashCode() => this.Expression.GetHashCode();

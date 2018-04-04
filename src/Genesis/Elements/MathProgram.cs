@@ -19,7 +19,7 @@
 // </copyright>
 // <summary>
 //    Project: Genesis
-//    Last updated: 03/31/2018
+//    Last updated: 04/04/2018
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
@@ -36,7 +36,7 @@ namespace Genesis.Elements
     ///     Represents a base class for mathematical program programs. A <see cref="MathProgram" /> represents a mathematical
     ///     expression whose output is a double-precision value. Math programs are useful to perform symbolic regression.
     /// </summary>
-    public abstract class MathProgram : ITreeProgram<double>, IComparable<MathProgram>
+    public abstract class MathProgram : ITreeProgram<double>
     {
         #region Fields
 
@@ -155,7 +155,7 @@ namespace Genesis.Elements
         ///     A value indicating if this program is less, equal or more than the other program, according to their
         ///     <see cref="Expression" /> comparison.
         /// </returns>
-        public int CompareTo(MathProgram other) => string.CompareOrdinal(this.Expression, other.Expression);
+        public int CompareTo(ITreeProgram<double> other) => string.CompareOrdinal(this.Expression, other.Expression);
 
         /// <summary>
         ///     Computes the output of the program based on this program's mathematical expression and its <see cref="Input" />.
@@ -218,9 +218,6 @@ namespace Genesis.Elements
                 return (hashCode * hashingMultiplier) ^ this.Label?.GetHashCode() ?? 0;
             }
         }
-
-        int IComparable<ITreeProgram<double>>.CompareTo(ITreeProgram<double> other) =>
-            !(other is MathProgram) ? int.MaxValue : this.CompareTo((MathProgram) other);
 
         #endregion
     }
