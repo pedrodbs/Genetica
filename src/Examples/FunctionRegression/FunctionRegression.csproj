@@ -53,13 +53,8 @@
     <ApplicationIcon>genetica.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="QuickGraph, Version=3.6.61114.0, Culture=neutral, PublicKeyToken=f3fb40175eec2af3, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\MyQuickGraph\3.0\sources\bin\Release\QuickGraph.dll</HintPath>
-    </Reference>
-    <Reference Include="QuickGraph.Graphviz, Version=3.6.61114.0, Culture=neutral, PublicKeyToken=f3fb40175eec2af3, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\MyQuickGraph\3.0\sources\bin\Release\QuickGraph.Graphviz.dll</HintPath>
+    <Reference Include="QuickGraph.Graphviz">
+      <HintPath>..\..\..\..\MyQuickGraph\3.0\sources\bin\Release\QuickGraph.Graphviz.dll</HintPath>
     </Reference>
     <Reference Include="System" />
   </ItemGroup>
@@ -69,20 +64,20 @@
     <Compile Include="FitnessFunction.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Genesis.Graphviz\Genesis.Graphviz.csproj">
-      <Project>{9b7ba1f3-c589-44ec-9fbf-6883afd13dae}</Project>
-      <Name>Genesis.Graphviz</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Genesis\Genesis.csproj">
-      <Project>{FA82CFDC-8CD4-419F-A5B1-43D32AC358D1}</Project>
-      <Name>Genesis</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="genetica.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Genetica.Graphviz\Genetica.Graphviz.csproj">
+      <Project>{9b7ba1f3-c589-44ec-9fbf-6883afd13dae}</Project>
+      <Name>Genetica.Graphviz</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Genetica\Genetica.csproj">
+      <Project>{fa82cfdc-8cd4-419f-a5b1-43d32ac358d1}</Project>
+      <Name>Genetica</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,4 +1,4 @@
-Genesis.Net License (MIT)
+Genetica.Net License (MIT)
 ===================================
 
 Copyright (c) 2018 Pedro Sequeira

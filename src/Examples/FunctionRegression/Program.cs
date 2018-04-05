@@ -28,16 +28,16 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using Genesis;
-using Genesis.Elements;
-using Genesis.Elements.Functions;
-using Genesis.Elements.Terminals;
-using Genesis.Evaluation;
-using Genesis.Graphviz;
-using Genesis.Operators.Crossover;
-using Genesis.Operators.Generation;
-using Genesis.Operators.Mutation;
-using Genesis.Operators.Selection;
+using Genetica;
+using Genetica.Elements;
+using Genetica.Elements.Functions;
+using Genetica.Elements.Terminals;
+using Genetica.Evaluation;
+using Genetica.Graphviz;
+using Genetica.Operators.Crossover;
+using Genetica.Operators.Generation;
+using Genetica.Operators.Mutation;
+using Genetica.Operators.Selection;
 using QuickGraph.Graphviz.Dot;
 
 namespace FunctionRegression

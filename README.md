@@ -3,7 +3,7 @@
 # Genetica.NET
 > A genetic programming library written in C#
 
-Genetica.NET is a .NET open-source *genetic programming* (GP) library written entirely in C#. In general terms, GP allows a population of *candidate programs* to change over time by means of operators inspired from natural evolution such as *selection*, *mutation* and *crossover*. The evolutionary process is guided by a *fitness function* that assesses how fit a program is (usually its output) in regard to some external objective function.
+Genetica is a .NET open-source *genetic programming* (GP) library written entirely in C#. In general terms, GP allows a population of *candidate programs* to change over time by means of operators inspired from natural evolution such as *selection*, *mutation* and *crossover*. The evolutionary process is guided by a *fitness function* that assesses how fit a program is (usually its output) in regard to some external objective function.
 
 Currently, Genetica.NET supports the evolution of programs representing *mathematical expressions* in a syntactic tree form. Mathematical programs combine *primitives* taken from a set of *terminals*, representing input scalar values, and several mathematical *functions*.
 

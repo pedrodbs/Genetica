@@ -33,9 +33,9 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Windows.Forms;
-using Genesis.Elements;
-using Genesis.Elements.Terminals;
-using Genesis.Graphviz;
+using Genetica.Elements;
+using Genetica.Elements.Terminals;
+using Genetica.Graphviz;
 using QuickGraph.Graphviz.Dot;
 
 namespace ProgramVisualizer

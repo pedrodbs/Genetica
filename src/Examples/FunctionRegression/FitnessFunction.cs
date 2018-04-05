@@ -26,9 +26,9 @@
 // ------------------------------------------
 
 using System;
-using Genesis.Elements;
-using Genesis.Elements.Terminals;
-using Genesis.Evaluation;
+using Genetica.Elements;
+using Genetica.Elements.Terminals;
+using Genetica.Evaluation;
 
 namespace FunctionRegression
 {
