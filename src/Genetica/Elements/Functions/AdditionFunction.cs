@@ -89,9 +89,13 @@ namespace Genetica.Elements.Functions
             if (input[1].EqualsConstant(0))
                 return input[0];
 
-            //// check whether operands are the same and return 2x
-            //if (input[0].Equals(input[1]))
-            //    return new MultiplicationFunction(input[0], new Constant(2));
+            // check whether there's a ((x+x)+x) situation, returns (3*x)
+            if (input[0] is AdditionFunction &&
+                input[0].Input[0].Equals(input[1]) && input[0].Input[1].Equals(input[1]))
+                return new MultiplicationFunction(new Constant(3), input[1]);
+            if (input[1] is AdditionFunction &&
+                input[1].Input[0].Equals(input[0]) && input[1].Input[1].Equals(input[0]))
+                return new MultiplicationFunction(new Constant(3), input[0]);
 
             // check whether there's a ((a*x)+x) situation, returns ((a+1)*x)
             if (input[0] is MultiplicationFunction)

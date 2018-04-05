@@ -19,7 +19,7 @@
 // </copyright>
 // <summary>
 //    Project: Genetica.Tests
-//    Last updated: 04/02/2018
+//    Last updated: 04/04/2018
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
@@ -42,7 +42,7 @@ namespace Genetica.Tests
         private static readonly KeyValuePair<string, string>[] EquivalentExpressions =
         {
             new KeyValuePair<string, string>("(((1.1+1)*x)+x)", "(x*3.1)"),
-            new KeyValuePair<string, string>("(2+(x*x))", "((x^2)+2)"),
+            new KeyValuePair<string, string>("(2+((x*x)*x))", "((x^3)+2)"),
             new KeyValuePair<string, string>("(0?1:log(3,(1+0)):max(3,(cos(0)-(3/1))))", "1"),
             new KeyValuePair<string, string>("(x?1:log(3,(1+0)):max(3,(cos(0)-(3/1))))", "(x?1:NaN:3)"),
             new KeyValuePair<string, string>("(x?1:log(3,(1+0)):max(x,(cos(0)-(3/1))))", "(x?1:NaN:max(x,-2))"),
@@ -69,8 +69,8 @@ namespace Genetica.Tests
         public void ChainedAdditionsTest()
         {
             var converter = GetConverter(out var varX, out _);
-            var expression = "x";
-            for (var i = 2; i <= 10; i++)
+            var expression = "(x+x)";
+            for (var i = 3; i <= 10; i++)
             {
                 expression = $"({expression}+x)";
                 var prog1 = converter.FromNormalNotation(expression);
@@ -85,8 +85,8 @@ namespace Genetica.Tests
         public void ChainedMultiplicationsTest()
         {
             var converter = GetConverter(out var varX, out _);
-            var expression = "x";
-            for (var i = 2; i <= 10; i++)
+            var expression = "(x*x)";
+            for (var i = 3; i <= 10; i++)
             {
                 expression = $"({expression}*x)";
                 var prog1 = converter.FromNormalNotation(expression);

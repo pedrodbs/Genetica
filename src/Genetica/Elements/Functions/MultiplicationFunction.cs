@@ -93,9 +93,13 @@ namespace Genetica.Elements.Functions
             if (input[0].EqualsConstant(0) || input[1].EqualsConstant(0))
                 return Constant.Zero;
 
-            ////check whether operands are the same and return square
-            //if (input[0].Equals(input[1]))
-            //    return new PowerFunction(input[0], new Constant(2));
+            // check whether there's a ((x*x)*x) situation, returns (x^3)
+            if (input[0] is MultiplicationFunction &&
+                input[0].Input[0].Equals(input[1]) && input[0].Input[1].Equals(input[1]))
+                return new PowerFunction(input[1], new Constant(3));
+            if (input[1] is MultiplicationFunction &&
+                input[1].Input[0].Equals(input[0]) && input[1].Input[1].Equals(input[0]))
+                return new PowerFunction(input[0], new Constant(3));
 
             // check whether there's a ((x^a)*x) situation, returns (x^(a+1))
             if (input[0] is PowerFunction && input[0].Input[1] is Constant &&
