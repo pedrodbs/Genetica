@@ -15,14 +15,14 @@
   <HelpKINode Title="AdditionFunction.Label property" Url="html/P_Genetica_Elements_Functions_AdditionFunction_Label.htm" />
   <HelpKINode Title="AdditionFunction.Simplify method" Url="html/M_Genetica_Elements_Functions_AdditionFunction_Simplify.htm" />
   <HelpKINode Title="AddProgram method">
-    <HelpKINode Title="IInformationTree(TProgram).AddProgram Method " Url="html/M_Genetica_Trees_IInformationTree_1_AddProgram.htm" />
+    <HelpKINode Title="IInformationTree`1.AddProgram Method " Url="html/M_Genetica_Trees_IInformationTree_1_AddProgram.htm" />
     <HelpKINode Title="InformationTree(TProgram).AddProgram Method " Url="html/M_Genetica_Trees_InformationTree_1_AddProgram.htm" />
     <HelpKINode Title="OrderedSymbolTree(TProgram).AddProgram Method " Url="html/M_Genetica_Trees_OrderedSymbolTree_1_AddProgram.htm" />
     <HelpKINode Title="SubProgramTree(TProgram, TOutput).AddProgram Method " Url="html/M_Genetica_Trees_SubProgramTree_2_AddProgram.htm" />
     <HelpKINode Title="SymbolTree(TProgram).AddProgram Method " Url="html/M_Genetica_Trees_SymbolTree_1_AddProgram.htm" />
   </HelpKINode>
   <HelpKINode Title="AddPrograms method">
-    <HelpKINode Title="IInformationTree(TProgram).AddPrograms Method " Url="html/M_Genetica_Trees_IInformationTree_1_AddPrograms.htm" />
+    <HelpKINode Title="IInformationTree`1.AddPrograms Method " Url="html/M_Genetica_Trees_IInformationTree_1_AddPrograms.htm" />
     <HelpKINode Title="InformationTree(TProgram).AddPrograms Method " Url="html/M_Genetica_Trees_InformationTree_1_AddPrograms.htm" />
     <HelpKINode Title="OrderedSymbolTree(TProgram).AddPrograms Method " Url="html/M_Genetica_Trees_OrderedSymbolTree_1_AddPrograms.htm" />
     <HelpKINode Title="SymbolTree(TProgram).AddPrograms Method " Url="html/M_Genetica_Trees_SymbolTree_1_AddPrograms.htm" />
@@ -85,7 +85,7 @@
     <HelpKINode Title="OrderedSymbolTree(TProgram).SymbolNode.Children Property " Url="html/P_Genetica_Trees_OrderedSymbolTree_1_SymbolNode_Children.htm" />
   </HelpKINode>
   <HelpKINode Title="Clear method">
-    <HelpKINode Title="IInformationTree(TProgram).Clear Method " Url="html/M_Genetica_Trees_IInformationTree_1_Clear.htm" />
+    <HelpKINode Title="IInformationTree`1.Clear Method " Url="html/M_Genetica_Trees_IInformationTree_1_Clear.htm" />
     <HelpKINode Title="InformationTree(TProgram).Clear Method " Url="html/M_Genetica_Trees_InformationTree_1_Clear.htm" />
     <HelpKINode Title="OrderedSymbolTree(TProgram).Clear Method " Url="html/M_Genetica_Trees_OrderedSymbolTree_1_Clear.htm" />
     <HelpKINode Title="SymbolTree(TProgram).Clear Method " Url="html/M_Genetica_Trees_SymbolTree_1_Clear.htm" />
@@ -326,10 +326,10 @@
     <HelpKINode Title="UnaryFunction.Expression Property " Url="html/P_Genetica_Elements_Functions_UnaryFunction_Expression.htm" />
   </HelpKINode>
   <HelpKINode Title="Extensions class">
-    <HelpKINode Title="Extensions Class" Url="html/T_Genetica_Graphviz_Extensions.htm" />
     <HelpKINode Title="Extensions Class" Url="html/T_Genetica_D3_Extensions.htm" />
-    <HelpKINode Title="methods" Url="html/Methods_T_Genetica_Graphviz_Extensions.htm" />
+    <HelpKINode Title="Extensions Class" Url="html/T_Genetica_Graphviz_Extensions.htm" />
     <HelpKINode Title="methods" Url="html/Methods_T_Genetica_D3_Extensions.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Genetica_Graphviz_Extensions.htm" />
   </HelpKINode>
   <HelpKINode Title="Extensions.ToD3JsonFile method" Url="html/Overload_Genetica_D3_Extensions_ToD3JsonFile.htm" />
   <HelpKINode Title="Extensions.ToD3TreeJsonFile method" Url="html/M_Genetica_D3_Extensions_ToD3TreeJsonFile.htm" />
@@ -517,9 +517,8 @@
   <HelpKINode Title="Genetica.Similarity.ValueSimilarity class" Url="html/T_Genetica_Similarity_ValueSimilarity.htm" />
   <HelpKINode Title="Genetica.Trees namespace" Url="html/N_Genetica_Trees.htm" />
   <HelpKINode Title="Genetica.Trees.IArgInfoTreeNode interface" Url="html/T_Genetica_Trees_IArgInfoTreeNode.htm" />
-  <HelpKINode Title="Genetica.Trees.IInformationTree(Of TProgram) interface" Url="html/T_Genetica_Trees_IInformationTree_1.htm" />
-  <HelpKINode Title="Genetica.Trees.IInformationTree&lt;TProgram&gt; interface" Url="html/T_Genetica_Trees_IInformationTree_1.htm" />
   <HelpKINode Title="Genetica.Trees.IInformationTreeNode interface" Url="html/T_Genetica_Trees_IInformationTreeNode.htm" />
+  <HelpKINode Title="Genetica.Trees.IInformationTree`1 interface" Url="html/T_Genetica_Trees_IInformationTree_1.htm" />
   <HelpKINode Title="Genetica.Trees.InformationTree(Of TProgram) class" Url="html/T_Genetica_Trees_InformationTree_1.htm" />
   <HelpKINode Title="Genetica.Trees.InformationTree&lt;TProgram&gt; class" Url="html/T_Genetica_Trees_InformationTree_1.htm" />
   <HelpKINode Title="Genetica.Trees.InfoTreeExtensions class" Url="html/T_Genetica_Trees_InfoTreeExtensions.htm" />
@@ -560,7 +559,7 @@
   <HelpKINode Title="GetCommonRegionIndexes(Of TOutput) method" Url="html/M_Genetica_Elements_TreeProgramExtensions_GetCommonRegionIndexes__1.htm" />
   <HelpKINode Title="GetCommonRegionIndexes&lt;TOutput&gt; method" Url="html/M_Genetica_Elements_TreeProgramExtensions_GetCommonRegionIndexes__1.htm" />
   <HelpKINode Title="GetCount method">
-    <HelpKINode Title="IInformationTree(TProgram).GetCount Method " Url="html/M_Genetica_Trees_IInformationTree_1_GetCount.htm" />
+    <HelpKINode Title="IInformationTree`1.GetCount Method " Url="html/M_Genetica_Trees_IInformationTree_1_GetCount.htm" />
     <HelpKINode Title="InformationTree(TProgram).GetCount Method " Url="html/M_Genetica_Trees_InformationTree_1_GetCount.htm" />
     <HelpKINode Title="OrderedSymbolTree(TProgram).ArgumentNode.GetCount Method " Url="html/M_Genetica_Trees_OrderedSymbolTree_1_ArgumentNode_GetCount.htm" />
     <HelpKINode Title="OrderedSymbolTree(TProgram).GetCount Method " Url="html/M_Genetica_Trees_OrderedSymbolTree_1_GetCount.htm" />
@@ -586,7 +585,7 @@
   <HelpKINode Title="GetMaxDepth(Of TOutput) method" Url="html/M_Genetica_Elements_TreeProgramExtensions_GetMaxDepth__1.htm" />
   <HelpKINode Title="GetMaxDepth&lt;TOutput&gt; method" Url="html/M_Genetica_Elements_TreeProgramExtensions_GetMaxDepth__1.htm" />
   <HelpKINode Title="GetNodeCount method">
-    <HelpKINode Title="IInformationTree(TProgram).GetNodeCount Method " Url="html/M_Genetica_Trees_IInformationTree_1_GetNodeCount.htm" />
+    <HelpKINode Title="IInformationTree`1.GetNodeCount Method " Url="html/M_Genetica_Trees_IInformationTree_1_GetNodeCount.htm" />
     <HelpKINode Title="InformationTree(TProgram).GetNodeCount Method " Url="html/M_Genetica_Trees_InformationTree_1_GetNodeCount.htm" />
     <HelpKINode Title="OrderedSymbolTree(TProgram).GetNodeCount Method " Url="html/M_Genetica_Trees_OrderedSymbolTree_1_GetNodeCount.htm" />
     <HelpKINode Title="SymbolTree(TProgram).GetNodeCount Method " Url="html/M_Genetica_Trees_SymbolTree_1_GetNodeCount.htm" />
@@ -716,30 +715,6 @@
     <HelpKINode Title="methods" Url="html/Methods_T_Genetica_Evaluation_IFitnessFunction_1.htm" />
   </HelpKINode>
   <HelpKINode Title="IFitnessFunction&lt;TProgram&gt;.Evaluate method" Url="html/M_Genetica_Evaluation_IFitnessFunction_1_Evaluate.htm" />
-  <HelpKINode Title="IInformationTree(Of TProgram) interface">
-    <HelpKINode Title="IInformationTree(TProgram) Interface" Url="html/T_Genetica_Trees_IInformationTree_1.htm" />
-    <HelpKINode Title="methods" Url="html/Methods_T_Genetica_Trees_IInformationTree_1.htm" />
-    <HelpKINode Title="properties" Url="html/Properties_T_Genetica_Trees_IInformationTree_1.htm" />
-  </HelpKINode>
-  <HelpKINode Title="IInformationTree(Of TProgram).AddProgram method" Url="html/M_Genetica_Trees_IInformationTree_1_AddProgram.htm" />
-  <HelpKINode Title="IInformationTree(Of TProgram).AddPrograms method" Url="html/M_Genetica_Trees_IInformationTree_1_AddPrograms.htm" />
-  <HelpKINode Title="IInformationTree(Of TProgram).Clear method" Url="html/M_Genetica_Trees_IInformationTree_1_Clear.htm" />
-  <HelpKINode Title="IInformationTree(Of TProgram).GetCount method" Url="html/M_Genetica_Trees_IInformationTree_1_GetCount.htm" />
-  <HelpKINode Title="IInformationTree(Of TProgram).GetNodeCount method" Url="html/M_Genetica_Trees_IInformationTree_1_GetNodeCount.htm" />
-  <HelpKINode Title="IInformationTree(Of TProgram).Prune method" Url="html/M_Genetica_Trees_IInformationTree_1_Prune.htm" />
-  <HelpKINode Title="IInformationTree(Of TProgram).RootNode property" Url="html/P_Genetica_Trees_IInformationTree_1_RootNode.htm" />
-  <HelpKINode Title="IInformationTree&lt;TProgram&gt; interface">
-    <HelpKINode Title="IInformationTree(TProgram) Interface" Url="html/T_Genetica_Trees_IInformationTree_1.htm" />
-    <HelpKINode Title="methods" Url="html/Methods_T_Genetica_Trees_IInformationTree_1.htm" />
-    <HelpKINode Title="properties" Url="html/Properties_T_Genetica_Trees_IInformationTree_1.htm" />
-  </HelpKINode>
-  <HelpKINode Title="IInformationTree&lt;TProgram&gt;.AddProgram method" Url="html/M_Genetica_Trees_IInformationTree_1_AddProgram.htm" />
-  <HelpKINode Title="IInformationTree&lt;TProgram&gt;.AddPrograms method" Url="html/M_Genetica_Trees_IInformationTree_1_AddPrograms.htm" />
-  <HelpKINode Title="IInformationTree&lt;TProgram&gt;.Clear method" Url="html/M_Genetica_Trees_IInformationTree_1_Clear.htm" />
-  <HelpKINode Title="IInformationTree&lt;TProgram&gt;.GetCount method" Url="html/M_Genetica_Trees_IInformationTree_1_GetCount.htm" />
-  <HelpKINode Title="IInformationTree&lt;TProgram&gt;.GetNodeCount method" Url="html/M_Genetica_Trees_IInformationTree_1_GetNodeCount.htm" />
-  <HelpKINode Title="IInformationTree&lt;TProgram&gt;.Prune method" Url="html/M_Genetica_Trees_IInformationTree_1_Prune.htm" />
-  <HelpKINode Title="IInformationTree&lt;TProgram&gt;.RootNode property" Url="html/P_Genetica_Trees_IInformationTree_1_RootNode.htm" />
   <HelpKINode Title="IInformationTreeNode interface">
     <HelpKINode Title="IInformationTreeNode Interface" Url="html/T_Genetica_Trees_IInformationTreeNode.htm" />
     <HelpKINode Title="methods" Url="html/Methods_T_Genetica_Trees_IInformationTreeNode.htm" />
@@ -747,6 +722,14 @@
   </HelpKINode>
   <HelpKINode Title="IInformationTreeNode.RootNode property" Url="html/P_Genetica_Trees_IInformationTreeNode_RootNode.htm" />
   <HelpKINode Title="IInformationTreeNode.Value property" Url="html/P_Genetica_Trees_IInformationTreeNode_Value.htm" />
+  <HelpKINode Title="IInformationTree`1 interface" Url="html/T_Genetica_Trees_IInformationTree_1.htm" />
+  <HelpKINode Title="IInformationTree`1.AddProgram method" Url="html/M_Genetica_Trees_IInformationTree_1_AddProgram.htm" />
+  <HelpKINode Title="IInformationTree`1.AddPrograms method" Url="html/M_Genetica_Trees_IInformationTree_1_AddPrograms.htm" />
+  <HelpKINode Title="IInformationTree`1.Clear method" Url="html/M_Genetica_Trees_IInformationTree_1_Clear.htm" />
+  <HelpKINode Title="IInformationTree`1.GetCount method" Url="html/M_Genetica_Trees_IInformationTree_1_GetCount.htm" />
+  <HelpKINode Title="IInformationTree`1.GetNodeCount method" Url="html/M_Genetica_Trees_IInformationTree_1_GetNodeCount.htm" />
+  <HelpKINode Title="IInformationTree`1.Prune method" Url="html/M_Genetica_Trees_IInformationTree_1_Prune.htm" />
+  <HelpKINode Title="IInformationTree`1.RootNode property" Url="html/P_Genetica_Trees_IInformationTree_1_RootNode.htm" />
   <HelpKINode Title="IMutationOperator(Of TProgram) interface">
     <HelpKINode Title="IMutationOperator(TProgram) Interface" Url="html/T_Genetica_Operators_Mutation_IMutationOperator_1.htm" />
     <HelpKINode Title="methods" Url="html/Methods_T_Genetica_Operators_Mutation_IMutationOperator_1.htm" />
@@ -902,17 +885,9 @@
   <HelpKINode Title="ITreeExpressionConverter&lt;TProgram&gt;.FromPrefixNotation method" Url="html/M_Genetica_Elements_ITreeExpressionConverter_1_FromPrefixNotation.htm" />
   <HelpKINode Title="ITreeExpressionConverter&lt;TProgram&gt;.ToNormalNotation method" Url="html/M_Genetica_Elements_ITreeExpressionConverter_1_ToNormalNotation.htm" />
   <HelpKINode Title="ITreeExpressionConverter&lt;TProgram&gt;.ToPrefixNotation method" Url="html/M_Genetica_Elements_ITreeExpressionConverter_1_ToPrefixNotation.htm" />
-  <HelpKINode Title="ITreeNode interface">
-    <HelpKINode Title="ITreeNode Interface" Url="html/T_Genetica_ITreeNode.htm" />
-    <HelpKINode Title="methods" Url="html/Methods_T_Genetica_ITreeNode.htm" />
-    <HelpKINode Title="properties" Url="html/Properties_T_Genetica_ITreeNode.htm" />
-  </HelpKINode>
+  <HelpKINode Title="ITreeNode interface" Url="html/T_Genetica_ITreeNode.htm" />
   <HelpKINode Title="ITreeNode.Children property" Url="html/P_Genetica_ITreeNode_Children.htm" />
-  <HelpKINode Title="ITreeProgram interface">
-    <HelpKINode Title="ITreeProgram Interface" Url="html/T_Genetica_Elements_ITreeProgram.htm" />
-    <HelpKINode Title="methods" Url="html/Methods_T_Genetica_Elements_ITreeProgram.htm" />
-    <HelpKINode Title="properties" Url="html/Properties_T_Genetica_Elements_ITreeProgram.htm" />
-  </HelpKINode>
+  <HelpKINode Title="ITreeProgram interface" Url="html/T_Genetica_Elements_ITreeProgram.htm" />
   <HelpKINode Title="ITreeProgram(Of TOutput) interface">
     <HelpKINode Title="ITreeProgram(TOutput) Interface" Url="html/T_Genetica_Elements_ITreeProgram_1.htm" />
     <HelpKINode Title="methods" Url="html/Methods_T_Genetica_Elements_ITreeProgram_1.htm" />
@@ -1348,7 +1323,7 @@
   <HelpKINode Title="ProgramAt(Of TOutput) method" Url="html/M_Genetica_Elements_TreeProgramExtensions_ProgramAt__1.htm" />
   <HelpKINode Title="ProgramAt&lt;TOutput&gt; method" Url="html/M_Genetica_Elements_TreeProgramExtensions_ProgramAt__1.htm" />
   <HelpKINode Title="Prune method">
-    <HelpKINode Title="IInformationTree(TProgram).Prune Method " Url="html/M_Genetica_Trees_IInformationTree_1_Prune.htm" />
+    <HelpKINode Title="IInformationTree`1.Prune Method " Url="html/M_Genetica_Trees_IInformationTree_1_Prune.htm" />
     <HelpKINode Title="InformationTree(TProgram).Prune Method " Url="html/M_Genetica_Trees_InformationTree_1_Prune.htm" />
     <HelpKINode Title="OrderedSymbolTree(TProgram).Prune Method " Url="html/M_Genetica_Trees_OrderedSymbolTree_1_Prune.htm" />
     <HelpKINode Title="SymbolTree(TProgram).Prune Method " Url="html/M_Genetica_Trees_SymbolTree_1_Prune.htm" />
@@ -1401,8 +1376,8 @@
   <HelpKINode Title="Replace method" Url="html/Overload_Genetica_Elements_TreeProgramExtensions_Replace.htm" />
   <HelpKINode Title="rootNode field" Url="html/F_Genetica_Trees_OrderedSymbolTree_1_rootNode.htm" />
   <HelpKINode Title="RootNode property">
-    <HelpKINode Title="IInformationTree(TProgram).RootNode Property " Url="html/P_Genetica_Trees_IInformationTree_1_RootNode.htm" />
     <HelpKINode Title="IInformationTreeNode.RootNode Property " Url="html/P_Genetica_Trees_IInformationTreeNode_RootNode.htm" />
+    <HelpKINode Title="IInformationTree`1.RootNode Property " Url="html/P_Genetica_Trees_IInformationTree_1_RootNode.htm" />
     <HelpKINode Title="InformationTree(TProgram).RootNode Property " Url="html/P_Genetica_Trees_InformationTree_1_RootNode.htm" />
     <HelpKINode Title="OrderedSymbolTree(TProgram).ArgumentNode.RootNode Property " Url="html/P_Genetica_Trees_OrderedSymbolTree_1_ArgumentNode_RootNode.htm" />
     <HelpKINode Title="OrderedSymbolTree(TProgram).RootNode Property " Url="html/P_Genetica_Trees_OrderedSymbolTree_1_RootNode.htm" />
@@ -1911,7 +1886,7 @@
   <HelpKINode Title="Vertex.Node property" Url="html/P_Genetica_Graphviz_Vertex_Node.htm" />
   <HelpKINode Title="Vertex.ToString method" Url="html/M_Genetica_Graphviz_Vertex_ToString.htm" />
   <HelpKINode Title="Vertex.Vertex constructor" Url="html/M_Genetica_Graphviz_Vertex__ctor.htm" />
-  <HelpKINode Title="Welcome" Url="html/838abd4d-77a4-4079-8c9b-e18feef6b481.htm" />
+  <HelpKINode Title="Welcome" Url="html/26a1dd42-4100-4c04-b8e2-5b421f03a238.htm" />
   <HelpKINode Title="Zero field" Url="html/F_Genetica_Elements_Terminals_Constant_Zero.htm" />
   <HelpKINode Title="ZeroProgram property" Url="html/P_Genetica_Elements_Functions_IfFunction_ZeroProgram.htm" />
 </HelpKI>
