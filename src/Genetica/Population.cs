@@ -19,7 +19,7 @@
 // </copyright>
 // <summary>
 //    Project: Genetica
-//    Last updated: 04/04/2018
+//    Last updated: 04/05/2018
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
@@ -43,22 +43,16 @@ namespace Genetica
     ///     generation:
     ///     <list type="number">
     ///         <item>
-    ///             <description>
-    ///                 performs selection to get a pool of <em>n</em> parents for crossover, where <em>n</em> is the size of
-    ///                 the population;
-    ///             </description>
-    ///             <description>
-    ///                 performs crossover from parent pool to get some offspring (given percentage of the population);
-    ///             </description>
-    ///             <description>
-    ///                 performs mutation from parent pool to get some mutated programs (given percentage of the population);
-    ///             </description>
-    ///             <description>
-    ///                 performs elite selection (keeps a given percentage of the population corresponding to the best
-    ///                 programs);
-    ///             </description>
-    ///             <description>creates some random programs (given percentage of the population).</description>
+    ///             performs selection to get a pool of <em>n</em> parents for crossover, where <em>n</em> is the size of the
+    ///             population;
     ///         </item>
+    ///         <item>performs crossover from parent pool to get some offspring (given percentage of the population);</item>
+    ///         <item>performs mutation from parent pool to get some mutated programs (given percentage of the population); </item>
+    ///         <item>
+    ///             performs elite selection (keeps a given percentage of the population corresponding to the best
+    ///             programs);
+    ///         </item>
+    ///         <item>creates some random programs (given percentage of the population).</item>
     ///     </list>
     /// </summary>
     /// <typeparam name="TProgram"></typeparam>

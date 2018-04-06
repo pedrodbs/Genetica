@@ -34,10 +34,14 @@ To include the contents of the main README.md **(not this file!)** as the first 
       </introduction>
       ```
 
-   2. Search for all "<code language="none" title=" ">" and replace by "" / remove
+   2. Search and remove all `<code language="none" title=" ">`
 
-   3. Search for all "</code></code>" and replace by "</code>"
+   3. Search for all `</code></code>` and replace by `</code>`
 
    4. Save file
 
 6. Build the documentation using SandCastle from within VisualStudio
+
+
+
+Copyright &copy; 2018, [Pedro Sequeira](https://github.com/pedrodbs)

@@ -1,52 +1,57 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <HelpTOC>
 
-  <HelpTOCNode Title="Genetica.NET" Url="html/26a1dd42-4100-4c04-b8e2-5b421f03a238.htm" />
-  <HelpTOCNode Id="70228361-0a71-4ab2-8e3d-98a83bff9eaa" Title="Genetica" Url="html/N_Genetica.htm">
-    <HelpTOCNode Id="d01ea47b-c17d-4757-a262-4162e5fed1bd" Title="IPopulation(TProgram) Interface" Url="html/T_Genetica_IPopulation_1.htm">
-      <HelpTOCNode Id="cdd1e320-4c17-4172-9174-4d1e4d5f776b" Title="IPopulation(TProgram) Properties" Url="html/Properties_T_Genetica_IPopulation_1.htm">
+  <HelpTOCNode Title="Genetica.NET" Url="html/431878af-00ee-43e3-90ab-aab160fc25aa.htm" />
+  <HelpTOCNode Id="a823749a-5768-4660-88bb-88df0d0cef64" Title="Genetica" Url="html/N_Genetica.htm">
+    <HelpTOCNode Id="d10f8389-9efb-4e66-a0d7-5fc0bf141912" Title="IPopulation(TProgram) Interface" Url="html/T_Genetica_IPopulation_1.htm">
+      <HelpTOCNode Id="3a41b4c0-b41a-4bc4-b897-6f8c25848a76" Title="IPopulation(TProgram) Properties" Url="html/Properties_T_Genetica_IPopulation_1.htm">
         <HelpTOCNode Title="BestProgram Property " Url="html/P_Genetica_IPopulation_1_BestProgram.htm" />
         <HelpTOCNode Title="CrossoverPercent Property " Url="html/P_Genetica_IPopulation_1_CrossoverPercent.htm" />
         <HelpTOCNode Title="ElitismPercent Property " Url="html/P_Genetica_IPopulation_1_ElitismPercent.htm" />
         <HelpTOCNode Title="MutationPercent Property " Url="html/P_Genetica_IPopulation_1_MutationPercent.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="fe0eccf2-c90a-41d7-832c-018443b6c18a" Title="IPopulation(TProgram) Methods" Url="html/Methods_T_Genetica_IPopulation_1.htm">
+      <HelpTOCNode Id="5386202a-3999-4274-979d-5b96d1c7d155" Title="IPopulation(TProgram) Methods" Url="html/Methods_T_Genetica_IPopulation_1.htm">
         <HelpTOCNode Title="Init Method " Url="html/M_Genetica_IPopulation_1_Init.htm" />
         <HelpTOCNode Title="Step Method " Url="html/M_Genetica_IPopulation_1_Step.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Title="ITreeNode Interface" Url="html/T_Genetica_ITreeNode.htm" />
-    <HelpTOCNode Id="793b126a-574d-43c2-b30b-dd4280109062" Title="Population(TProgram, TOutput) Class" Url="html/T_Genetica_Population_2.htm">
+    <HelpTOCNode Id="28139830-bde2-4ace-b871-6d1d91da0ed4" Title="ITreeNode Interface" Url="html/T_Genetica_ITreeNode.htm">
+      <HelpTOCNode Id="2ee7ed3e-c80b-44df-ad3f-2f19f169469b" Title="ITreeNode Properties" Url="html/Properties_T_Genetica_ITreeNode.htm">
+        <HelpTOCNode Title="Children Property " Url="html/P_Genetica_ITreeNode_Children.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="ITreeNode Methods" Url="html/Methods_T_Genetica_ITreeNode.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="3ce51eb5-ca83-428b-b2e7-c6c9b5875e0d" Title="Population(TProgram, TOutput) Class" Url="html/T_Genetica_Population_2.htm">
       <HelpTOCNode Title="Population(TProgram, TOutput) Constructor " Url="html/M_Genetica_Population_2__ctor.htm" />
-      <HelpTOCNode Id="e8b9dea9-a1f6-4222-8130-a06118282487" Title="Population(TProgram, TOutput) Properties" Url="html/Properties_T_Genetica_Population_2.htm">
+      <HelpTOCNode Id="ffc55884-92d8-4db1-b556-2949e39feec1" Title="Population(TProgram, TOutput) Properties" Url="html/Properties_T_Genetica_Population_2.htm">
         <HelpTOCNode Title="BestProgram Property " Url="html/P_Genetica_Population_2_BestProgram.htm" />
         <HelpTOCNode Title="CrossoverPercent Property " Url="html/P_Genetica_Population_2_CrossoverPercent.htm" />
         <HelpTOCNode Title="ElitismPercent Property " Url="html/P_Genetica_Population_2_ElitismPercent.htm" />
         <HelpTOCNode Title="MutationPercent Property " Url="html/P_Genetica_Population_2_MutationPercent.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="956d0d31-9cc4-44f2-bc27-534b3156a0c6" Title="Population(TProgram, TOutput) Methods" Url="html/Methods_T_Genetica_Population_2.htm">
+      <HelpTOCNode Id="f42017c1-a68a-4a3a-bc58-9515fe4e22d0" Title="Population(TProgram, TOutput) Methods" Url="html/Methods_T_Genetica_Population_2.htm">
         <HelpTOCNode Title="Dispose Method " Url="html/M_Genetica_Population_2_Dispose.htm" />
         <HelpTOCNode Title="Init Method " Url="html/M_Genetica_Population_2_Init.htm" />
         <HelpTOCNode Title="Step Method " Url="html/M_Genetica_Population_2_Step.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="e7f73d2f-fe06-426b-9cb3-d569779e6eb2" Title="Genetica.D3" Url="html/N_Genetica_D3.htm">
-    <HelpTOCNode Id="81d6e303-8ff1-4f2a-b1ab-c537a5e17c4d" Title="Extensions Class" Url="html/T_Genetica_D3_Extensions.htm">
-      <HelpTOCNode Id="0885cebb-5992-4826-9804-6fe1cac0a6e2" Title="Extensions Methods" Url="html/Methods_T_Genetica_D3_Extensions.htm">
-        <HelpTOCNode Id="d8d5876c-0b2f-472f-84e1-f1d5bf082108" Title="ToD3JsonFile Method " Url="html/Overload_Genetica_D3_Extensions_ToD3JsonFile.htm">
-          <HelpTOCNode Title="ToD3JsonFile(TProgram) Method (IInformationTree`1, Void, TProgram)" Url="html/M_Genetica_D3_Extensions_ToD3JsonFile__1.htm" />
+  <HelpTOCNode Id="cd19f3dd-6cd9-44ce-9d00-9069b1e9923e" Title="Genetica.D3" Url="html/N_Genetica_D3.htm">
+    <HelpTOCNode Id="fca1b66b-7146-4b49-b4c5-d6cc84e5e5b7" Title="Extensions Class" Url="html/T_Genetica_D3_Extensions.htm">
+      <HelpTOCNode Id="cd54337c-6c8d-471e-82dc-7d4a231e1c68" Title="Extensions Methods" Url="html/Methods_T_Genetica_D3_Extensions.htm">
+        <HelpTOCNode Id="9406a8eb-ba12-4edb-b212-574cba0982af" Title="ToD3JsonFile Method " Url="html/Overload_Genetica_D3_Extensions_ToD3JsonFile.htm">
+          <HelpTOCNode Title="ToD3JsonFile(TProgram) Method (IInformationTree(TProgram), String, Formatting)" Url="html/M_Genetica_D3_Extensions_ToD3JsonFile__1.htm" />
           <HelpTOCNode Title="ToD3JsonFile Method (ITreeNode, String, Formatting)" Url="html/M_Genetica_D3_Extensions_ToD3JsonFile.htm" />
         </HelpTOCNode>
         <HelpTOCNode Title="ToD3TreeJsonFile Method " Url="html/M_Genetica_D3_Extensions_ToD3TreeJsonFile.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="343c9eda-dd69-45ef-a1fd-9c68492dd502" Title="UniqueItemsList(T) Class" Url="html/T_Genetica_D3_UniqueItemsList_1.htm">
+    <HelpTOCNode Id="c059dddb-68dd-43d2-b8f1-6f4232eb8190" Title="UniqueItemsList(T) Class" Url="html/T_Genetica_D3_UniqueItemsList_1.htm">
       <HelpTOCNode Title="UniqueItemsList(T) Constructor " Url="html/M_Genetica_D3_UniqueItemsList_1__ctor.htm" />
-      <HelpTOCNode Id="1908a00e-a72f-4c0d-923d-f1754a2841fc" Title="UniqueItemsList(T) Properties" Url="html/Properties_T_Genetica_D3_UniqueItemsList_1.htm">
+      <HelpTOCNode Id="620ad1b3-2e4e-46fd-9060-b7c83725ca85" Title="UniqueItemsList(T) Properties" Url="html/Properties_T_Genetica_D3_UniqueItemsList_1.htm">
         <HelpTOCNode Title="Count Property " Url="html/P_Genetica_D3_UniqueItemsList_1_Count.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="e09b2d5a-70e5-45ce-bafb-fae258ef39cf" Title="UniqueItemsList(T) Methods" Url="html/Methods_T_Genetica_D3_UniqueItemsList_1.htm">
+      <HelpTOCNode Id="80f830fa-803a-4902-af59-8678993a190c" Title="UniqueItemsList(T) Methods" Url="html/Methods_T_Genetica_D3_UniqueItemsList_1.htm">
         <HelpTOCNode Title="Clear Method " Url="html/M_Genetica_D3_UniqueItemsList_1_Clear.htm" />
         <HelpTOCNode Title="Dispose Method " Url="html/M_Genetica_D3_UniqueItemsList_1_Dispose.htm" />
         <HelpTOCNode Title="GetIndex Method " Url="html/M_Genetica_D3_UniqueItemsList_1_GetIndex.htm" />
@@ -54,57 +59,62 @@
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="0fd3a16f-d47c-4613-bf75-4ecbbc5f2ee6" Title="Genetica.Elements" Url="html/N_Genetica_Elements.htm">
-    <HelpTOCNode Id="7f7c09eb-67b7-4041-9c01-9effd2e88314" Title="EvolutionaryDistanceCalculator(TProgram, TOutput) Class" Url="html/T_Genetica_Elements_EvolutionaryDistanceCalculator_2.htm">
+  <HelpTOCNode Id="d921ee85-107a-45e0-8f5f-79cf7a41f815" Title="Genetica.Elements" Url="html/N_Genetica_Elements.htm">
+    <HelpTOCNode Id="397694b7-e58e-4ff6-95ef-52be18127e71" Title="EvolutionaryDistanceCalculator(TProgram, TOutput) Class" Url="html/T_Genetica_Elements_EvolutionaryDistanceCalculator_2.htm">
       <HelpTOCNode Title="EvolutionaryDistanceCalculator(TProgram, TOutput) Constructor " Url="html/M_Genetica_Elements_EvolutionaryDistanceCalculator_2__ctor.htm" />
-      <HelpTOCNode Id="ac13a220-335b-487e-b518-ac861663df74" Title="EvolutionaryDistanceCalculator(TProgram, TOutput) Methods" Url="html/Methods_T_Genetica_Elements_EvolutionaryDistanceCalculator_2.htm">
+      <HelpTOCNode Id="5dcc044d-872c-4c41-8732-08fc0f80cf7f" Title="EvolutionaryDistanceCalculator(TProgram, TOutput) Methods" Url="html/Methods_T_Genetica_Elements_EvolutionaryDistanceCalculator_2.htm">
         <HelpTOCNode Title="GetDistance Method " Url="html/M_Genetica_Elements_EvolutionaryDistanceCalculator_2_GetDistance.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="937aa345-70b0-4ec3-8669-f86dcee8b971" Title="ICommutativeTreeProgram(TOutput) Interface" Url="html/T_Genetica_Elements_ICommutativeTreeProgram_1.htm">
+    <HelpTOCNode Id="466a5b5d-a68d-46b0-93bd-93a62ba33c23" Title="ICommutativeTreeProgram(TOutput) Interface" Url="html/T_Genetica_Elements_ICommutativeTreeProgram_1.htm">
       <HelpTOCNode Title="ICommutativeTreeProgram(TOutput) Properties" Url="html/Properties_T_Genetica_Elements_ICommutativeTreeProgram_1.htm" />
       <HelpTOCNode Title="ICommutativeTreeProgram(TOutput) Methods" Url="html/Methods_T_Genetica_Elements_ICommutativeTreeProgram_1.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="0c34e85d-a18c-4912-af44-e538ef6c7536" Title="IExpressionConverter(TProgram) Interface" Url="html/T_Genetica_Elements_IExpressionConverter_1.htm">
-      <HelpTOCNode Id="e540b6e7-c303-4cad-86b6-d8cce6c781a8" Title="IExpressionConverter(TProgram) Methods" Url="html/Methods_T_Genetica_Elements_IExpressionConverter_1.htm">
+    <HelpTOCNode Id="36f07d7e-404e-4b3e-bbe6-e110791b6e14" Title="IExpressionConverter(TProgram) Interface" Url="html/T_Genetica_Elements_IExpressionConverter_1.htm">
+      <HelpTOCNode Id="7c916902-5c13-4892-948f-eb2bc16a497e" Title="IExpressionConverter(TProgram) Methods" Url="html/Methods_T_Genetica_Elements_IExpressionConverter_1.htm">
         <HelpTOCNode Title="FromString Method " Url="html/M_Genetica_Elements_IExpressionConverter_1_FromString.htm" />
         <HelpTOCNode Title="ToString Method " Url="html/M_Genetica_Elements_IExpressionConverter_1_ToString.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="8a79d62a-8de8-42ca-a9a8-3895e7b7821d" Title="IProgram Interface" Url="html/T_Genetica_Elements_IProgram.htm">
-      <HelpTOCNode Id="d4d41a1a-d3ed-4f5f-b686-9c59999ee798" Title="IProgram Properties" Url="html/Properties_T_Genetica_Elements_IProgram.htm">
+    <HelpTOCNode Id="7b364826-633e-4bd0-bfe0-79674ce9e38a" Title="IProgram Interface" Url="html/T_Genetica_Elements_IProgram.htm">
+      <HelpTOCNode Id="5ec8ed87-926e-41dc-a5a4-67f9685ae42b" Title="IProgram Properties" Url="html/Properties_T_Genetica_Elements_IProgram.htm">
         <HelpTOCNode Title="Expression Property " Url="html/P_Genetica_Elements_IProgram_Expression.htm" />
         <HelpTOCNode Title="Length Property " Url="html/P_Genetica_Elements_IProgram_Length.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="024c50c3-7678-47f2-8dbe-625e22347437" Title="IProgram(TInput, TOutput) Interface" Url="html/T_Genetica_Elements_IProgram_2.htm">
-      <HelpTOCNode Id="af169c41-84c8-4dd1-a761-bf2beccade37" Title="IProgram(TInput, TOutput) Properties" Url="html/Properties_T_Genetica_Elements_IProgram_2.htm">
+    <HelpTOCNode Id="ec853063-ac6d-47c5-87d2-5102177272a0" Title="IProgram(TInput, TOutput) Interface" Url="html/T_Genetica_Elements_IProgram_2.htm">
+      <HelpTOCNode Id="dcabce52-d9a3-4308-a904-92414c9a0e1e" Title="IProgram(TInput, TOutput) Properties" Url="html/Properties_T_Genetica_Elements_IProgram_2.htm">
         <HelpTOCNode Title="Input Property " Url="html/P_Genetica_Elements_IProgram_2_Input.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="b6b025f5-0a3f-48fc-b76c-7258acac2357" Title="IProgram(TInput, TOutput) Methods" Url="html/Methods_T_Genetica_Elements_IProgram_2.htm">
+      <HelpTOCNode Id="258ce3cc-6d1c-4279-8cd3-d88f587994ab" Title="IProgram(TInput, TOutput) Methods" Url="html/Methods_T_Genetica_Elements_IProgram_2.htm">
         <HelpTOCNode Title="Compute Method " Url="html/M_Genetica_Elements_IProgram_2_Compute.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="8f23bde7-a3ae-4672-8bcf-9be4d9dfbe01" Title="ITreeExpressionConverter(TProgram) Interface" Url="html/T_Genetica_Elements_ITreeExpressionConverter_1.htm">
-      <HelpTOCNode Id="1d1dbb71-7fb7-4897-9f6e-dc644da1485c" Title="ITreeExpressionConverter(TProgram) Methods" Url="html/Methods_T_Genetica_Elements_ITreeExpressionConverter_1.htm">
+    <HelpTOCNode Id="f73c0c87-b8da-43d2-b5db-952dbeabe28d" Title="ITreeExpressionConverter(TProgram) Interface" Url="html/T_Genetica_Elements_ITreeExpressionConverter_1.htm">
+      <HelpTOCNode Id="696c6470-081d-4ac8-b4ad-9671f2075451" Title="ITreeExpressionConverter(TProgram) Methods" Url="html/Methods_T_Genetica_Elements_ITreeExpressionConverter_1.htm">
         <HelpTOCNode Title="FromNormalNotation Method " Url="html/M_Genetica_Elements_ITreeExpressionConverter_1_FromNormalNotation.htm" />
         <HelpTOCNode Title="FromPrefixNotation Method " Url="html/M_Genetica_Elements_ITreeExpressionConverter_1_FromPrefixNotation.htm" />
         <HelpTOCNode Title="ToNormalNotation Method " Url="html/M_Genetica_Elements_ITreeExpressionConverter_1_ToNormalNotation.htm" />
         <HelpTOCNode Title="ToPrefixNotation Method " Url="html/M_Genetica_Elements_ITreeExpressionConverter_1_ToPrefixNotation.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Title="ITreeProgram Interface" Url="html/T_Genetica_Elements_ITreeProgram.htm" />
-    <HelpTOCNode Id="c0f9d71e-b9f6-4d35-8598-d6a44622ff77" Title="ITreeProgram(TOutput) Interface" Url="html/T_Genetica_Elements_ITreeProgram_1.htm">
+    <HelpTOCNode Id="fb65eeb0-9826-4935-aec6-ac69ddbf6fc9" Title="ITreeProgram Interface" Url="html/T_Genetica_Elements_ITreeProgram.htm">
+      <HelpTOCNode Id="daf3d43c-315c-4d01-99b6-3980fa4bc433" Title="ITreeProgram Properties" Url="html/Properties_T_Genetica_Elements_ITreeProgram.htm">
+        <HelpTOCNode Title="Label Property " Url="html/P_Genetica_Elements_ITreeProgram_Label.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="ITreeProgram Methods" Url="html/Methods_T_Genetica_Elements_ITreeProgram.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="2213ae4c-e741-497f-993a-b8704ad09a37" Title="ITreeProgram(TOutput) Interface" Url="html/T_Genetica_Elements_ITreeProgram_1.htm">
       <HelpTOCNode Title="ITreeProgram(TOutput) Properties" Url="html/Properties_T_Genetica_Elements_ITreeProgram_1.htm" />
-      <HelpTOCNode Id="5e2c8f74-9467-4c44-bc13-4e8408f34d11" Title="ITreeProgram(TOutput) Methods" Url="html/Methods_T_Genetica_Elements_ITreeProgram_1.htm">
+      <HelpTOCNode Id="b59ddf26-1fd1-4042-82b3-7f6eeb9273e5" Title="ITreeProgram(TOutput) Methods" Url="html/Methods_T_Genetica_Elements_ITreeProgram_1.htm">
         <HelpTOCNode Title="CreateNew Method " Url="html/M_Genetica_Elements_ITreeProgram_1_CreateNew.htm" />
         <HelpTOCNode Title="GetPrimitive Method " Url="html/M_Genetica_Elements_ITreeProgram_1_GetPrimitive.htm" />
         <HelpTOCNode Title="Simplify Method " Url="html/M_Genetica_Elements_ITreeProgram_1_Simplify.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="a9562f7f-a5c1-4724-9bb9-3e0f09631c0d" Title="MathExpressionConverter Class" Url="html/T_Genetica_Elements_MathExpressionConverter.htm">
+    <HelpTOCNode Id="48d006af-6680-4e9c-9ab9-5b3d94fe92d3" Title="MathExpressionConverter Class" Url="html/T_Genetica_Elements_MathExpressionConverter.htm">
       <HelpTOCNode Title="MathExpressionConverter Constructor " Url="html/M_Genetica_Elements_MathExpressionConverter__ctor.htm" />
-      <HelpTOCNode Id="39f35641-335f-4852-b645-7a8ff8f49aed" Title="MathExpressionConverter Methods" Url="html/Methods_T_Genetica_Elements_MathExpressionConverter.htm">
+      <HelpTOCNode Id="a948d711-29b4-4b20-9922-9717a767786d" Title="MathExpressionConverter Methods" Url="html/Methods_T_Genetica_Elements_MathExpressionConverter.htm">
         <HelpTOCNode Title="Dispose Method " Url="html/M_Genetica_Elements_MathExpressionConverter_Dispose.htm" />
         <HelpTOCNode Title="FromNormalNotation Method " Url="html/M_Genetica_Elements_MathExpressionConverter_FromNormalNotation.htm" />
         <HelpTOCNode Title="FromPrefixNotation Method " Url="html/M_Genetica_Elements_MathExpressionConverter_FromPrefixNotation.htm" />
@@ -113,29 +123,29 @@
         <HelpTOCNode Title="ToNormalNotationExpression Method " Url="html/M_Genetica_Elements_MathExpressionConverter_ToNormalNotationExpression.htm" />
         <HelpTOCNode Title="ToPrefixNotation Method " Url="html/M_Genetica_Elements_MathExpressionConverter_ToPrefixNotation.htm" />
         <HelpTOCNode Title="ToPrefixNotationExpression Method " Url="html/M_Genetica_Elements_MathExpressionConverter_ToPrefixNotationExpression.htm" />
-        <HelpTOCNode Id="2f008c56-ea39-423f-bca0-924d89a16977" Title="ToString Method " Url="html/Overload_Genetica_Elements_MathExpressionConverter_ToString.htm">
+        <HelpTOCNode Id="8fc3fa02-bea3-48ed-b608-98f80cca20fa" Title="ToString Method " Url="html/Overload_Genetica_Elements_MathExpressionConverter_ToString.htm">
           <HelpTOCNode Title="ToString Method (MathProgram)" Url="html/M_Genetica_Elements_MathExpressionConverter_ToString.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="5906d275-73a1-43c9-aea4-2b57548f1b59" Title="MathPrimitiveSets Class" Url="html/T_Genetica_Elements_MathPrimitiveSets.htm">
-      <HelpTOCNode Id="45bd6ae5-daf9-4cfa-8c77-5689b3e41e81" Title="MathPrimitiveSets Fields" Url="html/Fields_T_Genetica_Elements_MathPrimitiveSets.htm">
+    <HelpTOCNode Id="526045f1-b573-484a-af7b-f71992023d36" Title="MathPrimitiveSets Class" Url="html/T_Genetica_Elements_MathPrimitiveSets.htm">
+      <HelpTOCNode Id="8792e6ae-6f58-4fb8-b3b0-6924de32c015" Title="MathPrimitiveSets Fields" Url="html/Fields_T_Genetica_Elements_MathPrimitiveSets.htm">
         <HelpTOCNode Title="Default Field" Url="html/F_Genetica_Elements_MathPrimitiveSets_Default.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="40e62d08-ca5e-41de-94b2-d3f9f1660be6" Title="MathProgram Class" Url="html/T_Genetica_Elements_MathProgram.htm">
+    <HelpTOCNode Id="5864a246-987f-4630-bbf0-bec5588cf324" Title="MathProgram Class" Url="html/T_Genetica_Elements_MathProgram.htm">
       <HelpTOCNode Title="MathProgram Constructor " Url="html/M_Genetica_Elements_MathProgram__ctor.htm" />
-      <HelpTOCNode Id="702a5407-b2d0-433d-8b1e-ab056d79f23b" Title="MathProgram Properties" Url="html/Properties_T_Genetica_Elements_MathProgram.htm">
+      <HelpTOCNode Id="2d2ddbef-51a3-467b-9188-3e0f91a35d76" Title="MathProgram Properties" Url="html/Properties_T_Genetica_Elements_MathProgram.htm">
         <HelpTOCNode Title="Expression Property " Url="html/P_Genetica_Elements_MathProgram_Expression.htm" />
         <HelpTOCNode Title="Input Property " Url="html/P_Genetica_Elements_MathProgram_Input.htm" />
         <HelpTOCNode Title="Label Property " Url="html/P_Genetica_Elements_MathProgram_Label.htm" />
         <HelpTOCNode Title="Length Property " Url="html/P_Genetica_Elements_MathProgram_Length.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="17b34347-05e5-457e-bda5-ee31e32f493a" Title="MathProgram Methods" Url="html/Methods_T_Genetica_Elements_MathProgram.htm">
+      <HelpTOCNode Id="cbcd331b-2d2a-4766-8fd5-fdf1fd571621" Title="MathProgram Methods" Url="html/Methods_T_Genetica_Elements_MathProgram.htm">
         <HelpTOCNode Title="CompareTo Method " Url="html/M_Genetica_Elements_MathProgram_CompareTo.htm" />
         <HelpTOCNode Title="Compute Method " Url="html/M_Genetica_Elements_MathProgram_Compute.htm" />
         <HelpTOCNode Title="CreateNew Method " Url="html/M_Genetica_Elements_MathProgram_CreateNew.htm" />
-        <HelpTOCNode Id="d4e17559-b149-47f6-97a5-362a1142840d" Title="Equals Method " Url="html/Overload_Genetica_Elements_MathProgram_Equals.htm">
+        <HelpTOCNode Id="fb20beda-7ca7-45a2-9aac-392cb7a3ea9e" Title="Equals Method " Url="html/Overload_Genetica_Elements_MathProgram_Equals.htm">
           <HelpTOCNode Title="Equals Method (Object)" Url="html/M_Genetica_Elements_MathProgram_Equals_1.htm" />
           <HelpTOCNode Title="Equals Method (MathProgram)" Url="html/M_Genetica_Elements_MathProgram_Equals.htm" />
         </HelpTOCNode>
@@ -144,13 +154,13 @@
         <HelpTOCNode Title="Simplify Method " Url="html/M_Genetica_Elements_MathProgram_Simplify.htm" />
         <HelpTOCNode Title="ToString Method " Url="html/M_Genetica_Elements_MathProgram_ToString.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="da7a96ed-29d9-4040-b7d3-498a128f2989" Title="MathProgram Operators" Url="html/Operators_T_Genetica_Elements_MathProgram.htm">
+      <HelpTOCNode Id="4eee99de-ccc5-47ef-9aa6-5ea9a3ebd819" Title="MathProgram Operators" Url="html/Operators_T_Genetica_Elements_MathProgram.htm">
         <HelpTOCNode Title="Equality Operator " Url="html/M_Genetica_Elements_MathProgram_op_Equality.htm" />
         <HelpTOCNode Title="Inequality Operator " Url="html/M_Genetica_Elements_MathProgram_op_Inequality.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="2176c83b-de7c-4df2-842c-864a45b99bf6" Title="MathProgramExtensions Class" Url="html/T_Genetica_Elements_MathProgramExtensions.htm">
-      <HelpTOCNode Id="d4d6a24b-b546-499e-af5b-a6f80508d4c0" Title="MathProgramExtensions Methods" Url="html/Methods_T_Genetica_Elements_MathProgramExtensions.htm">
+    <HelpTOCNode Id="6bd7b540-02a7-4065-b724-cb879eb20a1e" Title="MathProgramExtensions Class" Url="html/T_Genetica_Elements_MathProgramExtensions.htm">
+      <HelpTOCNode Id="4e229b70-a249-4f48-b20b-1a50808673bc" Title="MathProgramExtensions Methods" Url="html/Methods_T_Genetica_Elements_MathProgramExtensions.htm">
         <HelpTOCNode Title="ContainsConstant Method " Url="html/M_Genetica_Elements_MathProgramExtensions_ContainsConstant.htm" />
         <HelpTOCNode Title="EqualsConstant Method " Url="html/M_Genetica_Elements_MathProgramExtensions_EqualsConstant.htm" />
         <HelpTOCNode Title="GetRange Method " Url="html/M_Genetica_Elements_MathProgramExtensions_GetRange.htm" />
@@ -160,20 +170,20 @@
         <HelpTOCNode Title="Simplify Method " Url="html/M_Genetica_Elements_MathProgramExtensions_Simplify.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="b725ab4f-0be6-4f04-ba6c-92984d1ea37d" Title="PrimitiveSet(TProgram) Class" Url="html/T_Genetica_Elements_PrimitiveSet_1.htm">
+    <HelpTOCNode Id="598d9b85-ec1c-459e-a0d5-f57ac9339e32" Title="PrimitiveSet(TProgram) Class" Url="html/T_Genetica_Elements_PrimitiveSet_1.htm">
       <HelpTOCNode Title="PrimitiveSet(TProgram) Constructor " Url="html/M_Genetica_Elements_PrimitiveSet_1__ctor.htm" />
-      <HelpTOCNode Id="acd166d7-da2c-46cb-8276-37aa366218f8" Title="PrimitiveSet(TProgram) Properties" Url="html/Properties_T_Genetica_Elements_PrimitiveSet_1.htm">
+      <HelpTOCNode Id="e288c0da-4257-4982-b5a6-7037bb13b3e2" Title="PrimitiveSet(TProgram) Properties" Url="html/Properties_T_Genetica_Elements_PrimitiveSet_1.htm">
         <HelpTOCNode Title="Functions Property " Url="html/P_Genetica_Elements_PrimitiveSet_1_Functions.htm" />
         <HelpTOCNode Title="Terminals Property " Url="html/P_Genetica_Elements_PrimitiveSet_1_Terminals.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="e9659c80-ce88-4f0a-97a7-8a091ad78953" Title="PrimitiveSet(TProgram) Methods" Url="html/Methods_T_Genetica_Elements_PrimitiveSet_1.htm">
+      <HelpTOCNode Id="e48c1e7b-d3be-4ffe-b49e-d94aedfcb0a0" Title="PrimitiveSet(TProgram) Methods" Url="html/Methods_T_Genetica_Elements_PrimitiveSet_1.htm">
         <HelpTOCNode Title="Add Method " Url="html/M_Genetica_Elements_PrimitiveSet_1_Add.htm" />
         <HelpTOCNode Title="Dispose Method " Url="html/M_Genetica_Elements_PrimitiveSet_1_Dispose.htm" />
         <HelpTOCNode Title="ToString Method " Url="html/M_Genetica_Elements_PrimitiveSet_1_ToString.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="7be1d569-453b-4e76-818e-294cf6b64832" Title="TreeProgramExtensions Class" Url="html/T_Genetica_Elements_TreeProgramExtensions.htm">
-      <HelpTOCNode Id="e5ffbfdd-6731-494e-b86a-3264d71744dc" Title="TreeProgramExtensions Methods" Url="html/Methods_T_Genetica_Elements_TreeProgramExtensions.htm">
+    <HelpTOCNode Id="9e4f3d87-2f4a-4b82-af70-4e9636325540" Title="TreeProgramExtensions Class" Url="html/T_Genetica_Elements_TreeProgramExtensions.htm">
+      <HelpTOCNode Id="d8f29e71-31e6-499e-bd47-332e718eb037" Title="TreeProgramExtensions Methods" Url="html/Methods_T_Genetica_Elements_TreeProgramExtensions.htm">
         <HelpTOCNode Title="ContainsSubElement(TOutput) Method " Url="html/M_Genetica_Elements_TreeProgramExtensions_ContainsSubElement__1.htm" />
         <HelpTOCNode Title="GetCommonRegionIndexes(TOutput) Method " Url="html/M_Genetica_Elements_TreeProgramExtensions_GetCommonRegionIndexes__1.htm" />
         <HelpTOCNode Title="GetLeaves(TOutput) Method " Url="html/M_Genetica_Elements_TreeProgramExtensions_GetLeaves__1.htm" />
@@ -185,29 +195,29 @@
         <HelpTOCNode Title="IsLeaf(TOutput) Method " Url="html/M_Genetica_Elements_TreeProgramExtensions_IsLeaf__1.htm" />
         <HelpTOCNode Title="IsSubProgramOf(TOutput) Method " Url="html/M_Genetica_Elements_TreeProgramExtensions_IsSubProgramOf__1.htm" />
         <HelpTOCNode Title="ProgramAt(TOutput) Method " Url="html/M_Genetica_Elements_TreeProgramExtensions_ProgramAt__1.htm" />
-        <HelpTOCNode Id="51387de2-5874-47e3-b41c-c69c1c43ffad" Title="Replace Method " Url="html/Overload_Genetica_Elements_TreeProgramExtensions_Replace.htm">
+        <HelpTOCNode Id="8b7b6cdd-219d-4658-b705-d297a672e81a" Title="Replace Method " Url="html/Overload_Genetica_Elements_TreeProgramExtensions_Replace.htm">
           <HelpTOCNode Title="Replace(TOutput) Method (ITreeProgram(TOutput), ITreeProgram(TOutput), ITreeProgram(TOutput))" Url="html/M_Genetica_Elements_TreeProgramExtensions_Replace__1.htm" />
           <HelpTOCNode Title="Replace(TOutput) Method (ITreeProgram(TOutput), UInt32, ITreeProgram(TOutput))" Url="html/M_Genetica_Elements_TreeProgramExtensions_Replace__1_1.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="b508b12a-8b11-4e78-8477-ef4a3aa6f080" Title="Genetica.Elements.Functions" Url="html/N_Genetica_Elements_Functions.htm">
-    <HelpTOCNode Id="bd98309d-53c9-482e-a07a-6153b594a324" Title="AdditionFunction Class" Url="html/T_Genetica_Elements_Functions_AdditionFunction.htm">
+  <HelpTOCNode Id="e76fb863-0c64-4ff2-831f-e3784437bbe8" Title="Genetica.Elements.Functions" Url="html/N_Genetica_Elements_Functions.htm">
+    <HelpTOCNode Id="96d34242-6957-49e5-aa6c-5df8db74d6cb" Title="AdditionFunction Class" Url="html/T_Genetica_Elements_Functions_AdditionFunction.htm">
       <HelpTOCNode Title="AdditionFunction Constructor " Url="html/M_Genetica_Elements_Functions_AdditionFunction__ctor.htm" />
-      <HelpTOCNode Id="7165c542-6e74-4e6c-af2d-e0c080bc4913" Title="AdditionFunction Properties" Url="html/Properties_T_Genetica_Elements_Functions_AdditionFunction.htm">
+      <HelpTOCNode Id="d7690934-350a-42f4-8de7-8bfdec0bf933" Title="AdditionFunction Properties" Url="html/Properties_T_Genetica_Elements_Functions_AdditionFunction.htm">
         <HelpTOCNode Title="Expression Property " Url="html/P_Genetica_Elements_Functions_AdditionFunction_Expression.htm" />
         <HelpTOCNode Title="Label Property " Url="html/P_Genetica_Elements_Functions_AdditionFunction_Label.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="47727b5f-e929-4d08-a6f7-6053c3b4928b" Title="AdditionFunction Methods" Url="html/Methods_T_Genetica_Elements_Functions_AdditionFunction.htm">
+      <HelpTOCNode Id="bded3786-f6d9-4f24-96ae-0be3433b3c70" Title="AdditionFunction Methods" Url="html/Methods_T_Genetica_Elements_Functions_AdditionFunction.htm">
         <HelpTOCNode Title="Compute Method " Url="html/M_Genetica_Elements_Functions_AdditionFunction_Compute.htm" />
         <HelpTOCNode Title="CreateNew Method " Url="html/M_Genetica_Elements_Functions_AdditionFunction_CreateNew.htm" />
         <HelpTOCNode Title="Simplify Method " Url="html/M_Genetica_Elements_Functions_AdditionFunction_Simplify.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="1a621958-f34c-42e0-9d74-d1c74e8f31f2" Title="BinaryFunction Class" Url="html/T_Genetica_Elements_Functions_BinaryFunction.htm">
+    <HelpTOCNode Id="3b43e325-7dca-42ac-8f3b-5c5519313369" Title="BinaryFunction Class" Url="html/T_Genetica_Elements_Functions_BinaryFunction.htm">
       <HelpTOCNode Title="BinaryFunction Constructor " Url="html/M_Genetica_Elements_Functions_BinaryFunction__ctor.htm" />
-      <HelpTOCNode Id="8a4314c3-d2e1-4348-a207-73c6d4304093" Title="BinaryFunction Properties" Url="html/Properties_T_Genetica_Elements_Functions_BinaryFunction.htm">
+      <HelpTOCNode Id="dc9af985-b06f-487f-b702-b73ac15d6c65" Title="BinaryFunction Properties" Url="html/Properties_T_Genetica_Elements_Functions_BinaryFunction.htm">
         <HelpTOCNode Title="Expression Property " Url="html/P_Genetica_Elements_Functions_BinaryFunction_Expression.htm" />
         <HelpTOCNode Title="FirstParameter Property " Url="html/P_Genetica_Elements_Functions_BinaryFunction_FirstParameter.htm" />
         <HelpTOCNode Title="Label Property " Url="html/P_Genetica_Elements_Functions_BinaryFunction_Label.htm" />
@@ -215,36 +225,36 @@
       </HelpTOCNode>
       <HelpTOCNode Title="BinaryFunction Methods" Url="html/Methods_T_Genetica_Elements_Functions_BinaryFunction.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="0a992341-a5b6-4140-84cb-32f4b17e2104" Title="CommutativeBinaryFunction Class" Url="html/T_Genetica_Elements_Functions_CommutativeBinaryFunction.htm">
+    <HelpTOCNode Id="d38577fb-4657-4be7-ab56-73d298b3550e" Title="CommutativeBinaryFunction Class" Url="html/T_Genetica_Elements_Functions_CommutativeBinaryFunction.htm">
       <HelpTOCNode Title="CommutativeBinaryFunction Constructor " Url="html/M_Genetica_Elements_Functions_CommutativeBinaryFunction__ctor.htm" />
       <HelpTOCNode Title="CommutativeBinaryFunction Properties" Url="html/Properties_T_Genetica_Elements_Functions_CommutativeBinaryFunction.htm" />
       <HelpTOCNode Title="CommutativeBinaryFunction Methods" Url="html/Methods_T_Genetica_Elements_Functions_CommutativeBinaryFunction.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="e355089f-eece-441e-ac5f-2d4c1400daa6" Title="CosineFunction Class" Url="html/T_Genetica_Elements_Functions_CosineFunction.htm">
+    <HelpTOCNode Id="5a4f63a6-629c-4359-ac4f-90d8fad1da85" Title="CosineFunction Class" Url="html/T_Genetica_Elements_Functions_CosineFunction.htm">
       <HelpTOCNode Title="CosineFunction Constructor " Url="html/M_Genetica_Elements_Functions_CosineFunction__ctor.htm" />
-      <HelpTOCNode Id="f2facd40-abfb-43b1-8bd1-8e170b58c459" Title="CosineFunction Properties" Url="html/Properties_T_Genetica_Elements_Functions_CosineFunction.htm">
+      <HelpTOCNode Id="a7abac83-f68b-4bf3-8d73-e1d618ad41a7" Title="CosineFunction Properties" Url="html/Properties_T_Genetica_Elements_Functions_CosineFunction.htm">
         <HelpTOCNode Title="Label Property " Url="html/P_Genetica_Elements_Functions_CosineFunction_Label.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="9b49a1f1-3bd9-4771-8b11-49fed0bc6fe3" Title="CosineFunction Methods" Url="html/Methods_T_Genetica_Elements_Functions_CosineFunction.htm">
+      <HelpTOCNode Id="a8895ca5-21d5-45d2-98ab-53811fdf014d" Title="CosineFunction Methods" Url="html/Methods_T_Genetica_Elements_Functions_CosineFunction.htm">
         <HelpTOCNode Title="Compute Method " Url="html/M_Genetica_Elements_Functions_CosineFunction_Compute.htm" />
         <HelpTOCNode Title="CreateNew Method " Url="html/M_Genetica_Elements_Functions_CosineFunction_CreateNew.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="c742ebe8-b8b4-41a6-944a-2286f064aba3" Title="DivisionFunction Class" Url="html/T_Genetica_Elements_Functions_DivisionFunction.htm">
+    <HelpTOCNode Id="fce7befd-4773-4a39-b1c8-8344f313a179" Title="DivisionFunction Class" Url="html/T_Genetica_Elements_Functions_DivisionFunction.htm">
       <HelpTOCNode Title="DivisionFunction Constructor " Url="html/M_Genetica_Elements_Functions_DivisionFunction__ctor.htm" />
-      <HelpTOCNode Id="bd1e9f83-8cb7-440d-92b7-6b276f2ba8a8" Title="DivisionFunction Properties" Url="html/Properties_T_Genetica_Elements_Functions_DivisionFunction.htm">
+      <HelpTOCNode Id="4f136832-212b-4133-b8e2-616722eafa53" Title="DivisionFunction Properties" Url="html/Properties_T_Genetica_Elements_Functions_DivisionFunction.htm">
         <HelpTOCNode Title="Expression Property " Url="html/P_Genetica_Elements_Functions_DivisionFunction_Expression.htm" />
         <HelpTOCNode Title="Label Property " Url="html/P_Genetica_Elements_Functions_DivisionFunction_Label.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="2bb374db-3d18-4b2e-90e0-e587829ad2ad" Title="DivisionFunction Methods" Url="html/Methods_T_Genetica_Elements_Functions_DivisionFunction.htm">
+      <HelpTOCNode Id="ae801e67-c9bb-4943-be9a-a8993502eb2a" Title="DivisionFunction Methods" Url="html/Methods_T_Genetica_Elements_Functions_DivisionFunction.htm">
         <HelpTOCNode Title="Compute Method " Url="html/M_Genetica_Elements_Functions_DivisionFunction_Compute.htm" />
         <HelpTOCNode Title="CreateNew Method " Url="html/M_Genetica_Elements_Functions_DivisionFunction_CreateNew.htm" />
         <HelpTOCNode Title="Simplify Method " Url="html/M_Genetica_Elements_Functions_DivisionFunction_Simplify.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="36610bbf-d747-4a25-b6cb-5bde0dd3ca00" Title="IfFunction Class" Url="html/T_Genetica_Elements_Functions_IfFunction.htm">
+    <HelpTOCNode Id="76fb6911-a0e4-420a-af0a-84ce2fc1a7e3" Title="IfFunction Class" Url="html/T_Genetica_Elements_Functions_IfFunction.htm">
       <HelpTOCNode Title="IfFunction Constructor " Url="html/M_Genetica_Elements_Functions_IfFunction__ctor.htm" />
-      <HelpTOCNode Id="785525ac-dfd4-4343-ae32-2be5e3e972d8" Title="IfFunction Properties" Url="html/Properties_T_Genetica_Elements_Functions_IfFunction.htm">
+      <HelpTOCNode Id="37c2293e-95a5-4a35-b5ef-e3bd9d37f8ba" Title="IfFunction Properties" Url="html/Properties_T_Genetica_Elements_Functions_IfFunction.htm">
         <HelpTOCNode Title="ConditionProgram Property " Url="html/P_Genetica_Elements_Functions_IfFunction_ConditionProgram.htm" />
         <HelpTOCNode Title="Expression Property " Url="html/P_Genetica_Elements_Functions_IfFunction_Expression.htm" />
         <HelpTOCNode Title="Label Property " Url="html/P_Genetica_Elements_Functions_IfFunction_Label.htm" />
@@ -252,93 +262,93 @@
         <HelpTOCNode Title="PositiveProgram Property " Url="html/P_Genetica_Elements_Functions_IfFunction_PositiveProgram.htm" />
         <HelpTOCNode Title="ZeroProgram Property " Url="html/P_Genetica_Elements_Functions_IfFunction_ZeroProgram.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="ec4e48da-b1ba-4186-9973-09a6053dfec1" Title="IfFunction Methods" Url="html/Methods_T_Genetica_Elements_Functions_IfFunction.htm">
+      <HelpTOCNode Id="33385197-522c-4642-9167-6aa1dcb8fb1f" Title="IfFunction Methods" Url="html/Methods_T_Genetica_Elements_Functions_IfFunction.htm">
         <HelpTOCNode Title="Compute Method " Url="html/M_Genetica_Elements_Functions_IfFunction_Compute.htm" />
         <HelpTOCNode Title="CreateNew Method " Url="html/M_Genetica_Elements_Functions_IfFunction_CreateNew.htm" />
         <HelpTOCNode Title="Simplify Method " Url="html/M_Genetica_Elements_Functions_IfFunction_Simplify.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="d5a1b567-a971-4b0a-97ad-c120ff922f91" Title="LogarithmFunction Class" Url="html/T_Genetica_Elements_Functions_LogarithmFunction.htm">
+    <HelpTOCNode Id="0e1e4d3c-6316-4603-8947-a83674eeec16" Title="LogarithmFunction Class" Url="html/T_Genetica_Elements_Functions_LogarithmFunction.htm">
       <HelpTOCNode Title="LogarithmFunction Constructor " Url="html/M_Genetica_Elements_Functions_LogarithmFunction__ctor.htm" />
-      <HelpTOCNode Id="77037706-a496-4523-86f3-e4661afdb497" Title="LogarithmFunction Properties" Url="html/Properties_T_Genetica_Elements_Functions_LogarithmFunction.htm">
+      <HelpTOCNode Id="122bc252-2caf-4562-8bcd-563a0b9cc972" Title="LogarithmFunction Properties" Url="html/Properties_T_Genetica_Elements_Functions_LogarithmFunction.htm">
         <HelpTOCNode Title="Label Property " Url="html/P_Genetica_Elements_Functions_LogarithmFunction_Label.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="e3708196-54a5-492b-b083-7e1c971fad26" Title="LogarithmFunction Methods" Url="html/Methods_T_Genetica_Elements_Functions_LogarithmFunction.htm">
+      <HelpTOCNode Id="2043b605-5db5-482b-a242-edcd0d5d225e" Title="LogarithmFunction Methods" Url="html/Methods_T_Genetica_Elements_Functions_LogarithmFunction.htm">
         <HelpTOCNode Title="Compute Method " Url="html/M_Genetica_Elements_Functions_LogarithmFunction_Compute.htm" />
         <HelpTOCNode Title="CreateNew Method " Url="html/M_Genetica_Elements_Functions_LogarithmFunction_CreateNew.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="bc54bff8-1d72-4fa2-8bec-ccda28cd2199" Title="MaxFunction Class" Url="html/T_Genetica_Elements_Functions_MaxFunction.htm">
+    <HelpTOCNode Id="b6ab1371-621b-40a4-94b9-c000cabfc1f7" Title="MaxFunction Class" Url="html/T_Genetica_Elements_Functions_MaxFunction.htm">
       <HelpTOCNode Title="MaxFunction Constructor " Url="html/M_Genetica_Elements_Functions_MaxFunction__ctor.htm" />
-      <HelpTOCNode Id="6f8594bc-8b79-4ff2-bb00-9802d1df47b6" Title="MaxFunction Properties" Url="html/Properties_T_Genetica_Elements_Functions_MaxFunction.htm">
+      <HelpTOCNode Id="9fd000cc-42d7-45af-bc10-0cc6fa17c299" Title="MaxFunction Properties" Url="html/Properties_T_Genetica_Elements_Functions_MaxFunction.htm">
         <HelpTOCNode Title="Label Property " Url="html/P_Genetica_Elements_Functions_MaxFunction_Label.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="bf7fd1ba-5113-4a58-a4f6-3a7349ac1370" Title="MaxFunction Methods" Url="html/Methods_T_Genetica_Elements_Functions_MaxFunction.htm">
+      <HelpTOCNode Id="5dfdc61b-f147-474e-8470-5098d20b2da8" Title="MaxFunction Methods" Url="html/Methods_T_Genetica_Elements_Functions_MaxFunction.htm">
         <HelpTOCNode Title="Compute Method " Url="html/M_Genetica_Elements_Functions_MaxFunction_Compute.htm" />
         <HelpTOCNode Title="CreateNew Method " Url="html/M_Genetica_Elements_Functions_MaxFunction_CreateNew.htm" />
         <HelpTOCNode Title="Simplify Method " Url="html/M_Genetica_Elements_Functions_MaxFunction_Simplify.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="2511b938-b695-45bf-9996-a3749a0b6ab5" Title="MinFunction Class" Url="html/T_Genetica_Elements_Functions_MinFunction.htm">
+    <HelpTOCNode Id="d9f3075d-76d5-43ea-aac5-fdcd29f0cafc" Title="MinFunction Class" Url="html/T_Genetica_Elements_Functions_MinFunction.htm">
       <HelpTOCNode Title="MinFunction Constructor " Url="html/M_Genetica_Elements_Functions_MinFunction__ctor.htm" />
-      <HelpTOCNode Id="c26940fc-8554-4660-8ee1-81b356394f4d" Title="MinFunction Properties" Url="html/Properties_T_Genetica_Elements_Functions_MinFunction.htm">
+      <HelpTOCNode Id="a3db11cc-6110-4335-9347-7c6c9c7d1dc6" Title="MinFunction Properties" Url="html/Properties_T_Genetica_Elements_Functions_MinFunction.htm">
         <HelpTOCNode Title="Label Property " Url="html/P_Genetica_Elements_Functions_MinFunction_Label.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="f657c618-31b2-4f4b-8e49-1b0840aa09c7" Title="MinFunction Methods" Url="html/Methods_T_Genetica_Elements_Functions_MinFunction.htm">
+      <HelpTOCNode Id="fdb72265-169f-4039-80b3-02e43a71ea8c" Title="MinFunction Methods" Url="html/Methods_T_Genetica_Elements_Functions_MinFunction.htm">
         <HelpTOCNode Title="Compute Method " Url="html/M_Genetica_Elements_Functions_MinFunction_Compute.htm" />
         <HelpTOCNode Title="CreateNew Method " Url="html/M_Genetica_Elements_Functions_MinFunction_CreateNew.htm" />
         <HelpTOCNode Title="Simplify Method " Url="html/M_Genetica_Elements_Functions_MinFunction_Simplify.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="52bb2261-222c-4928-b8ad-92e5848c8999" Title="MultiplicationFunction Class" Url="html/T_Genetica_Elements_Functions_MultiplicationFunction.htm">
+    <HelpTOCNode Id="89013b1c-3609-4ab6-a6ef-dc29a9d143ee" Title="MultiplicationFunction Class" Url="html/T_Genetica_Elements_Functions_MultiplicationFunction.htm">
       <HelpTOCNode Title="MultiplicationFunction Constructor " Url="html/M_Genetica_Elements_Functions_MultiplicationFunction__ctor.htm" />
-      <HelpTOCNode Id="b2a02aed-9efe-4baa-8b93-a61b8d90e792" Title="MultiplicationFunction Properties" Url="html/Properties_T_Genetica_Elements_Functions_MultiplicationFunction.htm">
+      <HelpTOCNode Id="286fd42e-865f-4ae1-8a20-338b75818b0d" Title="MultiplicationFunction Properties" Url="html/Properties_T_Genetica_Elements_Functions_MultiplicationFunction.htm">
         <HelpTOCNode Title="Expression Property " Url="html/P_Genetica_Elements_Functions_MultiplicationFunction_Expression.htm" />
         <HelpTOCNode Title="Label Property " Url="html/P_Genetica_Elements_Functions_MultiplicationFunction_Label.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="1676964e-49d9-4496-b5f1-85f128dca3f8" Title="MultiplicationFunction Methods" Url="html/Methods_T_Genetica_Elements_Functions_MultiplicationFunction.htm">
+      <HelpTOCNode Id="c5f17bab-2514-4c62-aa65-bce29d1917fa" Title="MultiplicationFunction Methods" Url="html/Methods_T_Genetica_Elements_Functions_MultiplicationFunction.htm">
         <HelpTOCNode Title="Compute Method " Url="html/M_Genetica_Elements_Functions_MultiplicationFunction_Compute.htm" />
         <HelpTOCNode Title="CreateNew Method " Url="html/M_Genetica_Elements_Functions_MultiplicationFunction_CreateNew.htm" />
         <HelpTOCNode Title="Simplify Method " Url="html/M_Genetica_Elements_Functions_MultiplicationFunction_Simplify.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="b19e8c18-b0e2-4782-bdd4-e9c5c92acce4" Title="PowerFunction Class" Url="html/T_Genetica_Elements_Functions_PowerFunction.htm">
+    <HelpTOCNode Id="0b8f2d59-a9bd-4b4a-8af0-43ab2a6fa099" Title="PowerFunction Class" Url="html/T_Genetica_Elements_Functions_PowerFunction.htm">
       <HelpTOCNode Title="PowerFunction Constructor " Url="html/M_Genetica_Elements_Functions_PowerFunction__ctor.htm" />
-      <HelpTOCNode Id="20f6cce5-c62e-4c7b-8de6-d4950cc3f11a" Title="PowerFunction Properties" Url="html/Properties_T_Genetica_Elements_Functions_PowerFunction.htm">
+      <HelpTOCNode Id="0618c6f5-ed31-4640-95a5-e9625fced2a2" Title="PowerFunction Properties" Url="html/Properties_T_Genetica_Elements_Functions_PowerFunction.htm">
         <HelpTOCNode Title="Expression Property " Url="html/P_Genetica_Elements_Functions_PowerFunction_Expression.htm" />
         <HelpTOCNode Title="Label Property " Url="html/P_Genetica_Elements_Functions_PowerFunction_Label.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="eb4e007d-33c5-4726-a531-896eaf363d5c" Title="PowerFunction Methods" Url="html/Methods_T_Genetica_Elements_Functions_PowerFunction.htm">
+      <HelpTOCNode Id="99b63c7e-b60b-478e-863a-bf8638e571b6" Title="PowerFunction Methods" Url="html/Methods_T_Genetica_Elements_Functions_PowerFunction.htm">
         <HelpTOCNode Title="Compute Method " Url="html/M_Genetica_Elements_Functions_PowerFunction_Compute.htm" />
         <HelpTOCNode Title="CreateNew Method " Url="html/M_Genetica_Elements_Functions_PowerFunction_CreateNew.htm" />
         <HelpTOCNode Title="Simplify Method " Url="html/M_Genetica_Elements_Functions_PowerFunction_Simplify.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="c7cc665a-1f6a-419f-860b-682a2f94d1ba" Title="SineFunction Class" Url="html/T_Genetica_Elements_Functions_SineFunction.htm">
+    <HelpTOCNode Id="e96e65eb-ab96-4a72-8034-48e399bc35ca" Title="SineFunction Class" Url="html/T_Genetica_Elements_Functions_SineFunction.htm">
       <HelpTOCNode Title="SineFunction Constructor " Url="html/M_Genetica_Elements_Functions_SineFunction__ctor.htm" />
-      <HelpTOCNode Id="6abf0204-66b9-4306-8226-1284f8de6334" Title="SineFunction Properties" Url="html/Properties_T_Genetica_Elements_Functions_SineFunction.htm">
+      <HelpTOCNode Id="86b0729b-9aa2-4206-bbce-f00d6352c697" Title="SineFunction Properties" Url="html/Properties_T_Genetica_Elements_Functions_SineFunction.htm">
         <HelpTOCNode Title="Label Property " Url="html/P_Genetica_Elements_Functions_SineFunction_Label.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="6bc333a5-6ec1-46ed-8017-0fe9c964664a" Title="SineFunction Methods" Url="html/Methods_T_Genetica_Elements_Functions_SineFunction.htm">
+      <HelpTOCNode Id="752663b1-0f77-4fdf-9a56-e3a0abf39192" Title="SineFunction Methods" Url="html/Methods_T_Genetica_Elements_Functions_SineFunction.htm">
         <HelpTOCNode Title="Compute Method " Url="html/M_Genetica_Elements_Functions_SineFunction_Compute.htm" />
         <HelpTOCNode Title="CreateNew Method " Url="html/M_Genetica_Elements_Functions_SineFunction_CreateNew.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="44e84db9-5984-4ff7-add1-821a4dcaaba4" Title="SubtractionFunction Class" Url="html/T_Genetica_Elements_Functions_SubtractionFunction.htm">
+    <HelpTOCNode Id="f2afe321-6108-471f-8c53-655918da9375" Title="SubtractionFunction Class" Url="html/T_Genetica_Elements_Functions_SubtractionFunction.htm">
       <HelpTOCNode Title="SubtractionFunction Constructor " Url="html/M_Genetica_Elements_Functions_SubtractionFunction__ctor.htm" />
-      <HelpTOCNode Id="78d7c719-c18b-4454-9132-7d2576f51806" Title="SubtractionFunction Properties" Url="html/Properties_T_Genetica_Elements_Functions_SubtractionFunction.htm">
+      <HelpTOCNode Id="91fca633-838d-49b6-b978-830c07af6647" Title="SubtractionFunction Properties" Url="html/Properties_T_Genetica_Elements_Functions_SubtractionFunction.htm">
         <HelpTOCNode Title="Expression Property " Url="html/P_Genetica_Elements_Functions_SubtractionFunction_Expression.htm" />
         <HelpTOCNode Title="Label Property " Url="html/P_Genetica_Elements_Functions_SubtractionFunction_Label.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="1026d479-0293-4069-92b3-1480e49126cb" Title="SubtractionFunction Methods" Url="html/Methods_T_Genetica_Elements_Functions_SubtractionFunction.htm">
+      <HelpTOCNode Id="700fbcf4-23f4-47db-87d2-e2142b2a29e5" Title="SubtractionFunction Methods" Url="html/Methods_T_Genetica_Elements_Functions_SubtractionFunction.htm">
         <HelpTOCNode Title="Compute Method " Url="html/M_Genetica_Elements_Functions_SubtractionFunction_Compute.htm" />
         <HelpTOCNode Title="CreateNew Method " Url="html/M_Genetica_Elements_Functions_SubtractionFunction_CreateNew.htm" />
         <HelpTOCNode Title="Simplify Method " Url="html/M_Genetica_Elements_Functions_SubtractionFunction_Simplify.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="b0cef0d4-70e0-4623-9c84-16ab4ffabb73" Title="UnaryFunction Class" Url="html/T_Genetica_Elements_Functions_UnaryFunction.htm">
+    <HelpTOCNode Id="6acc4ed6-a8f5-4f32-a04d-6e582b3a6117" Title="UnaryFunction Class" Url="html/T_Genetica_Elements_Functions_UnaryFunction.htm">
       <HelpTOCNode Title="UnaryFunction Constructor " Url="html/M_Genetica_Elements_Functions_UnaryFunction__ctor.htm" />
-      <HelpTOCNode Id="3e7dd9f7-16ea-472a-9a04-72ffbe2b58c7" Title="UnaryFunction Properties" Url="html/Properties_T_Genetica_Elements_Functions_UnaryFunction.htm">
+      <HelpTOCNode Id="41154143-4cc7-4fe4-a9b6-369b424c50f8" Title="UnaryFunction Properties" Url="html/Properties_T_Genetica_Elements_Functions_UnaryFunction.htm">
         <HelpTOCNode Title="Expression Property " Url="html/P_Genetica_Elements_Functions_UnaryFunction_Expression.htm" />
         <HelpTOCNode Title="Label Property " Url="html/P_Genetica_Elements_Functions_UnaryFunction_Label.htm" />
         <HelpTOCNode Title="Operand Property " Url="html/P_Genetica_Elements_Functions_UnaryFunction_Operand.htm" />
@@ -346,441 +356,453 @@
       <HelpTOCNode Title="UnaryFunction Methods" Url="html/Methods_T_Genetica_Elements_Functions_UnaryFunction.htm" />
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="aea7a78d-9b62-4da4-b954-481f83907ca8" Title="Genetica.Elements.Terminals" Url="html/N_Genetica_Elements_Terminals.htm">
-    <HelpTOCNode Id="c711306f-d40b-47d2-842f-0201f8699b62" Title="Constant Class" Url="html/T_Genetica_Elements_Terminals_Constant.htm">
+  <HelpTOCNode Id="c1fce6e9-328c-40f7-92c5-05f5cb259141" Title="Genetica.Elements.Terminals" Url="html/N_Genetica_Elements_Terminals.htm">
+    <HelpTOCNode Id="b5e6eafb-cbcb-42b7-94fc-17351749f6c7" Title="Constant Class" Url="html/T_Genetica_Elements_Terminals_Constant.htm">
       <HelpTOCNode Title="Constant Constructor " Url="html/M_Genetica_Elements_Terminals_Constant__ctor.htm" />
-      <HelpTOCNode Id="14da7e84-3efe-494e-922e-d37caaf5735b" Title="Constant Properties" Url="html/Properties_T_Genetica_Elements_Terminals_Constant.htm">
+      <HelpTOCNode Id="2d5e97ad-3bba-4473-8e1a-8aeac7211dfb" Title="Constant Properties" Url="html/Properties_T_Genetica_Elements_Terminals_Constant.htm">
         <HelpTOCNode Title="Label Property " Url="html/P_Genetica_Elements_Terminals_Constant_Label.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="1dcdcbff-3d7c-4226-ae3a-63bbcdb9a67e" Title="Constant Methods" Url="html/Methods_T_Genetica_Elements_Terminals_Constant.htm">
+      <HelpTOCNode Id="dd301830-617d-43cd-9ccf-e7f9840420da" Title="Constant Methods" Url="html/Methods_T_Genetica_Elements_Terminals_Constant.htm">
         <HelpTOCNode Title="Compute Method " Url="html/M_Genetica_Elements_Terminals_Constant_Compute.htm" />
-        <HelpTOCNode Id="0c733de8-686b-4bbe-9689-12b6f7257e71" Title="Equals Method " Url="html/Overload_Genetica_Elements_Terminals_Constant_Equals.htm">
+        <HelpTOCNode Id="fb8b5494-5742-4cc4-8d9b-b585ced3d444" Title="Equals Method " Url="html/Overload_Genetica_Elements_Terminals_Constant_Equals.htm">
           <HelpTOCNode Title="Equals Method (Object)" Url="html/M_Genetica_Elements_Terminals_Constant_Equals.htm" />
         </HelpTOCNode>
         <HelpTOCNode Title="GetHashCode Method " Url="html/M_Genetica_Elements_Terminals_Constant_GetHashCode.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="e91b4188-84f5-4612-b000-851f9fba5fcf" Title="Constant Fields" Url="html/Fields_T_Genetica_Elements_Terminals_Constant.htm">
+      <HelpTOCNode Id="99738f0a-144d-4a07-a673-be4a23b2ab23" Title="Constant Fields" Url="html/Fields_T_Genetica_Elements_Terminals_Constant.htm">
         <HelpTOCNode Title="One Field" Url="html/F_Genetica_Elements_Terminals_Constant_One.htm" />
         <HelpTOCNode Title="Zero Field" Url="html/F_Genetica_Elements_Terminals_Constant_Zero.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="e1ab6fa0-8448-413c-903e-6dae1b626933" Title="Range Structure" Url="html/T_Genetica_Elements_Terminals_Range.htm">
-      <HelpTOCNode Id="3678eeef-4825-45d0-ab09-6c7f3d8c0299" Title="Range Constructor " Url="html/Overload_Genetica_Elements_Terminals_Range__ctor.htm">
+    <HelpTOCNode Id="0f1b36a9-f8ce-428f-883f-42ac8f12e25d" Title="Range Structure" Url="html/T_Genetica_Elements_Terminals_Range.htm">
+      <HelpTOCNode Id="1fc5f977-6888-4bfe-b9a9-aa0969eecddf" Title="Range Constructor " Url="html/Overload_Genetica_Elements_Terminals_Range__ctor.htm">
         <HelpTOCNode Title="Range Constructor (Double)" Url="html/M_Genetica_Elements_Terminals_Range__ctor.htm" />
         <HelpTOCNode Title="Range Constructor (Double, Double)" Url="html/M_Genetica_Elements_Terminals_Range__ctor_1.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="29f87201-f558-4cee-8e89-bd10f781b3ad" Title="Range Properties" Url="html/Properties_T_Genetica_Elements_Terminals_Range.htm">
+      <HelpTOCNode Id="b537fff3-d50e-4954-a242-16f022717e86" Title="Range Properties" Url="html/Properties_T_Genetica_Elements_Terminals_Range.htm">
         <HelpTOCNode Title="Interval Property " Url="html/P_Genetica_Elements_Terminals_Range_Interval.htm" />
         <HelpTOCNode Title="Max Property " Url="html/P_Genetica_Elements_Terminals_Range_Max.htm" />
         <HelpTOCNode Title="Min Property " Url="html/P_Genetica_Elements_Terminals_Range_Min.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="ff0c0ac7-8472-43d0-9211-de2a0b2a256f" Title="Range Methods" Url="html/Methods_T_Genetica_Elements_Terminals_Range.htm">
-        <HelpTOCNode Id="91ca5f42-f511-4a1f-878e-231727f642b5" Title="Equals Method " Url="html/Overload_Genetica_Elements_Terminals_Range_Equals.htm">
+      <HelpTOCNode Id="f085f923-4eab-4c27-b677-0c85665f4a89" Title="Range Methods" Url="html/Methods_T_Genetica_Elements_Terminals_Range.htm">
+        <HelpTOCNode Id="e9b92216-f5da-4ebf-b51b-a6ca8416a204" Title="Equals Method " Url="html/Overload_Genetica_Elements_Terminals_Range_Equals.htm">
           <HelpTOCNode Title="Equals Method (Object)" Url="html/M_Genetica_Elements_Terminals_Range_Equals_1.htm" />
           <HelpTOCNode Title="Equals Method (Range)" Url="html/M_Genetica_Elements_Terminals_Range_Equals.htm" />
         </HelpTOCNode>
         <HelpTOCNode Title="GetHashCode Method " Url="html/M_Genetica_Elements_Terminals_Range_GetHashCode.htm" />
         <HelpTOCNode Title="ToString Method " Url="html/M_Genetica_Elements_Terminals_Range_ToString.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="b67cb45d-1fa8-4daf-a012-2dd9c448748b" Title="Range Operators" Url="html/Operators_T_Genetica_Elements_Terminals_Range.htm">
+      <HelpTOCNode Id="9edd80b0-439a-4978-a3d4-69a3d1810af0" Title="Range Operators" Url="html/Operators_T_Genetica_Elements_Terminals_Range.htm">
         <HelpTOCNode Title="Equality Operator " Url="html/M_Genetica_Elements_Terminals_Range_op_Equality.htm" />
         <HelpTOCNode Title="Inequality Operator " Url="html/M_Genetica_Elements_Terminals_Range_op_Inequality.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="8ee88b4e-07d7-4ff9-a058-4c1a80e51f97" Title="Range Fields" Url="html/Fields_T_Genetica_Elements_Terminals_Range.htm">
+      <HelpTOCNode Id="ced3d095-a030-4ee1-9268-07e33cc60a21" Title="Range Fields" Url="html/Fields_T_Genetica_Elements_Terminals_Range.htm">
         <HelpTOCNode Title="Default Field" Url="html/F_Genetica_Elements_Terminals_Range_Default.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="35398613-0f6a-442d-a733-bfccd7b45ef8" Title="Terminal Class" Url="html/T_Genetica_Elements_Terminals_Terminal.htm">
+    <HelpTOCNode Id="05e0331d-5539-481a-9d39-7a2460ef9a2e" Title="Terminal Class" Url="html/T_Genetica_Elements_Terminals_Terminal.htm">
       <HelpTOCNode Title="Terminal Constructor " Url="html/M_Genetica_Elements_Terminals_Terminal__ctor.htm" />
-      <HelpTOCNode Id="45ecc63f-e32e-4c9c-a0b1-5f23bf765dd9" Title="Terminal Properties" Url="html/Properties_T_Genetica_Elements_Terminals_Terminal.htm">
+      <HelpTOCNode Id="1d2dfa26-0deb-4f01-a934-076e2d3a2c3b" Title="Terminal Properties" Url="html/Properties_T_Genetica_Elements_Terminals_Terminal.htm">
         <HelpTOCNode Title="Expression Property " Url="html/P_Genetica_Elements_Terminals_Terminal_Expression.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="6b63499f-9e51-4fa1-bc18-f823350161b4" Title="Terminal Methods" Url="html/Methods_T_Genetica_Elements_Terminals_Terminal.htm">
+      <HelpTOCNode Id="21cefa6d-072a-4631-b0ef-f81340786141" Title="Terminal Methods" Url="html/Methods_T_Genetica_Elements_Terminals_Terminal.htm">
         <HelpTOCNode Title="CreateNew Method " Url="html/M_Genetica_Elements_Terminals_Terminal_CreateNew.htm" />
-        <HelpTOCNode Id="441446f1-d47f-437b-bb15-d772ed2de83f" Title="Equals Method " Url="html/Overload_Genetica_Elements_Terminals_Terminal_Equals.htm">
+        <HelpTOCNode Id="b628d798-ac6f-4795-83d4-bab6768bb664" Title="Equals Method " Url="html/Overload_Genetica_Elements_Terminals_Terminal_Equals.htm">
           <HelpTOCNode Title="Equals Method (Object)" Url="html/M_Genetica_Elements_Terminals_Terminal_Equals.htm" />
         </HelpTOCNode>
         <HelpTOCNode Title="GetHashCode Method " Url="html/M_Genetica_Elements_Terminals_Terminal_GetHashCode.htm" />
         <HelpTOCNode Title="Simplify Method " Url="html/M_Genetica_Elements_Terminals_Terminal_Simplify.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="330b487a-23c3-4d1c-b7d8-517df094f08c" Title="Variable Class" Url="html/T_Genetica_Elements_Terminals_Variable.htm">
-      <HelpTOCNode Id="dc13de85-5639-41a2-bc50-3906ef0d8979" Title="Variable Constructor " Url="html/Overload_Genetica_Elements_Terminals_Variable__ctor.htm">
+    <HelpTOCNode Id="f27b40ff-ec8d-470b-977e-7c5472798154" Title="Variable Class" Url="html/T_Genetica_Elements_Terminals_Variable.htm">
+      <HelpTOCNode Id="a3622697-5c20-4f11-9ba5-88f2b295eb2c" Title="Variable Constructor " Url="html/Overload_Genetica_Elements_Terminals_Variable__ctor.htm">
         <HelpTOCNode Title="Variable Constructor (String)" Url="html/M_Genetica_Elements_Terminals_Variable__ctor.htm" />
         <HelpTOCNode Title="Variable Constructor (String, Range)" Url="html/M_Genetica_Elements_Terminals_Variable__ctor_1.htm" />
         <HelpTOCNode Title="Variable Constructor (String, Double, Range)" Url="html/M_Genetica_Elements_Terminals_Variable__ctor_2.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="f330a8c3-8d62-422f-8b71-43b62560eeec" Title="Variable Properties" Url="html/Properties_T_Genetica_Elements_Terminals_Variable.htm">
+      <HelpTOCNode Id="30f2e34f-e728-4cc0-8b63-ecfaa4a32007" Title="Variable Properties" Url="html/Properties_T_Genetica_Elements_Terminals_Variable.htm">
         <HelpTOCNode Title="Label Property " Url="html/P_Genetica_Elements_Terminals_Variable_Label.htm" />
         <HelpTOCNode Title="Range Property " Url="html/P_Genetica_Elements_Terminals_Variable_Range.htm" />
         <HelpTOCNode Title="Value Property " Url="html/P_Genetica_Elements_Terminals_Variable_Value.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="34887790-a26f-4891-98c8-b315b4d5ccf8" Title="Variable Methods" Url="html/Methods_T_Genetica_Elements_Terminals_Variable.htm">
+      <HelpTOCNode Id="0ae5d327-bf9c-4d63-bcbc-05db98f7b525" Title="Variable Methods" Url="html/Methods_T_Genetica_Elements_Terminals_Variable.htm">
         <HelpTOCNode Title="Compute Method " Url="html/M_Genetica_Elements_Terminals_Variable_Compute.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="a25d9d91-9200-4029-92b2-a2ad82f6508a" Title="Genetica.Evaluation" Url="html/N_Genetica_Evaluation.htm">
-    <HelpTOCNode Id="752d974e-08d9-45c6-bcd5-4d48fc0ec980" Title="IFitnessFunction(TProgram) Interface" Url="html/T_Genetica_Evaluation_IFitnessFunction_1.htm">
-      <HelpTOCNode Id="033ed7fa-eeeb-4c10-8ade-f2534f99e282" Title="IFitnessFunction(TProgram) Methods" Url="html/Methods_T_Genetica_Evaluation_IFitnessFunction_1.htm">
+  <HelpTOCNode Id="a7bafd55-1a65-4453-bf56-426fa8c50e5f" Title="Genetica.Evaluation" Url="html/N_Genetica_Evaluation.htm">
+    <HelpTOCNode Id="356bc8c3-57ab-44a6-b0fb-bd2cc71fedeb" Title="IFitnessFunction(TProgram) Interface" Url="html/T_Genetica_Evaluation_IFitnessFunction_1.htm">
+      <HelpTOCNode Id="a44b832a-7808-4820-9516-4dd00f2e540d" Title="IFitnessFunction(TProgram) Methods" Url="html/Methods_T_Genetica_Evaluation_IFitnessFunction_1.htm">
         <HelpTOCNode Title="Evaluate Method " Url="html/M_Genetica_Evaluation_IFitnessFunction_1_Evaluate.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="626bc1c5-1f43-48c6-8c65-6656f4329285" Title="LinearRankFitnessFunction(TProgram) Class" Url="html/T_Genetica_Evaluation_LinearRankFitnessFunction_1.htm">
+    <HelpTOCNode Id="b00edb53-2b87-4b82-b92d-b7c3cc5060f8" Title="LinearRankFitnessFunction(TProgram) Class" Url="html/T_Genetica_Evaluation_LinearRankFitnessFunction_1.htm">
       <HelpTOCNode Title="LinearRankFitnessFunction(TProgram) Constructor " Url="html/M_Genetica_Evaluation_LinearRankFitnessFunction_1__ctor.htm" />
       <HelpTOCNode Title="LinearRankFitnessFunction(TProgram) Properties" Url="html/Properties_T_Genetica_Evaluation_LinearRankFitnessFunction_1.htm" />
-      <HelpTOCNode Id="b9413623-223e-46f2-aa51-f847600697f5" Title="LinearRankFitnessFunction(TProgram) Methods" Url="html/Methods_T_Genetica_Evaluation_LinearRankFitnessFunction_1.htm">
+      <HelpTOCNode Id="a6b6d353-7b1d-4249-8160-f4016a582967" Title="LinearRankFitnessFunction(TProgram) Methods" Url="html/Methods_T_Genetica_Evaluation_LinearRankFitnessFunction_1.htm">
         <HelpTOCNode Title="Evaluate Method " Url="html/M_Genetica_Evaluation_LinearRankFitnessFunction_1_Evaluate.htm" />
       </HelpTOCNode>
       <HelpTOCNode Title="LinearRankFitnessFunction(TProgram) Fields" Url="html/Fields_T_Genetica_Evaluation_LinearRankFitnessFunction_1.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="e4a0f591-8842-47ef-9998-ded156094b5c" Title="NonLinearRankFitnessFunction(TProgram) Class" Url="html/T_Genetica_Evaluation_NonLinearRankFitnessFunction_1.htm">
+    <HelpTOCNode Id="68dd85de-90af-4922-9f55-9ab74ac1cf5e" Title="NonLinearRankFitnessFunction(TProgram) Class" Url="html/T_Genetica_Evaluation_NonLinearRankFitnessFunction_1.htm">
       <HelpTOCNode Title="NonLinearRankFitnessFunction(TProgram) Constructor " Url="html/M_Genetica_Evaluation_NonLinearRankFitnessFunction_1__ctor.htm" />
       <HelpTOCNode Title="NonLinearRankFitnessFunction(TProgram) Properties" Url="html/Properties_T_Genetica_Evaluation_NonLinearRankFitnessFunction_1.htm" />
-      <HelpTOCNode Id="1cc80fa2-ab65-4699-9c8e-ce7d4640f036" Title="NonLinearRankFitnessFunction(TProgram) Methods" Url="html/Methods_T_Genetica_Evaluation_NonLinearRankFitnessFunction_1.htm">
+      <HelpTOCNode Id="1f2104a9-14dd-4574-b5b0-87dec0ab71fc" Title="NonLinearRankFitnessFunction(TProgram) Methods" Url="html/Methods_T_Genetica_Evaluation_NonLinearRankFitnessFunction_1.htm">
         <HelpTOCNode Title="Evaluate Method " Url="html/M_Genetica_Evaluation_NonLinearRankFitnessFunction_1_Evaluate.htm" />
       </HelpTOCNode>
       <HelpTOCNode Title="NonLinearRankFitnessFunction(TProgram) Fields" Url="html/Fields_T_Genetica_Evaluation_NonLinearRankFitnessFunction_1.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="0783d958-3992-483e-9448-11b3e7844300" Title="RankFitnessFunction(TProgram) Class" Url="html/T_Genetica_Evaluation_RankFitnessFunction_1.htm">
+    <HelpTOCNode Id="f8849ab8-b27a-4d5c-8072-ca9257a53a83" Title="RankFitnessFunction(TProgram) Class" Url="html/T_Genetica_Evaluation_RankFitnessFunction_1.htm">
       <HelpTOCNode Title="RankFitnessFunction(TProgram) Constructor " Url="html/M_Genetica_Evaluation_RankFitnessFunction_1__ctor.htm" />
-      <HelpTOCNode Id="6d7b2b0a-9a48-44f2-bc4a-001fe7026820" Title="RankFitnessFunction(TProgram) Properties" Url="html/Properties_T_Genetica_Evaluation_RankFitnessFunction_1.htm">
+      <HelpTOCNode Id="9d2c7acf-cbb0-492c-9056-ce3246caa602" Title="RankFitnessFunction(TProgram) Properties" Url="html/Properties_T_Genetica_Evaluation_RankFitnessFunction_1.htm">
         <HelpTOCNode Title="SelectivePressure Property " Url="html/P_Genetica_Evaluation_RankFitnessFunction_1_SelectivePressure.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="16c432f3-8735-4d01-97e8-9ee86e519ffe" Title="RankFitnessFunction(TProgram) Methods" Url="html/Methods_T_Genetica_Evaluation_RankFitnessFunction_1.htm">
+      <HelpTOCNode Id="421f7c18-0c15-4abb-860e-aac29a8eeea0" Title="RankFitnessFunction(TProgram) Methods" Url="html/Methods_T_Genetica_Evaluation_RankFitnessFunction_1.htm">
         <HelpTOCNode Title="Compare Method " Url="html/M_Genetica_Evaluation_RankFitnessFunction_1_Compare.htm" />
         <HelpTOCNode Title="Evaluate Method " Url="html/M_Genetica_Evaluation_RankFitnessFunction_1_Evaluate.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="b7a1ad90-8bf0-422c-af29-a9e6b2f73bf7" Title="RankFitnessFunction(TProgram) Fields" Url="html/Fields_T_Genetica_Evaluation_RankFitnessFunction_1.htm">
+      <HelpTOCNode Id="f8c921ac-4b94-4a2d-888d-9349ecffcc5e" Title="RankFitnessFunction(TProgram) Fields" Url="html/Fields_T_Genetica_Evaluation_RankFitnessFunction_1.htm">
         <HelpTOCNode Title="individualRankings Field" Url="html/F_Genetica_Evaluation_RankFitnessFunction_1_individualRankings.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="2af555d3-9f6e-44a9-aeb8-e2a2c070ff73" Title="Genetica.Graphviz" Url="html/N_Genetica_Graphviz.htm">
-    <HelpTOCNode Id="9c2fc2c6-80e8-4107-8e1b-1726940538d2" Title="Edge Class" Url="html/T_Genetica_Graphviz_Edge.htm">
+  <HelpTOCNode Id="c39c2001-718b-4e9d-a770-5a29fae699aa" Title="Genetica.Graphviz" Url="html/N_Genetica_Graphviz.htm">
+    <HelpTOCNode Id="9bfbdedc-9bcf-4ff9-8431-83041547aece" Title="Edge Class" Url="html/T_Genetica_Graphviz_Edge.htm">
       <HelpTOCNode Title="Edge Constructor " Url="html/M_Genetica_Graphviz_Edge__ctor.htm" />
-      <HelpTOCNode Id="e84e0fd6-f6b2-48e0-b25b-9510b8c00b45" Title="Edge Properties" Url="html/Properties_T_Genetica_Graphviz_Edge.htm">
+      <HelpTOCNode Id="f5f377e8-1f98-4eb6-a245-c7f326f615d4" Title="Edge Properties" Url="html/Properties_T_Genetica_Graphviz_Edge.htm">
         <HelpTOCNode Title="Source Property " Url="html/P_Genetica_Graphviz_Edge_Source.htm" />
         <HelpTOCNode Title="Target Property " Url="html/P_Genetica_Graphviz_Edge_Target.htm" />
       </HelpTOCNode>
       <HelpTOCNode Title="Edge Methods" Url="html/Methods_T_Genetica_Graphviz_Edge.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="3ced0ac1-ca79-4f49-afd1-c35069b171e9" Title="Extensions Class" Url="html/T_Genetica_Graphviz_Extensions.htm">
-      <HelpTOCNode Id="12f2b204-bbe0-4489-a2a6-5bed396d270d" Title="Extensions Methods" Url="html/Methods_T_Genetica_Graphviz_Extensions.htm">
-        <HelpTOCNode Id="b47b3717-4fde-4e53-a5b2-4d44418095fb" Title="ToGraphvizFile Method " Url="html/Overload_Genetica_Graphviz_Extensions_ToGraphvizFile.htm">
-          <HelpTOCNode Title="ToGraphvizFile(TProgram) Method (IInformationTree`1, Void, TProgram, String, String)" Url="html/M_Genetica_Graphviz_Extensions_ToGraphvizFile__1.htm" />
+    <HelpTOCNode Id="7bcbf45d-752b-468b-b59c-41b75f4d25e0" Title="Extensions Class" Url="html/T_Genetica_Graphviz_Extensions.htm">
+      <HelpTOCNode Id="225092b3-18a5-4801-88e6-722a70a85128" Title="Extensions Methods" Url="html/Methods_T_Genetica_Graphviz_Extensions.htm">
+        <HelpTOCNode Id="02b7a7ae-07da-4419-b5ca-f626967027d3" Title="ToGraphvizFile Method " Url="html/Overload_Genetica_Graphviz_Extensions_ToGraphvizFile.htm">
+          <HelpTOCNode Title="ToGraphvizFile(TProgram) Method (IInformationTree(TProgram), String, String, GraphvizImageType, Int32)" Url="html/M_Genetica_Graphviz_Extensions_ToGraphvizFile__1.htm" />
           <HelpTOCNode Title="ToGraphvizFile Method (ITreeNode, String, String, GraphvizImageType, Int32)" Url="html/M_Genetica_Graphviz_Extensions_ToGraphvizFile.htm" />
           <HelpTOCNode Title="ToGraphvizFile Method (ITreeNode, String, String, FormatVertexEventHandler`1(Vertex), FormatEdgeAction`2(Vertex, Edge), GraphvizImageType, Int32)" Url="html/M_Genetica_Graphviz_Extensions_ToGraphvizFile_1.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="6b6c85ab-1f24-4370-83f5-8487dfb4a52f" Title="Vertex Class" Url="html/T_Genetica_Graphviz_Vertex.htm">
+    <HelpTOCNode Id="966c5255-618b-4f8a-86bb-7d279e34151d" Title="Vertex Class" Url="html/T_Genetica_Graphviz_Vertex.htm">
       <HelpTOCNode Title="Vertex Constructor " Url="html/M_Genetica_Graphviz_Vertex__ctor.htm" />
-      <HelpTOCNode Id="9e80cfc0-47a8-44bf-8bb3-1f5f6c77ea9d" Title="Vertex Properties" Url="html/Properties_T_Genetica_Graphviz_Vertex.htm">
+      <HelpTOCNode Id="e169a917-6f49-4819-93ee-b747835851e5" Title="Vertex Properties" Url="html/Properties_T_Genetica_Graphviz_Vertex.htm">
         <HelpTOCNode Title="Node Property " Url="html/P_Genetica_Graphviz_Vertex_Node.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="818ee3aa-a8c2-42e5-b9a4-82ff565e22b1" Title="Vertex Methods" Url="html/Methods_T_Genetica_Graphviz_Vertex.htm">
+      <HelpTOCNode Id="fa9ce69e-8741-4b89-b97d-efdd92cdf24b" Title="Vertex Methods" Url="html/Methods_T_Genetica_Graphviz_Vertex.htm">
         <HelpTOCNode Title="GetHashCode Method " Url="html/M_Genetica_Graphviz_Vertex_GetHashCode.htm" />
         <HelpTOCNode Title="ToString Method " Url="html/M_Genetica_Graphviz_Vertex_ToString.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="6370d7df-2817-4a4b-8185-b5622eb988d4" Title="Genetica.Operators.Crossover" Url="html/N_Genetica_Operators_Crossover.htm">
-    <HelpTOCNode Id="3d405352-21f5-4df6-814b-c96c89874cdf" Title="ContextPreservingCrossover(TProgram, TOutput) Class" Url="html/T_Genetica_Operators_Crossover_ContextPreservingCrossover_2.htm">
+  <HelpTOCNode Id="2a756239-8516-40e8-82d6-e66b632d2ccb" Title="Genetica.Operators.Crossover" Url="html/N_Genetica_Operators_Crossover.htm">
+    <HelpTOCNode Id="248217dc-9200-47e8-a280-72c8558f8a6f" Title="ContextPreservingCrossover(TProgram, TOutput) Class" Url="html/T_Genetica_Operators_Crossover_ContextPreservingCrossover_2.htm">
       <HelpTOCNode Title="ContextPreservingCrossover(TProgram, TOutput) Constructor " Url="html/M_Genetica_Operators_Crossover_ContextPreservingCrossover_2__ctor.htm" />
-      <HelpTOCNode Id="9dc3496d-fbc7-4858-b58c-b4f962124a25" Title="ContextPreservingCrossover(TProgram, TOutput) Methods" Url="html/Methods_T_Genetica_Operators_Crossover_ContextPreservingCrossover_2.htm">
+      <HelpTOCNode Id="b56be4fa-de28-4675-9caa-64404258dd51" Title="ContextPreservingCrossover(TProgram, TOutput) Methods" Url="html/Methods_T_Genetica_Operators_Crossover_ContextPreservingCrossover_2.htm">
         <HelpTOCNode Title="Crossover Method " Url="html/M_Genetica_Operators_Crossover_ContextPreservingCrossover_2_Crossover.htm" />
         <HelpTOCNode Title="Dispose Method " Url="html/M_Genetica_Operators_Crossover_ContextPreservingCrossover_2_Dispose.htm" />
         <HelpTOCNode Title="GetAllOffspring Method " Url="html/M_Genetica_Operators_Crossover_ContextPreservingCrossover_2_GetAllOffspring.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="1b35e1c9-812c-4645-99ca-4db21d40e1c6" Title="ICrossoverOperator(TProgram) Interface" Url="html/T_Genetica_Operators_Crossover_ICrossoverOperator_1.htm">
-      <HelpTOCNode Id="4a99e3b3-f4bc-4415-8d5f-2612d89ecd3b" Title="ICrossoverOperator(TProgram) Methods" Url="html/Methods_T_Genetica_Operators_Crossover_ICrossoverOperator_1.htm">
+    <HelpTOCNode Id="90fbf64a-17fb-4607-ad96-3d554b0dcfb9" Title="ICrossoverOperator(TProgram) Interface" Url="html/T_Genetica_Operators_Crossover_ICrossoverOperator_1.htm">
+      <HelpTOCNode Id="5a47a5fe-5e81-4ab3-aabd-69df90033790" Title="ICrossoverOperator(TProgram) Methods" Url="html/Methods_T_Genetica_Operators_Crossover_ICrossoverOperator_1.htm">
         <HelpTOCNode Title="Crossover Method " Url="html/M_Genetica_Operators_Crossover_ICrossoverOperator_1_Crossover.htm" />
         <HelpTOCNode Title="GetAllOffspring Method " Url="html/M_Genetica_Operators_Crossover_ICrossoverOperator_1_GetAllOffspring.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="cddd3708-63aa-4fa5-b50d-1572e414eb84" Title="OnePointCrossover(TProgram, TOutput) Class" Url="html/T_Genetica_Operators_Crossover_OnePointCrossover_2.htm">
+    <HelpTOCNode Id="2093d0ec-50c5-4a36-a270-6f2a33875339" Title="OnePointCrossover(TProgram, TOutput) Class" Url="html/T_Genetica_Operators_Crossover_OnePointCrossover_2.htm">
       <HelpTOCNode Title="OnePointCrossover(TProgram, TOutput) Constructor " Url="html/M_Genetica_Operators_Crossover_OnePointCrossover_2__ctor.htm" />
-      <HelpTOCNode Id="170e8cd6-363c-4e0a-912c-683e529d58b9" Title="OnePointCrossover(TProgram, TOutput) Methods" Url="html/Methods_T_Genetica_Operators_Crossover_OnePointCrossover_2.htm">
+      <HelpTOCNode Id="feaac23f-0731-4fcb-abd7-e3c688d4d0c9" Title="OnePointCrossover(TProgram, TOutput) Methods" Url="html/Methods_T_Genetica_Operators_Crossover_OnePointCrossover_2.htm">
         <HelpTOCNode Title="Crossover Method " Url="html/M_Genetica_Operators_Crossover_OnePointCrossover_2_Crossover.htm" />
         <HelpTOCNode Title="Dispose Method " Url="html/M_Genetica_Operators_Crossover_OnePointCrossover_2_Dispose.htm" />
         <HelpTOCNode Title="GetAllOffspring Method " Url="html/M_Genetica_Operators_Crossover_OnePointCrossover_2_GetAllOffspring.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="9e8b2d52-bdbd-47d0-b018-3560040ddfcf" Title="StochasticCrossover(TProgram) Class" Url="html/T_Genetica_Operators_Crossover_StochasticCrossover_1.htm">
-      <HelpTOCNode Id="03b81f65-7bf6-4584-99eb-33e54d91539e" Title="StochasticCrossover(TProgram) Constructor " Url="html/Overload_Genetica_Operators_Crossover_StochasticCrossover_1__ctor.htm">
+    <HelpTOCNode Id="cdd54ee3-5ac4-4c74-bd31-394e140f9bb1" Title="StochasticCrossover(TProgram) Class" Url="html/T_Genetica_Operators_Crossover_StochasticCrossover_1.htm">
+      <HelpTOCNode Id="43fee5de-4b95-4451-83dd-d0f0b163a7b0" Title="StochasticCrossover(TProgram) Constructor " Url="html/Overload_Genetica_Operators_Crossover_StochasticCrossover_1__ctor.htm">
         <HelpTOCNode Title="StochasticCrossover(TProgram) Constructor (IDictionary(ICrossoverOperator(TProgram), Double))" Url="html/M_Genetica_Operators_Crossover_StochasticCrossover_1__ctor.htm" />
         <HelpTOCNode Title="StochasticCrossover(TProgram) Constructor (IList(ICrossoverOperator(TProgram)))" Url="html/M_Genetica_Operators_Crossover_StochasticCrossover_1__ctor_1.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="42ade607-1252-4ffa-a0bb-b0d1e1c13cf2" Title="StochasticCrossover(TProgram) Methods" Url="html/Methods_T_Genetica_Operators_Crossover_StochasticCrossover_1.htm">
+      <HelpTOCNode Id="0c64cf6f-1f90-4a01-8aa9-6d2008668fa0" Title="StochasticCrossover(TProgram) Methods" Url="html/Methods_T_Genetica_Operators_Crossover_StochasticCrossover_1.htm">
         <HelpTOCNode Title="Crossover Method " Url="html/M_Genetica_Operators_Crossover_StochasticCrossover_1_Crossover.htm" />
         <HelpTOCNode Title="Dispose Method " Url="html/M_Genetica_Operators_Crossover_StochasticCrossover_1_Dispose.htm" />
         <HelpTOCNode Title="GetAllOffspring Method " Url="html/M_Genetica_Operators_Crossover_StochasticCrossover_1_GetAllOffspring.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="7a6f7b96-6fc8-40be-b858-4473dea88bc9" Title="SubtreeCrossover(TProgram, TOutput) Class" Url="html/T_Genetica_Operators_Crossover_SubtreeCrossover_2.htm">
+    <HelpTOCNode Id="d3d9e300-a9e9-461f-9c84-35379a144406" Title="SubtreeCrossover(TProgram, TOutput) Class" Url="html/T_Genetica_Operators_Crossover_SubtreeCrossover_2.htm">
       <HelpTOCNode Title="SubtreeCrossover(TProgram, TOutput) Constructor " Url="html/M_Genetica_Operators_Crossover_SubtreeCrossover_2__ctor.htm" />
-      <HelpTOCNode Id="f263f831-e64a-407f-85a8-eeac293c26c1" Title="SubtreeCrossover(TProgram, TOutput) Methods" Url="html/Methods_T_Genetica_Operators_Crossover_SubtreeCrossover_2.htm">
+      <HelpTOCNode Id="db84d731-79d6-45f9-ad3d-f6b8b314f32f" Title="SubtreeCrossover(TProgram, TOutput) Methods" Url="html/Methods_T_Genetica_Operators_Crossover_SubtreeCrossover_2.htm">
         <HelpTOCNode Title="Crossover Method " Url="html/M_Genetica_Operators_Crossover_SubtreeCrossover_2_Crossover.htm" />
         <HelpTOCNode Title="Dispose Method " Url="html/M_Genetica_Operators_Crossover_SubtreeCrossover_2_Dispose.htm" />
         <HelpTOCNode Title="GetAllOffspring Method " Url="html/M_Genetica_Operators_Crossover_SubtreeCrossover_2_GetAllOffspring.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="0848864a-6916-49ff-b43b-75f6248b1d12" Title="UniformCrossover(TProgram, TOutput) Class" Url="html/T_Genetica_Operators_Crossover_UniformCrossover_2.htm">
+    <HelpTOCNode Id="0d8a3b78-9bf5-4178-b2de-505511cf5ee6" Title="UniformCrossover(TProgram, TOutput) Class" Url="html/T_Genetica_Operators_Crossover_UniformCrossover_2.htm">
       <HelpTOCNode Title="UniformCrossover(TProgram, TOutput) Constructor " Url="html/M_Genetica_Operators_Crossover_UniformCrossover_2__ctor.htm" />
-      <HelpTOCNode Id="df282762-6079-478a-9de5-6dd4ef6a2e75" Title="UniformCrossover(TProgram, TOutput) Methods" Url="html/Methods_T_Genetica_Operators_Crossover_UniformCrossover_2.htm">
+      <HelpTOCNode Id="3f189abb-60bc-48df-b6de-9b51e3a4a2f4" Title="UniformCrossover(TProgram, TOutput) Methods" Url="html/Methods_T_Genetica_Operators_Crossover_UniformCrossover_2.htm">
         <HelpTOCNode Title="Crossover Method " Url="html/M_Genetica_Operators_Crossover_UniformCrossover_2_Crossover.htm" />
         <HelpTOCNode Title="Dispose Method " Url="html/M_Genetica_Operators_Crossover_UniformCrossover_2_Dispose.htm" />
         <HelpTOCNode Title="GetAllOffspring Method " Url="html/M_Genetica_Operators_Crossover_UniformCrossover_2_GetAllOffspring.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="56af0e2f-461a-4ff5-9c34-325d18d77b76" Title="Genetica.Operators.Generation" Url="html/N_Genetica_Operators_Generation.htm">
-    <HelpTOCNode Id="e42e40ac-e117-4f5f-8f8c-1528d1c4ff60" Title="FullProgramGenerator(TProgram, TOutput) Class" Url="html/T_Genetica_Operators_Generation_FullProgramGenerator_2.htm">
+  <HelpTOCNode Id="844fca4c-dc3e-4f55-a2ce-df1347f7e78d" Title="Genetica.Operators.Generation" Url="html/N_Genetica_Operators_Generation.htm">
+    <HelpTOCNode Id="444c370f-f7f6-43a0-88fa-33415d133db7" Title="FullProgramGenerator(TProgram, TOutput) Class" Url="html/T_Genetica_Operators_Generation_FullProgramGenerator_2.htm">
       <HelpTOCNode Title="FullProgramGenerator(TProgram, TOutput) Constructor " Url="html/M_Genetica_Operators_Generation_FullProgramGenerator_2__ctor.htm" />
-      <HelpTOCNode Id="4f56ca47-ea07-468e-8bf9-8030d385fb44" Title="FullProgramGenerator(TProgram, TOutput) Methods" Url="html/Methods_T_Genetica_Operators_Generation_FullProgramGenerator_2.htm">
+      <HelpTOCNode Id="0d5b0522-8ae4-49b1-a09c-7777fcf912ce" Title="FullProgramGenerator(TProgram, TOutput) Methods" Url="html/Methods_T_Genetica_Operators_Generation_FullProgramGenerator_2.htm">
         <HelpTOCNode Title="Dispose Method " Url="html/M_Genetica_Operators_Generation_FullProgramGenerator_2_Dispose.htm" />
         <HelpTOCNode Title="Generate Method " Url="html/M_Genetica_Operators_Generation_FullProgramGenerator_2_Generate.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="a9172752-b34c-4267-99cd-ab27b43739ca" Title="GrowProgramGenerator(TProgram, TOutput) Class" Url="html/T_Genetica_Operators_Generation_GrowProgramGenerator_2.htm">
+    <HelpTOCNode Id="636841b8-e057-4ba6-a41c-2f5c15eba080" Title="GrowProgramGenerator(TProgram, TOutput) Class" Url="html/T_Genetica_Operators_Generation_GrowProgramGenerator_2.htm">
       <HelpTOCNode Title="GrowProgramGenerator(TProgram, TOutput) Constructor " Url="html/M_Genetica_Operators_Generation_GrowProgramGenerator_2__ctor.htm" />
-      <HelpTOCNode Id="27e6bdf9-a1b6-4053-8f4e-90ed818d93bc" Title="GrowProgramGenerator(TProgram, TOutput) Methods" Url="html/Methods_T_Genetica_Operators_Generation_GrowProgramGenerator_2.htm">
+      <HelpTOCNode Id="d4e460c4-45cc-4f94-9dc6-2672516fa561" Title="GrowProgramGenerator(TProgram, TOutput) Methods" Url="html/Methods_T_Genetica_Operators_Generation_GrowProgramGenerator_2.htm">
         <HelpTOCNode Title="Dispose Method " Url="html/M_Genetica_Operators_Generation_GrowProgramGenerator_2_Dispose.htm" />
         <HelpTOCNode Title="Generate Method " Url="html/M_Genetica_Operators_Generation_GrowProgramGenerator_2_Generate.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="d5372d4e-d8e8-4624-8f60-7fc13aea4e95" Title="IProgramGenerator(TProgram, TOutput) Interface" Url="html/T_Genetica_Operators_Generation_IProgramGenerator_2.htm">
-      <HelpTOCNode Id="ee599941-61e2-4889-b8ed-3f10de9112eb" Title="IProgramGenerator(TProgram, TOutput) Methods" Url="html/Methods_T_Genetica_Operators_Generation_IProgramGenerator_2.htm">
+    <HelpTOCNode Id="bfacd112-d5ca-4a79-b477-5dc2570cbd67" Title="IProgramGenerator(TProgram, TOutput) Interface" Url="html/T_Genetica_Operators_Generation_IProgramGenerator_2.htm">
+      <HelpTOCNode Id="7476ac0b-50bc-418b-be55-84cab6ab83c9" Title="IProgramGenerator(TProgram, TOutput) Methods" Url="html/Methods_T_Genetica_Operators_Generation_IProgramGenerator_2.htm">
         <HelpTOCNode Title="Generate Method " Url="html/M_Genetica_Operators_Generation_IProgramGenerator_2_Generate.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="4980ef01-61b2-4ffd-9fcf-9adaca0c4f5a" Title="StochasticProgramGenerator(TProgram, TOutput) Class" Url="html/T_Genetica_Operators_Generation_StochasticProgramGenerator_2.htm">
-      <HelpTOCNode Id="91255cec-f3f9-4366-86ea-786658c9032b" Title="StochasticProgramGenerator(TProgram, TOutput) Constructor " Url="html/Overload_Genetica_Operators_Generation_StochasticProgramGenerator_2__ctor.htm">
+    <HelpTOCNode Id="c3883241-9b5f-40e1-b426-f59a90abbe60" Title="StochasticProgramGenerator(TProgram, TOutput) Class" Url="html/T_Genetica_Operators_Generation_StochasticProgramGenerator_2.htm">
+      <HelpTOCNode Id="aca2d97a-b503-42f9-a295-c572e8681510" Title="StochasticProgramGenerator(TProgram, TOutput) Constructor " Url="html/Overload_Genetica_Operators_Generation_StochasticProgramGenerator_2__ctor.htm">
         <HelpTOCNode Title="StochasticProgramGenerator(TProgram, TOutput) Constructor (IDictionary(IProgramGenerator(TProgram, TOutput), Double))" Url="html/M_Genetica_Operators_Generation_StochasticProgramGenerator_2__ctor.htm" />
         <HelpTOCNode Title="StochasticProgramGenerator(TProgram, TOutput) Constructor (IList(IProgramGenerator(TProgram, TOutput)))" Url="html/M_Genetica_Operators_Generation_StochasticProgramGenerator_2__ctor_1.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="7ec83339-1fe5-401d-88cb-6114e74e7336" Title="StochasticProgramGenerator(TProgram, TOutput) Methods" Url="html/Methods_T_Genetica_Operators_Generation_StochasticProgramGenerator_2.htm">
+      <HelpTOCNode Id="f6a77f7a-2a75-4242-927b-e2eb4c187480" Title="StochasticProgramGenerator(TProgram, TOutput) Methods" Url="html/Methods_T_Genetica_Operators_Generation_StochasticProgramGenerator_2.htm">
         <HelpTOCNode Title="Dispose Method " Url="html/M_Genetica_Operators_Generation_StochasticProgramGenerator_2_Dispose.htm" />
         <HelpTOCNode Title="Generate Method " Url="html/M_Genetica_Operators_Generation_StochasticProgramGenerator_2_Generate.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="73363bbd-8f6b-4e15-bc33-5967e4a5c8d5" Title="Genetica.Operators.Mutation" Url="html/N_Genetica_Operators_Mutation.htm">
-    <HelpTOCNode Id="4df1224a-8fae-470a-95ca-4b6916ae6c3a" Title="FitnessSimplifyMutation Class" Url="html/T_Genetica_Operators_Mutation_FitnessSimplifyMutation.htm">
+  <HelpTOCNode Id="df7152b4-c619-414c-a92a-35bac690d7f2" Title="Genetica.Operators.Mutation" Url="html/N_Genetica_Operators_Mutation.htm">
+    <HelpTOCNode Id="118bf74b-c148-4792-8549-102e892ed15e" Title="FitnessSimplifyMutation Class" Url="html/T_Genetica_Operators_Mutation_FitnessSimplifyMutation.htm">
       <HelpTOCNode Title="FitnessSimplifyMutation Constructor " Url="html/M_Genetica_Operators_Mutation_FitnessSimplifyMutation__ctor.htm" />
-      <HelpTOCNode Id="f7029125-380a-49e6-99d3-9005915cc705" Title="FitnessSimplifyMutation Methods" Url="html/Methods_T_Genetica_Operators_Mutation_FitnessSimplifyMutation.htm">
+      <HelpTOCNode Id="5c0a2fcf-f2d1-4f2a-8b81-d269801fda4d" Title="FitnessSimplifyMutation Methods" Url="html/Methods_T_Genetica_Operators_Mutation_FitnessSimplifyMutation.htm">
         <HelpTOCNode Title="Dispose Method " Url="html/M_Genetica_Operators_Mutation_FitnessSimplifyMutation_Dispose.htm" />
         <HelpTOCNode Title="GetAllMutations Method " Url="html/M_Genetica_Operators_Mutation_FitnessSimplifyMutation_GetAllMutations.htm" />
         <HelpTOCNode Title="Mutate Method " Url="html/M_Genetica_Operators_Mutation_FitnessSimplifyMutation_Mutate.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="6ca62068-42b2-46e7-b1c6-2b949436123e" Title="HoistMutation(TProgram, TOutput) Class" Url="html/T_Genetica_Operators_Mutation_HoistMutation_2.htm">
+    <HelpTOCNode Id="5c4ee050-923c-4262-a8ce-fbf0e78fa14d" Title="HoistMutation(TProgram, TOutput) Class" Url="html/T_Genetica_Operators_Mutation_HoistMutation_2.htm">
       <HelpTOCNode Title="HoistMutation(TProgram, TOutput) Constructor " Url="html/M_Genetica_Operators_Mutation_HoistMutation_2__ctor.htm" />
-      <HelpTOCNode Id="ee5186cf-e774-4b50-bfcc-500769f5ee46" Title="HoistMutation(TProgram, TOutput) Methods" Url="html/Methods_T_Genetica_Operators_Mutation_HoistMutation_2.htm">
+      <HelpTOCNode Id="8b1c4057-d75c-4d69-b40e-03e5fb440c85" Title="HoistMutation(TProgram, TOutput) Methods" Url="html/Methods_T_Genetica_Operators_Mutation_HoistMutation_2.htm">
         <HelpTOCNode Title="Dispose Method " Url="html/M_Genetica_Operators_Mutation_HoistMutation_2_Dispose.htm" />
         <HelpTOCNode Title="GetAllMutations Method " Url="html/M_Genetica_Operators_Mutation_HoistMutation_2_GetAllMutations.htm" />
         <HelpTOCNode Title="Mutate Method " Url="html/M_Genetica_Operators_Mutation_HoistMutation_2_Mutate.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="1b252b26-d10a-4a25-9561-858a7a9073e2" Title="IMutationOperator(TProgram) Interface" Url="html/T_Genetica_Operators_Mutation_IMutationOperator_1.htm">
-      <HelpTOCNode Id="444782ca-488e-4ecc-afc1-2aa1dca2d9c7" Title="IMutationOperator(TProgram) Methods" Url="html/Methods_T_Genetica_Operators_Mutation_IMutationOperator_1.htm">
+    <HelpTOCNode Id="5b723c60-e951-4432-b020-1c6cf0b34f4d" Title="IMutationOperator(TProgram) Interface" Url="html/T_Genetica_Operators_Mutation_IMutationOperator_1.htm">
+      <HelpTOCNode Id="4e5eac3d-3129-4a7d-a8da-4e4707dcec6c" Title="IMutationOperator(TProgram) Methods" Url="html/Methods_T_Genetica_Operators_Mutation_IMutationOperator_1.htm">
         <HelpTOCNode Title="GetAllMutations Method " Url="html/M_Genetica_Operators_Mutation_IMutationOperator_1_GetAllMutations.htm" />
         <HelpTOCNode Title="Mutate Method " Url="html/M_Genetica_Operators_Mutation_IMutationOperator_1_Mutate.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="e7882cf6-c9b0-4cfc-bfed-dc254b6192d6" Title="PointMutation(TProgram, TOutput) Class" Url="html/T_Genetica_Operators_Mutation_PointMutation_2.htm">
+    <HelpTOCNode Id="e2006b5d-0642-4e3e-8fd7-c58794045930" Title="PointMutation(TProgram, TOutput) Class" Url="html/T_Genetica_Operators_Mutation_PointMutation_2.htm">
       <HelpTOCNode Title="PointMutation(TProgram, TOutput) Constructor " Url="html/M_Genetica_Operators_Mutation_PointMutation_2__ctor.htm" />
-      <HelpTOCNode Id="f225a6a1-2a82-4293-a58f-1eb619c91ce1" Title="PointMutation(TProgram, TOutput) Properties" Url="html/Properties_T_Genetica_Operators_Mutation_PointMutation_2.htm">
+      <HelpTOCNode Id="a171cb8a-b013-4f7c-9b22-bfbeaa1d76ac" Title="PointMutation(TProgram, TOutput) Properties" Url="html/Properties_T_Genetica_Operators_Mutation_PointMutation_2.htm">
         <HelpTOCNode Title="MutationProbability Property " Url="html/P_Genetica_Operators_Mutation_PointMutation_2_MutationProbability.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="43b2aac5-06c1-471f-bc47-d21a869a7b8e" Title="PointMutation(TProgram, TOutput) Methods" Url="html/Methods_T_Genetica_Operators_Mutation_PointMutation_2.htm">
+      <HelpTOCNode Id="6d24cf8b-8272-4793-a304-c0e8ea26c9ec" Title="PointMutation(TProgram, TOutput) Methods" Url="html/Methods_T_Genetica_Operators_Mutation_PointMutation_2.htm">
         <HelpTOCNode Title="Dispose Method " Url="html/M_Genetica_Operators_Mutation_PointMutation_2_Dispose.htm" />
         <HelpTOCNode Title="GetAllMutations Method " Url="html/M_Genetica_Operators_Mutation_PointMutation_2_GetAllMutations.htm" />
         <HelpTOCNode Title="Mutate Method " Url="html/M_Genetica_Operators_Mutation_PointMutation_2_Mutate.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="f2ad827a-96ac-4189-8dc0-39c9f495410f" Title="ShrinkMutation(TProgram, TOutput) Class" Url="html/T_Genetica_Operators_Mutation_ShrinkMutation_2.htm">
+    <HelpTOCNode Id="a1c2b0a7-5fa5-48c0-b0d6-7b88c59eb70e" Title="ShrinkMutation(TProgram, TOutput) Class" Url="html/T_Genetica_Operators_Mutation_ShrinkMutation_2.htm">
       <HelpTOCNode Title="ShrinkMutation(TProgram, TOutput) Constructor " Url="html/M_Genetica_Operators_Mutation_ShrinkMutation_2__ctor.htm" />
-      <HelpTOCNode Id="7eab6f3f-df46-44da-853c-2119d7403c0c" Title="ShrinkMutation(TProgram, TOutput) Methods" Url="html/Methods_T_Genetica_Operators_Mutation_ShrinkMutation_2.htm">
+      <HelpTOCNode Id="7c348ad0-6dc7-449b-94fc-673a76b2ea12" Title="ShrinkMutation(TProgram, TOutput) Methods" Url="html/Methods_T_Genetica_Operators_Mutation_ShrinkMutation_2.htm">
         <HelpTOCNode Title="Dispose Method " Url="html/M_Genetica_Operators_Mutation_ShrinkMutation_2_Dispose.htm" />
         <HelpTOCNode Title="GetAllMutations Method " Url="html/M_Genetica_Operators_Mutation_ShrinkMutation_2_GetAllMutations.htm" />
         <HelpTOCNode Title="Mutate Method " Url="html/M_Genetica_Operators_Mutation_ShrinkMutation_2_Mutate.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="d4a14fb3-4cb9-4b37-bf86-b3faa21a680a" Title="SimplifyMutation Class" Url="html/T_Genetica_Operators_Mutation_SimplifyMutation.htm">
+    <HelpTOCNode Id="6ea9aaf3-4580-467e-86bb-5e6b612162f8" Title="SimplifyMutation Class" Url="html/T_Genetica_Operators_Mutation_SimplifyMutation.htm">
       <HelpTOCNode Title="SimplifyMutation Constructor " Url="html/M_Genetica_Operators_Mutation_SimplifyMutation__ctor.htm" />
-      <HelpTOCNode Id="ad375d87-3ee2-49cd-9295-111d3cf6e677" Title="SimplifyMutation Methods" Url="html/Methods_T_Genetica_Operators_Mutation_SimplifyMutation.htm">
+      <HelpTOCNode Id="d043376e-26d3-4e88-9b6e-aed5c66624ae" Title="SimplifyMutation Methods" Url="html/Methods_T_Genetica_Operators_Mutation_SimplifyMutation.htm">
         <HelpTOCNode Title="Dispose Method " Url="html/M_Genetica_Operators_Mutation_SimplifyMutation_Dispose.htm" />
         <HelpTOCNode Title="GetAllMutations Method " Url="html/M_Genetica_Operators_Mutation_SimplifyMutation_GetAllMutations.htm" />
         <HelpTOCNode Title="Mutate Method " Url="html/M_Genetica_Operators_Mutation_SimplifyMutation_Mutate.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="7d3da72b-5060-4e04-9862-e6a800a2b670" Title="StochasticMutation(TProgram) Class" Url="html/T_Genetica_Operators_Mutation_StochasticMutation_1.htm">
-      <HelpTOCNode Id="bd3d4367-e75d-423c-a677-aa2570eb8d62" Title="StochasticMutation(TProgram) Constructor " Url="html/Overload_Genetica_Operators_Mutation_StochasticMutation_1__ctor.htm">
+    <HelpTOCNode Id="34f653ad-679a-42a0-b4f0-b6ece6d913e1" Title="StochasticMutation(TProgram) Class" Url="html/T_Genetica_Operators_Mutation_StochasticMutation_1.htm">
+      <HelpTOCNode Id="d8ec4cba-32eb-4574-9a58-7c85347cfd8f" Title="StochasticMutation(TProgram) Constructor " Url="html/Overload_Genetica_Operators_Mutation_StochasticMutation_1__ctor.htm">
         <HelpTOCNode Title="StochasticMutation(TProgram) Constructor (ICollection(IMutationOperator(TProgram)))" Url="html/M_Genetica_Operators_Mutation_StochasticMutation_1__ctor.htm" />
         <HelpTOCNode Title="StochasticMutation(TProgram) Constructor (IDictionary(IMutationOperator(TProgram), Double))" Url="html/M_Genetica_Operators_Mutation_StochasticMutation_1__ctor_1.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="780b2392-e29a-494a-8ce0-8c2526a1d1a3" Title="StochasticMutation(TProgram) Methods" Url="html/Methods_T_Genetica_Operators_Mutation_StochasticMutation_1.htm">
+      <HelpTOCNode Id="a7da953a-bf05-49c6-82e9-a5b3c1cda6fe" Title="StochasticMutation(TProgram) Methods" Url="html/Methods_T_Genetica_Operators_Mutation_StochasticMutation_1.htm">
         <HelpTOCNode Title="Dispose Method " Url="html/M_Genetica_Operators_Mutation_StochasticMutation_1_Dispose.htm" />
         <HelpTOCNode Title="GetAllMutations Method " Url="html/M_Genetica_Operators_Mutation_StochasticMutation_1_GetAllMutations.htm" />
         <HelpTOCNode Title="Mutate Method " Url="html/M_Genetica_Operators_Mutation_StochasticMutation_1_Mutate.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="e23d2d59-cb05-4a4b-9f89-1fe9ace68f7e" Title="SubtreeMutation(TProgram, TOutput) Class" Url="html/T_Genetica_Operators_Mutation_SubtreeMutation_2.htm">
+    <HelpTOCNode Id="6130f0c2-4a39-4c18-b898-f41261dee2bf" Title="SubtreeMutation(TProgram, TOutput) Class" Url="html/T_Genetica_Operators_Mutation_SubtreeMutation_2.htm">
       <HelpTOCNode Title="SubtreeMutation(TProgram, TOutput) Constructor " Url="html/M_Genetica_Operators_Mutation_SubtreeMutation_2__ctor.htm" />
-      <HelpTOCNode Id="ada0a560-30be-4b74-8c12-807385a19a62" Title="SubtreeMutation(TProgram, TOutput) Properties" Url="html/Properties_T_Genetica_Operators_Mutation_SubtreeMutation_2.htm">
+      <HelpTOCNode Id="cc87d3a5-ad91-45f0-95a9-0f8de89a8789" Title="SubtreeMutation(TProgram, TOutput) Properties" Url="html/Properties_T_Genetica_Operators_Mutation_SubtreeMutation_2.htm">
         <HelpTOCNode Title="MaxDepth Property " Url="html/P_Genetica_Operators_Mutation_SubtreeMutation_2_MaxDepth.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="dbb49030-0c1b-4d31-ab2f-076329827d9b" Title="SubtreeMutation(TProgram, TOutput) Methods" Url="html/Methods_T_Genetica_Operators_Mutation_SubtreeMutation_2.htm">
+      <HelpTOCNode Id="81971d17-7d74-4e20-a5ab-17175d74441e" Title="SubtreeMutation(TProgram, TOutput) Methods" Url="html/Methods_T_Genetica_Operators_Mutation_SubtreeMutation_2.htm">
         <HelpTOCNode Title="Dispose Method " Url="html/M_Genetica_Operators_Mutation_SubtreeMutation_2_Dispose.htm" />
         <HelpTOCNode Title="GetAllMutations Method " Url="html/M_Genetica_Operators_Mutation_SubtreeMutation_2_GetAllMutations.htm" />
         <HelpTOCNode Title="Mutate Method " Url="html/M_Genetica_Operators_Mutation_SubtreeMutation_2_Mutate.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="89c5facc-407f-4f2a-84a1-07b74ec3b4ce" Title="SwapMutation(TProgram, TOutput) Class" Url="html/T_Genetica_Operators_Mutation_SwapMutation_2.htm">
+    <HelpTOCNode Id="9fcdfce4-7f5c-4d52-882c-4fdfc414c277" Title="SwapMutation(TProgram, TOutput) Class" Url="html/T_Genetica_Operators_Mutation_SwapMutation_2.htm">
       <HelpTOCNode Title="SwapMutation(TProgram, TOutput) Constructor " Url="html/M_Genetica_Operators_Mutation_SwapMutation_2__ctor.htm" />
-      <HelpTOCNode Id="b2f3dd6e-8553-4bf4-89d8-cfdc3b242261" Title="SwapMutation(TProgram, TOutput) Methods" Url="html/Methods_T_Genetica_Operators_Mutation_SwapMutation_2.htm">
+      <HelpTOCNode Id="638c040e-c956-440d-93a6-a0b5a4e012f7" Title="SwapMutation(TProgram, TOutput) Methods" Url="html/Methods_T_Genetica_Operators_Mutation_SwapMutation_2.htm">
         <HelpTOCNode Title="Dispose Method " Url="html/M_Genetica_Operators_Mutation_SwapMutation_2_Dispose.htm" />
         <HelpTOCNode Title="GetAllMutations Method " Url="html/M_Genetica_Operators_Mutation_SwapMutation_2_GetAllMutations.htm" />
         <HelpTOCNode Title="Mutate Method " Url="html/M_Genetica_Operators_Mutation_SwapMutation_2_Mutate.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="a366d093-904d-4e39-82b6-58d15999817d" Title="Genetica.Operators.Selection" Url="html/N_Genetica_Operators_Selection.htm">
-    <HelpTOCNode Id="d07ed789-4676-48d6-9ca0-ff283b4e07f3" Title="ISelectionOperator(TProgram) Interface" Url="html/T_Genetica_Operators_Selection_ISelectionOperator_1.htm">
-      <HelpTOCNode Id="c0762a95-b653-4d2d-9f59-a74ba0ae98e4" Title="ISelectionOperator(TProgram) Methods" Url="html/Methods_T_Genetica_Operators_Selection_ISelectionOperator_1.htm">
+  <HelpTOCNode Id="069f066a-09cb-4c96-b863-db3ca5b7f45d" Title="Genetica.Operators.Selection" Url="html/N_Genetica_Operators_Selection.htm">
+    <HelpTOCNode Id="6d0df1cf-e1f4-44ff-8f13-ce54c3601466" Title="ISelectionOperator(TProgram) Interface" Url="html/T_Genetica_Operators_Selection_ISelectionOperator_1.htm">
+      <HelpTOCNode Id="54afea49-1e8f-4089-b54a-545b479ebb2e" Title="ISelectionOperator(TProgram) Methods" Url="html/Methods_T_Genetica_Operators_Selection_ISelectionOperator_1.htm">
         <HelpTOCNode Title="Select Method " Url="html/M_Genetica_Operators_Selection_ISelectionOperator_1_Select.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
     <HelpTOCNode Title="PopulationSelector Delegate" Url="html/T_Genetica_Operators_Selection_PopulationSelector.htm" />
-    <HelpTOCNode Id="32bbb84b-e91a-4beb-a004-00aa7c5f0742" Title="PopulationSelectors Class" Url="html/T_Genetica_Operators_Selection_PopulationSelectors.htm">
-      <HelpTOCNode Id="5b213cfa-85c9-461f-a98e-3b97302b00ae" Title="PopulationSelectors Methods" Url="html/Methods_T_Genetica_Operators_Selection_PopulationSelectors.htm">
+    <HelpTOCNode Id="8970a357-80aa-41d6-99c9-8c6ee6fd8252" Title="PopulationSelectors Class" Url="html/T_Genetica_Operators_Selection_PopulationSelectors.htm">
+      <HelpTOCNode Id="15867e45-2c92-42c0-b396-403995aeaf91" Title="PopulationSelectors Methods" Url="html/Methods_T_Genetica_Operators_Selection_PopulationSelectors.htm">
         <HelpTOCNode Title="RandomSelector Method " Url="html/M_Genetica_Operators_Selection_PopulationSelectors_RandomSelector.htm" />
         <HelpTOCNode Title="UniformSelector Method " Url="html/M_Genetica_Operators_Selection_PopulationSelectors_UniformSelector.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="25992abc-795a-4893-a4b9-b65cb1a7530d" Title="RouletteWheelSelection(TProgram) Class" Url="html/T_Genetica_Operators_Selection_RouletteWheelSelection_1.htm">
+    <HelpTOCNode Id="3541bc76-9288-43cb-a764-53dcf4abec80" Title="RouletteWheelSelection(TProgram) Class" Url="html/T_Genetica_Operators_Selection_RouletteWheelSelection_1.htm">
       <HelpTOCNode Title="RouletteWheelSelection(TProgram) Constructor " Url="html/M_Genetica_Operators_Selection_RouletteWheelSelection_1__ctor.htm" />
-      <HelpTOCNode Id="7b200d5c-f52c-4c1d-9581-c9b571a3c75b" Title="RouletteWheelSelection(TProgram) Methods" Url="html/Methods_T_Genetica_Operators_Selection_RouletteWheelSelection_1.htm">
+      <HelpTOCNode Id="02015592-4a3a-4cb9-af4e-35c12522d8df" Title="RouletteWheelSelection(TProgram) Methods" Url="html/Methods_T_Genetica_Operators_Selection_RouletteWheelSelection_1.htm">
         <HelpTOCNode Title="Dispose Method " Url="html/M_Genetica_Operators_Selection_RouletteWheelSelection_1_Dispose.htm" />
         <HelpTOCNode Title="Select Method " Url="html/M_Genetica_Operators_Selection_RouletteWheelSelection_1_Select.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="99c6754b-5bba-49b5-83fc-1f0f5a95229d" Title="StochasticSelection(TProgram) Class" Url="html/T_Genetica_Operators_Selection_StochasticSelection_1.htm">
-      <HelpTOCNode Id="580dc94a-4627-4fc0-a6ce-b5da80099ce9" Title="StochasticSelection(TProgram) Constructor " Url="html/Overload_Genetica_Operators_Selection_StochasticSelection_1__ctor.htm">
+    <HelpTOCNode Id="2ea022f2-0fe3-4c5d-ab8c-57090432c970" Title="StochasticSelection(TProgram) Class" Url="html/T_Genetica_Operators_Selection_StochasticSelection_1.htm">
+      <HelpTOCNode Id="0f00b7a0-901b-479f-9bb5-b9b737f49204" Title="StochasticSelection(TProgram) Constructor " Url="html/Overload_Genetica_Operators_Selection_StochasticSelection_1__ctor.htm">
         <HelpTOCNode Title="StochasticSelection(TProgram) Constructor (ICollection(ISelectionOperator(TProgram)))" Url="html/M_Genetica_Operators_Selection_StochasticSelection_1__ctor.htm" />
         <HelpTOCNode Title="StochasticSelection(TProgram) Constructor (IDictionary(ISelectionOperator(TProgram), Double))" Url="html/M_Genetica_Operators_Selection_StochasticSelection_1__ctor_1.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="5e4b98bf-b54e-42c3-8e36-fbcd59b8fd8a" Title="StochasticSelection(TProgram) Methods" Url="html/Methods_T_Genetica_Operators_Selection_StochasticSelection_1.htm">
+      <HelpTOCNode Id="0d2a9bfe-7071-4b1c-a165-ca675ac69dbe" Title="StochasticSelection(TProgram) Methods" Url="html/Methods_T_Genetica_Operators_Selection_StochasticSelection_1.htm">
         <HelpTOCNode Title="Dispose Method " Url="html/M_Genetica_Operators_Selection_StochasticSelection_1_Dispose.htm" />
         <HelpTOCNode Title="Select Method " Url="html/M_Genetica_Operators_Selection_StochasticSelection_1_Select.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="1015e71c-77b3-43cf-86cb-dd76c0276e63" Title="TournamentSelection(TProgram) Class" Url="html/T_Genetica_Operators_Selection_TournamentSelection_1.htm">
+    <HelpTOCNode Id="9c318ec1-673c-4c64-a742-425fd2b2a73b" Title="TournamentSelection(TProgram) Class" Url="html/T_Genetica_Operators_Selection_TournamentSelection_1.htm">
       <HelpTOCNode Title="TournamentSelection(TProgram) Constructor " Url="html/M_Genetica_Operators_Selection_TournamentSelection_1__ctor.htm" />
-      <HelpTOCNode Id="5ac7ab5f-658e-4d05-be00-4dc476265231" Title="TournamentSelection(TProgram) Properties" Url="html/Properties_T_Genetica_Operators_Selection_TournamentSelection_1.htm">
+      <HelpTOCNode Id="ebdc96d0-e6a5-4518-b579-e60b90ccc434" Title="TournamentSelection(TProgram) Properties" Url="html/Properties_T_Genetica_Operators_Selection_TournamentSelection_1.htm">
         <HelpTOCNode Title="TournamentSize Property " Url="html/P_Genetica_Operators_Selection_TournamentSelection_1_TournamentSize.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="19a83c26-7a96-40f4-83af-27e83161ecb9" Title="TournamentSelection(TProgram) Methods" Url="html/Methods_T_Genetica_Operators_Selection_TournamentSelection_1.htm">
+      <HelpTOCNode Id="a9b65a00-7597-4262-8c71-43c7285f93e7" Title="TournamentSelection(TProgram) Methods" Url="html/Methods_T_Genetica_Operators_Selection_TournamentSelection_1.htm">
         <HelpTOCNode Title="Dispose Method " Url="html/M_Genetica_Operators_Selection_TournamentSelection_1_Dispose.htm" />
         <HelpTOCNode Title="Select Method " Url="html/M_Genetica_Operators_Selection_TournamentSelection_1_Select.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="aef0d2a6-031d-4a43-9ee9-f059197e598c" Title="Genetica.Similarity" Url="html/N_Genetica_Similarity.htm">
-    <HelpTOCNode Id="298f35e0-9196-4f0d-a8ea-4c797842901e" Title="AverageSimilarity(TProgram) Class" Url="html/T_Genetica_Similarity_AverageSimilarity_1.htm">
+  <HelpTOCNode Id="8fe1abee-16a1-472f-bc97-70f59f46829a" Title="Genetica.Similarity" Url="html/N_Genetica_Similarity.htm">
+    <HelpTOCNode Id="6433c3a9-ed24-424a-a2ec-9efaf09219ed" Title="AverageSimilarity(TProgram) Class" Url="html/T_Genetica_Similarity_AverageSimilarity_1.htm">
       <HelpTOCNode Title="AverageSimilarity(TProgram) Constructor " Url="html/M_Genetica_Similarity_AverageSimilarity_1__ctor.htm" />
-      <HelpTOCNode Id="e6b11682-ae55-4187-ad7c-df8e93aa8439" Title="AverageSimilarity(TProgram) Methods" Url="html/Methods_T_Genetica_Similarity_AverageSimilarity_1.htm">
+      <HelpTOCNode Id="d0b37e78-83ad-408b-b50e-ef1c5ac6a63b" Title="AverageSimilarity(TProgram) Methods" Url="html/Methods_T_Genetica_Similarity_AverageSimilarity_1.htm">
         <HelpTOCNode Title="Calculate Method " Url="html/M_Genetica_Similarity_AverageSimilarity_1_Calculate.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="0aa59616-77c7-4f40-8665-6f5860e6d3af" Title="CommonRegionSimilarity(TProgram, TOutput) Class" Url="html/T_Genetica_Similarity_CommonRegionSimilarity_2.htm">
+    <HelpTOCNode Id="d4f76013-aeb9-4899-891c-513c37bc57a5" Title="CommonRegionSimilarity(TProgram, TOutput) Class" Url="html/T_Genetica_Similarity_CommonRegionSimilarity_2.htm">
       <HelpTOCNode Title="CommonRegionSimilarity(TProgram, TOutput) Constructor " Url="html/M_Genetica_Similarity_CommonRegionSimilarity_2__ctor.htm" />
-      <HelpTOCNode Id="10b28e36-ff4f-4d9d-ab4d-0fdd46563672" Title="CommonRegionSimilarity(TProgram, TOutput) Methods" Url="html/Methods_T_Genetica_Similarity_CommonRegionSimilarity_2.htm">
+      <HelpTOCNode Id="546d633b-e3f2-4b01-991a-a1caf50a1ab5" Title="CommonRegionSimilarity(TProgram, TOutput) Methods" Url="html/Methods_T_Genetica_Similarity_CommonRegionSimilarity_2.htm">
         <HelpTOCNode Title="Calculate Method " Url="html/M_Genetica_Similarity_CommonRegionSimilarity_2_Calculate.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="aa9f06ef-b9d8-4a3c-aced-da17c28f0617" Title="ISimilarityMeasure(TProgram) Interface" Url="html/T_Genetica_Similarity_ISimilarityMeasure_1.htm">
-      <HelpTOCNode Id="1cd84f2a-6c0a-4ef6-89d8-b4634c06202a" Title="ISimilarityMeasure(TProgram) Methods" Url="html/Methods_T_Genetica_Similarity_ISimilarityMeasure_1.htm">
+    <HelpTOCNode Id="b3a5da1c-794e-4b2d-88c8-a6c0c66a5c54" Title="ISimilarityMeasure(TProgram) Interface" Url="html/T_Genetica_Similarity_ISimilarityMeasure_1.htm">
+      <HelpTOCNode Id="b66f7f75-9b0d-45a7-838a-280f0d5d4163" Title="ISimilarityMeasure(TProgram) Methods" Url="html/Methods_T_Genetica_Similarity_ISimilarityMeasure_1.htm">
         <HelpTOCNode Title="Calculate Method " Url="html/M_Genetica_Similarity_ISimilarityMeasure_1_Calculate.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="31b988ec-effc-43be-90ca-602f7479a3ad" Title="LeafSimilarity(TProgram, TOutput) Class" Url="html/T_Genetica_Similarity_LeafSimilarity_2.htm">
+    <HelpTOCNode Id="181c19c5-5f94-4579-9273-4b23def2d2e1" Title="LeafSimilarity(TProgram, TOutput) Class" Url="html/T_Genetica_Similarity_LeafSimilarity_2.htm">
       <HelpTOCNode Title="LeafSimilarity(TProgram, TOutput) Constructor " Url="html/M_Genetica_Similarity_LeafSimilarity_2__ctor.htm" />
-      <HelpTOCNode Id="586be000-0fcc-4da3-ac94-cda5e782f474" Title="LeafSimilarity(TProgram, TOutput) Methods" Url="html/Methods_T_Genetica_Similarity_LeafSimilarity_2.htm">
+      <HelpTOCNode Id="6fa92371-239e-4103-ae55-191d75713af4" Title="LeafSimilarity(TProgram, TOutput) Methods" Url="html/Methods_T_Genetica_Similarity_LeafSimilarity_2.htm">
         <HelpTOCNode Title="Calculate Method " Url="html/M_Genetica_Similarity_LeafSimilarity_2_Calculate.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="98d74ccd-a996-46fc-a1e6-dcbad077e3f5" Title="NormalNotationEditSimilarity Class" Url="html/T_Genetica_Similarity_NormalNotationEditSimilarity.htm">
+    <HelpTOCNode Id="0e8790df-e016-4362-8599-1070861c0cc7" Title="NormalNotationEditSimilarity Class" Url="html/T_Genetica_Similarity_NormalNotationEditSimilarity.htm">
       <HelpTOCNode Title="NormalNotationEditSimilarity Constructor " Url="html/M_Genetica_Similarity_NormalNotationEditSimilarity__ctor.htm" />
-      <HelpTOCNode Id="28b1c93e-86e0-4d9e-8aa1-7c28ffcf65eb" Title="NormalNotationEditSimilarity Methods" Url="html/Methods_T_Genetica_Similarity_NormalNotationEditSimilarity.htm">
+      <HelpTOCNode Id="7361a6cb-2554-4e89-878c-5da39383ec00" Title="NormalNotationEditSimilarity Methods" Url="html/Methods_T_Genetica_Similarity_NormalNotationEditSimilarity.htm">
         <HelpTOCNode Title="Calculate Method " Url="html/M_Genetica_Similarity_NormalNotationEditSimilarity_Calculate.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="71913d55-f761-442b-8b43-2c6f40b3e0d2" Title="PrefixNotationEditSimilarity Class" Url="html/T_Genetica_Similarity_PrefixNotationEditSimilarity.htm">
+    <HelpTOCNode Id="b4eba6fc-4d48-4db6-81b9-b10279c4e1e9" Title="PrefixNotationEditSimilarity Class" Url="html/T_Genetica_Similarity_PrefixNotationEditSimilarity.htm">
       <HelpTOCNode Title="PrefixNotationEditSimilarity Constructor " Url="html/M_Genetica_Similarity_PrefixNotationEditSimilarity__ctor.htm" />
-      <HelpTOCNode Id="095b60de-909e-404a-bcfc-db9f81a6b6b1" Title="PrefixNotationEditSimilarity Methods" Url="html/Methods_T_Genetica_Similarity_PrefixNotationEditSimilarity.htm">
+      <HelpTOCNode Id="08957c2e-7b86-4271-b70a-7ccfa416a7bc" Title="PrefixNotationEditSimilarity Methods" Url="html/Methods_T_Genetica_Similarity_PrefixNotationEditSimilarity.htm">
         <HelpTOCNode Title="Calculate Method " Url="html/M_Genetica_Similarity_PrefixNotationEditSimilarity_Calculate.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="a944ef4c-a3d4-402c-af79-a9cece7304c3" Title="PrimitiveSimilarity(TProgram, TOutput) Class" Url="html/T_Genetica_Similarity_PrimitiveSimilarity_2.htm">
+    <HelpTOCNode Id="8d26a562-1646-4b15-959e-1c303689fc09" Title="PrimitiveSimilarity(TProgram, TOutput) Class" Url="html/T_Genetica_Similarity_PrimitiveSimilarity_2.htm">
       <HelpTOCNode Title="PrimitiveSimilarity(TProgram, TOutput) Constructor " Url="html/M_Genetica_Similarity_PrimitiveSimilarity_2__ctor.htm" />
-      <HelpTOCNode Id="e534be47-c667-4ba9-bb69-ca771a1270f7" Title="PrimitiveSimilarity(TProgram, TOutput) Methods" Url="html/Methods_T_Genetica_Similarity_PrimitiveSimilarity_2.htm">
+      <HelpTOCNode Id="830fc1e8-84ae-4db3-b700-cc39fc9d3173" Title="PrimitiveSimilarity(TProgram, TOutput) Methods" Url="html/Methods_T_Genetica_Similarity_PrimitiveSimilarity_2.htm">
         <HelpTOCNode Title="Calculate Method " Url="html/M_Genetica_Similarity_PrimitiveSimilarity_2_Calculate.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="4c842113-63ba-463c-b92e-8f10f3f8f5b8" Title="SubCombinationSimilarity(TProgram, TOutput) Class" Url="html/T_Genetica_Similarity_SubCombinationSimilarity_2.htm">
+    <HelpTOCNode Id="6cc029ff-8f93-45c0-979f-5ac9c33815e6" Title="SubCombinationSimilarity(TProgram, TOutput) Class" Url="html/T_Genetica_Similarity_SubCombinationSimilarity_2.htm">
       <HelpTOCNode Title="SubCombinationSimilarity(TProgram, TOutput) Constructor " Url="html/M_Genetica_Similarity_SubCombinationSimilarity_2__ctor.htm" />
-      <HelpTOCNode Id="5d7bb7f7-b7ff-49ac-ab4d-df7245532c91" Title="SubCombinationSimilarity(TProgram, TOutput) Methods" Url="html/Methods_T_Genetica_Similarity_SubCombinationSimilarity_2.htm">
+      <HelpTOCNode Id="c22433da-e951-4693-abef-ece179936fad" Title="SubCombinationSimilarity(TProgram, TOutput) Methods" Url="html/Methods_T_Genetica_Similarity_SubCombinationSimilarity_2.htm">
         <HelpTOCNode Title="Calculate Method " Url="html/M_Genetica_Similarity_SubCombinationSimilarity_2_Calculate.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="62765511-6076-4582-98bb-21c4b056e57a" Title="SubProgramSimilarity(TProgram, TOutput) Class" Url="html/T_Genetica_Similarity_SubProgramSimilarity_2.htm">
+    <HelpTOCNode Id="a3d8b82d-d540-4045-877d-d8c4878f4c0f" Title="SubProgramSimilarity(TProgram, TOutput) Class" Url="html/T_Genetica_Similarity_SubProgramSimilarity_2.htm">
       <HelpTOCNode Title="SubProgramSimilarity(TProgram, TOutput) Constructor " Url="html/M_Genetica_Similarity_SubProgramSimilarity_2__ctor.htm" />
-      <HelpTOCNode Id="a57a5653-c45a-40d7-89ed-109c2214c6f9" Title="SubProgramSimilarity(TProgram, TOutput) Methods" Url="html/Methods_T_Genetica_Similarity_SubProgramSimilarity_2.htm">
+      <HelpTOCNode Id="33cd0a33-feca-437f-ad9a-f961bfd7aa0b" Title="SubProgramSimilarity(TProgram, TOutput) Methods" Url="html/Methods_T_Genetica_Similarity_SubProgramSimilarity_2.htm">
         <HelpTOCNode Title="Calculate Method " Url="html/M_Genetica_Similarity_SubProgramSimilarity_2_Calculate.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="82840543-c5e8-47ae-b485-d72cd469b97d" Title="SymbolTreeSimilarity Class" Url="html/T_Genetica_Similarity_SymbolTreeSimilarity.htm">
+    <HelpTOCNode Id="d95f45ef-51af-46e4-a487-70949be651e0" Title="SymbolTreeSimilarity Class" Url="html/T_Genetica_Similarity_SymbolTreeSimilarity.htm">
       <HelpTOCNode Title="SymbolTreeSimilarity Constructor " Url="html/M_Genetica_Similarity_SymbolTreeSimilarity__ctor.htm" />
-      <HelpTOCNode Id="1c3c4a99-530e-49d3-9947-37eac530715f" Title="SymbolTreeSimilarity Methods" Url="html/Methods_T_Genetica_Similarity_SymbolTreeSimilarity.htm">
+      <HelpTOCNode Id="822bd05b-6770-471b-8d71-65fc2db0aff8" Title="SymbolTreeSimilarity Methods" Url="html/Methods_T_Genetica_Similarity_SymbolTreeSimilarity.htm">
         <HelpTOCNode Title="Calculate Method " Url="html/M_Genetica_Similarity_SymbolTreeSimilarity_Calculate.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="d0536b55-df24-4c99-9369-d7ac670393dc" Title="TreeEditSimilarity(TProgram, TOutput) Class" Url="html/T_Genetica_Similarity_TreeEditSimilarity_2.htm">
+    <HelpTOCNode Id="80e92558-46ce-49f4-9cf5-9c9a78b8fb58" Title="TreeEditSimilarity(TProgram, TOutput) Class" Url="html/T_Genetica_Similarity_TreeEditSimilarity_2.htm">
       <HelpTOCNode Title="TreeEditSimilarity(TProgram, TOutput) Constructor " Url="html/M_Genetica_Similarity_TreeEditSimilarity_2__ctor.htm" />
-      <HelpTOCNode Id="3545cd7d-e870-44d5-9335-e9dfd9ab0bed" Title="TreeEditSimilarity(TProgram, TOutput) Methods" Url="html/Methods_T_Genetica_Similarity_TreeEditSimilarity_2.htm">
+      <HelpTOCNode Id="6938c81f-0fb5-4835-b199-4eab5dcc2750" Title="TreeEditSimilarity(TProgram, TOutput) Methods" Url="html/Methods_T_Genetica_Similarity_TreeEditSimilarity_2.htm">
         <HelpTOCNode Title="Calculate Method " Url="html/M_Genetica_Similarity_TreeEditSimilarity_2_Calculate.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="f57aea84-a442-4e5c-ac08-afd91748d8db" Title="ValueSimilarity Class" Url="html/T_Genetica_Similarity_ValueSimilarity.htm">
+    <HelpTOCNode Id="e1019d3a-53a6-4db2-8f81-3994bec59523" Title="ValueSimilarity Class" Url="html/T_Genetica_Similarity_ValueSimilarity.htm">
       <HelpTOCNode Title="ValueSimilarity Constructor " Url="html/M_Genetica_Similarity_ValueSimilarity__ctor.htm" />
-      <HelpTOCNode Id="4841e8c3-59e7-4922-84dd-913e3e609805" Title="ValueSimilarity Methods" Url="html/Methods_T_Genetica_Similarity_ValueSimilarity.htm">
+      <HelpTOCNode Id="f8283e16-b162-4a18-b191-116351f0e5e0" Title="ValueSimilarity Methods" Url="html/Methods_T_Genetica_Similarity_ValueSimilarity.htm">
         <HelpTOCNode Title="Calculate Method " Url="html/M_Genetica_Similarity_ValueSimilarity_Calculate.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="8c3fe534-94fe-445e-b9f3-0295038e936f" Title="Genetica.Trees" Url="html/N_Genetica_Trees.htm">
-    <HelpTOCNode Id="0f60dacd-6c1a-4a6b-8c0f-c6100cfe720e" Title="IArgInfoTreeNode Interface" Url="html/T_Genetica_Trees_IArgInfoTreeNode.htm">
+  <HelpTOCNode Id="a8d3d6c5-7f3c-4edc-bf14-ecd83a0c93fc" Title="Genetica.Trees" Url="html/N_Genetica_Trees.htm">
+    <HelpTOCNode Id="ef321fba-b7b0-4f45-a4ee-255e9c2a894a" Title="IArgInfoTreeNode Interface" Url="html/T_Genetica_Trees_IArgInfoTreeNode.htm">
       <HelpTOCNode Title="IArgInfoTreeNode Properties" Url="html/Properties_T_Genetica_Trees_IArgInfoTreeNode.htm" />
       <HelpTOCNode Title="IArgInfoTreeNode Methods" Url="html/Methods_T_Genetica_Trees_IArgInfoTreeNode.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Title="IInformationTree`1 Interface" Url="html/T_Genetica_Trees_IInformationTree_1.htm" />
-    <HelpTOCNode Id="34322df3-6a7f-480b-8f2b-fc31c396cb54" Title="IInformationTreeNode Interface" Url="html/T_Genetica_Trees_IInformationTreeNode.htm">
-      <HelpTOCNode Id="21ab8547-e30c-4244-b7ef-dfc1f1c0b278" Title="IInformationTreeNode Properties" Url="html/Properties_T_Genetica_Trees_IInformationTreeNode.htm">
+    <HelpTOCNode Id="3b24ed01-f908-4742-9f39-b4370dd6fb6c" Title="IInformationTree(TProgram) Interface" Url="html/T_Genetica_Trees_IInformationTree_1.htm">
+      <HelpTOCNode Id="1c763665-91d4-4291-8ca5-489bb3a5485a" Title="IInformationTree(TProgram) Properties" Url="html/Properties_T_Genetica_Trees_IInformationTree_1.htm">
+        <HelpTOCNode Title="RootNode Property " Url="html/P_Genetica_Trees_IInformationTree_1_RootNode.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="1d641166-bbec-4f6a-a073-c55c3013cc0b" Title="IInformationTree(TProgram) Methods" Url="html/Methods_T_Genetica_Trees_IInformationTree_1.htm">
+        <HelpTOCNode Title="AddProgram Method " Url="html/M_Genetica_Trees_IInformationTree_1_AddProgram.htm" />
+        <HelpTOCNode Title="AddPrograms Method " Url="html/M_Genetica_Trees_IInformationTree_1_AddPrograms.htm" />
+        <HelpTOCNode Title="Clear Method " Url="html/M_Genetica_Trees_IInformationTree_1_Clear.htm" />
+        <HelpTOCNode Title="GetCount Method " Url="html/M_Genetica_Trees_IInformationTree_1_GetCount.htm" />
+        <HelpTOCNode Title="GetNodeCount Method " Url="html/M_Genetica_Trees_IInformationTree_1_GetNodeCount.htm" />
+        <HelpTOCNode Title="Prune Method " Url="html/M_Genetica_Trees_IInformationTree_1_Prune.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="b4f1c323-ab77-4c68-b8d7-26585bc42795" Title="IInformationTreeNode Interface" Url="html/T_Genetica_Trees_IInformationTreeNode.htm">
+      <HelpTOCNode Id="f09e3803-0c47-4a77-8539-f832bc328763" Title="IInformationTreeNode Properties" Url="html/Properties_T_Genetica_Trees_IInformationTreeNode.htm">
         <HelpTOCNode Title="RootNode Property " Url="html/P_Genetica_Trees_IInformationTreeNode_RootNode.htm" />
         <HelpTOCNode Title="Value Property " Url="html/P_Genetica_Trees_IInformationTreeNode_Value.htm" />
       </HelpTOCNode>
       <HelpTOCNode Title="IInformationTreeNode Methods" Url="html/Methods_T_Genetica_Trees_IInformationTreeNode.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="3a10b2fc-fde2-4def-826e-28bf0c9bbc40" Title="InformationTree(TProgram) Class" Url="html/T_Genetica_Trees_InformationTree_1.htm">
+    <HelpTOCNode Id="b2acf003-120a-4d02-ae47-a6b93f9545a9" Title="InformationTree(TProgram) Class" Url="html/T_Genetica_Trees_InformationTree_1.htm">
       <HelpTOCNode Title="InformationTree(TProgram) Constructor " Url="html/M_Genetica_Trees_InformationTree_1__ctor.htm" />
-      <HelpTOCNode Id="9d090bed-24bd-4e82-b3c5-247252aff462" Title="InformationTree(TProgram) Properties" Url="html/Properties_T_Genetica_Trees_InformationTree_1.htm">
+      <HelpTOCNode Id="1fd530d9-cfbc-4402-b4ad-1a7589891ffb" Title="InformationTree(TProgram) Properties" Url="html/Properties_T_Genetica_Trees_InformationTree_1.htm">
         <HelpTOCNode Title="RootNode Property " Url="html/P_Genetica_Trees_InformationTree_1_RootNode.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="a8e68c4a-8b2f-40d8-a8c1-9ca21e3bbb3f" Title="InformationTree(TProgram) Methods" Url="html/Methods_T_Genetica_Trees_InformationTree_1.htm">
+      <HelpTOCNode Id="9b39ae8f-4e48-4b5b-9b26-92e0c5146382" Title="InformationTree(TProgram) Methods" Url="html/Methods_T_Genetica_Trees_InformationTree_1.htm">
         <HelpTOCNode Title="AddProgram Method " Url="html/M_Genetica_Trees_InformationTree_1_AddProgram.htm" />
         <HelpTOCNode Title="AddPrograms Method " Url="html/M_Genetica_Trees_InformationTree_1_AddPrograms.htm" />
         <HelpTOCNode Title="Clear Method " Url="html/M_Genetica_Trees_InformationTree_1_Clear.htm" />
@@ -789,18 +811,18 @@
         <HelpTOCNode Title="Prune Method " Url="html/M_Genetica_Trees_InformationTree_1_Prune.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="c07836db-8e7a-4708-8755-dbe15fd0b9b7" Title="InfoTreeExtensions Class" Url="html/T_Genetica_Trees_InfoTreeExtensions.htm">
-      <HelpTOCNode Id="d937b004-75b6-4fc6-9f92-af752d84b162" Title="InfoTreeExtensions Methods" Url="html/Methods_T_Genetica_Trees_InfoTreeExtensions.htm">
+    <HelpTOCNode Id="6394a3eb-2734-459f-8f41-e254b81d017a" Title="InfoTreeExtensions Class" Url="html/T_Genetica_Trees_InfoTreeExtensions.htm">
+      <HelpTOCNode Id="479681a8-406a-4350-8e17-866ff02b56bd" Title="InfoTreeExtensions Methods" Url="html/Methods_T_Genetica_Trees_InfoTreeExtensions.htm">
         <HelpTOCNode Title="GetFullness(TProgram) Method " Url="html/M_Genetica_Trees_InfoTreeExtensions_GetFullness__1.htm" />
         <HelpTOCNode Title="GetRelativeValue Method " Url="html/M_Genetica_Trees_InfoTreeExtensions_GetRelativeValue.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="6d374a92-c8bb-4364-bf8b-5b0ee3922c0e" Title="OrderedSymbolTree(TProgram) Class" Url="html/T_Genetica_Trees_OrderedSymbolTree_1.htm">
+    <HelpTOCNode Id="144bfe8e-6424-4895-a325-6b468d0a7b31" Title="OrderedSymbolTree(TProgram) Class" Url="html/T_Genetica_Trees_OrderedSymbolTree_1.htm">
       <HelpTOCNode Title="OrderedSymbolTree(TProgram) Constructor " Url="html/M_Genetica_Trees_OrderedSymbolTree_1__ctor.htm" />
-      <HelpTOCNode Id="2ec97f05-0366-4130-b6e8-66ff00fac497" Title="OrderedSymbolTree(TProgram) Properties" Url="html/Properties_T_Genetica_Trees_OrderedSymbolTree_1.htm">
+      <HelpTOCNode Id="12dc3961-d64b-4c0c-bd09-19aa1fff0f8e" Title="OrderedSymbolTree(TProgram) Properties" Url="html/Properties_T_Genetica_Trees_OrderedSymbolTree_1.htm">
         <HelpTOCNode Title="RootNode Property " Url="html/P_Genetica_Trees_OrderedSymbolTree_1_RootNode.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="163c7ce1-48f2-44c0-a0ce-4e138a56d9cd" Title="OrderedSymbolTree(TProgram) Methods" Url="html/Methods_T_Genetica_Trees_OrderedSymbolTree_1.htm">
+      <HelpTOCNode Id="1a43a972-6a2d-4cb0-a75b-dbfc2ef61c47" Title="OrderedSymbolTree(TProgram) Methods" Url="html/Methods_T_Genetica_Trees_OrderedSymbolTree_1.htm">
         <HelpTOCNode Title="AddElement Method " Url="html/M_Genetica_Trees_OrderedSymbolTree_1_AddElement.htm" />
         <HelpTOCNode Title="AddProgram Method " Url="html/M_Genetica_Trees_OrderedSymbolTree_1_AddProgram.htm" />
         <HelpTOCNode Title="AddPrograms Method " Url="html/M_Genetica_Trees_OrderedSymbolTree_1_AddPrograms.htm" />
@@ -811,49 +833,49 @@
         <HelpTOCNode Title="GetSimilarity Method " Url="html/M_Genetica_Trees_OrderedSymbolTree_1_GetSimilarity.htm" />
         <HelpTOCNode Title="Prune Method " Url="html/M_Genetica_Trees_OrderedSymbolTree_1_Prune.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="69470ba3-cfc0-4107-b512-cd757224d404" Title="OrderedSymbolTree(TProgram) Fields" Url="html/Fields_T_Genetica_Trees_OrderedSymbolTree_1.htm">
+      <HelpTOCNode Id="67071839-39b6-419d-91f6-92719eaccdfd" Title="OrderedSymbolTree(TProgram) Fields" Url="html/Fields_T_Genetica_Trees_OrderedSymbolTree_1.htm">
         <HelpTOCNode Title="rootNode Field" Url="html/F_Genetica_Trees_OrderedSymbolTree_1_rootNode.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="0a4820fa-ba66-4b09-b738-d38fa5af58b1" Title="OrderedSymbolTree(TProgram).ArgumentNode Class" Url="html/T_Genetica_Trees_OrderedSymbolTree_1_ArgumentNode.htm">
+    <HelpTOCNode Id="85c84f04-2e06-45e3-8df8-63a09d15ccb5" Title="OrderedSymbolTree(TProgram).ArgumentNode Class" Url="html/T_Genetica_Trees_OrderedSymbolTree_1_ArgumentNode.htm">
       <HelpTOCNode Title="OrderedSymbolTree(TProgram).ArgumentNode Constructor " Url="html/M_Genetica_Trees_OrderedSymbolTree_1_ArgumentNode__ctor.htm" />
-      <HelpTOCNode Id="f77584fb-7089-4868-92cd-408c6463db81" Title="ArgumentNode Properties" Url="html/Properties_T_Genetica_Trees_OrderedSymbolTree_1_ArgumentNode.htm">
+      <HelpTOCNode Id="1b2073a3-8f5a-4f75-8a68-3f43ecc8d294" Title="ArgumentNode Properties" Url="html/Properties_T_Genetica_Trees_OrderedSymbolTree_1_ArgumentNode.htm">
         <HelpTOCNode Title="Children Property " Url="html/P_Genetica_Trees_OrderedSymbolTree_1_ArgumentNode_Children.htm" />
         <HelpTOCNode Title="Parent Property " Url="html/P_Genetica_Trees_OrderedSymbolTree_1_ArgumentNode_Parent.htm" />
         <HelpTOCNode Title="RootNode Property " Url="html/P_Genetica_Trees_OrderedSymbolTree_1_ArgumentNode_RootNode.htm" />
         <HelpTOCNode Title="Value Property " Url="html/P_Genetica_Trees_OrderedSymbolTree_1_ArgumentNode_Value.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="32d8396b-7545-41b0-a551-012250e93f65" Title="ArgumentNode Methods" Url="html/Methods_T_Genetica_Trees_OrderedSymbolTree_1_ArgumentNode.htm">
+      <HelpTOCNode Id="bb2e751e-d370-45c1-b08e-684b51576319" Title="ArgumentNode Methods" Url="html/Methods_T_Genetica_Trees_OrderedSymbolTree_1_ArgumentNode.htm">
         <HelpTOCNode Title="GetCount Method " Url="html/M_Genetica_Trees_OrderedSymbolTree_1_ArgumentNode_GetCount.htm" />
         <HelpTOCNode Title="ToString Method " Url="html/M_Genetica_Trees_OrderedSymbolTree_1_ArgumentNode_ToString.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="0821b705-82ec-4e19-b643-ef8ada4b92e9" Title="OrderedSymbolTree(TProgram).SymbolNode Class" Url="html/T_Genetica_Trees_OrderedSymbolTree_1_SymbolNode.htm">
+    <HelpTOCNode Id="55667b68-20bb-441d-bf32-94bb7bcf90b8" Title="OrderedSymbolTree(TProgram).SymbolNode Class" Url="html/T_Genetica_Trees_OrderedSymbolTree_1_SymbolNode.htm">
       <HelpTOCNode Title="OrderedSymbolTree(TProgram).SymbolNode Constructor " Url="html/M_Genetica_Trees_OrderedSymbolTree_1_SymbolNode__ctor.htm" />
-      <HelpTOCNode Id="a93a069e-774c-43a5-a168-12a411f56c6e" Title="SymbolNode Properties" Url="html/Properties_T_Genetica_Trees_OrderedSymbolTree_1_SymbolNode.htm">
+      <HelpTOCNode Id="1c2401cc-ee43-4864-bce8-1db15def2f7a" Title="SymbolNode Properties" Url="html/Properties_T_Genetica_Trees_OrderedSymbolTree_1_SymbolNode.htm">
         <HelpTOCNode Title="Children Property " Url="html/P_Genetica_Trees_OrderedSymbolTree_1_SymbolNode_Children.htm" />
         <HelpTOCNode Title="RootNode Property " Url="html/P_Genetica_Trees_OrderedSymbolTree_1_SymbolNode_RootNode.htm" />
         <HelpTOCNode Title="Value Property " Url="html/P_Genetica_Trees_OrderedSymbolTree_1_SymbolNode_Value.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="43289a10-e94a-4a48-be4e-232cb240cea3" Title="SymbolNode Methods" Url="html/Methods_T_Genetica_Trees_OrderedSymbolTree_1_SymbolNode.htm">
+      <HelpTOCNode Id="9d577165-d967-44e1-9c8d-80cba522d228" Title="SymbolNode Methods" Url="html/Methods_T_Genetica_Trees_OrderedSymbolTree_1_SymbolNode.htm">
         <HelpTOCNode Title="GetCount Method " Url="html/M_Genetica_Trees_OrderedSymbolTree_1_SymbolNode_GetCount.htm" />
         <HelpTOCNode Title="ToString Method " Url="html/M_Genetica_Trees_OrderedSymbolTree_1_SymbolNode_ToString.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="1833fb3d-59e0-4083-a6d1-73cb654c4e75" Title="SubProgramTree(TProgram, TOutput) Class" Url="html/T_Genetica_Trees_SubProgramTree_2.htm">
+    <HelpTOCNode Id="14c6cce2-a50e-4967-badf-b3afed2a5a98" Title="SubProgramTree(TProgram, TOutput) Class" Url="html/T_Genetica_Trees_SubProgramTree_2.htm">
       <HelpTOCNode Title="SubProgramTree(TProgram, TOutput) Constructor " Url="html/M_Genetica_Trees_SubProgramTree_2__ctor.htm" />
       <HelpTOCNode Title="SubProgramTree(TProgram, TOutput) Properties" Url="html/Properties_T_Genetica_Trees_SubProgramTree_2.htm" />
-      <HelpTOCNode Id="cd23955b-f4da-44f1-8072-dd69f7ec7526" Title="SubProgramTree(TProgram, TOutput) Methods" Url="html/Methods_T_Genetica_Trees_SubProgramTree_2.htm">
+      <HelpTOCNode Id="5a911d56-a3a6-491d-a2fd-dec24aecbe75" Title="SubProgramTree(TProgram, TOutput) Methods" Url="html/Methods_T_Genetica_Trees_SubProgramTree_2.htm">
         <HelpTOCNode Title="AddProgram Method " Url="html/M_Genetica_Trees_SubProgramTree_2_AddProgram.htm" />
       </HelpTOCNode>
       <HelpTOCNode Title="SubProgramTree(TProgram, TOutput) Fields" Url="html/Fields_T_Genetica_Trees_SubProgramTree_2.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="3f66db6a-f662-4561-a708-12d0bbb4ed0b" Title="SymbolTree(TProgram) Class" Url="html/T_Genetica_Trees_SymbolTree_1.htm">
+    <HelpTOCNode Id="69d0b5bc-9762-4baa-a956-f14dcfb9a1d8" Title="SymbolTree(TProgram) Class" Url="html/T_Genetica_Trees_SymbolTree_1.htm">
       <HelpTOCNode Title="SymbolTree(TProgram) Constructor " Url="html/M_Genetica_Trees_SymbolTree_1__ctor.htm" />
-      <HelpTOCNode Id="02511a5e-84a6-422d-89b4-9f1d5b784a86" Title="SymbolTree(TProgram) Properties" Url="html/Properties_T_Genetica_Trees_SymbolTree_1.htm">
+      <HelpTOCNode Id="ac46c271-68b8-4c9a-a627-ff3bc7dac832" Title="SymbolTree(TProgram) Properties" Url="html/Properties_T_Genetica_Trees_SymbolTree_1.htm">
         <HelpTOCNode Title="RootNode Property " Url="html/P_Genetica_Trees_SymbolTree_1_RootNode.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="9c3d2e7d-a10c-491c-9a4b-a1018f2f2e28" Title="SymbolTree(TProgram) Methods" Url="html/Methods_T_Genetica_Trees_SymbolTree_1.htm">
+      <HelpTOCNode Id="504c76c3-838b-43f6-8c53-7b91ddc11730" Title="SymbolTree(TProgram) Methods" Url="html/Methods_T_Genetica_Trees_SymbolTree_1.htm">
         <HelpTOCNode Title="AddProgram Method " Url="html/M_Genetica_Trees_SymbolTree_1_AddProgram.htm" />
         <HelpTOCNode Title="AddPrograms Method " Url="html/M_Genetica_Trees_SymbolTree_1_AddPrograms.htm" />
         <HelpTOCNode Title="Clear Method " Url="html/M_Genetica_Trees_SymbolTree_1_Clear.htm" />
@@ -865,10 +887,10 @@
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="4f99d061-3f1e-4f90-9064-3843011700f8" Title="Genetica.Util" Url="html/N_Genetica_Util.htm">
-    <HelpTOCNode Id="4be180d8-7893-4613-bd3f-cad96cd3fa89" Title="CollectionUtil Class" Url="html/T_Genetica_Util_CollectionUtil.htm">
-      <HelpTOCNode Id="62938644-ec46-4a98-93fe-e1520bdd4948" Title="CollectionUtil Methods" Url="html/Methods_T_Genetica_Util_CollectionUtil.htm">
-        <HelpTOCNode Id="7227db48-b2a3-49cb-aaf1-b0a82a298d0f" Title="AddRange Method " Url="html/Overload_Genetica_Util_CollectionUtil_AddRange.htm">
+  <HelpTOCNode Id="4fbebdd6-5039-48d0-bebe-6824948b88ae" Title="Genetica.Util" Url="html/N_Genetica_Util.htm">
+    <HelpTOCNode Id="f4e407c8-d08a-4dd9-b65d-a347a17fef04" Title="CollectionUtil Class" Url="html/T_Genetica_Util_CollectionUtil.htm">
+      <HelpTOCNode Id="f92206b2-fd14-4b2d-aad9-c924578a3e92" Title="CollectionUtil Methods" Url="html/Methods_T_Genetica_Util_CollectionUtil.htm">
+        <HelpTOCNode Id="3b80031c-d5ee-4f33-a037-b0c31257a257" Title="AddRange Method " Url="html/Overload_Genetica_Util_CollectionUtil_AddRange.htm">
           <HelpTOCNode Title="AddRange(TKey, TValue) Method (IDictionary(TKey, TValue), IDictionary(TKey, TValue))" Url="html/M_Genetica_Util_CollectionUtil_AddRange__2.htm" />
           <HelpTOCNode Title="AddRange(TKey, TValue) Method (IDictionary(TKey, TValue), IEnumerable(KeyValuePair(TKey, TValue)))" Url="html/M_Genetica_Util_CollectionUtil_AddRange__2_1.htm" />
           <HelpTOCNode Title="AddRange(T) Method (ISet(T), IEnumerable(T))" Url="html/M_Genetica_Util_CollectionUtil_AddRange__1.htm" />
@@ -877,7 +899,7 @@
         <HelpTOCNode Title="Align(T) Method " Url="html/M_Genetica_Util_CollectionUtil_Align__1.htm" />
         <HelpTOCNode Title="Dispose(T) Method " Url="html/M_Genetica_Util_CollectionUtil_Dispose__1.htm" />
         <HelpTOCNode Title="GetAllCombinations(T) Method " Url="html/M_Genetica_Util_CollectionUtil_GetAllCombinations__1.htm" />
-        <HelpTOCNode Id="4fdcab9f-b16f-4387-a64a-5cf1022dd140" Title="GetRandomItem Method " Url="html/Overload_Genetica_Util_CollectionUtil_GetRandomItem.htm">
+        <HelpTOCNode Id="58dff29b-1531-44c3-a48f-dcf8384c41a4" Title="GetRandomItem Method " Url="html/Overload_Genetica_Util_CollectionUtil_GetRandomItem.htm">
           <HelpTOCNode Title="GetRandomItem(T) Method (IDictionary(T, Double))" Url="html/M_Genetica_Util_CollectionUtil_GetRandomItem__1.htm" />
           <HelpTOCNode Title="GetRandomItem(T) Method (IList(T))" Url="html/M_Genetica_Util_CollectionUtil_GetRandomItem__1_2.htm" />
           <HelpTOCNode Title="GetRandomItem(T) Method (IDictionary(T, Double), Random)" Url="html/M_Genetica_Util_CollectionUtil_GetRandomItem__1_1.htm" />
@@ -885,16 +907,16 @@
         </HelpTOCNode>
         <HelpTOCNode Title="GetSubset(T) Method " Url="html/M_Genetica_Util_CollectionUtil_GetSubset__1.htm" />
         <HelpTOCNode Title="GetUniqueItems(T) Method " Url="html/M_Genetica_Util_CollectionUtil_GetUniqueItems__1.htm" />
-        <HelpTOCNode Id="2d482bf5-ea73-4937-b1b8-7e28a5185f53" Title="Shuffle Method " Url="html/Overload_Genetica_Util_CollectionUtil_Shuffle.htm">
+        <HelpTOCNode Id="14925ef1-579a-466d-930f-051139810088" Title="Shuffle Method " Url="html/Overload_Genetica_Util_CollectionUtil_Shuffle.htm">
           <HelpTOCNode Title="Shuffle(T) Method (IList(T))" Url="html/M_Genetica_Util_CollectionUtil_Shuffle__1.htm" />
           <HelpTOCNode Title="Shuffle(T) Method (IList(T), Random)" Url="html/M_Genetica_Util_CollectionUtil_Shuffle__1_1.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="86ef1742-494e-4598-a407-b0f3742bbdf1" Title="StringUtil Class" Url="html/T_Genetica_Util_StringUtil.htm">
-      <HelpTOCNode Id="985cc9ba-2f5e-47df-a4cc-12c9ac48a218" Title="StringUtil Methods" Url="html/Methods_T_Genetica_Util_StringUtil.htm">
+    <HelpTOCNode Id="0289df1b-6983-453f-9a17-105d76ba71a8" Title="StringUtil Class" Url="html/T_Genetica_Util_StringUtil.htm">
+      <HelpTOCNode Id="01f54c91-e261-4a86-a349-1d1ff5425b7b" Title="StringUtil Methods" Url="html/Methods_T_Genetica_Util_StringUtil.htm">
         <HelpTOCNode Title="LevenshteinDistance Method " Url="html/M_Genetica_Util_StringUtil_LevenshteinDistance.htm" />
-        <HelpTOCNode Id="3ee96722-7871-4e7e-bc85-65fa94f8a53e" Title="Repeat Method " Url="html/Overload_Genetica_Util_StringUtil_Repeat.htm">
+        <HelpTOCNode Id="41aca82f-3974-4be4-bad6-f85d091fa3f1" Title="Repeat Method " Url="html/Overload_Genetica_Util_StringUtil_Repeat.htm">
           <HelpTOCNode Title="Repeat Method (Char, UInt32)" Url="html/M_Genetica_Util_StringUtil_Repeat.htm" />
           <HelpTOCNode Title="Repeat Method (String, UInt32)" Url="html/M_Genetica_Util_StringUtil_Repeat_1.htm" />
         </HelpTOCNode>

@@ -7,22 +7,34 @@ Genetica is a .NET open-source *genetic programming* (GP) library written entire
 
 Currently, Genetica.NET supports the evolution of programs representing *mathematical expressions* in a syntactic tree form. Mathematical programs combine *primitives* taken from a set of *terminals*, representing input scalar values, and several mathematical *functions*.
 
+**Table of contents**
+
+- [About](#about)
+- [API Documentation](#api-documentation)
+- [Packages and Dependencies](#packages-and-dependencies)
+- [Installation](#installation)
+- [Features](#features)
+- [Examples](#examples)
+- [See Also](#see-also)
+
+------
+
+## About
+
 Genetica.NET is open-source under the [MIT license](https://github.com/pedrodbs/Genetica/blob/master/LICENSE.md) and is free for commercial use.
 
-- Source repository: https://github.com/pedrodbs/Genetica/
+- Source repository: https://github.com/pedrodbs/Genetica
 - Issue tracker: https://github.com/pedrodbs/Genetica/issues
 
 Supported platforms:
 
 - .Net 4.5+ on Windows, Linux and Mac
 
-[TOC]
-
 ## API Documentation
 
-- HTML
-- Windows Help file (CHM)
-- PDF document
+- [HTML](https://pedrodbs.github.io/Genetica/)
+- [Windows Help file (CHM)](https://github.com/pedrodbs/Genetica/raw/master/docs/Genetica.NET.chm)
+- [PDF document](https://github.com/pedrodbs/Genetica/raw/master/docs/Genetica.NET.pdf)
 
 ## Packages and Dependencies
 
@@ -37,7 +49,7 @@ The following packages with the corresponding dependencies are provided:
 
 ## Installation
 
-Currently, you can *git clone* the Genetica.NET [source code](https://github.com/pedrodbs/genetica) and use an IDE like VisualStudio to build the corresponding binaries. NuGet deployment is planned in the future.
+Currently, you can `git clone` the Genetica.NET [source code](https://github.com/pedrodbs/Genetica) and use an IDE like VisualStudio to build the corresponding binaries. NuGet deployment is planned in the future.
 
 ##Getting started
 
