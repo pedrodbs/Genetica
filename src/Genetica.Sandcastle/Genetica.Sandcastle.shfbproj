@@ -13,7 +13,7 @@
     <RootNamespace>Genesis.Sandcastle</RootNamespace>
     <Name>Genetica.Sandcastle</Name>
     <!-- SHFB properties -->
-    <FrameworkVersion>.NET Framework 4.5</FrameworkVersion>
+    <FrameworkVersion>Cross-platform (.NET Core/.NET Standard)</FrameworkVersion>
     <OutputPath>..\..\docs\</OutputPath>
     <HtmlHelpName>Genetica.NET</HtmlHelpName>
     <Language>en-US</Language>
@@ -35,7 +35,7 @@
     <PresentationStyle>VS2013</PresentationStyle>
     <BuildLogFile>build.log</BuildLogFile>
     <CleanIntermediates>True</CleanIntermediates>
-    <KeepLogFile>True</KeepLogFile>
+    <KeepLogFile>False</KeepLogFile>
     <DisableCodeBlockComponent>False</DisableCodeBlockComponent>
     <IndentHtml>False</IndentHtml>
     <BuildAssemblerVerbosity>OnlyWarningsAndErrors</BuildAssemblerVerbosity>
@@ -60,7 +60,7 @@
     <PlugInConfigurations>
     </PlugInConfigurations>
     <SourceCodeBasePath>..\</SourceCodeBasePath>
-    <MissingTags>Summary, Parameter, Returns, AutoDocumentCtors, TypeParameter, AutoDocumentDispose</MissingTags>
+    <MissingTags>AutoDocumentCtors, AutoDocumentDispose</MissingTags>
     <VisibleItems>InheritedMembers, InheritedFrameworkMembers, Protected, ProtectedInternalAsProtected, NonBrowsable</VisibleItems>
     <ApiFilter>
     </ApiFilter>
@@ -108,6 +108,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Content\README.aml" />
+    <None Include="Media\empty_docx.aml" />
   </ItemGroup>
   <!-- Import the SHFB build targets -->
   <Import Project="$(SHFBROOT)\SandcastleHelpFileBuilder.targets" />

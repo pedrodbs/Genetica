@@ -1,83 +1,38 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{9EC944ED-8FAC-401E-A65D-EF8BE5633F84}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>FunctionRegression</RootNamespace>
-    <AssemblyName>FunctionRegression</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <TargetFrameworkProfile />
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Debug</OutputPath>
-    <DefineConstants>DEBUG;</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <ExternalConsole>true</ExternalConsole>
-    <PlatformTarget>x64</PlatformTarget>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release</OutputPath>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <ExternalConsole>true</ExternalConsole>
-    <PlatformTarget>x86</PlatformTarget>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
-    <PlatformTarget>x64</PlatformTarget>
-    <OutputPath>bin\x64\Debug\</OutputPath>
-    <Optimize>false</Optimize>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
-    <PlatformTarget>x64</PlatformTarget>
-    <OutputPath>bin\x64\Release\</OutputPath>
-  </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject>FunctionRegression.MainClass</StartupObject>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <OutputPath>bin\Debug\</OutputPath>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <OutputPath>bin\Release\</OutputPath>
-  </PropertyGroup>
-  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <Platforms>AnyCPU;x64;x86</Platforms>
+    <PackageId>FunctionRegression</PackageId>
+    <Copyright>Copyright © Pedro Sequeira 2018</Copyright>
+    <Product>Genetica.NET</Product>
+    <Authors>Pedro Sequeira</Authors>
+    <PackageLicenseUrl>https://raw.github.com/pedrodbs/Genetica/master/LICENSE.md</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/pedrodbs/Genetica</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/pedrodbs/Genetica</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <FileVersion>1.1.0.0</FileVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+    <Description>An example application for Genetica.NET, a genetic programming library written in C#</Description>
+    <PackageTags>genetic programming</PackageTags>
+    <Version>1.1.0</Version>
+    <PackageIconUrl>https://raw.github.com/pedrodbs/Genetica/master/img/genetica.ico</PackageIconUrl>
     <ApplicationIcon>genetica.ico</ApplicationIcon>
   </PropertyGroup>
+
   <ItemGroup>
-    <Reference Include="QuickGraph.Graphviz">
-      <HintPath>..\..\..\..\MyQuickGraph\3.0\sources\bin\Release\QuickGraph.Graphviz.dll</HintPath>
+    <ProjectReference Include="..\..\Genetica.Graphviz\Genetica.Graphviz.csproj" />
+    <ProjectReference Include="..\..\Genetica\Genetica.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="QuickGraph">
+      <HintPath>..\..\..\ext\QuickGraph.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
+    <Reference Include="QuickGraph.Graphviz">
+      <HintPath>..\..\..\ext\QuickGraph.Graphviz.dll</HintPath>
+    </Reference>
   </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="FitnessFunction.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="app.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="genetica.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\Genetica.Graphviz\Genetica.Graphviz.csproj">
-      <Project>{9b7ba1f3-c589-44ec-9fbf-6883afd13dae}</Project>
-      <Name>Genetica.Graphviz</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Genetica\Genetica.csproj">
-      <Project>{fa82cfdc-8cd4-419f-a5b1-43d32ac358d1}</Project>
-      <Name>Genetica</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+
 </Project>

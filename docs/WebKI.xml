@@ -326,8 +326,8 @@
     <HelpKINode Title="UnaryFunction.Expression Property " Url="html/P_Genetica_Elements_Functions_UnaryFunction_Expression.htm" />
   </HelpKINode>
   <HelpKINode Title="Extensions class">
-    <HelpKINode Title="Extensions Class" Url="html/T_Genetica_D3_Extensions.htm" />
     <HelpKINode Title="Extensions Class" Url="html/T_Genetica_Graphviz_Extensions.htm" />
+    <HelpKINode Title="Extensions Class" Url="html/T_Genetica_D3_Extensions.htm" />
     <HelpKINode Title="methods" Url="html/Methods_T_Genetica_Graphviz_Extensions.htm" />
     <HelpKINode Title="methods" Url="html/Methods_T_Genetica_D3_Extensions.htm" />
   </HelpKINode>
@@ -1399,6 +1399,7 @@
   <HelpKINode Title="RankFitnessFunction&lt;TProgram&gt;.SelectivePressure property" Url="html/P_Genetica_Evaluation_RankFitnessFunction_1_SelectivePressure.htm" />
   <HelpKINode Title="Repeat method" Url="html/Overload_Genetica_Util_StringUtil_Repeat.htm" />
   <HelpKINode Title="Replace method" Url="html/Overload_Genetica_Elements_TreeProgramExtensions_Replace.htm" />
+  <HelpKINode Title="ReplaceFirst method" Url="html/M_Genetica_Util_StringUtil_ReplaceFirst.htm" />
   <HelpKINode Title="rootNode field" Url="html/F_Genetica_Trees_OrderedSymbolTree_1_rootNode.htm" />
   <HelpKINode Title="RootNode property">
     <HelpKINode Title="IInformationTree(TProgram).RootNode Property " Url="html/P_Genetica_Trees_IInformationTree_1_RootNode.htm" />
@@ -1564,7 +1565,7 @@
   </HelpKINode>
   <HelpKINode Title="StringUtil.LevenshteinDistance method" Url="html/M_Genetica_Util_StringUtil_LevenshteinDistance.htm" />
   <HelpKINode Title="StringUtil.Repeat method" Url="html/Overload_Genetica_Util_StringUtil_Repeat.htm" />
-  <HelpKINode Title="StringUtil.ToLiteral method" Url="html/M_Genetica_Util_StringUtil_ToLiteral.htm" />
+  <HelpKINode Title="StringUtil.ReplaceFirst method" Url="html/M_Genetica_Util_StringUtil_ReplaceFirst.htm" />
   <HelpKINode Title="SubCombinationSimilarity(Of TProgram, TOutput) class">
     <HelpKINode Title="SubCombinationSimilarity(TProgram, TOutput) Class" Url="html/T_Genetica_Similarity_SubCombinationSimilarity_2.htm" />
     <HelpKINode Title="constructor" Url="html/M_Genetica_Similarity_SubCombinationSimilarity_2__ctor.htm" />
@@ -1741,7 +1742,6 @@
   <HelpKINode Title="ToD3JsonFile method" Url="html/Overload_Genetica_D3_Extensions_ToD3JsonFile.htm" />
   <HelpKINode Title="ToD3TreeJsonFile method" Url="html/M_Genetica_D3_Extensions_ToD3TreeJsonFile.htm" />
   <HelpKINode Title="ToGraphvizFile method" Url="html/Overload_Genetica_Graphviz_Extensions_ToGraphvizFile.htm" />
-  <HelpKINode Title="ToLiteral method" Url="html/M_Genetica_Util_StringUtil_ToLiteral.htm" />
   <HelpKINode Title="ToNormalNotation method">
     <HelpKINode Title="ITreeExpressionConverter(TProgram).ToNormalNotation Method " Url="html/M_Genetica_Elements_ITreeExpressionConverter_1_ToNormalNotation.htm" />
     <HelpKINode Title="MathExpressionConverter.ToNormalNotation Method " Url="html/M_Genetica_Elements_MathExpressionConverter_ToNormalNotation.htm" />

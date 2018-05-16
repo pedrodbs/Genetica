@@ -19,7 +19,7 @@
 // </copyright>
 // <summary>
 //    Project: Genetica.D3
-//    Last updated: 03/23/2018
+//    Last updated: 05/16/2018
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
@@ -80,7 +80,8 @@ namespace Genetica.D3
         public static void ToD3JsonFile(
             this ITreeNode rootNode, string filePath, Formatting formatting = Formatting.None)
         {
-            using (var sw = new StreamWriter(filePath, false, Encoding.UTF8))
+            using (var fs = new FileStream(filePath, FileMode.Create))
+            using (var sw = new StreamWriter(fs, Encoding.UTF8))
             {
                 var writer = new JsonTextWriter(sw) {Formatting = formatting};
                 WriteGraphJson(rootNode, writer);
@@ -96,7 +97,8 @@ namespace Genetica.D3
         public static void ToD3TreeJsonFile(
             this ITreeNode rootNode, string filePath, Formatting formatting = Formatting.None)
         {
-            using (var sw = new StreamWriter(filePath, false, Encoding.UTF8))
+            using (var fs = new FileStream(filePath, FileMode.Create))
+            using (var sw = new StreamWriter(fs, Encoding.UTF8))
             {
                 var writer = new JsonTextWriter(sw) {Formatting = formatting};
                 WriteTreeJson(rootNode, writer);
@@ -154,6 +156,7 @@ namespace Genetica.D3
                 WriteNodeProperties(writer, node);
                 writer.WriteEndObject();
             }
+
             writer.WriteEndArray();
 
             // writes links (source and target)
@@ -171,6 +174,7 @@ namespace Genetica.D3
 
                 writer.WriteEndObject();
             }
+
             writer.WriteEndArray();
 
             writer.WriteEndObject();

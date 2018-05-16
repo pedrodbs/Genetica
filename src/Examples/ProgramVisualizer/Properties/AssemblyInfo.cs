@@ -6,10 +6,10 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("ProgramVisualizer")]
-[assembly: AssemblyDescription("Example application using Genetica.Net")]
+[assembly: AssemblyDescription("An example application for Genetica.NET, a genetic programming library written in C#")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Pedro Sequeira")]
-[assembly: AssemblyProduct("")]
+[assembly: AssemblyProduct("Genetica.NET")]
 [assembly: AssemblyCopyright("Copyright (c) 2018 Pedro Sequeira")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

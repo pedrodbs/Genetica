@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>ProgramVisualizer</RootNamespace>
     <AssemblyName>ProgramVisualizer</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <TargetFrameworkProfile />
@@ -55,12 +55,17 @@
     <OutputPath>bin\x86\Release\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MathNet.Numerics, Version=4.4.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MathNet.Numerics.4.4.1\lib\net40\MathNet.Numerics.dll</HintPath>
+    </Reference>
     <Reference Include="QuickGraph.Graphviz">
-      <HintPath>..\..\..\..\MyQuickGraph\3.0\sources\bin\Release\QuickGraph.Graphviz.dll</HintPath>
+      <HintPath>..\..\..\ext\QuickGraph.Graphviz.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
@@ -85,6 +90,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -103,11 +109,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Genetica.Graphviz\Genetica.Graphviz.csproj">
-      <Project>{9b7ba1f3-c589-44ec-9fbf-6883afd13dae}</Project>
+      <Project>{6ecce597-f5f2-499c-ba94-771ee78c9f40}</Project>
       <Name>Genetica.Graphviz</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Genetica\Genetica.csproj">
-      <Project>{fa82cfdc-8cd4-419f-a5b1-43d32ac358d1}</Project>
+      <Project>{ce7c1342-6826-4373-80ce-11445297e495}</Project>
       <Name>Genetica</Name>
     </ProjectReference>
   </ItemGroup>

@@ -1,88 +1,42 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9B7BA1F3-C589-44EC-9FBF-6883AFD13DAE}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <RootNamespace>Genetica.Graphviz</RootNamespace>
-    <AssemblyName>Genetica.Graphviz</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <TargetFrameworkProfile />
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Debug</OutputPath>
-    <DefineConstants>DEBUG;</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <ConsolePause>false</ConsolePause>
-    <PlatformTarget>x64</PlatformTarget>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release</OutputPath>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <ConsolePause>false</ConsolePause>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
-    <PlatformTarget>x64</PlatformTarget>
-    <OutputPath>bin\x64\Debug\</OutputPath>
-    <DefineConstants>DEBUG;</DefineConstants>
-    <Optimize>false</Optimize>
-    <DocumentationFile>bin\x64\Debug\Genetica.Graphviz.xml</DocumentationFile>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
-    <PlatformTarget>x64</PlatformTarget>
-    <OutputPath>bin\x64\Release\</OutputPath>
-    <DocumentationFile>bin\x64\Release\Genetica.Graphviz.xml</DocumentationFile>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
-    <PlatformTarget>x86</PlatformTarget>
-    <OutputPath>bin\x86\Debug\</OutputPath>
-    <DefineConstants>DEBUG;</DefineConstants>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
-    <PlatformTarget>x86</PlatformTarget>
-    <OutputPath>bin\x86\Release\</OutputPath>
-  </PropertyGroup>
-  <PropertyGroup>
+    <TargetFramework>netstandard1.3</TargetFramework>
+    <NoWarn>$(NoWarn);NU1605</NoWarn>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <Platforms>AnyCPU;x64;x86</Platforms>
+    <PackageId>Genetica.Graphviz</PackageId>
+    <Copyright>Copyright © Pedro Sequeira 2018</Copyright>
+    <Product>Genetica.NET</Product>
+    <Authors>Pedro Sequeira</Authors>
+    <PackageLicenseUrl>https://raw.github.com/pedrodbs/Genetica/master/LICENSE.md</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/pedrodbs/Genetica</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/pedrodbs/Genetica</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <FileVersion>1.1.0.0</FileVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+    <Description>Graphviz extensions for Genetica.NET, a genetic programming library written in C#</Description>
+    <PackageTags>genetic programming</PackageTags>
+    <Version>1.1.0</Version>
+    <PackageIconUrl>https://raw.github.com/pedrodbs/Genetica/master/img/genetica.ico</PackageIconUrl>
     <ApplicationIcon>genetica.ico</ApplicationIcon>
   </PropertyGroup>
+
   <ItemGroup>
-    <Reference Include="MathNet.Numerics, Version=4.4.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MathNet.Numerics.4.4.0\lib\net40\MathNet.Numerics.dll</HintPath>
-    </Reference>
+    <PackageReference Include="System.Diagnostics.Process" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Genetica\Genetica.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="QuickGraph">
-      <HintPath>..\..\..\MyQuickGraph\3.0\sources\bin\Release\QuickGraph.dll</HintPath>
+      <HintPath>..\..\ext\QuickGraph.dll</HintPath>
     </Reference>
     <Reference Include="QuickGraph.Graphviz">
-      <HintPath>..\..\..\MyQuickGraph\3.0\sources\bin\Release\QuickGraph.Graphviz.dll</HintPath>
+      <HintPath>..\..\ext\QuickGraph.Graphviz.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Numerics" />
-    <Reference Include="System.Runtime.Serialization" />
   </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Edge.cs" />
-    <Compile Include="Extensions.cs" />
-    <Compile Include="Vertex.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Genetica\Genetica.csproj">
-      <Project>{FA82CFDC-8CD4-419F-A5B1-43D32AC358D1}</Project>
-      <Name>Genetica</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="genetica.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+
 </Project>

@@ -19,17 +19,14 @@
 // </copyright>
 // <summary>
 //    Project: Genetica
-//    Last updated: 03/23/2018
+//    Last updated: 05/16/2018
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
 // ------------------------------------------
 
 using System;
-using System.CodeDom;
-using System.IO;
 using System.Text;
-using Microsoft.CSharp;
 
 namespace Genetica.Util
 {
@@ -47,7 +44,7 @@ namespace Genetica.Util
         /// <returns>The edit or Levenshtein distance between the given strings.</returns>
         /// <remarks>
         ///     Code based on:
-        ///     <a
+        ///     <see
         ///         href="https://stackoverflow.com/questions/9453731/how-to-calculate-distance-similarity-measure-of-given-2-strings" />
         /// </remarks>
         public static int LevenshteinDistance(this string a, string b)
@@ -70,9 +67,16 @@ namespace Genetica.Util
                         distances[i - 1, j - 1] + cost
                     );
             }
+
             return distances[lengthA, lengthB];
         }
 
+        /// <summary>
+        ///     Creates a new string by concatenating (repeating) the given string a certain number of times.
+        /// </summary>
+        /// <param name="str">The string we want to be repeated.</param>
+        /// <param name="num">The number of times to repeat the string.</param>
+        /// <returns>A new string where the given string is repeated a certain number of times. </returns>
         public static string Repeat(this string str, uint num)
         {
             var sb = new StringBuilder();
@@ -81,17 +85,27 @@ namespace Genetica.Util
             return sb.ToString();
         }
 
-        public static string Repeat(this char c, uint num)
-        {
-            return new string(c, (int) num);
-        }
+        /// <summary>
+        ///     Creates a new string corresponding to the concatenation (repetition) of the given character a certain number of
+        ///     times.
+        /// </summary>
+        /// <param name="c">The character to be repeated.</param>
+        /// <param name="num">The number of times to be repeated.</param>
+        /// <returns>A new string corresponding to the concatenation (repetition) of the given character a certain number of times.</returns>
+        public static string Repeat(this char c, uint num) => new string(c, (int) num);
 
-        public static string ToLiteral(this string input)
+        /// <summary>
+        ///     Replaces the first occurrence of a given pattern in a string by a replacement string.
+        /// </summary>
+        /// <param name="text">The original string we want to replace.</param>
+        /// <param name="search">The pattern to be replaced in the original string.</param>
+        /// <param name="replace">The replacement string.</param>
+        /// <returns>The original string with the first occurrence of the given pattern replaced by the replacement string.</returns>
+        /// <remarks>From <see href="https://stackoverflow.com/a/8809437" />.</remarks>
+        public static string ReplaceFirst(this string text, string search, string replace)
         {
-            var writer = new StringWriter();
-            var provider = new CSharpCodeProvider();
-            provider.GenerateCodeFromExpression(new CodePrimitiveExpression(input), writer, null);
-            return writer.GetStringBuilder().ToString().Replace("\"", string.Empty);
+            var pos = text.IndexOf(search, StringComparison.Ordinal);
+            return pos < 0 ? text : text.Substring(0, pos) + replace + text.Substring(pos + search.Length);
         }
 
         #endregion

@@ -250,7 +250,7 @@ namespace Genetica.Util
         /// <param name="finalIndex">The final index of the collection sub-set.</param>
         /// <returns>The subset of the given list.</returns>
         public static IList<T> GetSubset<T>(
-            this IList<T> collection, uint startIdex = 0, uint finalIndex = uint.MaxValue)
+            this IList<T> collection, int startIdex = 0, int finalIndex = int.MaxValue)
         {
             if (collection == null) return null;
             var length = Math.Max(finalIndex, collection.Count) - startIdex;

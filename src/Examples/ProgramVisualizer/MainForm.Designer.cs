@@ -205,7 +205,7 @@
             this.propertyGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.propertyGrid.Font = new System.Drawing.Font("Candara", 10.18868F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.propertyGrid.HelpBackColor = System.Drawing.Color.White;
-            this.propertyGrid.HelpBorderColor = System.Drawing.Color.Black;
+            this.propertyGrid.HelpBorderColor = System.Drawing.Color.White;
             this.propertyGrid.HelpForeColor = System.Drawing.Color.Black;
             this.propertyGrid.LineColor = System.Drawing.Color.White;
             this.propertyGrid.Location = new System.Drawing.Point(3, 22);
@@ -213,7 +213,7 @@
             this.propertyGrid.SelectedItemWithFocusBackColor = System.Drawing.Color.Gray;
             this.propertyGrid.Size = new System.Drawing.Size(273, 498);
             this.propertyGrid.TabIndex = 1;
-            this.propertyGrid.ViewBorderColor = System.Drawing.Color.Black;
+            this.propertyGrid.ViewBorderColor = System.Drawing.Color.White;
             this.propertyGrid.ViewForeColor = System.Drawing.Color.Black;
             // 
             // groupBox5

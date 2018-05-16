@@ -28,7 +28,7 @@ Genetica.NET is open-source under the [MIT license](https://github.com/pedrodbs/
 
 Supported platforms:
 
-- .Net 4.5+ on Windows, Linux and Mac
+- All runtimes supporting *.NET Standard 1.3+* (.NET Core 1.0+, .NET Framework 4.6+) on Windows, Linux and Mac
 
 ## API Documentation
 

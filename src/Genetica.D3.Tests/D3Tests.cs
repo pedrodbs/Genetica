@@ -19,7 +19,7 @@
 // </copyright>
 // <summary>
 //    Project: Genetica.D3.Tests
-//    Last updated: 03/29/2018
+//    Last updated: 05/14/2018
 //    Author: Pedro Sequeira
 //    E-mail: pedrodbs@gmail.com
 // </summary>
@@ -61,9 +61,11 @@ namespace Genetica.D3.Tests
 
             prog.ToD3JsonFile(fullPath);
             Console.WriteLine(fullPath);
-            Assert.IsTrue(File.Exists(fullPath), $"D3 json file should exist in {fullPath}");
+            Assert.IsTrue(File.Exists(fullPath), $"D3 json file should exist in {fullPath}.");
 
+#if !DEBUG
             File.Delete(fullPath);
+#endif
         }
 
         [TestMethod]
@@ -81,10 +83,12 @@ namespace Genetica.D3.Tests
             tree.ToD3JsonFile(fullPath);
 
             Console.WriteLine(fullPath);
-            Assert.IsTrue(File.Exists(fullPath), $"Image file with information tree should exist in {fullPath}");
+            Assert.IsTrue(File.Exists(fullPath), $"Image file with information tree should exist in {fullPath}.");
             Assert.IsTrue(new FileInfo(fullPath).Length > 0, "Image size should be > 0 bytes.");
 
+#if !DEBUG
             File.Delete(fullPath);
+#endif
         }
 
         [TestMethod]
@@ -102,10 +106,12 @@ namespace Genetica.D3.Tests
             tree.ToD3JsonFile(fullPath);
 
             Console.WriteLine(fullPath);
-            Assert.IsTrue(File.Exists(fullPath), $"Image file with information tree should exist in {fullPath}");
+            Assert.IsTrue(File.Exists(fullPath), $"Image file with information tree should exist in {fullPath}.");
             Assert.IsTrue(new FileInfo(fullPath).Length > 0, "Image size should be > 0 bytes.");
 
+#if !DEBUG
             File.Delete(fullPath);
+#endif
         }
 
         [TestMethod]
@@ -123,10 +129,12 @@ namespace Genetica.D3.Tests
             tree.ToD3JsonFile(fullPath);
 
             Console.WriteLine(fullPath);
-            Assert.IsTrue(File.Exists(fullPath), $"Image file with information tree should exist in {fullPath}");
+            Assert.IsTrue(File.Exists(fullPath), $"Image file with information tree should exist in {fullPath}.");
             Assert.IsTrue(new FileInfo(fullPath).Length > 0, "Image size should be > 0 bytes.");
 
+#if !DEBUG
             File.Delete(fullPath);
+#endif
         }
 
         [TestMethod]
@@ -144,10 +152,12 @@ namespace Genetica.D3.Tests
             tree.ToD3JsonFile(fullPath);
 
             Console.WriteLine(fullPath);
-            Assert.IsTrue(File.Exists(fullPath), $"Image file with information tree should exist in {fullPath}");
+            Assert.IsTrue(File.Exists(fullPath), $"Image file with information tree should exist in {fullPath}.");
             Assert.IsTrue(new FileInfo(fullPath).Length > 0, "Image size should be > 0 bytes.");
 
+#if !DEBUG
             File.Delete(fullPath);
+#endif
         }
 
         [TestMethod]
@@ -161,9 +171,11 @@ namespace Genetica.D3.Tests
 
             prog.ToD3TreeJsonFile(fullPath);
             Console.WriteLine(fullPath);
-            Assert.IsTrue(File.Exists(fullPath), $"D3 json file should exist in {fullPath}");
+            Assert.IsTrue(File.Exists(fullPath), $"D3 json file should exist in {fullPath}.");
 
+#if !DEBUG
             File.Delete(fullPath);
+#endif
         }
 
         #endregion
