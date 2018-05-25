@@ -55,8 +55,10 @@
             // 
             this.expressionTxtBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.expressionTxtBox.BackColor = System.Drawing.Color.White;
             this.expressionTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.expressionTxtBox.Font = new System.Drawing.Font("Consolas", 10.18868F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.expressionTxtBox.ForeColor = System.Drawing.Color.Black;
             this.expressionTxtBox.Location = new System.Drawing.Point(9, 27);
             this.expressionTxtBox.Margin = new System.Windows.Forms.Padding(4);
             this.expressionTxtBox.Name = "expressionTxtBox";
@@ -253,7 +255,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainForm";
-            this.Text = "Genetica.Net - Program Visualizer";
+            this.Text = "Genetica.NET - Program Visualizer";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
